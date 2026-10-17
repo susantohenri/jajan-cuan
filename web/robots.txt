@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /experience
+
+Sitemap: https://jajan-cuan.web.app/sitemap.xml

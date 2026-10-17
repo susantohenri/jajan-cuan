@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Katalog Resep — Jajan Cuan</title>
+
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* Experience page layout tweaks */
+    body {
+      padding-bottom: 90px; /* Space for sticky bar */
+    }
+    .loading-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--color-text-secondary);
+    }
+    .spinner {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      border: 3px solid var(--color-border);
+      border-top-color: var(--color-primary);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 1rem;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+
+  <!-- Google tag (gtag.js) GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKCSWCG5W1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SKCSWCG5W1');
+  </script>
+</head>
+<body>
+
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="brand-logo">
+        🍳 Jajan<span>Cuan</span>
+      </a>
+      <a href="index.html" class="btn btn-outline btn-sm">
+        ← Kembali ke Beranda
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Experience Header & Filter -->
+  <main class="container" style="padding-top: 2rem;">
+    <div class="experience-header" style="border: none; padding-bottom: 0.5rem;">
+      <span class="section-tag">Interactive Catalog</span>
+      <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Katalog Ide Jajanan Siap Jual</h1>
+      <p>Klik kartu resep untuk melihat analisis margin keuntungan, langkah memasak, dan kalkulator HPP otomatis.</p>
+    </div>
+
+    <!-- Section 1: Filter Kategori -->
+    <div class="filter-tags-scroll" id="filterContainer">
+      <button class="filter-tag active" data-filter="all">Semua Resep</button>
+      <button class="filter-tag" data-filter="modal-kecil">Modal &lt; 50rb</button>
+      <button class="filter-tag" data-filter="viral">Viral TikTok</button>
+      <button class="filter-tag" data-filter="kue">Kue & Roti</button>
+      <button class="filter-tag" data-filter="gorengan">Gorengan</button>
+      <button class="filter-tag" data-filter="minuman">Minuman</button>
+    </div>
+
+    <!-- Section 2: Grid Kartu Resep (Dynamic RTDB / Fallback) -->
+    <div id="recipesContainer" style="margin-top: 1.5rem;">
+      <div class="loading-state" id="loadingState">
+        <div class="spinner"></div>
+        <p>Memuat resep & kalkulator cuan...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Sticky Bottom Bar -->
+  <div class="sticky-bar">
+    <div class="container">
+      <div class="sticky-bar-text">
+        Mau akses ratusan resep & kalkulator langsung di HP?
+      </div>
+      <button class="btn btn-primary btn-sm trigger-waitlist" data-source="experience_sticky">
+        🔔 Ingatkan Saya Saat Rilis
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal Waitlist Component -->
+  <div class="modal-overlay" id="waitlistModal" aria-hidden="true" role="dialog" aria-labelledby="modalExpTitle">
+    <div class="modal-card">
+      <button class="modal-close" id="closeModalBtn" aria-label="Tutup modal">&times;</button>
+      
+      <!-- Form Content -->
+      <div id="modalFormContainer">
+        <div class="modal-header">
+          <div class="modal-icon">🚀</div>
+          <h3 id="modalExpTitle">Jajan Cuan Segera Hadir di Google Play!</h3>
+          <p class="text-secondary">Jadilah yang pertama mencoba. Kami kabari kamu saat rilis.</p>
+        </div>
+
+        <form id="waitlistForm">
+          <div class="modal-radio-group">
+            <label class="modal-radio-label">
+              <input type="radio" name="contactType" value="whatsapp" checked>
+              <span>WhatsApp</span>
+            </label>
+            <label class="modal-radio-label">
+              <input type="radio" name="contactType" value="email">
+              <span>Email</span>
+            </label>
+          </div>
+
+          <div class="modal-form-group">
+            <input 
+              type="text" 
+              id="contactInput" 
+              class="modal-input" 
+              placeholder="Nomor WhatsApp (contoh: 0812xxxx)" 
+              required
+              autocomplete="off"
+            >
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block" id="submitWaitlistBtn">
+            Kabari Saya Saat Rilis →
+          </button>
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div class="modal-success" id="modalSuccessContainer">
+        <div class="modal-success-icon">✅</div>
+        <h4>Terima kasih!</h4>
+        <p class="text-secondary">Kontak kamu sudah tersimpan. Kami akan hubungi kamu segera setelah aplikasi siap diunduh.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDK CDN (compat mode) -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-analytics-compat.js"></script>
+
+  <!-- App Scripts -->
+  <script src="js/firebase-init.js"></script>
+  <script src="js/experience.js"></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Seed Database RTDB — Jajan Cuan (Internal Developer Tool)</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 2rem;
+      background: #F9FAFB;
+      color: #1F2937;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #FFFFFF;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      border: 1px solid #E5E7EB;
+    }
+    button {
+      background: #FF6B35;
+      color: #FFFFFF;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #E55A2B;
+    }
+    button:disabled {
+      background: #9CA3AF;
+      cursor: not-allowed;
+    }
+    #log {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #111827;
+      color: #10B981;
+      border-radius: 8px;
+      font-family: monospace;
+      font-size: 0.9rem;
+      white-space: pre-wrap;
+      min-height: 120px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+  </style>
+
+  <!-- Firebase CDN (compat) -->
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-database-compat.js"></script>
+</head>
+<body>
+
+  <div class="card">
+    <h2>🛠️ Jajan Cuan — RTDB Database Seeder</h2>
+    <p style="margin: 0.5rem 0 1.5rem 0; color: #4B5563;">
+      Halaman ini digunakan untuk mengunggah 3 data resep awal ke node <code>/posts</code> pada Firebase Realtime Database:
+      <br><strong>jajan-cuan-default-rtdb (jajan-cuan)</strong>
+    </p>
+
+    <button id="seedBtn">🚀 Push Seed Data ke RTDB</button>
+    <button id="checkBtn" style="background: #2EC4B6; margin-left: 0.5rem;">🔍 Cek Data Sekarang</button>
+
+    <div id="log">Siap mengeksekusi seed data...</div>
+  </div>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDcNmkB3OC1xFqicMF3Mn0M__chbVAVDBk",
+      authDomain: "jajan-cuan.firebaseapp.com",
+      databaseURL: "https://jajan-cuan-default-rtdb.firebaseio.com",
+      projectId: "jajan-cuan",
+      storageBucket: "jajan-cuan.firebasestorage.app",
+      messagingSenderId: "1032979243442",
+      appId: "1:1032979243442:web:67e7769d199f00a714c4ab"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    const SEED_PAYLOAD = {
+      "pangsit-goreng-viral": {
+        "title": "Pangsit Goreng Viral",
+        "slug": "pangsit-goreng-viral",
+        "excerpt": "Modal Rp 30.000, bisa jual 50 biji. Laris di depan sekolah & pasar!",
+        "category": "gorengan",
+        "tags": ["gorengan", "viral", "modal-kecil"],
+        "published": true,
+        "published_at": "2026-10-01T00:00:00Z",
+        "last_updated": "2026-10-18T00:00:00Z",
+        "og_image": "",
+        "business_analysis": {
+          "market_demand": "Tinggi — jajanan gorengan selalu dicari, terutama di area sekolah, kantor, dan pasar tradisional.",
+          "ease_of_making": "Sangat mudah — tidak perlu oven, cukup wajan dan minyak goreng.",
+          "ingredient_availability": "Semua bahan tersedia di warung/toko kelontong terdekat.",
+          "estimated_initial_capital": 30000
+        },
+        "ingredients": [
+          { "name": "Kulit pangsit", "quantity": "1 bungkus (50 lembar)", "default_price": 8000 },
+          { "name": "Daging ayam giling", "quantity": "250 gram", "default_price": 12000 },
+          { "name": "Bawang putih", "quantity": "3 siung", "default_price": 1000 },
+          { "name": "Kecap asin", "quantity": "1 sdm", "default_price": 500 },
+          { "name": "Merica bubuk", "quantity": "1/2 sdt", "default_price": 500 },
+          { "name": "Minyak goreng", "quantity": "500 ml", "default_price": 7000 },
+          { "name": "Garam", "quantity": "secukupnya", "default_price": 500 },
+          { "name": "Daun bawang", "quantity": "2 batang", "default_price": 500 }
+        ],
+        "default_portions": 50,
+        "cooking_steps": [
+          "Campurkan daging ayam giling, bawang putih cincang halus, kecap asin, merica, garam, dan daun bawang iris.",
+          "Aduk rata hingga bumbu meresap sempurna.",
+          "Ambil selembar kulit pangsit, letakkan 1 sendok teh adonan di tengah.",
+          "Lipat kulit pangsit membentuk segitiga, rekatkan pinggiran dengan air.",
+          "Panaskan minyak goreng dengan api sedang.",
+          "Goreng pangsit hingga kecokelatan dan renyah — sekitar 3-4 menit.",
+          "Angkat dan tiriskan di atas kertas minyak."
+        ],
+        "promo_images": []
+      },
+      "kue-bolu-keju": {
+        "title": "Kue Bolu Keju Lumer",
+        "slug": "kue-bolu-keju",
+        "excerpt": "Resep cepat dan layak jual — bolu lembut dengan keju yang meleleh di setiap gigitan.",
+        "category": "kue",
+        "tags": ["kue", "viral", "manis"],
+        "published": true,
+        "published_at": "2026-10-05T00:00:00Z",
+        "last_updated": "2026-10-18T00:00:00Z",
+        "og_image": "",
+        "business_analysis": {
+          "market_demand": "Tinggi — kue bolu keju viral di TikTok dan IG Reels, terutama untuk hampers dan oleh-oleh.",
+          "ease_of_making": "Sedang — perlu mixer dan oven/panci kukus.",
+          "ingredient_availability": "Mudah — semua bahan ada di supermarket atau toko bahan kue.",
+          "estimated_initial_capital": 45000
+        },
+        "ingredients": [
+          { "name": "Telur", "quantity": "4 butir", "default_price": 8000 },
+          { "name": "Gula pasir", "quantity": "150 gram", "default_price": 3000 },
+          { "name": "Tepung terigu", "quantity": "150 gram", "default_price": 3000 },
+          { "name": "Margarin (lelehkan)", "quantity": "100 gram", "default_price": 4000 },
+          { "name": "Susu bubuk", "quantity": "2 sdm", "default_price": 3000 },
+          { "name": "Keju cheddar parut", "quantity": "100 gram", "default_price": 12000 },
+          { "name": "Emulsifier/SP", "quantity": "1 sdt", "default_price": 2000 },
+          { "name": "Vanili", "quantity": "1 sdt", "default_price": 1000 }
+        ],
+        "default_portions": 20,
+        "cooking_steps": [
+          "Kocok telur, gula, dan emulsifier (SP) dengan mixer kecepatan tinggi hingga kental berjejak — sekitar 10 menit.",
+          "Masukkan tepung terigu dan susu bubuk yang sudah diayak. Aduk balik perlahan.",
+          "Tuang margarin leleh, aduk rata dari bawah ke atas.",
+          "Tambahkan sebagian keju parut, sisakan untuk topping.",
+          "Tuang adonan ke dalam loyang yang sudah diolesi margarin dan ditaburi tepung.",
+          "Taburi sisa keju parut di atas permukaan adonan.",
+          "Panggang di oven suhu 170°C selama 30–35 menit atau kukus 40 menit hingga matang.",
+          "Keluarkan dari oven, biarkan dingin, potong sesuai porsi."
+        ],
+        "promo_images": []
+      },
+      "risol-mayo-lumer": {
+        "title": "Risol Mayo Lumer",
+        "slug": "risol-mayo-lumer",
+        "excerpt": "Jajanan hits anak muda — kulit renyah, isian lumer mayo + smoked beef. Modal kecil, untung besar!",
+        "category": "gorengan",
+        "tags": ["gorengan", "viral", "modal-kecil"],
+        "published": true,
+        "published_at": "2026-10-10T00:00:00Z",
+        "last_updated": "2026-10-18T00:00:00Z",
+        "og_image": "",
+        "business_analysis": {
+          "market_demand": "Sangat tinggi — risol mayo jadi jajanan No.1 di kantin sekolah & cafe kekinian.",
+          "ease_of_making": "Mudah — kulit bisa beli jadi, isian tinggal campur.",
+          "ingredient_availability": "Mudah — supermarket & minimarket.",
+          "estimated_initial_capital": 40000
+        },
+        "ingredients": [
+          { "name": "Kulit risol (beli jadi)", "quantity": "20 lembar", "default_price": 10000 },
+          { "name": "Smoked beef", "quantity": "100 gram", "default_price": 10000 },
+          { "name": "Mayonaise", "quantity": "100 gram", "default_price": 5000 },
+          { "name": "Keju mozarella", "quantity": "100 gram", "default_price": 8000 },
+          { "name": "Tepung panir", "quantity": "100 gram", "default_price": 3000 },
+          { "name": "Telur (untuk coating)", "quantity": "2 butir", "default_price": 4000 },
+          { "name": "Minyak goreng", "quantity": "500 ml", "default_price": 7000 }
+        ],
+        "default_portions": 20,
+        "cooking_steps": [
+          "Iris smoked beef tipis, tumis sebentar dengan sedikit minyak.",
+          "Letakkan kulit risol di meja rata. Taruh smoked beef, keju mozarella, dan mayonaise secukupnya.",
+          "Lipat kulit risol membentuk amplop rapat.",
+          "Celupkan risol ke telur kocok, lalu gulingkan di tepung panir hingga rata.",
+          "Goreng dalam minyak panas (deep fry) dengan api sedang hingga kuning keemasan — sekitar 3 menit.",
+          "Angkat, tiriskan, dan sajikan selagi panas agar keju masih lumer."
+        ],
+        "promo_images": []
+      }
+    };
+
+    const logEl = document.getElementById('log');
+    function log(msg) {
+      logEl.textContent += `\n[${new Date().toLocaleTimeString()}] ${msg}`;
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    document.getElementById('seedBtn').addEventListener('click', async () => {
+      const btn = document.getElementById('seedBtn');
+      btn.disabled = true;
+      log("Mengirim seed data ke path '/posts' di Firebase RTDB...");
+      try {
+        await db.ref('posts').set(SEED_PAYLOAD);
+        log("✅ BERHASIL! 3 resep berhasil di-push ke node '/posts'.");
+      } catch (err) {
+        log(`❌ GAGAL: ${err.message}`);
+        console.error(err);
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById('checkBtn').addEventListener('click', async () => {
+      log("Membaca node '/posts' dari RTDB...");
+      try {
+        const snap = await db.ref('posts').once('value');
+        const data = snap.val();
+        if (data) {
+          log(`✅ Data ditemukan: ${Object.keys(data).length} postingan resep aktif:\n- ` + Object.keys(data).join('\n- '));
+        } else {
+          log("⚠️ Node '/posts' masih kosong.");
+        }
+      } catch (err) {
+        log(`❌ Gagal membaca: ${err.message}`);
+      }
+    });
+  </script>
+</body>
+</html>

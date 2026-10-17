@@ -1,0 +1,16 @@
+{
+  "rules": {
+    "posts": {
+      ".read": true,
+      ".write": false,
+      ".indexOn": ["published"]
+    },
+    "waitlist": {
+      ".read": false,
+      ".write": true,
+      "$pushId": {
+        ".validate": "newData.hasChildren(['contact', 'type', 'created_at'])"
+      }
+    }
+  }
+}

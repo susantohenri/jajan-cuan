@@ -1,0 +1,115 @@
+{
+  "pangsit-goreng-viral": {
+    "title": "Pangsit Goreng Viral",
+    "slug": "pangsit-goreng-viral",
+    "excerpt": "Modal Rp 30.000, bisa jual 50 biji. Laris di depan sekolah & pasar!",
+    "category": "gorengan",
+    "tags": ["gorengan", "viral", "modal-kecil"],
+    "published": true,
+    "published_at": "2026-10-01T00:00:00Z",
+    "last_updated": "2026-10-18T00:00:00Z",
+    "og_image": "",
+    "business_analysis": {
+      "market_demand": "Tinggi — jajanan gorengan selalu dicari, terutama di area sekolah, kantor, dan pasar tradisional.",
+      "ease_of_making": "Sangat mudah — tidak perlu oven, cukup wajan dan minyak goreng.",
+      "ingredient_availability": "Semua bahan tersedia di warung/toko kelontong terdekat.",
+      "estimated_initial_capital": 30000
+    },
+    "ingredients": [
+      { "name": "Kulit pangsit", "quantity": "1 bungkus (50 lembar)", "default_price": 8000 },
+      { "name": "Daging ayam giling", "quantity": "250 gram", "default_price": 12000 },
+      { "name": "Bawang putih", "quantity": "3 siung", "default_price": 1000 },
+      { "name": "Kecap asin", "quantity": "1 sdm", "default_price": 500 },
+      { "name": "Merica bubuk", "quantity": "1/2 sdt", "default_price": 500 },
+      { "name": "Minyak goreng", "quantity": "500 ml", "default_price": 7000 },
+      { "name": "Garam", "quantity": "secukupnya", "default_price": 500 },
+      { "name": "Daun bawang", "quantity": "2 batang", "default_price": 500 }
+    ],
+    "default_portions": 50,
+    "cooking_steps": [
+      "Campurkan daging ayam giling, bawang putih cincang halus, kecap asin, merica, garam, dan daun bawang iris.",
+      "Aduk rata hingga bumbu meresap sempurna.",
+      "Ambil selembar kulit pangsit, letakkan 1 sendok teh adonan di tengah.",
+      "Lipat kulit pangsit membentuk segitiga, rekatkan pinggiran dengan air.",
+      "Panaskan minyak goreng dengan api sedang.",
+      "Goreng pangsit hingga kecokelatan dan renyah — sekitar 3-4 menit.",
+      "Angkat dan tiriskan di atas kertas minyak."
+    ],
+    "promo_images": []
+  },
+  "kue-bolu-keju": {
+    "title": "Kue Bolu Keju Lumer",
+    "slug": "kue-bolu-keju",
+    "excerpt": "Resep cepat dan layak jual — bolu lembut dengan keju yang meleleh di setiap gigitan.",
+    "category": "kue",
+    "tags": ["kue", "viral", "manis"],
+    "published": true,
+    "published_at": "2026-10-05T00:00:00Z",
+    "last_updated": "2026-10-18T00:00:00Z",
+    "og_image": "",
+    "business_analysis": {
+      "market_demand": "Tinggi — kue bolu keju viral di TikTok dan IG Reels, terutama untuk hampers dan oleh-oleh.",
+      "ease_of_making": "Sedang — perlu mixer dan oven/panci kukus.",
+      "ingredient_availability": "Mudah — semua bahan ada di supermarket atau toko bahan kue.",
+      "estimated_initial_capital": 45000
+    },
+    "ingredients": [
+      { "name": "Telur", "quantity": "4 butir", "default_price": 8000 },
+      { "name": "Gula pasir", "quantity": "150 gram", "default_price": 3000 },
+      { "name": "Tepung terigu", "quantity": "150 gram", "default_price": 3000 },
+      { "name": "Margarin (lelehkan)", "quantity": "100 gram", "default_price": 4000 },
+      { "name": "Susu bubuk", "quantity": "2 sdm", "default_price": 3000 },
+      { "name": "Keju cheddar parut", "quantity": "100 gram", "default_price": 12000 },
+      { "name": "Emulsifier/SP", "quantity": "1 sdt", "default_price": 2000 },
+      { "name": "Vanili", "quantity": "1 sdt", "default_price": 1000 }
+    ],
+    "default_portions": 20,
+    "cooking_steps": [
+      "Kocok telur, gula, dan emulsifier (SP) dengan mixer kecepatan tinggi hingga kental berjejak — sekitar 10 menit.",
+      "Masukkan tepung terigu dan susu bubuk yang sudah diayak. Aduk balik perlahan.",
+      "Tuang margarin leleh, aduk rata dari bawah ke atas.",
+      "Tambahkan sebagian keju parut, sisakan untuk topping.",
+      "Tuang adonan ke dalam loyang yang sudah diolesi margarin dan ditaburi tepung.",
+      "Taburi sisa keju parut di atas permukaan adonan.",
+      "Panggang di oven suhu 170°C selama 30–35 menit atau kukus 40 menit hingga matang.",
+      "Keluarkan dari oven, biarkan dingin, potong sesuai porsi."
+    ],
+    "promo_images": []
+  },
+  "risol-mayo-lumer": {
+    "title": "Risol Mayo Lumer",
+    "slug": "risol-mayo-lumer",
+    "excerpt": "Jajanan hits anak muda — kulit renyah, isian lumer mayo + smoked beef. Modal kecil, untung besar!",
+    "category": "gorengan",
+    "tags": ["gorengan", "viral", "modal-kecil"],
+    "published": true,
+    "published_at": "2026-10-10T00:00:00Z",
+    "last_updated": "2026-10-18T00:00:00Z",
+    "og_image": "",
+    "business_analysis": {
+      "market_demand": "Sangat tinggi — risol mayo jadi jajanan No.1 di kantin sekolah & cafe kekinian.",
+      "ease_of_making": "Mudah — kulit bisa beli jadi, isian tinggal campur.",
+      "ingredient_availability": "Mudah — supermarket & minimarket.",
+      "estimated_initial_capital": 40000
+    },
+    "ingredients": [
+      { "name": "Kulit risol (beli jadi)", "quantity": "20 lembar", "default_price": 10000 },
+      { "name": "Smoked beef", "quantity": "100 gram", "default_price": 10000 },
+      { "name": "Mayonaise", "quantity": "100 gram", "default_price": 5000 },
+      { "name": "Keju mozarella", "quantity": "100 gram", "default_price": 8000 },
+      { "name": "Tepung panir", "quantity": "100 gram", "default_price": 3000 },
+      { "name": "Telur (untuk coating)", "quantity": "2 butir", "default_price": 4000 },
+      { "name": "Minyak goreng", "quantity": "500 ml", "default_price": 7000 }
+    ],
+    "default_portions": 20,
+    "cooking_steps": [
+      "Iris smoked beef tipis, tumis sebentar dengan sedikit minyak.",
+      "Letakkan kulit risol di meja rata. Taruh smoked beef, keju mozarella, dan mayonaise secukupnya.",
+      "Lipat kulit risol membentuk amplop rapat.",
+      "Celupkan risol ke telur kocok, lalu gulingkan di tepung panir hingga rata.",
+      "Goreng dalam minyak panas (deep fry) dengan api sedang hingga kuning keemasan — sekitar 3 menit.",
+      "Angkat, tiriskan, dan sajikan selagi panas agar keju masih lumer."
+    ],
+    "promo_images": []
+  }
+}

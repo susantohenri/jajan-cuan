@@ -33,3 +33,14 @@ google-services.json
 
 # Android Profiling
 *.hprof
+
+# Firebase
+.firebase/
+firebase-debug.log
+
+# Node (jika nanti pakai npm)
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
