@@ -1,3 +1,6 @@
+# code indexing
+.codegraph/
+
 # Gradle files
 .gradle/
 build/

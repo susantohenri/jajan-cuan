@@ -85,8 +85,26 @@
       </ol>
     </div>
 
+    <!-- Search Bar Interaktif (Pencarian Judul, Bahan, & Tag) -->
+    <div class="search-bar-wrapper" id="searchBarWrapper" style="margin-top: 1.25rem;">
+      <div class="search-input-box">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input 
+          type="search" 
+          id="recipeSearchInput" 
+          class="search-input" 
+          placeholder="Cari ide jajanan atau bahan (contoh: tapioka, kulit lumpia, risol)..." 
+          autocomplete="off"
+          spellcheck="false"
+          aria-label="Cari ide jajanan atau bahan baku"
+        />
+        <button id="clearSearchBtn" class="search-clear-btn" aria-label="Bersihkan pencarian" style="display: none;" title="Bersihkan pencarian">✕</button>
+      </div>
+      <div id="searchStats" class="search-stats" style="display: none;"></div>
+    </div>
+
     <!-- Filter Kategori (Mendukung deep-link URL ?filter=...) -->
-    <div class="filter-tags-scroll" id="filterContainer" role="group" aria-label="Filter kategori resep" style="margin-top: 1rem;">
+    <div class="filter-tags-scroll" id="filterContainer" role="group" aria-label="Filter kategori resep" style="margin-top: 0.75rem;">
       <button class="filter-tag active" data-filter="all">🍽️ Semua Resep</button>
       <button class="filter-tag" data-filter="modal-kecil">💰 Modal &lt; 50rb</button>
       <button class="filter-tag" data-filter="viral">🔥 Viral TikTok</button>

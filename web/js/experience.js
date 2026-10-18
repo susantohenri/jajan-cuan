@@ -116,6 +116,16 @@ function formatRupiah(num) {
   return 'Rp ' + Math.round(num).toLocaleString('id-ID');
 }
 
+function escapeHtml(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
 // Global active recipes state & Admin Mode Detection
 let allRecipes = [];
 const urlParams = new URLSearchParams(window.location.search);
@@ -130,6 +140,11 @@ let currentFilter = initialUrlFilter;
 let pageCursors = [null]; // pageCursors[0] = null (page 1), pageCursors[1] = cursor key for page 2, etc.
 let hasNextPage = false;
 let isFetchingPage = false;
+
+// --- SEARCH ENGINE STATE ---
+let currentSearchQuery = '';
+let searchDebounceTimer = null;
+let isSearching = false;
 
 // --- MAIN INIT ---
 document.addEventListener('DOMContentLoaded', () => {
@@ -157,10 +172,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (isAdmin) {
     setupAdminToolbar();
-    loadAdminPosts();
+    loadAdminPosts().then(() => {
+      initSearch();
+    });
   } else {
     setupPaginationListeners();
-    loadUserPage(1, currentFilter);
+    const queryParam = urlParams.get('q') || urlParams.get('search');
+    if (!queryParam) {
+      loadUserPage(1, currentFilter);
+    }
+    initSearch();
   }
 });
 
@@ -518,6 +539,39 @@ function renderRecipes(recipes) {
   if (!container) return;
 
   if (recipes.length === 0) {
+    if (isSearching && currentSearchQuery) {
+      container.innerHTML = `
+        <div class="empty-search-card">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">🔍</div>
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--ink);">Resep Tidak Ditemukan</h3>
+          <p class="text-secondary" style="max-width: 480px; margin: 0 auto 1.25rem;">
+            Tidak ada jajanan dengan kata kunci "<strong>${escapeHtml(currentSearchQuery)}</strong>"${currentFilter !== 'all' ? ` di kategori <strong>${escapeHtml(currentFilter)}</strong>` : ''}.
+          </p>
+          <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="btn btn-primary btn-sm btn-reset-search">
+              🔄 Tampilkan Semua Resep
+            </button>
+            ${currentFilter !== 'all' ? `
+              <button class="btn btn-outline btn-sm btn-clear-filter-search">
+                🌐 Cari di Semua Kategori
+              </button>
+            ` : ''}
+          </div>
+          <div style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--mut);">
+            <span>Saran kata kunci populer:</span><br>
+            <button class="search-suggestion-chip" data-keyword="tapioka">tapioka</button>
+            <button class="search-suggestion-chip" data-keyword="kulit lumpia">kulit lumpia</button>
+            <button class="search-suggestion-chip" data-keyword="keju">keju</button>
+            <button class="search-suggestion-chip" data-keyword="cireng">cireng</button>
+            <button class="search-suggestion-chip" data-keyword="sosis">sosis</button>
+            <button class="search-suggestion-chip" data-keyword="bolu">bolu</button>
+          </div>
+        </div>
+      `;
+      setupEmptySearchListeners();
+      return;
+    }
+
     container.innerHTML = `
       <div class="card text-center" style="padding: 3rem 1rem;">
         <h3>Belum Ada Resep di Kategori Ini</h3>
@@ -542,11 +596,22 @@ function renderRecipes(recipes) {
             ${sourcePhoto 
               ? `<img src="${sourcePhoto}" alt="${recipe.title}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.parentElement.innerHTML='<span>${emoji}</span>';">` 
               : `<span>${emoji}</span>`}
+            ${!isAdmin ? `
+              <button class="btn-card-bookmark trigger-waitlist" data-source="card_bookmark_hook" data-recipe="${slug}" title="Simpan resep ke favorit (Buka di Aplikasi)" aria-label="Simpan resep ke favorit">
+                <span class="bookmark-icon">🤍</span>
+                <span class="bookmark-text">Simpan</span>
+              </button>
+            ` : ''}
           </div>
           <div class="recipe-card-info">
             <div class="recipe-card-meta">
               <span class="mini-card-tag">${recipe.category}</span>
               ${(recipe.tags || []).map(t => `<span class="section-tag" style="font-size: 0.7rem; padding: 0.15rem 0.5rem; margin-bottom: 0;">#${t}</span>`).join('')}
+              ${recipe._matchedIngredient ? `
+                <span class="search-match-pill" title="Resep ini cocok karena menggunakan bahan ${escapeHtml(recipe._matchedIngredient)}">
+                  🧂 Bahan: <strong>${escapeHtml(recipe._matchedIngredient)}</strong>
+                </span>
+              ` : ''}
             </div>
             
             ${isAdmin ? `
@@ -1040,14 +1105,20 @@ function initFilters() {
       btn.classList.add('active');
 
       const filter = btn.getAttribute('data-filter');
-      if (!isAdmin) {
-        // Mode Pengunjung: Reset DB pagination ke halaman 1 untuk filter ini (load on-demand)
-        currentPage = 1;
-        pageCursors = [null];
-        currentFilter = filter;
-        loadUserPage(1, filter);
+      currentFilter = filter;
+
+      if (isSearching && currentSearchQuery) {
+        // Jika sedang mencari, jalankan ulang pencarian dalam lingkup filter kategori baru
+        executeSearch(currentSearchQuery);
       } else {
-        filterRecipes(filter);
+        if (!isAdmin) {
+          // Mode Pengunjung: Reset DB pagination ke halaman 1 untuk filter ini (load on-demand)
+          currentPage = 1;
+          pageCursors = [null];
+          loadUserPage(1, filter);
+        } else {
+          filterRecipes(filter);
+        }
       }
     });
   });
@@ -1084,7 +1155,6 @@ function initWaitlistModal() {
   const successContainer = document.getElementById('modalSuccessContainer');
   const submitBtn = document.getElementById('submitWaitlistBtn');
   const radioButtons = document.querySelectorAll('input[name="contactType"]');
-  const triggers = document.querySelectorAll('.trigger-waitlist');
 
   let currentSource = 'experience_sticky';
 
@@ -1093,6 +1163,18 @@ function initWaitlistModal() {
     if (modal) {
       modal.classList.add('active');
       modal.setAttribute('aria-hidden', 'false');
+
+      // Kustomisasi pesan jika dipicu oleh tombol bookmark di kartu resep (App-Install Hook)
+      const modalExpTitle = document.getElementById('modalExpTitle');
+      const modalSubtitle = modal.querySelector('.modal-subtitle');
+      if (source === 'card_bookmark_hook') {
+        if (modalExpTitle) modalExpTitle.textContent = 'Simpan Resep ke Favorit 🤍';
+        if (modalSubtitle) modalSubtitle.textContent = 'Mau simpan resep favorit tanpa batas & buka offline di pasar? Dapatkan akses prioritas aplikasi Android Jajan Cuan di Google Play!';
+      } else {
+        if (modalExpTitle) modalExpTitle.textContent = 'Jadilah yang Pertama Tahu Saat Rilis!';
+        if (modalSubtitle) modalSubtitle.textContent = 'Dapatkan akses prioritas ke 100+ resep jajanan viral, kalkulator HPP otomatis, dan bahan promosi siap pakai langsung di HP kamu.';
+      }
+
       if (formContainer && successContainer) {
         formContainer.style.display = 'block';
         successContainer.classList.remove('active');
@@ -1117,12 +1199,14 @@ function initWaitlistModal() {
     }
   }
 
-  triggers.forEach((btn) => {
-    btn.addEventListener('click', (e) => {
+  // Delegasi event listener untuk menangani elemen statis dan tombol dinamis (.btn-card-bookmark)
+  document.body.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.trigger-waitlist');
+    if (trigger) {
       e.preventDefault();
-      const source = btn.getAttribute('data-source') || 'experience_sticky';
+      const source = trigger.getAttribute('data-source') || 'experience_sticky';
       openModal(source);
-    });
+    }
   });
 
   if (closeModalBtn) closeModalBtn.addEventListener('click', closeModal);
@@ -1203,4 +1287,249 @@ function initWaitlistModal() {
       }
     });
   }
+}
+
+// --- SEARCH ENGINE IMPLEMENTATION ---
+function getAllCatalogRecipes() {
+  if (isAdmin && typeof adminDrafts !== 'undefined' && Object.keys(adminDrafts).length > 0) {
+    return Object.values(adminDrafts).filter(r => r && r.published !== false);
+  }
+  if (typeof window.SCRAPED_DRAFTS !== 'undefined' && window.SCRAPED_DRAFTS) {
+    return Object.values(window.SCRAPED_DRAFTS).filter(r => r && r.published !== false);
+  }
+  if (typeof SEED_DATA !== 'undefined' && Array.isArray(SEED_DATA)) {
+    return SEED_DATA.filter(r => r && r.published !== false);
+  }
+  return allRecipes;
+}
+
+function initSearch() {
+  const searchInput = document.getElementById('recipeSearchInput');
+  const clearBtn = document.getElementById('clearSearchBtn');
+  if (!searchInput) return;
+
+  // Handle Input with Debounce (250 ms)
+  searchInput.addEventListener('input', (e) => {
+    const query = e.target.value;
+    if (clearBtn) {
+      clearBtn.style.display = query.trim().length > 0 ? 'inline-flex' : 'none';
+    }
+    clearTimeout(searchDebounceTimer);
+    searchDebounceTimer = setTimeout(() => {
+      executeSearch(query);
+    }, 250);
+  });
+
+  // Handle Clear Button Click
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      clearBtn.style.display = 'none';
+      searchInput.focus();
+      executeSearch('');
+    });
+  }
+
+  // Keyboard shortcut: '/' to focus search, 'Escape' to clear
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement !== searchInput && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+      e.preventDefault();
+      searchInput.focus();
+      searchInput.select();
+    } else if (e.key === 'Escape' && document.activeElement === searchInput) {
+      if (searchInput.value) {
+        searchInput.value = '';
+        if (clearBtn) clearBtn.style.display = 'none';
+        executeSearch('');
+      }
+      searchInput.blur();
+    }
+  });
+
+  // Check URL query param (?q= or ?search=)
+  const queryParam = urlParams.get('q') || urlParams.get('search');
+  if (queryParam) {
+    searchInput.value = queryParam;
+    if (clearBtn) clearBtn.style.display = 'inline-flex';
+    executeSearch(queryParam);
+  }
+}
+
+function executeSearch(rawQuery) {
+  const query = (rawQuery || '').trim().toLowerCase();
+  currentSearchQuery = query;
+
+  const searchStats = document.getElementById('searchStats');
+  const clearBtn = document.getElementById('clearSearchBtn');
+  const paginationControls = document.getElementById('paginationControls');
+
+  if (!query) {
+    isSearching = false;
+    if (searchStats) searchStats.style.display = 'none';
+    if (clearBtn) clearBtn.style.display = 'none';
+
+    if (isAdmin) {
+      filterRecipes(currentFilter);
+    } else {
+      if (paginationControls) paginationControls.style.display = 'flex';
+      loadUserPage(1, currentFilter);
+    }
+    return;
+  }
+
+  isSearching = true;
+  if (clearBtn) clearBtn.style.display = 'inline-flex';
+  if (paginationControls) paginationControls.style.display = 'none';
+
+  const allAvailable = getAllCatalogRecipes();
+  const searchTerms = query.split(/\s+/).filter(Boolean);
+
+  // Score & filter
+  const matches = [];
+
+  allAvailable.forEach((recipe) => {
+    if (recipe.published === false) return;
+
+    // Filter kategori aktif jika bukan 'all'
+    let matchesCategory = true;
+    if (currentFilter !== 'all') {
+      const tags = recipe.tags || [];
+      const cat = recipe.category || '';
+      if (currentFilter === 'modal-kecil') {
+        matchesCategory = tags.includes('modal-kecil') || (recipe.business_analysis?.estimated_initial_capital <= 50000);
+      } else if (currentFilter === 'viral') {
+        matchesCategory = tags.includes('viral');
+      } else {
+        matchesCategory = (cat === currentFilter) || tags.includes(currentFilter);
+      }
+    }
+
+    if (!matchesCategory) return;
+
+    const titleLower = (recipe.title || '').toLowerCase();
+    const excerptLower = (recipe.excerpt || '').toLowerCase();
+    const catLower = (recipe.category || '').toLowerCase();
+    const tagsLower = (recipe.tags || []).join(' ').toLowerCase();
+
+    // Check ingredients
+    let matchedIngredientName = null;
+    let ingredientsText = '';
+    if (Array.isArray(recipe.ingredients)) {
+      recipe.ingredients.forEach((ing) => {
+        const name = (ing.name || '').toLowerCase();
+        const raw = (ing.raw_text || '').toLowerCase();
+        ingredientsText += ' ' + name + ' ' + raw;
+
+        searchTerms.forEach(term => {
+          if ((name.includes(term) || raw.includes(term)) && !matchedIngredientName) {
+            matchedIngredientName = ing.name;
+          }
+        });
+      });
+    }
+
+    const fullSearchableText = `${titleLower} ${excerptLower} ${catLower} ${tagsLower} ${ingredientsText}`;
+
+    // Setiap kata kunci harus ada di data resep
+    const allTermsMatch = searchTerms.every(term => fullSearchableText.includes(term));
+
+    if (allTermsMatch) {
+      // Perhitungan skor relevansi
+      let score = 0;
+      if (titleLower === query) score += 100;
+      else if (titleLower.startsWith(query)) score += 80;
+      else if (titleLower.includes(query)) score += 60;
+
+      if (matchedIngredientName) score += 45;
+      if (tagsLower.includes(query) || catLower.includes(query)) score += 30;
+      if (excerptLower.includes(query)) score += 10;
+
+      matches.push({
+        recipe: {
+          ...recipe,
+          _matchedIngredient: matchedIngredientName
+        },
+        score
+      });
+    }
+  });
+
+  // Urutkan dari skor tertinggi
+  matches.sort((a, b) => b.score - a.score);
+  const matchedRecipes = matches.map(m => m.recipe);
+
+  // Render resep yang cocok
+  renderRecipes(matchedRecipes);
+
+  // Tampilkan badge statistik hasil pencarian
+  if (searchStats) {
+    searchStats.style.display = 'flex';
+    const filterNote = currentFilter !== 'all' ? ` di kategori <strong>${escapeHtml(currentFilter)}</strong>` : '';
+    searchStats.innerHTML = `
+      <div class="search-stats-text">
+        Ditemukan <strong>${matchedRecipes.length}</strong> resep untuk "<strong>${escapeHtml(query)}</strong>"${filterNote}
+      </div>
+      <button class="search-reset-link" id="statsResetBtn">✕ Reset</button>
+    `;
+
+    const statsResetBtn = document.getElementById('statsResetBtn');
+    if (statsResetBtn) {
+      statsResetBtn.addEventListener('click', () => {
+        const searchInput = document.getElementById('recipeSearchInput');
+        if (searchInput) {
+          searchInput.value = '';
+          searchInput.focus();
+        }
+        executeSearch('');
+      });
+    }
+  }
+
+  // Pelacakan GA4 Event
+  if (typeof gtag === 'function') {
+    gtag('event', 'recipe_search', {
+      search_term: query,
+      result_count: matchedRecipes.length,
+      filter: currentFilter
+    });
+  }
+}
+
+function setupEmptySearchListeners() {
+  const resetBtn = document.querySelector('.btn-reset-search');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      const searchInput = document.getElementById('recipeSearchInput');
+      if (searchInput) {
+        searchInput.value = '';
+        searchInput.focus();
+      }
+      executeSearch('');
+    });
+  }
+
+  const clearFilterBtn = document.querySelector('.btn-clear-filter-search');
+  if (clearFilterBtn) {
+    clearFilterBtn.addEventListener('click', () => {
+      const filterButtons = document.querySelectorAll('.filter-tag');
+      filterButtons.forEach(b => {
+        if (b.getAttribute('data-filter') === 'all') b.classList.add('active');
+        else b.classList.remove('active');
+      });
+      currentFilter = 'all';
+      executeSearch(currentSearchQuery);
+    });
+  }
+
+  document.querySelectorAll('.search-suggestion-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const keyword = chip.getAttribute('data-keyword') || chip.textContent;
+      const searchInput = document.getElementById('recipeSearchInput');
+      if (searchInput) {
+        searchInput.value = keyword;
+        searchInput.focus();
+      }
+      executeSearch(keyword);
+    });
+  });
 }
