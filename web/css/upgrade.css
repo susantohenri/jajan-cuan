@@ -21,11 +21,59 @@ html {
   outline-offset: 2px;
 }
 
-/* --- Nav & Trust Bar --- */
+/* --- Nav & Brand Logo Mobile Protection --- */
+.navbar {
+  padding: 0.85rem 0;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.brand-logo {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.35rem !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.brand-logo span {
+  color: var(--color-accent-dark, #D97706);
+}
+
 .jc-nav {
   display: flex;
-  gap: 0.6rem;
   align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding: 0.65rem 0;
+  }
+  .brand-logo {
+    font-size: 1.15rem !important;
+    gap: 0.25rem !important;
+  }
+  .jc-nav .btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.82rem;
+  }
+  /* Di layar HP, sembunyikan tombol sekunder 'Daftar Rilis' di navbar 
+     karena sudah ada tombol utama raksasa di hero tepat di bawahnya */
+  .nav-waitlist-btn {
+    display: none !important;
+  }
 }
 
 .jc-trust {
