@@ -394,6 +394,34 @@ node scripts/polish-image.js mini-spaghetti-ekonomis-untuk-jualan-2ribuan
 
 ---
 
+#### Langkah 3.5: Pemolesan Judul Menu via Gemini API (Branding & Copywriting Komersial)
+Script: [`scripts/polish-titles.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/polish-titles.js)
+* **Tujuan & Standar Copywriting:**
+  * Menghapus *noise* obrolan UGC Cookpad dan *keyword stuffing* yang repetitif (seperti *"ide jualan"*, *"bisa untuk jualan"*, *"nih bunda"*, *"part 1"*, *"laris manis auto nagih"*, dsb).
+  * Menghasilkan nama menu yang ringkas (2–5 kata), menggugah selera (*appetizing*), berstandar *Title Case*, dan berorientasi komersial untuk etalase UMKM.
+* **Proteksi Integritas Data & Aset Gambar:**
+  * Nilai `id` dan `slug` sengaja **dipertahankan tetap utuh** sehingga ratusan aset foto AI yang sudah di-generate pada `web/img/recipes/polished/{slug}.jpg` tidak akan terputus (*broken links*).
+  * Judul asli Cookpad otomatis diarsipkan ke properti `original_title` sebagai riwayat data.
+  * Deskripsi analisis pasar (`business_analysis.market_demand`) otomatis disinkronkan dengan nama menu baru.
+* **Performa Tinggi:** Menggunakan sistem *batching* (10 resep per request) dengan output JSON murni (`responseMimeType: "application/json"`).
+
+##### Command yang dapat dijalankan:
+```bash
+# 1. Mode Dry-Run (Pratinjau perubahan judul tanpa mengubah berkas di disk)
+node scripts/polish-titles.js --dry-run --limit 5
+
+# 2. Uji Coba Batch Kecil (5-10 resep pertama)
+node scripts/polish-titles.js --limit 10
+
+# 3. Eksekusi Penuh untuk Seluruh Resep di Draft (Membaca GEMINI_API_KEY dari .env)
+node scripts/polish-titles.js
+
+# 4. Eksekusi dengan menyertakan API Key langsung via CLI Flag
+node scripts/polish-titles.js --key <GEMINI_API_KEY>
+```
+
+---
+
 #### Langkah 4: Kurasi Visual Lokal & Hard Delete via Web Admin
 * Buka browser di URL: **`http://localhost:3000/experience?admin=true`**
 * **Review Visual Grounding Berdampingan:** Pada tab **"📸 Promo Siap Share"**, bandingkan foto asli Cookpad vs hasil polesan AI secara *side-by-side*:
@@ -466,6 +494,7 @@ node scripts/release.js
 | [`scripts/fetch-cookpad.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/fetch-cookpad.js) | ✅ Terverifikasi | Multi-page search scraping, JSON-LD Schema.org parser, ekstraksi porsi `recipeYield`, kalkulasi modal awal via kamus benchmark, merge anti-duplikat. |
 | [`scripts/ingredient-dictionary.json`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/ingredient-dictionary.json) | ✅ Terverifikasi | 60+ kata kunci bahan pokok & jajanan street-food Indonesia, mencegah nilai `NaN` pada kalkulator HPP. |
 | [`scripts/polish-image.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/polish-image.js) | ✅ Terverifikasi | Strict Grounding Prompt (anti-halusinasi bentuk/wadah), multi-provider AI (Cloudflare Workers AI FLUX.1-schnell & SDXL, Google Gemini Flash Image, Imagen), pembacaan otomatis `.env`, dukungan `--batch`, `--limit`, `--cf-token`, `--cf-account`, `--key`, `--fallback-source`, dan `--use-source`. |
+| [`scripts/polish-titles.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/polish-titles.js) | ✅ Terverifikasi | Copywriting menu komersial via Gemini API batching, eliminasi noise UGC Cookpad, preservasi keutuhan `id`/`slug` & aset gambar, arsip `original_title`, dan update deskripsi analisis pasar. |
 | [`web/experience.html`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/web/experience.html) | ✅ Terverifikasi | Toolbar Admin kurasi, banner info localhost, antarmuka kartu resep responsif, panel visual grounding, dan pagination bar UI. |
 | [`web/js/experience.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/web/js/experience.js) | ✅ Terverifikasi | On-demand RTDB Cursor Pagination (`PAGE_SIZE = 5`, `limitToFirst(6)`), On-demand Category query, Realtime HPP calculator engine, dynamic accordion & tabs, Hard Delete event listeners. |
 | [`database.rules.json`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/database.rules.json) | ✅ Terverifikasi | Keamanan read publik pada `/posts`, write-protection, indexing performa tinggi pada `.indexOn: ["published", "category"]`. |

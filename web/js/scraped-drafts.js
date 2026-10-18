@@ -2,7 +2,7 @@ window.SCRAPED_DRAFTS = {
   "mini-spaghetti-ekonomis-untuk-jualan-2ribuan": {
     "id": "mini-spaghetti-ekonomis-untuk-jualan-2ribuan",
     "slug": "mini-spaghetti-ekonomis-untuk-jualan-2ribuan",
-    "title": "Mini spaghetti ekonomis untuk jualan 2ribuan",
+    "title": "Spaghetti Mini Saus Sosis",
     "source_url": "https://cookpad.com/id/resep/26729440",
     "excerpt": "Resep ide jualan modal ~Rp 39.000, hasil 25 porsi (25 mika).",
     "category": "gorengan",
@@ -17,7 +17,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "25 mika",
     "default_portions": 25,
     "business_analysis": {
-      "market_demand": "Tinggi — Mini spaghetti ekonomis untuk jualan 2ribuan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Spaghetti Mini Saus Sosis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 39000
@@ -102,12 +102,15 @@ window.SCRAPED_DRAFTS = {
       "mode": "cloudflare_flux",
       "polished_at": "2026-10-18T01:50:40.928Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Mini spaghetti ekonomis untuk jualan 2ribuan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:03:06.493Z"
   },
   "tteokpokkitopokki-ekonomis-untuk-jualan-harga-2ribu": {
     "id": "tteokpokkitopokki-ekonomis-untuk-jualan-harga-2ribu",
     "slug": "tteokpokkitopokki-ekonomis-untuk-jualan-harga-2ribu",
-    "title": "Tteokpokki/Topokki ekonomis untuk jualan harga 2ribu",
+    "title": "Tteokbokki Kenyal Ekonomis",
     "source_url": "https://cookpad.com/id/resep/26721382",
     "excerpt": "Resep ide jualan modal ~Rp 32.500, hasil 30 porsi (30 mika).",
     "category": "jajanan-sekolah",
@@ -122,7 +125,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "30 mika",
     "default_portions": 30,
     "business_analysis": {
-      "market_demand": "Tinggi — Tteokpokki/Topokki ekonomis untuk jualan harga 2ribu memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Tteokbokki Kenyal Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 32500
@@ -229,16 +232,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/ef8046dfcb4daa15/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/tteokpokkitopokki-ekonomis-untuk-jualan-harga-2ribu.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:06.468Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Tteokpokki/Topokki ekonomis untuk jualan harga 2ribu",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:36.268Z"
   },
   "cara-membuat-sostel-atau-sosis-telur-mudah-dan-ide-jualan": {
     "id": "cara-membuat-sostel-atau-sosis-telur-mudah-dan-ide-jualan",
     "slug": "cara-membuat-sostel-atau-sosis-telur-mudah-dan-ide-jualan",
-    "title": "Cara Membuat Sostel Atau Sosis Telur Mudah Dan Ide Jualan",
+    "title": "Sosis Telur Sayur Gurih",
     "source_url": "https://cookpad.com/id/resep/26717009",
     "excerpt": "Resep ide jualan modal ~Rp 29.000, hasil 10 porsi (10 bungkus).",
     "category": "minuman",
@@ -252,7 +260,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 bungkus",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Cara Membuat Sostel Atau Sosis Telur Mudah Dan Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Sosis Telur Sayur Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 29000
@@ -332,16 +340,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/ecbb73fdc9aa39f9/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cara-membuat-sostel-atau-sosis-telur-mudah-dan-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:11.157Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cara Membuat Sostel Atau Sosis Telur Mudah Dan Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:36.268Z"
   },
   "cara-membuat-kue-turon-khas-filipina-cocok-buat-ide-jualan-rp1000": {
     "id": "cara-membuat-kue-turon-khas-filipina-cocok-buat-ide-jualan-rp1000",
     "slug": "cara-membuat-kue-turon-khas-filipina-cocok-buat-ide-jualan-rp1000",
-    "title": "Cara Membuat Kue Turon Khas Filipina, Cocok Buat Ide Jualan Rp.1000",
+    "title": "Turon Pisang Nangka Crispy",
     "source_url": "https://cookpad.com/id/resep/26400747",
     "excerpt": "Resep ide jualan modal ~Rp 31.000, hasil 10 porsi (10 buah).",
     "category": "kue",
@@ -356,7 +369,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 buah",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Cara Membuat Kue Turon Khas Filipina, Cocok Buat Ide Jualan Rp.1000 memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Turon Pisang Nangka Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 31000
@@ -419,16 +432,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/3d453513d3de278e/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cara-membuat-kue-turon-khas-filipina-cocok-buat-ide-jualan-rp1000.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:17.201Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cara Membuat Kue Turon Khas Filipina, Cocok Buat Ide Jualan Rp.1000",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:36.268Z"
   },
   "es-cokelat-jelly-resep-jualan": {
     "id": "es-cokelat-jelly-resep-jualan",
     "slug": "es-cokelat-jelly-resep-jualan",
-    "title": "Es cokelat jelly (resep jualan)",
+    "title": "Es Cokelat Jelly Creamy",
     "source_url": "https://cookpad.com/id/resep/23897609",
     "excerpt": "Resep ide jualan modal ~Rp 33.000, hasil 20 porsi (20 orang).",
     "category": "minuman",
@@ -442,7 +460,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 orang",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Es cokelat jelly (resep jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Cokelat Jelly Creamy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 33000
@@ -505,16 +523,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/86c48621478d70d0/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/es-cokelat-jelly-resep-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:21.560Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Es cokelat jelly (resep jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:36.268Z"
   },
   "pie-susu-ekonomis-ide-jualan": {
     "id": "pie-susu-ekonomis-ide-jualan",
     "slug": "pie-susu-ekonomis-ide-jualan",
-    "title": "Pie Susu Ekonomis, ide jualan",
+    "title": "Pie Susu Mini Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24507079",
     "excerpt": "Resep ide jualan modal ~Rp 21.500, hasil 14 porsi (14-18 pc).",
     "category": "minuman",
@@ -529,7 +552,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "14-18 pc",
     "default_portions": 14,
     "business_analysis": {
-      "market_demand": "Tinggi — Pie Susu Ekonomis, ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Pie Susu Mini Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 21500
@@ -597,16 +620,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/74794b214e9bad3d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/pie-susu-ekonomis-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:25.819Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Pie Susu Ekonomis, ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:36.268Z"
   },
   "sosis-solo-resep-jualan": {
     "id": "sosis-solo-resep-jualan",
     "slug": "sosis-solo-resep-jualan",
-    "title": "Sosis Solo (Resep Jualan)",
+    "title": "Sosis Solo Goreng Gurih",
     "source_url": "https://cookpad.com/id/resep/26419410",
     "excerpt": "Resep ide jualan modal ~Rp 11.000, hasil 45 porsi (45pcs).",
     "category": "gorengan",
@@ -620,7 +648,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "45pcs",
     "default_portions": 45,
     "business_analysis": {
-      "market_demand": "Tinggi — Sosis Solo (Resep Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Sosis Solo Goreng Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 11000
@@ -672,16 +700,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6a10b636aa67fc25/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/sosis-solo-resep-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:30.596Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Sosis Solo (Resep Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:36.268Z"
   },
   "janda-genit-premium-resep-andalan-untuk-jualan": {
     "id": "janda-genit-premium-resep-andalan-untuk-jualan",
     "slug": "janda-genit-premium-resep-andalan-untuk-jualan",
-    "title": "Janda Genit Premium – Resep Andalan untuk Jualan",
+    "title": "Kue Janda Genit Premium",
     "source_url": "https://cookpad.com/id/resep/26594862",
     "excerpt": "Resep ide jualan modal ~Rp 37.500, hasil 1 porsi (± 1 toples ukuran 500–600 gram).",
     "category": "gorengan",
@@ -695,7 +728,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "± 1 toples ukuran 500–600 gram",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Janda Genit Premium – Resep Andalan untuk Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Janda Genit Premium memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 37500
@@ -773,16 +806,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/1c5f6b740c3fe23d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/janda-genit-premium-resep-andalan-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:35.100Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Janda Genit Premium – Resep Andalan untuk Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:36.268Z"
   },
   "es-matcha-latte-ide-jualan": {
     "id": "es-matcha-latte-ide-jualan",
     "slug": "es-matcha-latte-ide-jualan",
-    "title": "Es Matcha Latte (ide jualan)",
+    "title": "Es Matcha Latte Creamy",
     "source_url": "https://cookpad.com/id/resep/25805641",
     "excerpt": "Resep ide jualan modal ~Rp 17.500, hasil 8 porsi (8 Botol).",
     "category": "minuman",
@@ -796,7 +834,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "8 Botol",
     "default_portions": 8,
     "business_analysis": {
-      "market_demand": "Tinggi — Es Matcha Latte (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Matcha Latte Creamy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 17500
@@ -840,16 +878,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/ec7904530b5ac76d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/es-matcha-latte-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:39.445Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Es Matcha Latte (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:36.268Z"
   },
   "bolu-jadul-lembut-resep-bakulan-yang-pernah-laris": {
     "id": "bolu-jadul-lembut-resep-bakulan-yang-pernah-laris",
     "slug": "bolu-jadul-lembut-resep-bakulan-yang-pernah-laris",
-    "title": "Bolu Jadul Lembut, Resep Bakulan yang Pernah Laris 🍰",
+    "title": "Bolu Panggang Jadul Lembut",
     "source_url": "https://cookpad.com/id/resep/26576358",
     "excerpt": "Resep ide jualan modal ~Rp 19.500, hasil 1 porsi (1 loyang ukuran 20cm).",
     "category": "minuman",
@@ -863,7 +906,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 loyang ukuran 20cm",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Bolu Jadul Lembut, Resep Bakulan yang Pernah Laris 🍰 memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bolu Panggang Jadul Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 19500
@@ -924,16 +967,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/7ee203d5a24e229b/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bolu-jadul-lembut-resep-bakulan-yang-pernah-laris.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:43.596Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bolu Jadul Lembut, Resep Bakulan yang Pernah Laris 🍰",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:36.268Z"
   },
   "dadar-gulung-isi-srikaya-ide-jualan": {
     "id": "dadar-gulung-isi-srikaya-ide-jualan",
     "slug": "dadar-gulung-isi-srikaya-ide-jualan",
-    "title": "Dadar Gulung isi Srikaya (ide jualan)",
+    "title": "Dadar Gulung Srikaya Lumer",
     "source_url": "https://cookpad.com/id/resep/26572778",
     "excerpt": "Resep ide jualan modal ~Rp 45.000, hasil 20 porsi (20 porsi).",
     "category": "kue",
@@ -947,7 +995,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Dadar Gulung isi Srikaya (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Dadar Gulung Srikaya Lumer memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 45000
@@ -1063,16 +1111,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/cc486a5ba09626fa/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/dadar-gulung-isi-srikaya-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:47.702Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Dadar Gulung isi Srikaya (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:36.268Z"
   },
   "teh-sereh-ide-jualan": {
     "id": "teh-sereh-ide-jualan",
     "slug": "teh-sereh-ide-jualan",
-    "title": "Teh Sereh (Ide Jualan)",
+    "title": "Teh Sereh Jahe Segar",
     "source_url": "https://cookpad.com/id/resep/26485983",
     "excerpt": "Resep ide jualan modal ~Rp 11.000, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -1086,7 +1139,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Teh Sereh (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Teh Sereh Jahe Segar memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 11000
@@ -1136,16 +1189,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6d043c965e926317/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/teh-sereh-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:52.472Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Teh Sereh (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:22.303Z"
   },
   "resep-atau-cara-membuat-stik-mie-rumahan-cocok-buat-ide-jualan": {
     "id": "resep-atau-cara-membuat-stik-mie-rumahan-cocok-buat-ide-jualan",
     "slug": "resep-atau-cara-membuat-stik-mie-rumahan-cocok-buat-ide-jualan",
-    "title": "Resep atau Cara Membuat Stik Mie Rumahan Cocok Buat Ide Jualan",
+    "title": "Stik Mie Crispy Gurih",
     "source_url": "https://cookpad.com/id/resep/26380030",
     "excerpt": "Resep ide jualan modal ~Rp 23.500, hasil 1 porsi (1 loyang).",
     "category": "gorengan",
@@ -1159,7 +1217,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 loyang",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Resep atau Cara Membuat Stik Mie Rumahan Cocok Buat Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Stik Mie Crispy Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 23500
@@ -1241,16 +1299,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/0a70032035d5f38d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/resep-atau-cara-membuat-stik-mie-rumahan-cocok-buat-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:10:56.891Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Resep atau Cara Membuat Stik Mie Rumahan Cocok Buat Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:22.304Z"
   },
   "salted-bread-dough-bisa-di-frozen-aman-buat-jualan": {
     "id": "salted-bread-dough-bisa-di-frozen-aman-buat-jualan",
     "slug": "salted-bread-dough-bisa-di-frozen-aman-buat-jualan",
-    "title": "Salted Bread - Dough bisa di Frozen (Aman buat jualan)",
+    "title": "Japanese Salted Butter Bread",
     "source_url": "https://cookpad.com/id/resep/17262285",
     "excerpt": "Resep ide jualan modal ~Rp 26.000, hasil 10 porsi (10 salted bread 46 gram).",
     "category": "minuman",
@@ -1264,7 +1327,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 salted bread 46 gram",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Salted Bread - Dough bisa di Frozen (Aman buat jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Japanese Salted Butter Bread memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 26000
@@ -1354,16 +1417,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/744080c8fcaaf6d0/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/salted-bread-dough-bisa-di-frozen-aman-buat-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:00.980Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Salted Bread - Dough bisa di Frozen (Aman buat jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:22.304Z"
   },
   "pepaya-mustofa-renyah-tahan-lama-ide-jualan": {
     "id": "pepaya-mustofa-renyah-tahan-lama-ide-jualan",
     "slug": "pepaya-mustofa-renyah-tahan-lama-ide-jualan",
-    "title": "Pepaya Mustofa Renyah Tahan Lama (Ide Jualan)",
+    "title": "Pepaya Mustofa Crispy Renyah",
     "source_url": "https://cookpad.com/id/resep/26270784",
     "excerpt": "Resep ide jualan modal ~Rp 35.500, hasil 1000 porsi (1000 gram).",
     "category": "minuman",
@@ -1377,7 +1445,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1000 gram",
     "default_portions": 1000,
     "business_analysis": {
-      "market_demand": "Tinggi — Pepaya Mustofa Renyah Tahan Lama (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Pepaya Mustofa Crispy Renyah memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 35500
@@ -1479,16 +1547,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/005cde4b08fe0124/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/pepaya-mustofa-renyah-tahan-lama-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:05.246Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Pepaya Mustofa Renyah Tahan Lama (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:22.304Z"
   },
   "resep-kue-tradisional-ongol-ongol-bihun-nanas-yang-mudah-dan-ekonomis-cocok-buat-ide-jualan": {
     "id": "resep-kue-tradisional-ongol-ongol-bihun-nanas-yang-mudah-dan-ekonomis-cocok-buat-ide-jualan",
     "slug": "resep-kue-tradisional-ongol-ongol-bihun-nanas-yang-mudah-dan-ekonomis-cocok-buat-ide-jualan",
-    "title": "Resep kue tradisional ongol-ongol bihun nanas yang mudah dan ekonomis cocok buat ide jualan",
+    "title": "Ongol-Ongol Bihun Nanas Legit",
     "source_url": "https://cookpad.com/id/resep/26260685",
     "excerpt": "Resep ide jualan modal ~Rp 17.500, hasil 1 porsi (1 loyang).",
     "category": "kue",
@@ -1503,7 +1576,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 loyang",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Resep kue tradisional ongol-ongol bihun nanas yang mudah dan ekonomis cocok buat ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Ongol-Ongol Bihun Nanas Legit memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 17500
@@ -1579,16 +1652,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/8e15e7d704212bd4/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/resep-kue-tradisional-ongol-ongol-bihun-nanas-yang-mudah-dan-ekonomis-cocok-buat-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:09.773Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Resep kue tradisional ongol-ongol bihun nanas yang mudah dan ekonomis cocok buat ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:22.304Z"
   },
   "jamu-beras-kencur-jualan": {
     "id": "jamu-beras-kencur-jualan",
     "slug": "jamu-beras-kencur-jualan",
-    "title": "Jamu Beras Kencur jualan",
+    "title": "Jamu Beras Kencur Segar",
     "source_url": "https://cookpad.com/id/resep/26138471",
     "excerpt": "Resep ide jualan modal ~Rp 19.000, hasil 10 porsi (10 botol).",
     "category": "minuman",
@@ -1602,7 +1680,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 botol",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Jamu Beras Kencur jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Jamu Beras Kencur Segar memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 19000
@@ -1678,16 +1756,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/cffa990e65e32cba/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/jamu-beras-kencur-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:14.258Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Jamu Beras Kencur jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:22.304Z"
   },
   "kunyit-asem-untuk-jualan": {
     "id": "kunyit-asem-untuk-jualan",
     "slug": "kunyit-asem-untuk-jualan",
-    "title": "Kunyit Asem untuk jualan",
+    "title": "Jamu Kunyit Asam Segar",
     "source_url": "https://cookpad.com/id/resep/26138437",
     "excerpt": "Resep ide jualan modal ~Rp 11.500, hasil 10 porsi (10 botol 200ml).",
     "category": "minuman",
@@ -1701,7 +1784,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 botol 200ml",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Kunyit Asem untuk jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Jamu Kunyit Asam Segar memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 11500
@@ -1751,16 +1834,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/c8eb26ae5e8e5e1f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kunyit-asem-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:19.052Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kunyit Asem untuk jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:22.304Z"
   },
   "ide-jualan-kue-bugis-ubi-ungu-modifikasi-kue-talam-putih-pakai-cetakan-cantik-dan-unik": {
     "id": "ide-jualan-kue-bugis-ubi-ungu-modifikasi-kue-talam-putih-pakai-cetakan-cantik-dan-unik",
     "slug": "ide-jualan-kue-bugis-ubi-ungu-modifikasi-kue-talam-putih-pakai-cetakan-cantik-dan-unik",
-    "title": "Ide Jualan Kue Bugis Ubi Ungu Modifikasi Kue Talam Putih Pakai Cetakan, Cantik dan Unik",
+    "title": "Kue Bugis Talam Ubi Ungu",
     "source_url": "https://cookpad.com/id/resep/25956451",
     "excerpt": "Resep ide jualan modal ~Rp 32.500, hasil 20 porsi (20 buah).",
     "category": "minuman",
@@ -1774,7 +1862,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 buah",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide Jualan Kue Bugis Ubi Ungu Modifikasi Kue Talam Putih Pakai Cetakan, Cantik dan Unik memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Bugis Talam Ubi Ungu memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 32500
@@ -1891,16 +1979,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/f86bbb770c057241/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-kue-bugis-ubi-ungu-modifikasi-kue-talam-putih-pakai-cetakan-cantik-dan-unik.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:23.731Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide Jualan Kue Bugis Ubi Ungu Modifikasi Kue Talam Putih Pakai Cetakan, Cantik dan Unik",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:22.304Z"
   },
   "nastar-lumer-rasa-premium-untuk-jualan": {
     "id": "nastar-lumer-rasa-premium-untuk-jualan",
     "slug": "nastar-lumer-rasa-premium-untuk-jualan",
-    "title": "Nastar Lumer Rasa Premium Untuk Jualan",
+    "title": "Nastar Butter Lumer Premium",
     "source_url": "https://cookpad.com/id/resep/25473207",
     "excerpt": "Resep ide jualan modal ~Rp 32.500, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -1914,7 +2007,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Nastar Lumer Rasa Premium Untuk Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Nastar Butter Lumer Premium memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 32500
@@ -2009,16 +2102,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/3d6f99cea2613f97/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/nastar-lumer-rasa-premium-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:27.983Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Nastar Lumer Rasa Premium Untuk Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:22.304Z"
   },
   "brownies-ketan-hitam-kukus-resep-jualan": {
     "id": "brownies-ketan-hitam-kukus-resep-jualan",
     "slug": "brownies-ketan-hitam-kukus-resep-jualan",
-    "title": "Brownies Ketan Hitam Kukus (resep Jualan)",
+    "title": "Brownies Kukus Ketan Hitam Lembut",
     "source_url": "https://cookpad.com/id/resep/25825240",
     "excerpt": "Resep ide jualan modal ~Rp 34.000, hasil 20 porsi (20 potong).",
     "category": "minuman",
@@ -2032,7 +2130,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 potong",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Brownies Ketan Hitam Kukus (resep Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Brownies Kukus Ketan Hitam Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 34000
@@ -2114,16 +2212,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/596d7e8f02ebcecd/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/brownies-ketan-hitam-kukus-resep-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:32.146Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Brownies Ketan Hitam Kukus (resep Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:22.304Z"
   },
   "cara-membuat-kue-lemet-pisang-atau-papais-pisang-tepung-ketan-putih-rumahan-cocok-buat-ide-jualan": {
     "id": "cara-membuat-kue-lemet-pisang-atau-papais-pisang-tepung-ketan-putih-rumahan-cocok-buat-ide-jualan",
     "slug": "cara-membuat-kue-lemet-pisang-atau-papais-pisang-tepung-ketan-putih-rumahan-cocok-buat-ide-jualan",
-    "title": "Cara Membuat Kue Lemet Pisang atau Papais Pisang Tepung Ketan Putih Rumahan Cocok Buat Ide Jualan",
+    "title": "Lemet Pisang Tradisional Legit",
     "source_url": "https://cookpad.com/id/resep/25820747",
     "excerpt": "Resep ide jualan modal ~Rp 15.000, hasil 24 porsi (24 buah).",
     "category": "kue",
@@ -2137,7 +2240,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "24 buah",
     "default_portions": 24,
     "business_analysis": {
-      "market_demand": "Tinggi — Cara Membuat Kue Lemet Pisang atau Papais Pisang Tepung Ketan Putih Rumahan Cocok Buat Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Lemet Pisang Tradisional Legit memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 15000
@@ -2197,16 +2300,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/a955323bb4a5c12a/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cara-membuat-kue-lemet-pisang-atau-papais-pisang-tepung-ketan-putih-rumahan-cocok-buat-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:39.588Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cara Membuat Kue Lemet Pisang atau Papais Pisang Tepung Ketan Putih Rumahan Cocok Buat Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:32.195Z"
   },
   "cara-membuat-kue-keranjang-atau-kue-dodol-cina-gampang-cocok-buat-ide-jualan": {
     "id": "cara-membuat-kue-keranjang-atau-kue-dodol-cina-gampang-cocok-buat-ide-jualan",
     "slug": "cara-membuat-kue-keranjang-atau-kue-dodol-cina-gampang-cocok-buat-ide-jualan",
-    "title": "Cara Membuat Kue Keranjang atau Kue Dodol Cina Gampang Cocok Buat Ide Jualan",
+    "title": "Kue Keranjang Manis Legit",
     "source_url": "https://cookpad.com/id/resep/25817735",
     "excerpt": "Resep ide jualan modal ~Rp 19.500, hasil 20 porsi (20 buah).",
     "category": "kue",
@@ -2220,7 +2328,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 buah",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Cara Membuat Kue Keranjang atau Kue Dodol Cina Gampang Cocok Buat Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Keranjang Manis Legit memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 19500
@@ -2289,16 +2397,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/cfab9bd87bc54afd/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cara-membuat-kue-keranjang-atau-kue-dodol-cina-gampang-cocok-buat-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:44.262Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cara Membuat Kue Keranjang atau Kue Dodol Cina Gampang Cocok Buat Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:32.195Z"
   },
   "thai-tea-ala-dum-dum-ide-jualan": {
     "id": "thai-tea-ala-dum-dum-ide-jualan",
     "slug": "thai-tea-ala-dum-dum-ide-jualan",
-    "title": "Thai Tea ala Dum Dum (Ide Jualan)",
+    "title": "Thai Tea Creamy Original",
     "source_url": "https://cookpad.com/id/resep/25805761",
     "excerpt": "Resep ide jualan modal ~Rp 11.000, hasil 8 porsi (8 porsi).",
     "category": "minuman",
@@ -2312,7 +2425,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "8 porsi",
     "default_portions": 8,
     "business_analysis": {
-      "market_demand": "Tinggi — Thai Tea ala Dum Dum (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Thai Tea Creamy Original memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 11000
@@ -2356,16 +2469,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6725367092200264/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/thai-tea-ala-dum-dum-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:48.771Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Thai Tea ala Dum Dum (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:32.196Z"
   },
   "marble-cake-jualan": {
     "id": "marble-cake-jualan",
     "slug": "marble-cake-jualan",
-    "title": "Marble Cake Jualan",
+    "title": "Classic Marble Butter Cake",
     "source_url": "https://cookpad.com/id/resep/25782953",
     "excerpt": "Resep ide jualan modal ~Rp 41.500, hasil 20 porsi (20 porsi).",
     "category": "kue",
@@ -2379,7 +2497,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Marble Cake Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Classic Marble Butter Cake memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 41500
@@ -2467,16 +2585,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/64b221df10c022cb/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/marble-cake-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:53.132Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Marble Cake Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:32.196Z"
   },
   "brownies-kukus-cocok-untuk-jualan": {
     "id": "brownies-kukus-cocok-untuk-jualan",
     "slug": "brownies-kukus-cocok-untuk-jualan",
-    "title": "Brownies Kukus Cocok Untuk Jualan",
+    "title": "Brownies Kukus Cokelat Lumer",
     "source_url": "https://cookpad.com/id/resep/25708444",
     "excerpt": "Resep ide jualan modal ~Rp 31.500, hasil 1 porsi (1 loyang jadi 4 kotak).",
     "category": "minuman",
@@ -2490,7 +2613,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 loyang jadi 4 kotak",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Brownies Kukus Cocok Untuk Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Brownies Kukus Cokelat Lumer memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 31500
@@ -2563,16 +2686,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b662594ecac54999/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/brownies-kukus-cocok-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:11:57.710Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Brownies Kukus Cocok Untuk Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:32.196Z"
   },
   "fudgie-brownies-resep-jualan": {
     "id": "fudgie-brownies-resep-jualan",
     "slug": "fudgie-brownies-resep-jualan",
-    "title": "Fudgie Brownies (Resep Jualan)",
+    "title": "Shiny Fudgy Brownies Panggang",
     "source_url": "https://cookpad.com/id/resep/25694608",
     "excerpt": "Resep ide jualan modal ~Rp 39.500, hasil 25 porsi (25 potong).",
     "category": "minuman",
@@ -2586,7 +2714,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "25 potong",
     "default_portions": 25,
     "business_analysis": {
-      "market_demand": "Tinggi — Fudgie Brownies (Resep Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Shiny Fudgy Brownies Panggang memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 39500
@@ -2658,16 +2786,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/5a5908614ac838c8/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/fudgie-brownies-resep-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:02.228Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Fudgie Brownies (Resep Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:32.196Z"
   },
   "batagor-jualan-super-enak": {
     "id": "batagor-jualan-super-enak",
     "slug": "batagor-jualan-super-enak",
-    "title": "Batagor Jualan Super Enak",
+    "title": "Batagor Crispy Bumbu Kacang",
     "source_url": "https://cookpad.com/id/resep/25476484",
     "excerpt": "Resep ide jualan modal ~Rp 36.500, hasil 17 porsi (17-20 kemasan, 1 porsi 5k.).",
     "category": "gorengan",
@@ -2681,7 +2814,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "17-20 kemasan, 1 porsi 5k.",
     "default_portions": 17,
     "business_analysis": {
-      "market_demand": "Tinggi — Batagor Jualan Super Enak memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Batagor Crispy Bumbu Kacang memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 36500
@@ -2802,16 +2935,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6c856cc205bbb0eb/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/batagor-jualan-super-enak.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:06.770Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Batagor Jualan Super Enak",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:32.196Z"
   },
   "bumbu-pecel-awet-cocok-untuk-ide-jualan": {
     "id": "bumbu-pecel-awet-cocok-untuk-ide-jualan",
     "slug": "bumbu-pecel-awet-cocok-untuk-ide-jualan",
-    "title": "Bumbu pecel awet cocok untuk ide jualan",
+    "title": "Bumbu Pecel Kacang Gurih",
     "source_url": "https://cookpad.com/id/resep/25456668",
     "excerpt": "Resep ide jualan modal ~Rp 18.500, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -2825,7 +2963,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Bumbu pecel awet cocok untuk ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bumbu Pecel Kacang Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 18500
@@ -2903,16 +3041,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e750bccc8f272fd8/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bumbu-pecel-awet-cocok-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:11.338Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bumbu pecel awet cocok untuk ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:32.196Z"
   },
   "biji-salak-ubi-ungu-ide-berbagi-ide-jualan": {
     "id": "biji-salak-ubi-ungu-ide-berbagi-ide-jualan",
     "slug": "biji-salak-ubi-ungu-ide-berbagi-ide-jualan",
-    "title": "Biji Salak Ubi Ungu (Ide Berbagi & Ide Jualan)",
+    "title": "Kolak Biji Salak Ubi Ungu",
     "source_url": "https://cookpad.com/id/resep/25449762",
     "excerpt": "Resep ide jualan modal ~Rp 32.500, hasil 21 porsi (21 cup @200 ml).",
     "category": "minuman",
@@ -2926,7 +3069,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "21 cup @200 ml",
     "default_portions": 21,
     "business_analysis": {
-      "market_demand": "Tinggi — Biji Salak Ubi Ungu (Ide Berbagi & Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kolak Biji Salak Ubi Ungu memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 32500
@@ -3041,16 +3184,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/31fbdbf71be44478/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/biji-salak-ubi-ungu-ide-berbagi-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:15.502Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Biji Salak Ubi Ungu (Ide Berbagi & Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:32.196Z"
   },
   "ide-jualan-unik-keripik-pangsit-balado-hijau": {
     "id": "ide-jualan-unik-keripik-pangsit-balado-hijau",
     "slug": "ide-jualan-unik-keripik-pangsit-balado-hijau",
-    "title": "Ide Jualan Unik Keripik Pangsit Balado Hijau",
+    "title": "Keripik Pangsit Balado Hijau Crispy",
     "source_url": "https://cookpad.com/id/resep/25444562",
     "excerpt": "Resep ide jualan modal ~Rp 17.000, hasil 3 porsi (3 toples).",
     "category": "gorengan",
@@ -3064,7 +3212,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "3 toples",
     "default_portions": 3,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide Jualan Unik Keripik Pangsit Balado Hijau memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Keripik Pangsit Balado Hijau Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 17000
@@ -3099,16 +3247,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/884d9f05c24730bc/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-unik-keripik-pangsit-balado-hijau.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:19.813Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide Jualan Unik Keripik Pangsit Balado Hijau",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:32.196Z"
   },
   "corndog-ekonomis-ide-jualan-2000an": {
     "id": "corndog-ekonomis-ide-jualan-2000an",
     "slug": "corndog-ekonomis-ide-jualan-2000an",
-    "title": "Corndog Ekonomis Ide Jualan 2000an",
+    "title": "Corndog Crispy Ekonomis",
     "source_url": "https://cookpad.com/id/resep/25432680",
     "excerpt": "Resep ide jualan modal ~Rp 42.000, hasil 12 porsi (12 pcs ukuran sedang).",
     "category": "gorengan",
@@ -3123,7 +3276,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "12 pcs ukuran sedang",
     "default_portions": 12,
     "business_analysis": {
-      "market_demand": "Tinggi — Corndog Ekonomis Ide Jualan 2000an memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Corndog Crispy Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 42000
@@ -3220,16 +3373,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/9271b5b5cf19e7a7/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/corndog-ekonomis-ide-jualan-2000an.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:24.192Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Corndog Ekonomis Ide Jualan 2000an",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:43.212Z"
   },
   "271-es-bongko-khas-pontianak-bisa-untuk-takjil-ide-jualan": {
     "id": "271-es-bongko-khas-pontianak-bisa-untuk-takjil-ide-jualan",
     "slug": "271-es-bongko-khas-pontianak-bisa-untuk-takjil-ide-jualan",
-    "title": "271. ES BONGKO KHAS PONTIANAK | BISA UNTUK TAKJIL & IDE JUALAN",
+    "title": "Es Bongko Khas Pontianak",
     "source_url": "https://cookpad.com/id/resep/25420385",
     "excerpt": "Resep ide jualan modal ~Rp 41.500, hasil 4 porsi (4 Porsi).",
     "category": "minuman",
@@ -3243,7 +3401,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "4 Porsi",
     "default_portions": 4,
     "business_analysis": {
-      "market_demand": "Tinggi — 271. ES BONGKO KHAS PONTIANAK | BISA UNTUK TAKJIL & IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Bongko Khas Pontianak memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 41500
@@ -3373,16 +3531,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6c89da7d5414c55b/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/271-es-bongko-khas-pontianak-bisa-untuk-takjil-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:29.066Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "271. ES BONGKO KHAS PONTIANAK | BISA UNTUK TAKJIL & IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:43.212Z"
   },
   "risol-ayam-lada-hitam-resep-jualan": {
     "id": "risol-ayam-lada-hitam-resep-jualan",
     "slug": "risol-ayam-lada-hitam-resep-jualan",
-    "title": "Risol Ayam Lada Hitam (Resep Jualan)",
+    "title": "Risol Ayam Lada Hitam",
     "source_url": "https://cookpad.com/id/resep/25381300",
     "excerpt": "Resep ide jualan modal ~Rp 62.000, hasil 40 porsi (40 pieces kurang lebih).",
     "category": "gorengan",
@@ -3396,7 +3559,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "40 pieces kurang lebih",
     "default_portions": 40,
     "business_analysis": {
-      "market_demand": "Tinggi — Risol Ayam Lada Hitam (Resep Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Risol Ayam Lada Hitam memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 62000
@@ -3549,16 +3712,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/21320acc6ae0aec3/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/risol-ayam-lada-hitam-resep-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:33.886Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Risol Ayam Lada Hitam (Resep Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:43.212Z"
   },
   "ayam-bakar-pedas-menu-bakulan": {
     "id": "ayam-bakar-pedas-menu-bakulan",
     "slug": "ayam-bakar-pedas-menu-bakulan",
-    "title": "Ayam Bakar Pedas / Menu Bakulan",
+    "title": "Ayam Bakar Bumbu Pedas",
     "source_url": "https://cookpad.com/id/resep/25372854",
     "excerpt": "Resep ide jualan modal ~Rp 46.000, hasil 8 porsi (8 potong).",
     "category": "jajanan-sekolah",
@@ -3572,7 +3740,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "8 potong",
     "default_portions": 8,
     "business_analysis": {
-      "market_demand": "Tinggi — Ayam Bakar Pedas / Menu Bakulan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Ayam Bakar Bumbu Pedas memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 46000
@@ -3690,16 +3858,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/967956dee4b0d39f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ayam-bakar-pedas-menu-bakulan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:39.283Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ayam Bakar Pedas / Menu Bakulan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:43.213Z"
   },
   "mie-ayam-lampung-resep-jualan": {
     "id": "mie-ayam-lampung-resep-jualan",
     "slug": "mie-ayam-lampung-resep-jualan",
-    "title": "Mie Ayam Lampung (Resep Jualan)",
+    "title": "Mie Ayam Khas Lampung",
     "source_url": "https://cookpad.com/id/resep/25364931",
     "excerpt": "Resep ide jualan modal ~Rp 63.000, hasil 12 porsi (12 porsi).",
     "category": "jajanan-sekolah",
@@ -3713,7 +3886,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "12 porsi",
     "default_portions": 12,
     "business_analysis": {
-      "market_demand": "Tinggi — Mie Ayam Lampung (Resep Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Mie Ayam Khas Lampung memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 63000
@@ -3870,16 +4043,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/189bcec4d71ac6cb/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/mie-ayam-lampung-resep-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:43.476Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Mie Ayam Lampung (Resep Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:43.213Z"
   },
   "resep-keripik-tempe-pelangi-awet-2-bulan-ide-usaha-laris-manis": {
     "id": "resep-keripik-tempe-pelangi-awet-2-bulan-ide-usaha-laris-manis",
     "slug": "resep-keripik-tempe-pelangi-awet-2-bulan-ide-usaha-laris-manis",
-    "title": "RESEP KERIPIK TEMPE PELANGI AWET 2 BULAN | IDE USAHA LARIS MANIS",
+    "title": "Keripik Tempe Pelangi Crispy",
     "source_url": "https://cookpad.com/id/resep/24789418",
     "excerpt": "Resep ide jualan modal ~Rp 13.500, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -3893,7 +4071,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — RESEP KERIPIK TEMPE PELANGI AWET 2 BULAN | IDE USAHA LARIS MANIS memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Keripik Tempe Pelangi Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 13500
@@ -3956,16 +4134,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/04f7b624e1467113/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/resep-keripik-tempe-pelangi-awet-2-bulan-ide-usaha-laris-manis.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:47.583Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "RESEP KERIPIK TEMPE PELANGI AWET 2 BULAN | IDE USAHA LARIS MANIS",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:43.213Z"
   },
   "cheese-chicken-nugget-ide-jualan": {
     "id": "cheese-chicken-nugget-ide-jualan",
     "slug": "cheese-chicken-nugget-ide-jualan",
-    "title": "Cheese Chicken Nugget (Ide Jualan)",
+    "title": "Cheese Chicken Nugget Crispy",
     "source_url": "https://cookpad.com/id/resep/25354162",
     "excerpt": "Resep ide jualan modal ~Rp 41.000, hasil 40 porsi (40 buah).",
     "category": "kue",
@@ -3979,7 +4162,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "40 buah",
     "default_portions": 40,
     "business_analysis": {
-      "market_demand": "Tinggi — Cheese Chicken Nugget (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Cheese Chicken Nugget Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 41000
@@ -4068,16 +4251,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/fd7426602e5f730d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cheese-chicken-nugget-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:52.585Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cheese Chicken Nugget (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:43.213Z"
   },
   "265-bola-bola-pisang-keju-lumer-bisa-untuk-ide-jualan": {
     "id": "265-bola-bola-pisang-keju-lumer-bisa-untuk-ide-jualan",
     "slug": "265-bola-bola-pisang-keju-lumer-bisa-untuk-ide-jualan",
-    "title": "265. BOLA-BOLA PISANG KEJU LUMER || BISA UNTUK IDE JUALAN",
+    "title": "Bola Pisang Keju Lumer",
     "source_url": "https://cookpad.com/id/resep/24901644",
     "excerpt": "Resep ide jualan modal ~Rp 48.000, hasil 17 porsi (17 pcs).",
     "category": "gorengan",
@@ -4091,7 +4279,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "17 pcs",
     "default_portions": 17,
     "business_analysis": {
-      "market_demand": "Tinggi — 265. BOLA-BOLA PISANG KEJU LUMER || BISA UNTUK IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bola Pisang Keju Lumer memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 48000
@@ -4182,16 +4370,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/24be8c0e97f57057/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/265-bola-bola-pisang-keju-lumer-bisa-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:12:56.816Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "265. BOLA-BOLA PISANG KEJU LUMER || BISA UNTUK IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:43.213Z"
   },
   "odeng-udang-dengan-kuah-kaldu-udang-cocok-untuk-ide-bisnis": {
     "id": "odeng-udang-dengan-kuah-kaldu-udang-cocok-untuk-ide-bisnis",
     "slug": "odeng-udang-dengan-kuah-kaldu-udang-cocok-untuk-ide-bisnis",
-    "title": "Odeng Udang Dengan Kuah Kaldu Udang (Cocok Untuk Ide Bisnis)",
+    "title": "Odeng Udang Kuah Kaldu",
     "source_url": "https://cookpad.com/id/resep/25304581",
     "excerpt": "Resep ide jualan modal ~Rp 64.500, hasil 20 porsi (20 porsi).",
     "category": "gorengan",
@@ -4205,7 +4398,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Odeng Udang Dengan Kuah Kaldu Udang (Cocok Untuk Ide Bisnis) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Odeng Udang Kuah Kaldu memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 64500
@@ -4373,16 +4566,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/754cec4051b5e64c/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/odeng-udang-dengan-kuah-kaldu-udang-cocok-untuk-ide-bisnis.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:02.231Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Odeng Udang Dengan Kuah Kaldu Udang (Cocok Untuk Ide Bisnis)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:43.213Z"
   },
   "kue-bawang-super-enak-renyah-dan-gurih-cocok-untuk-ide-bisnis": {
     "id": "kue-bawang-super-enak-renyah-dan-gurih-cocok-untuk-ide-bisnis",
     "slug": "kue-bawang-super-enak-renyah-dan-gurih-cocok-untuk-ide-bisnis",
-    "title": "Kue Bawang Super Enak, Renyah dan Gurih Cocok Untuk Ide Bisnis",
+    "title": "Kue Bawang Renyah Gurih",
     "source_url": "https://cookpad.com/id/resep/25323114",
     "excerpt": "Resep ide jualan modal ~Rp 51.000, hasil 20 porsi (20 porsi).",
     "category": "kue",
@@ -4396,7 +4594,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Kue Bawang Super Enak, Renyah dan Gurih Cocok Untuk Ide Bisnis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Bawang Renyah Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 51000
@@ -4505,16 +4703,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/9895dda77dc84002/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kue-bawang-super-enak-renyah-dan-gurih-cocok-untuk-ide-bisnis.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:06.986Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kue Bawang Super Enak, Renyah dan Gurih Cocok Untuk Ide Bisnis",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:43.213Z"
   },
   "bolu-pisang-kukus-ide-jualan": {
     "id": "bolu-pisang-kukus-ide-jualan",
     "slug": "bolu-pisang-kukus-ide-jualan",
-    "title": "Bolu pisang kukus (ide jualan)",
+    "title": "Bolu Pisang Kukus Lembut",
     "source_url": "https://cookpad.com/id/resep/24979056",
     "excerpt": "Resep ide jualan modal ~Rp 31.000, hasil 31 porsi (31 pcs).",
     "category": "minuman",
@@ -4528,7 +4731,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "31 pcs",
     "default_portions": 31,
     "business_analysis": {
-      "market_demand": "Tinggi — Bolu pisang kukus (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bolu Pisang Kukus Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 31000
@@ -4598,16 +4801,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b984c41d461b7436/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bolu-pisang-kukus-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:11.749Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bolu pisang kukus (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:57.578Z"
   },
   "262-tteokbokki-rice-paper-mozzarella-cocok-untuk-ide-jualan": {
     "id": "262-tteokbokki-rice-paper-mozzarella-cocok-untuk-ide-jualan",
     "slug": "262-tteokbokki-rice-paper-mozzarella-cocok-untuk-ide-jualan",
-    "title": "262. TTEOKBOKKI RICE PAPER MOZZARELLA || COCOK UNTUK IDE JUALAN",
+    "title": "Tteokbokki Rice Paper Mozzarella",
     "source_url": "https://cookpad.com/id/resep/24329939",
     "excerpt": "Resep ide jualan modal ~Rp 36.500, hasil 2 porsi (2 Porsi).",
     "category": "jajanan-sekolah",
@@ -4621,7 +4829,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "2 Porsi",
     "default_portions": 2,
     "business_analysis": {
-      "market_demand": "Tinggi — 262. TTEOKBOKKI RICE PAPER MOZZARELLA || COCOK UNTUK IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Tteokbokki Rice Paper Mozzarella memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 36500
@@ -4718,16 +4926,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/8c88584a383e3bcb/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/262-tteokbokki-rice-paper-mozzarella-cocok-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:18.458Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "262. TTEOKBOKKI RICE PAPER MOZZARELLA || COCOK UNTUK IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:57.578Z"
   },
   "soto-ayam-gobyos-layak-jual": {
     "id": "soto-ayam-gobyos-layak-jual",
     "slug": "soto-ayam-gobyos-layak-jual",
-    "title": "Soto ayam gobyos layak jual",
+    "title": "Soto Ayam Kuah Gobyos",
     "source_url": "https://cookpad.com/id/resep/5247842",
     "excerpt": "Resep ide jualan modal ~Rp 60.500, hasil 8 porsi (8 porsi).",
     "category": "minuman",
@@ -4741,7 +4954,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "8 porsi",
     "default_portions": 8,
     "business_analysis": {
-      "market_demand": "Tinggi — Soto ayam gobyos layak jual memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Soto Ayam Kuah Gobyos memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 60500
@@ -4907,16 +5120,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/fb25232fe931d23d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/soto-ayam-gobyos-layak-jual.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:23.171Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Soto ayam gobyos layak jual",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:57.578Z"
   },
   "mie-pedas-ala-gacoan-ide-jualan-lengkap-dengan-hitung-hpp-dan-harga-jual": {
     "id": "mie-pedas-ala-gacoan-ide-jualan-lengkap-dengan-hitung-hpp-dan-harga-jual",
     "slug": "mie-pedas-ala-gacoan-ide-jualan-lengkap-dengan-hitung-hpp-dan-harga-jual",
-    "title": "Mie Pedas ala Gacoan Ide Jualan lengkap dengan Hitung HPP dan Harga Jual",
+    "title": "Mie Pedas Gurih Spesial",
     "source_url": "https://cookpad.com/id/resep/25176500",
     "excerpt": "Resep ide jualan modal ~Rp 58.500, hasil 10 porsi (10 porsi).",
     "category": "gorengan",
@@ -4930,7 +5148,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 porsi",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Mie Pedas ala Gacoan Ide Jualan lengkap dengan Hitung HPP dan Harga Jual memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Mie Pedas Gurih Spesial memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 58500
@@ -5064,16 +5282,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/af060a3f711c1ef5/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/mie-pedas-ala-gacoan-ide-jualan-lengkap-dengan-hitung-hpp-dan-harga-jual.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:27.773Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Mie Pedas ala Gacoan Ide Jualan lengkap dengan Hitung HPP dan Harga Jual",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:57.578Z"
   },
   "cokodok-pisang-ide-jualan": {
     "id": "cokodok-pisang-ide-jualan",
     "slug": "cokodok-pisang-ide-jualan",
-    "title": "Cokodok Pisang Ide Jualan",
+    "title": "Cokodok Pisang Manis Crispy",
     "source_url": "https://cookpad.com/id/resep/25151778",
     "excerpt": "Resep ide jualan modal ~Rp 19.000, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -5087,7 +5310,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Cokodok Pisang Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Cokodok Pisang Manis Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 19000
@@ -5150,16 +5373,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/ad3fca3e841e6727/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cokodok-pisang-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:32.484Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cokodok Pisang Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:57.578Z"
   },
   "ide-jualan-mochi-warna-warni-varian-isi": {
     "id": "ide-jualan-mochi-warna-warni-varian-isi",
     "slug": "ide-jualan-mochi-warna-warni-varian-isi",
-    "title": "(ide jualan) Mochi Warna-Warni & varian isi",
+    "title": "Mochi Pelangi Aneka Rasa",
     "source_url": "https://cookpad.com/id/resep/25121724",
     "excerpt": "Resep ide jualan modal ~Rp 36.500, hasil 8 porsi (8 porsi kecil).",
     "category": "jajanan-sekolah",
@@ -5173,7 +5401,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "8 porsi kecil",
     "default_portions": 8,
     "business_analysis": {
-      "market_demand": "Tinggi — (ide jualan) Mochi Warna-Warni & varian isi memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Mochi Pelangi Aneka Rasa memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 36500
@@ -5271,16 +5499,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b7b05a2542afdc2f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-mochi-warna-warni-varian-isi.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:36.638Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "(ide jualan) Mochi Warna-Warni & varian isi",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:57.578Z"
   },
   "kue-pepe-bakulan": {
     "id": "kue-pepe-bakulan",
     "slug": "kue-pepe-bakulan",
-    "title": "Kue Pepe Bakulan",
+    "title": "Kue Pepe Tradisional Legit",
     "source_url": "https://cookpad.com/id/resep/25120716",
     "excerpt": "Resep ide jualan modal ~Rp 21.000, hasil 1 porsi (1 loyang besar).",
     "category": "kue",
@@ -5294,7 +5527,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 loyang besar",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Kue Pepe Bakulan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Pepe Tradisional Legit memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 21000
@@ -5365,16 +5598,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/781d6b41205a1c8a/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kue-pepe-bakulan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:41.265Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kue Pepe Bakulan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:57.578Z"
   },
   "martabak-khas-aceh-ala-abang-jualan": {
     "id": "martabak-khas-aceh-ala-abang-jualan",
     "slug": "martabak-khas-aceh-ala-abang-jualan",
-    "title": "Martabak khas Aceh ala Abang jualan",
+    "title": "Martabak Telur Khas Aceh",
     "source_url": "https://cookpad.com/id/resep/25117502",
     "excerpt": "Resep ide jualan modal ~Rp 16.000, hasil 1 porsi (1 porsi).",
     "category": "jajanan-sekolah",
@@ -5388,7 +5626,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 porsi",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Martabak khas Aceh ala Abang jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Martabak Telur Khas Aceh memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 16000
@@ -5456,16 +5694,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/c50221ad1ff15664/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/martabak-khas-aceh-ala-abang-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:45.375Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Martabak khas Aceh ala Abang jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:57.578Z"
   },
   "sourdough-cinnamon-roll-ide-jualan-makanan-sehat": {
     "id": "sourdough-cinnamon-roll-ide-jualan-makanan-sehat",
     "slug": "sourdough-cinnamon-roll-ide-jualan-makanan-sehat",
-    "title": "Sourdough Cinnamon Roll ide jualan makanan sehat",
+    "title": "Artisan Sourdough Cinnamon Roll",
     "source_url": "https://cookpad.com/id/resep/25113539",
     "excerpt": "Resep ide jualan modal ~Rp 16.000, hasil 18 porsi (18 pcs).",
     "category": "jajanan-sekolah",
@@ -5479,7 +5722,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "18 pcs",
     "default_portions": 18,
     "business_analysis": {
-      "market_demand": "Tinggi — Sourdough Cinnamon Roll ide jualan makanan sehat memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Artisan Sourdough Cinnamon Roll memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 16000
@@ -5541,16 +5784,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/72419c4d95d1b75c/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/sourdough-cinnamon-roll-ide-jualan-makanan-sehat.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:49.800Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Sourdough Cinnamon Roll ide jualan makanan sehat",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:57.578Z"
   },
   "egg-roll-tahu-kukus-dengan-sambal-homemade-ide-jualan": {
     "id": "egg-roll-tahu-kukus-dengan-sambal-homemade-ide-jualan",
     "slug": "egg-roll-tahu-kukus-dengan-sambal-homemade-ide-jualan",
-    "title": "Egg Roll Tahu Kukus dengan Sambal Homemade (ide jualan)",
+    "title": "Egg Roll Tahu Kukus Spesial",
     "source_url": "https://cookpad.com/id/resep/25110719",
     "excerpt": "Resep ide jualan modal ~Rp 53.500, hasil 3 porsi (3 porsi kecil).",
     "category": "gorengan",
@@ -5564,7 +5812,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "3 porsi kecil",
     "default_portions": 3,
     "business_analysis": {
-      "market_demand": "Tinggi — Egg Roll Tahu Kukus dengan Sambal Homemade (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Egg Roll Tahu Kukus Spesial memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 53500
@@ -5727,16 +5975,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/7a74f1cede703b48/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/egg-roll-tahu-kukus-dengan-sambal-homemade-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:54.020Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Egg Roll Tahu Kukus dengan Sambal Homemade (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:04:57.578Z"
   },
   "onde-onde-ide-jualan": {
     "id": "onde-onde-ide-jualan",
     "slug": "onde-onde-ide-jualan",
-    "title": "Onde-Onde (ide jualan)",
+    "title": "Onde-Onde Wijen Klasik",
     "source_url": "https://cookpad.com/id/resep/25106872",
     "excerpt": "Resep ide jualan modal ~Rp 18.000, hasil 60 porsi (60pc).",
     "category": "gorengan",
@@ -5750,7 +6003,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "60pc",
     "default_portions": 60,
     "business_analysis": {
-      "market_demand": "Tinggi — Onde-Onde (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Onde-Onde Wijen Klasik memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 18000
@@ -5810,16 +6063,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/faaf11d2b244b347/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/onde-onde-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:13:58.345Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Onde-Onde (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:12.382Z"
   },
   "rice-bowl-ayam-lada-hitam-ide-jualan": {
     "id": "rice-bowl-ayam-lada-hitam-ide-jualan",
     "slug": "rice-bowl-ayam-lada-hitam-ide-jualan",
-    "title": "Rice Bowl Ayam Lada Hitam (Ide Jualan)",
+    "title": "Rice Bowl Ayam Lada Hitam",
     "source_url": "https://cookpad.com/id/resep/25037871",
     "excerpt": "Resep ide jualan modal ~Rp 34.000, hasil 3 porsi (3 porsi).",
     "category": "jajanan-sekolah",
@@ -5833,7 +6091,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "3 porsi",
     "default_portions": 3,
     "business_analysis": {
-      "market_demand": "Tinggi — Rice Bowl Ayam Lada Hitam (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Rice Bowl Ayam Lada Hitam memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 34000
@@ -5931,16 +6189,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e36b3718cedc754c/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/rice-bowl-ayam-lada-hitam-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:02.827Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Rice Bowl Ayam Lada Hitam (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:12.382Z"
   },
   "ide-jualan-tteokpoki-goreng-bumbu-manis-pedas": {
     "id": "ide-jualan-tteokpoki-goreng-bumbu-manis-pedas",
     "slug": "ide-jualan-tteokpoki-goreng-bumbu-manis-pedas",
-    "title": "(ide jualan) Tteokpoki Goreng Bumbu Manis Pedas",
+    "title": "Tteokbokki Goreng Pedas Manis",
     "source_url": "https://cookpad.com/id/resep/25088504",
     "excerpt": "Resep ide jualan modal ~Rp 24.500, hasil 4 porsi (4 porsi kecil).",
     "category": "gorengan",
@@ -5954,7 +6217,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "4 porsi kecil",
     "default_portions": 4,
     "business_analysis": {
-      "market_demand": "Tinggi — (ide jualan) Tteokpoki Goreng Bumbu Manis Pedas memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Tteokbokki Goreng Pedas Manis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 24500
@@ -6045,16 +6308,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/76f1e50618587319/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-tteokpoki-goreng-bumbu-manis-pedas.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:07.164Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "(ide jualan) Tteokpoki Goreng Bumbu Manis Pedas",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:12.382Z"
   },
   "ide-jualan-brownies-kukus": {
     "id": "ide-jualan-brownies-kukus",
     "slug": "ide-jualan-brownies-kukus",
-    "title": "(ide jualan) Brownies Kukus",
+    "title": "Brownies Kukus Cokelat Lembut",
     "source_url": "https://cookpad.com/id/resep/25088450",
     "excerpt": "Resep ide jualan modal ~Rp 47.000, hasil 12 porsi (12 porsi kecil).",
     "category": "minuman",
@@ -6068,7 +6336,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "12 porsi kecil",
     "default_portions": 12,
     "business_analysis": {
-      "market_demand": "Tinggi — (ide jualan) Brownies Kukus memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Brownies Kukus Cokelat Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 47000
@@ -6144,16 +6412,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/82975391f1eb1219/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-brownies-kukus.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:11.948Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "(ide jualan) Brownies Kukus",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:12.382Z"
   },
   "getas-ekonomis-jual-1000pcs": {
     "id": "getas-ekonomis-jual-1000pcs",
     "slug": "getas-ekonomis-jual-1000pcs",
-    "title": "Getas Ekonomis Jual 1000/pcs",
+    "title": "Kue Getas Ketan Manis",
     "source_url": "https://cookpad.com/id/resep/25068543",
     "excerpt": "Resep ide jualan modal ~Rp 31.500, hasil 20 porsi (20-25 biji).",
     "category": "minuman",
@@ -6168,7 +6441,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20-25 biji",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Getas Ekonomis Jual 1000/pcs memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Getas Ketan Manis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 31500
@@ -6243,16 +6516,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/4390ec820f199a62/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/getas-ekonomis-jual-1000pcs.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:16.255Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Getas Ekonomis Jual 1000/pcs",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:12.382Z"
   },
   "ide-jualan-donat-burger": {
     "id": "ide-jualan-donat-burger",
     "slug": "ide-jualan-donat-burger",
-    "title": "(ide jualan) donat Burger",
+    "title": "Donat Burger Mini Spesial",
     "source_url": "https://cookpad.com/id/resep/25066935",
     "excerpt": "Resep ide jualan modal ~Rp 39.000, hasil 20 porsi (20-25 porsi kecil).",
     "category": "gorengan",
@@ -6266,7 +6544,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20-25 porsi kecil",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — (ide jualan) donat Burger memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Donat Burger Mini Spesial memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 39000
@@ -6355,16 +6633,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e341a15bb7e9ef38/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-donat-burger.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:20.395Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "(ide jualan) donat Burger",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:12.382Z"
   },
   "sambal-rujak-jualan": {
     "id": "sambal-rujak-jualan",
     "slug": "sambal-rujak-jualan",
-    "title": "Sambal Rujak Jualan",
+    "title": "Sambal Rujak Kacang Kental",
     "source_url": "https://cookpad.com/id/resep/17231513",
     "excerpt": "Resep ide jualan modal ~Rp 10.500, hasil 300 porsi (300 gr (diameter9cm tinggi 7 cm)).",
     "category": "jajanan-sekolah",
@@ -6378,7 +6661,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "300 gr (diameter9cm tinggi 7 cm)",
     "default_portions": 300,
     "business_analysis": {
-      "market_demand": "Tinggi — Sambal Rujak Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Sambal Rujak Kacang Kental memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 10500
@@ -6422,16 +6705,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/8fea50137c2814d9/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/sambal-rujak-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:25.063Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Sambal Rujak Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:12.382Z"
   },
   "ide-jualan-kebab-mini-homemade-isi-sayur-dan-sosis": {
     "id": "ide-jualan-kebab-mini-homemade-isi-sayur-dan-sosis",
     "slug": "ide-jualan-kebab-mini-homemade-isi-sayur-dan-sosis",
-    "title": "(ide jualan) Kebab Mini Homemade Isi Sayur dan Sosis",
+    "title": "Kebab Mini Sosis Sayur",
     "source_url": "https://cookpad.com/id/resep/25057726",
     "excerpt": "Resep ide jualan modal ~Rp 14.000, hasil 7 porsi (7 porsi kecil).",
     "category": "gorengan",
@@ -6445,7 +6733,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "7 porsi kecil",
     "default_portions": 7,
     "business_analysis": {
-      "market_demand": "Tinggi — (ide jualan) Kebab Mini Homemade Isi Sayur dan Sosis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kebab Mini Sosis Sayur memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 14000
@@ -6505,16 +6793,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/4003518cacb74072/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-kebab-mini-homemade-isi-sayur-dan-sosis.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:29.168Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "(ide jualan) Kebab Mini Homemade Isi Sayur dan Sosis",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:12.382Z"
   },
   "getas-ekonomis-cocok-dijual-ecer-1000an": {
     "id": "getas-ekonomis-cocok-dijual-ecer-1000an",
     "slug": "getas-ekonomis-cocok-dijual-ecer-1000an",
-    "title": "Getas ekonomis (cocok dijual ecer 1000an)",
+    "title": "Kue Getas Ketan Salju",
     "source_url": "https://cookpad.com/id/resep/25050058",
     "excerpt": "Resep ide jualan modal ~Rp 27.000, hasil 25 porsi (-+25bj).",
     "category": "jajanan-sekolah",
@@ -6529,7 +6822,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "-+25bj",
     "default_portions": 25,
     "business_analysis": {
-      "market_demand": "Tinggi — Getas ekonomis (cocok dijual ecer 1000an) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Getas Ketan Salju memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 27000
@@ -6605,16 +6898,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/270bf7dedbd6512b/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/getas-ekonomis-cocok-dijual-ecer-1000an.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:34.029Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Getas ekonomis (cocok dijual ecer 1000an)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:12.382Z"
   },
   "manisan-pepaya-kriuk-ide-jualan": {
     "id": "manisan-pepaya-kriuk-ide-jualan",
     "slug": "manisan-pepaya-kriuk-ide-jualan",
-    "title": "Manisan pepaya kriuk (ide jualan)",
+    "title": "Manisan Pepaya Kriuk Segar",
     "source_url": "https://cookpad.com/id/resep/25049755",
     "excerpt": "Resep ide jualan modal ~Rp 13.000, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -6628,7 +6926,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Manisan pepaya kriuk (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Manisan Pepaya Kriuk Segar memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 13000
@@ -6690,16 +6988,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/bb382209fcfc9a04/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/manisan-pepaya-kriuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:38.445Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Manisan pepaya kriuk (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:12.382Z"
   },
   "mie-homemade-pedas-topping-wortel-ide-jualan-1000": {
     "id": "mie-homemade-pedas-topping-wortel-ide-jualan-1000",
     "slug": "mie-homemade-pedas-topping-wortel-ide-jualan-1000",
-    "title": "Mie Homemade Pedas Topping Wortel (ide jualan 1.000)",
+    "title": "Mie Pedas Topping Wortel",
     "source_url": "https://cookpad.com/id/resep/25043691",
     "excerpt": "Resep ide jualan modal ~Rp 47.000, hasil 5 porsi (5 porsi kecil).",
     "category": "gorengan",
@@ -6713,7 +7016,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "5 porsi kecil",
     "default_portions": 5,
     "business_analysis": {
-      "market_demand": "Tinggi — Mie Homemade Pedas Topping Wortel (ide jualan 1.000) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Mie Pedas Topping Wortel memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 47000
@@ -6831,16 +7134,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/a8fd20ca16c56629/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/mie-homemade-pedas-topping-wortel-ide-jualan-1000.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:42.583Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Mie Homemade Pedas Topping Wortel (ide jualan 1.000)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:28.430Z"
   },
   "cireng-isi-ayam-suwir-resep-jualan": {
     "id": "cireng-isi-ayam-suwir-resep-jualan",
     "slug": "cireng-isi-ayam-suwir-resep-jualan",
-    "title": "Cireng isi ayam suwir (resep jualan)",
+    "title": "Cireng Crispy Ayam Suwir",
     "source_url": "https://cookpad.com/id/resep/24244551",
     "excerpt": "Resep ide jualan modal ~Rp 33.000, hasil 40 porsi (40+ pcs).",
     "category": "jajanan-sekolah",
@@ -6854,7 +7162,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "40+ pcs",
     "default_portions": 40,
     "business_analysis": {
-      "market_demand": "Tinggi — Cireng isi ayam suwir (resep jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Cireng Crispy Ayam Suwir memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 33000
@@ -6948,16 +7256,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/63a0a958f5784882/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cireng-isi-ayam-suwir-resep-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:50.198Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cireng isi ayam suwir (resep jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:28.430Z"
   },
   "253-jamur-krispi-super-simpel-bisa-untuk-ide-jualan": {
     "id": "253-jamur-krispi-super-simpel-bisa-untuk-ide-jualan",
     "slug": "253-jamur-krispi-super-simpel-bisa-untuk-ide-jualan",
-    "title": "253. JAMUR KRISPI SUPER SIMPEL ||BISA UNTUK IDE JUALAN",
+    "title": "Jamur Tiram Crispy Gurih",
     "source_url": "https://cookpad.com/id/resep/25016621",
     "excerpt": "Resep ide jualan modal ~Rp 22.000, hasil 1 porsi (1 toples besar).",
     "category": "minuman",
@@ -6971,7 +7284,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 toples besar",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — 253. JAMUR KRISPI SUPER SIMPEL ||BISA UNTUK IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Jamur Tiram Crispy Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 22000
@@ -7046,16 +7359,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/ca745174e02e8d07/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/253-jamur-krispi-super-simpel-bisa-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:54.947Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "253. JAMUR KRISPI SUPER SIMPEL ||BISA UNTUK IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:28.430Z"
   },
   "252-puding-kelapa-muda-bisa-untuk-ide-jualan": {
     "id": "252-puding-kelapa-muda-bisa-untuk-ide-jualan",
     "slug": "252-puding-kelapa-muda-bisa-untuk-ide-jualan",
-    "title": "252. PUDING KELAPA MUDA || BISA UNTUK IDE JUALAN",
+    "title": "Puding Kelapa Muda Segar",
     "source_url": "https://cookpad.com/id/resep/25008138",
     "excerpt": "Resep ide jualan modal ~Rp 15.500, hasil 14 porsi (14 Porsi).",
     "category": "jajanan-sekolah",
@@ -7069,7 +7387,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "14 Porsi",
     "default_portions": 14,
     "business_analysis": {
-      "market_demand": "Tinggi — 252. PUDING KELAPA MUDA || BISA UNTUK IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Puding Kelapa Muda Segar memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 15500
@@ -7129,16 +7447,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/1965a54619125d16/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/252-puding-kelapa-muda-bisa-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:14:59.051Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "252. PUDING KELAPA MUDA || BISA UNTUK IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:28.430Z"
   },
   "lumpia-pizza-tanpa-keju-mozarela-bisa-dijual-1000-an": {
     "id": "lumpia-pizza-tanpa-keju-mozarela-bisa-dijual-1000-an",
     "slug": "lumpia-pizza-tanpa-keju-mozarela-bisa-dijual-1000-an",
-    "title": "Lumpia pizza tanpa keju mozarela bisa dijual 1000 an",
+    "title": "Lumpia Pizza Mini Crispy",
     "source_url": "https://cookpad.com/id/resep/24991233",
     "excerpt": "Resep ide jualan modal ~Rp 20.000, hasil 25 porsi (25 porsi).",
     "category": "minuman",
@@ -7153,7 +7476,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "25 porsi",
     "default_portions": 25,
     "business_analysis": {
-      "market_demand": "Tinggi — Lumpia pizza tanpa keju mozarela bisa dijual 1000 an memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Lumpia Pizza Mini Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 20000
@@ -7200,16 +7523,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/1f4f77499077270a/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/lumpia-pizza-tanpa-keju-mozarela-bisa-dijual-1000-an.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:03.264Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Lumpia pizza tanpa keju mozarela bisa dijual 1000 an",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:28.430Z"
   },
   "gohyong-ayam-tahu-ide-jualan": {
     "id": "gohyong-ayam-tahu-ide-jualan",
     "slug": "gohyong-ayam-tahu-ide-jualan",
-    "title": "Gohyong Ayam Tahu (Ide Jualan)",
+    "title": "Gohyong Ayam Tahu Crispy",
     "source_url": "https://cookpad.com/id/resep/24980344",
     "excerpt": "Resep ide jualan modal ~Rp 86.500, hasil 8 porsi (8-9 porsi).",
     "category": "gorengan",
@@ -7223,7 +7551,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "8-9 porsi",
     "default_portions": 8,
     "business_analysis": {
-      "market_demand": "Tinggi — Gohyong Ayam Tahu (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Gohyong Ayam Tahu Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 86500
@@ -7426,16 +7754,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/2b0b5267d68f8281/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/gohyong-ayam-tahu-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:07.495Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Gohyong Ayam Tahu (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:28.430Z"
   },
   "makaroni-schootel-kukus-untuk-ide-jualan": {
     "id": "makaroni-schootel-kukus-untuk-ide-jualan",
     "slug": "makaroni-schootel-kukus-untuk-ide-jualan",
-    "title": "Makaroni schootel kukus untuk ide jualan",
+    "title": "Makaroni Schotel Kukus Gurih",
     "source_url": "https://cookpad.com/id/resep/24985525",
     "excerpt": "Resep ide jualan modal ~Rp 22.000, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -7449,7 +7782,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Makaroni schootel kukus untuk ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Makaroni Schotel Kukus Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 22000
@@ -7519,16 +7852,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/71d9447a3cc7447d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/makaroni-schootel-kukus-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:12.651Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Makaroni schootel kukus untuk ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:28.430Z"
   },
   "67-martabak-tahu-ide-jualan-1000an": {
     "id": "67-martabak-tahu-ide-jualan-1000an",
     "slug": "67-martabak-tahu-ide-jualan-1000an",
-    "title": "67 Martabak Tahu (Ide Jualan 1000an)",
+    "title": "Martabak Tahu Mini Crispy",
     "source_url": "https://cookpad.com/id/resep/24969900",
     "excerpt": "Resep ide jualan modal ~Rp 15.500, hasil 18 porsi (18 buah).",
     "category": "jajanan-sekolah",
@@ -7543,7 +7881,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "18 buah",
     "default_portions": 18,
     "business_analysis": {
-      "market_demand": "Tinggi — 67 Martabak Tahu (Ide Jualan 1000an) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Martabak Tahu Mini Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 15500
@@ -7600,16 +7938,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/d54023f92cb2f0f2/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/67-martabak-tahu-ide-jualan-1000an.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:17.129Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "67 Martabak Tahu (Ide Jualan 1000an)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:28.430Z"
   },
   "249-dimsum-goreng-telur-puyuh-bisa-di-frozen-jadi-ide-jualan": {
     "id": "249-dimsum-goreng-telur-puyuh-bisa-di-frozen-jadi-ide-jualan",
     "slug": "249-dimsum-goreng-telur-puyuh-bisa-di-frozen-jadi-ide-jualan",
-    "title": "249. DIMSUM GORENG TELUR PUYUH || BISA DI FROZEN & JADI IDE JUALAN",
+    "title": "Dimsum Goreng Telur Puyuh",
     "source_url": "https://cookpad.com/id/resep/24962271",
     "excerpt": "Resep ide jualan modal ~Rp 53.000, hasil 25 porsi (25 pcs).",
     "category": "minuman",
@@ -7623,7 +7966,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "25 pcs",
     "default_portions": 25,
     "business_analysis": {
-      "market_demand": "Tinggi — 249. DIMSUM GORENG TELUR PUYUH || BISA DI FROZEN & JADI IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Dimsum Goreng Telur Puyuh memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 53000
@@ -7750,16 +8093,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/9af084c022e3da82/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/249-dimsum-goreng-telur-puyuh-bisa-di-frozen-jadi-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:21.488Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "249. DIMSUM GORENG TELUR PUYUH || BISA DI FROZEN & JADI IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:28.430Z"
   },
   "siomay-bandung-ide-jualan": {
     "id": "siomay-bandung-ide-jualan",
     "slug": "siomay-bandung-ide-jualan",
-    "title": "Siomay Bandung [ide jualan]",
+    "title": "Siomay Bandung Bumbu Kacang",
     "source_url": "https://cookpad.com/id/resep/24947048",
     "excerpt": "Resep ide jualan modal ~Rp 87.000, hasil 4 porsi (4 orang).",
     "category": "gorengan",
@@ -7773,7 +8121,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "4 orang",
     "default_portions": 4,
     "business_analysis": {
-      "market_demand": "Tinggi — Siomay Bandung [ide jualan] memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Siomay Bandung Bumbu Kacang memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 87000
@@ -7979,16 +8327,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/85886347d6e50f72/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/siomay-bandung-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:25.937Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Siomay Bandung [ide jualan]",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:28.430Z"
   },
   "kaki-naga-ide-jualan-frozen-food": {
     "id": "kaki-naga-ide-jualan-frozen-food",
     "slug": "kaki-naga-ide-jualan-frozen-food",
-    "title": "Kaki Naga (ide jualan frozen food)",
+    "title": "Kaki Naga Ayam Crispy",
     "source_url": "https://cookpad.com/id/resep/24946446",
     "excerpt": "Resep ide jualan modal ~Rp 55.000, hasil 20 porsi (20-40 porsi).",
     "category": "gorengan",
@@ -8002,7 +8355,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20-40 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Kaki Naga (ide jualan frozen food) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kaki Naga Ayam Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 55000
@@ -8125,16 +8478,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/4e6bc086d36e3fa0/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kaki-naga-ide-jualan-frozen-food.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:30.369Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kaki Naga (ide jualan frozen food)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:43.211Z"
   },
   "ide-jualan-rumahan-rice-box": {
     "id": "ide-jualan-rumahan-rice-box",
     "slug": "ide-jualan-rumahan-rice-box",
-    "title": "Ide Jualan Rumahan Rice Box",
+    "title": "Rice Box Chicken Karaage",
     "source_url": "https://cookpad.com/id/resep/24928559",
     "excerpt": "Resep ide jualan modal ~Rp 36.000, hasil 3 porsi (3 porsi).",
     "category": "jajanan-sekolah",
@@ -8148,7 +8506,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "3 porsi",
     "default_portions": 3,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide Jualan Rumahan Rice Box memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Rice Box Chicken Karaage memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 36000
@@ -8239,16 +8597,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/7ba4c0c2915b9b60/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-rumahan-rice-box.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:34.788Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide Jualan Rumahan Rice Box",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:43.211Z"
   },
   "dimsum-ayam-ekonomis-utk-jualan": {
     "id": "dimsum-ayam-ekonomis-utk-jualan",
     "slug": "dimsum-ayam-ekonomis-utk-jualan",
-    "title": "Dimsum Ayam Ekonomis utk jualan",
+    "title": "Dimsum Ayam Gurih Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24930604",
     "excerpt": "Resep ide jualan modal ~Rp 51.000, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -8263,7 +8626,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Dimsum Ayam Ekonomis utk jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Dimsum Ayam Gurih Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 51000
@@ -8364,16 +8727,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/8d62e956fa7b1fd1/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/dimsum-ayam-ekonomis-utk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:39.031Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Dimsum Ayam Ekonomis utk jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:43.211Z"
   },
   "es-lilin-simpel-ide-jualan-rumahan": {
     "id": "es-lilin-simpel-ide-jualan-rumahan",
     "slug": "es-lilin-simpel-ide-jualan-rumahan",
-    "title": "Es lilin simpel ide jualan rumahan",
+    "title": "Es Lilin Susu Creamy",
     "source_url": "https://cookpad.com/id/resep/24928535",
     "excerpt": "Resep ide jualan modal ~Rp 23.500, hasil 20 porsi (Larutan Susu).",
     "category": "minuman",
@@ -8387,7 +8755,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "Larutan Susu",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Es lilin simpel ide jualan rumahan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Lilin Susu Creamy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 23500
@@ -8458,16 +8826,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/1b90b776a4a493ee/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/es-lilin-simpel-ide-jualan-rumahan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:43.579Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Es lilin simpel ide jualan rumahan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:43.211Z"
   },
   "111risoles-kentang-sayur-ide-jualan": {
     "id": "111risoles-kentang-sayur-ide-jualan",
     "slug": "111risoles-kentang-sayur-ide-jualan",
-    "title": "#111.Risoles kentang sayur IDE JUALAN",
+    "title": "Risoles Kentang Sayur Crispy",
     "source_url": "https://cookpad.com/id/resep/24924318",
     "excerpt": "Resep ide jualan modal ~Rp 36.500, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -8481,7 +8854,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — #111.Risoles kentang sayur IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Risoles Kentang Sayur Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 36500
@@ -8596,16 +8969,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/923be30501f5ab42/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/111risoles-kentang-sayur-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:47.903Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "#111.Risoles kentang sayur IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:43.211Z"
   },
   "245-bomboloni-super-empuk-bisa-di-frozen-jadi-ide-jualan": {
     "id": "245-bomboloni-super-empuk-bisa-di-frozen-jadi-ide-jualan",
     "slug": "245-bomboloni-super-empuk-bisa-di-frozen-jadi-ide-jualan",
-    "title": "245. BOMBOLONI SUPER EMPUK || BISA DI FROZEN & JADI IDE JUALAN",
+    "title": "Donat Bomboloni Lembut Empuk",
     "source_url": "https://cookpad.com/id/resep/24915204",
     "excerpt": "Resep ide jualan modal ~Rp 39.500, hasil 23 porsi (23 pcs).",
     "category": "gorengan",
@@ -8619,7 +8997,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "23 pcs",
     "default_portions": 23,
     "business_analysis": {
-      "market_demand": "Tinggi — 245. BOMBOLONI SUPER EMPUK || BISA DI FROZEN & JADI IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Donat Bomboloni Lembut Empuk memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 39500
@@ -8707,16 +9085,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e9959b1eda11b7e0/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/245-bomboloni-super-empuk-bisa-di-frozen-jadi-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:52.562Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "245. BOMBOLONI SUPER EMPUK || BISA DI FROZEN & JADI IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:43.211Z"
   },
   "brownies-hias-ekonomis-ide-jualan": {
     "id": "brownies-hias-ekonomis-ide-jualan",
     "slug": "brownies-hias-ekonomis-ide-jualan",
-    "title": "Brownies Hias Ekonomis (Ide Jualan)",
+    "title": "Brownies Hias Cokelat Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24890587",
     "excerpt": "Resep ide jualan modal ~Rp 39.000, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -8731,7 +9114,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Brownies Hias Ekonomis (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Brownies Hias Cokelat Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 39000
@@ -8826,16 +9209,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/65e528dcc671e3c9/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/brownies-hias-ekonomis-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:15:56.956Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Brownies Hias Ekonomis (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:43.211Z"
   },
   "double-chocolate-soft-cookies-ide-bakulan": {
     "id": "double-chocolate-soft-cookies-ide-bakulan",
     "slug": "double-chocolate-soft-cookies-ide-bakulan",
-    "title": "Double Chocolate Soft Cookies (ide bakulan)",
+    "title": "Double Chocolate Soft Cookies",
     "source_url": "https://cookpad.com/id/resep/24887210",
     "excerpt": "Resep ide jualan modal ~Rp 23.000, hasil 18 porsi (18 buah).",
     "category": "minuman",
@@ -8849,7 +9237,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "18 buah",
     "default_portions": 18,
     "business_analysis": {
-      "market_demand": "Tinggi — Double Chocolate Soft Cookies (ide bakulan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Double Chocolate Soft Cookies memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 23000
@@ -8926,16 +9314,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/4316afa344b66deb/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/double-chocolate-soft-cookies-ide-bakulan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:01.074Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Double Chocolate Soft Cookies (ide bakulan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:43.211Z"
   },
   "243-kroket-pisang-cokelat-lumer-bisa-di-frozen-untuk-ide-jualan": {
     "id": "243-kroket-pisang-cokelat-lumer-bisa-di-frozen-untuk-ide-jualan",
     "slug": "243-kroket-pisang-cokelat-lumer-bisa-di-frozen-untuk-ide-jualan",
-    "title": "243. KROKET PISANG COKELAT LUMER | BISA DI FROZEN & UNTUK IDE JUALAN",
+    "title": "Kroket Pisang Cokelat Lumer",
     "source_url": "https://cookpad.com/id/resep/24877429",
     "excerpt": "Resep ide jualan modal ~Rp 27.000, hasil 12 porsi (12 psc).",
     "category": "gorengan",
@@ -8949,7 +9342,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "12 psc",
     "default_portions": 12,
     "business_analysis": {
-      "market_demand": "Tinggi — 243. KROKET PISANG COKELAT LUMER | BISA DI FROZEN & UNTUK IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kroket Pisang Cokelat Lumer memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 27000
@@ -9030,16 +9423,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/603f5fad3f1225e8/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/243-kroket-pisang-cokelat-lumer-bisa-di-frozen-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:10.700Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "243. KROKET PISANG COKELAT LUMER | BISA DI FROZEN & UNTUK IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:43.211Z"
   },
   "brownies-mini-cup-ide-jualan": {
     "id": "brownies-mini-cup-ide-jualan",
     "slug": "brownies-mini-cup-ide-jualan",
-    "title": "Brownies Mini Cup (Ide jualan)",
+    "title": "Brownies Cokelat Mini Cup",
     "source_url": "https://cookpad.com/id/resep/16549182",
     "excerpt": "Resep ide jualan modal ~Rp 40.000, hasil 40 porsi (40 cup).",
     "category": "minuman",
@@ -9053,7 +9451,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "40 cup",
     "default_portions": 40,
     "business_analysis": {
-      "market_demand": "Tinggi — Brownies Mini Cup (Ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Brownies Cokelat Mini Cup memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 40000
@@ -9140,16 +9538,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b1b4593871c7f9ce/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/brownies-mini-cup-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:14.969Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Brownies Mini Cup (Ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:43.211Z"
   },
   "pempek-kapal-selam-kuah-cuko-ide-jualan": {
     "id": "pempek-kapal-selam-kuah-cuko-ide-jualan",
     "slug": "pempek-kapal-selam-kuah-cuko-ide-jualan",
-    "title": "Pempek Kapal Selam Kuah Cuko (Ide Jualan)",
+    "title": "Pempek Kapal Selam Kuah Cuko",
     "source_url": "https://cookpad.com/id/resep/24877020",
     "excerpt": "Resep ide jualan modal ~Rp 51.000, hasil 12 porsi (12 buah).",
     "category": "jajanan-sekolah",
@@ -9163,7 +9566,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "12 buah",
     "default_portions": 12,
     "business_analysis": {
-      "market_demand": "Tinggi — Pempek Kapal Selam Kuah Cuko (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Pempek Kapal Selam Kuah Cuko memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 51000
@@ -9297,16 +9700,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/01be4aba8ec37c1d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/pempek-kapal-selam-kuah-cuko-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:19.218Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Pempek Kapal Selam Kuah Cuko (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:57.231Z"
   },
   "roti-goreng-ide-jualan": {
     "id": "roti-goreng-ide-jualan",
     "slug": "roti-goreng-ide-jualan",
-    "title": "Roti goreng ide jualan",
+    "title": "Roti Goreng Cokelat Lumer",
     "source_url": "https://cookpad.com/id/resep/24872658",
     "excerpt": "Resep ide jualan modal ~Rp 26.000, hasil 18 porsi (18 pcs).",
     "category": "kue",
@@ -9320,7 +9728,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "18 pcs",
     "default_portions": 18,
     "business_analysis": {
-      "market_demand": "Tinggi — Roti goreng ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Roti Goreng Cokelat Lumer memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 26000
@@ -9372,16 +9780,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/988eed3421065680/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/roti-goreng-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:23.923Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Roti goreng ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:57.231Z"
   },
   "resep-andalan-jualan-ku-bolu-ketan-ekonomis": {
     "id": "resep-andalan-jualan-ku-bolu-ketan-ekonomis",
     "slug": "resep-andalan-jualan-ku-bolu-ketan-ekonomis",
-    "title": "Resep andalan jualan ku (BOLU KETAN EKONOMIS)",
+    "title": "Bolu Ketan Lembut Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24871266",
     "excerpt": "Resep ide jualan modal ~Rp 38.500, hasil 1 porsi (1loyang).",
     "category": "kue",
@@ -9396,7 +9809,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1loyang",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Resep andalan jualan ku (BOLU KETAN EKONOMIS) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bolu Ketan Lembut Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 38500
@@ -9485,16 +9898,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/c631b3c4141bf88d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/resep-andalan-jualan-ku-bolu-ketan-ekonomis.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:28.609Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Resep andalan jualan ku (BOLU KETAN EKONOMIS)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:57.231Z"
   },
   "seblak-jualan": {
     "id": "seblak-jualan",
     "slug": "seblak-jualan",
-    "title": "Seblak jualan",
+    "title": "Seblak Kuah Pedas Gurih",
     "source_url": "https://cookpad.com/id/resep/24842506",
     "excerpt": "Resep ide jualan modal ~Rp 40.000, hasil 1 porsi (1 porsi).",
     "category": "minuman",
@@ -9508,7 +9926,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 porsi",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Seblak jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Seblak Kuah Pedas Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 40000
@@ -9608,16 +10026,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e48cdf9e7d78f2ef/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/seblak-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:33.146Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Seblak jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:57.231Z"
   },
   "es-kuehunkue-ide-jualan": {
     "id": "es-kuehunkue-ide-jualan",
     "slug": "es-kuehunkue-ide-jualan",
-    "title": "Es Kue/Hunkue Ide jualan",
+    "title": "Es Kue Hunkwe Jadul",
     "source_url": "https://cookpad.com/id/resep/17077013",
     "excerpt": "Resep ide jualan modal ~Rp 9.000, hasil 60 porsi (±60's).",
     "category": "minuman",
@@ -9631,7 +10054,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "±60's",
     "default_portions": 60,
     "business_analysis": {
-      "market_demand": "Tinggi — Es Kue/Hunkue Ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Kue Hunkwe Jadul memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 9000
@@ -9677,16 +10100,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b20231c37d1fbdc2/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/es-kuehunkue-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:39.498Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Es Kue/Hunkue Ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:57.231Z"
   },
   "236-bistik-daging-sapi-frozen-bisa-untuk-stok-ide-jualan": {
     "id": "236-bistik-daging-sapi-frozen-bisa-untuk-stok-ide-jualan",
     "slug": "236-bistik-daging-sapi-frozen-bisa-untuk-stok-ide-jualan",
-    "title": "236. BISTIK DAGING SAPI FROZEN || BISA UNTUK STOK & IDE JUALAN",
+    "title": "Bistik Daging Sapi Frozen",
     "source_url": "https://cookpad.com/id/resep/24715299",
     "excerpt": "Resep ide jualan modal ~Rp 41.000, hasil 6 porsi (6 Cup).",
     "category": "minuman",
@@ -9700,7 +10128,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "6 Cup",
     "default_portions": 6,
     "business_analysis": {
-      "market_demand": "Tinggi — 236. BISTIK DAGING SAPI FROZEN || BISA UNTUK STOK & IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bistik Daging Sapi Frozen memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 41000
@@ -9807,16 +10235,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6dd3aca18850f9c8/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/236-bistik-daging-sapi-frozen-bisa-untuk-stok-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:45.854Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "236. BISTIK DAGING SAPI FROZEN || BISA UNTUK STOK & IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:57.231Z"
   },
   "cilok-bumbu-kacang-ide-jualan": {
     "id": "cilok-bumbu-kacang-ide-jualan",
     "slug": "cilok-bumbu-kacang-ide-jualan",
-    "title": "Cilok Bumbu Kacang (Ide Jualan)",
+    "title": "Cilok Kenyal Bumbu Kacang",
     "source_url": "https://cookpad.com/id/resep/24780775",
     "excerpt": "Resep ide jualan modal ~Rp 33.000, hasil 2 porsi (2 porsi).",
     "category": "minuman",
@@ -9830,7 +10263,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "2 porsi",
     "default_portions": 2,
     "business_analysis": {
-      "market_demand": "Tinggi — Cilok Bumbu Kacang (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Cilok Kenyal Bumbu Kacang memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 33000
@@ -9964,16 +10397,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/937cb42fd4f4ff72/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cilok-bumbu-kacang-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:50.660Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cilok Bumbu Kacang (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:57.231Z"
   },
   "es-lumut-cokelat-ide-jualan": {
     "id": "es-lumut-cokelat-ide-jualan",
     "slug": "es-lumut-cokelat-ide-jualan",
-    "title": "Es Lumut Cokelat (Ide Jualan)",
+    "title": "Es Lumut Cokelat Creamy",
     "source_url": "https://cookpad.com/id/resep/24769489",
     "excerpt": "Resep ide jualan modal ~Rp 28.500, hasil 12 porsi (12 botol).",
     "category": "minuman",
@@ -9987,7 +10425,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "12 botol",
     "default_portions": 12,
     "business_analysis": {
-      "market_demand": "Tinggi — Es Lumut Cokelat (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Lumut Cokelat Creamy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 28500
@@ -10046,16 +10484,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/93861561a02cd274/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/es-lumut-cokelat-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:54.905Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Es Lumut Cokelat (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:57.231Z"
   },
   "proll-tape-brownies-ide-bakulanhampers": {
     "id": "proll-tape-brownies-ide-bakulanhampers",
     "slug": "proll-tape-brownies-ide-bakulanhampers",
-    "title": "Proll Tape Brownies (Ide Bakulan&Hampers)",
+    "title": "Prol Tape Brownies Panggang",
     "source_url": "https://cookpad.com/id/resep/24735036",
     "excerpt": "Resep ide jualan modal ~Rp 59.000, hasil 2 porsi (2 loyang size 20x10cm).",
     "category": "minuman",
@@ -10069,7 +10512,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "2 loyang size 20x10cm",
     "default_portions": 2,
     "business_analysis": {
-      "market_demand": "Tinggi — Proll Tape Brownies (Ide Bakulan&Hampers) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Prol Tape Brownies Panggang memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 59000
@@ -10205,16 +10648,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/fb6be2ca5fbd8b6b/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/proll-tape-brownies-ide-bakulanhampers.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:16:59.054Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Proll Tape Brownies (Ide Bakulan&Hampers)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:57.231Z"
   },
   "232-abon-lele-gurih-awet-bisa-untuk-ide-jualan": {
     "id": "232-abon-lele-gurih-awet-bisa-untuk-ide-jualan",
     "slug": "232-abon-lele-gurih-awet-bisa-untuk-ide-jualan",
-    "title": "232. ABON LELE GURIH AWET & BISA UNTUK IDE JUALAN",
+    "title": "Abon Lele Gurih Renyah",
     "source_url": "https://cookpad.com/id/resep/24730580",
     "excerpt": "Resep ide jualan modal ~Rp 24.000, hasil 1 porsi (1 toples kecil).",
     "category": "minuman",
@@ -10228,7 +10676,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 toples kecil",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — 232. ABON LELE GURIH AWET & BISA UNTUK IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Abon Lele Gurih Renyah memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 24000
@@ -10323,16 +10771,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/4eba400b31f7d525/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/232-abon-lele-gurih-awet-bisa-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:03.767Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "232. ABON LELE GURIH AWET & BISA UNTUK IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:05:57.231Z"
   },
   "part-1-ide-jualan-mochi-ekonomis": {
     "id": "part-1-ide-jualan-mochi-ekonomis",
     "slug": "part-1-ide-jualan-mochi-ekonomis",
-    "title": "#part 1_ ide jualan, Mochi ekonomis",
+    "title": "Mochi Lembut Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24727112",
     "excerpt": "Resep ide jualan modal ~Rp 20.000, hasil 30 porsi (30 - 40 biji).",
     "category": "gorengan",
@@ -10347,7 +10800,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "30 - 40 biji",
     "default_portions": 30,
     "business_analysis": {
-      "market_demand": "Tinggi — #part 1_ ide jualan, Mochi ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Mochi Lembut Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 20000
@@ -10413,16 +10866,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b6dbf937491b19af/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/part-1-ide-jualan-mochi-ekonomis.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:08.314Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "#part 1_ ide jualan, Mochi ekonomis",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:11.617Z"
   },
   "230-tahu-bakso-ayam-gurih-lezat-bisa-untuk-stok-frozen-atau-ide-jualan": {
     "id": "230-tahu-bakso-ayam-gurih-lezat-bisa-untuk-stok-frozen-atau-ide-jualan",
     "slug": "230-tahu-bakso-ayam-gurih-lezat-bisa-untuk-stok-frozen-atau-ide-jualan",
-    "title": "230. TAHU BAKSO AYAM GURIH, LEZAT & BISA UNTUK STOK FROZEN ATAU IDE JUALAN",
+    "title": "Tahu Bakso Ayam Gurih",
     "source_url": "https://cookpad.com/id/resep/24297202",
     "excerpt": "Resep ide jualan modal ~Rp 82.000, hasil 20 porsi (20 potong).",
     "category": "minuman",
@@ -10436,7 +10894,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 potong",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — 230. TAHU BAKSO AYAM GURIH, LEZAT & BISA UNTUK STOK FROZEN ATAU IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Tahu Bakso Ayam Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 82000
@@ -10614,16 +11072,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/7b3e4d6004cbc8c3/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/230-tahu-bakso-ayam-gurih-lezat-bisa-untuk-stok-frozen-atau-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:12.417Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "230. TAHU BAKSO AYAM GURIH, LEZAT & BISA UNTUK STOK FROZEN ATAU IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:11.617Z"
   },
   "sambal-cumi-bisa-untuk-jualan": {
     "id": "sambal-cumi-bisa-untuk-jualan",
     "slug": "sambal-cumi-bisa-untuk-jualan",
-    "title": "Sambal cumi.. bisa untuk jualan",
+    "title": "Sambal Cumi Asin Pedas",
     "source_url": "https://cookpad.com/id/resep/24682029",
     "excerpt": "Resep ide jualan modal ~Rp 22.500, hasil 10 porsi (10 orang).",
     "category": "gorengan",
@@ -10637,7 +11100,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 orang",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Sambal cumi.. bisa untuk jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Sambal Cumi Asin Pedas memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 22500
@@ -10713,16 +11176,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/0939521ce958bf97/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/sambal-cumi-bisa-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:16.671Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Sambal cumi.. bisa untuk jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:11.617Z"
   },
   "dodol-coklat-ide-hantaran-dan-jualan": {
     "id": "dodol-coklat-ide-hantaran-dan-jualan",
     "slug": "dodol-coklat-ide-hantaran-dan-jualan",
-    "title": "Dodol Coklat (ide hantaran dan jualan)",
+    "title": "Dodol Ketan Cokelat Legit",
     "source_url": "https://cookpad.com/id/resep/24614735",
     "excerpt": "Resep ide jualan modal ~Rp 18.500, hasil 10 porsi (10 orang).",
     "category": "jajanan-sekolah",
@@ -10736,7 +11204,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 orang",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Dodol Coklat (ide hantaran dan jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Dodol Ketan Cokelat Legit memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 18500
@@ -10788,16 +11256,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/ed98bacbadef8ff3/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/dodol-coklat-ide-hantaran-dan-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:24.267Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Dodol Coklat (ide hantaran dan jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:11.617Z"
   },
   "223-cente-cantik-manis-cocok-buat-suguhan-arisan-ide-jualan": {
     "id": "223-cente-cantik-manis-cocok-buat-suguhan-arisan-ide-jualan",
     "slug": "223-cente-cantik-manis-cocok-buat-suguhan-arisan-ide-jualan",
-    "title": "223. CENTE CANTIK MANIS | COCOK BUAT SUGUHAN ARISAN / IDE JUALAN",
+    "title": "Kue Cantik Manis Mutiara",
     "source_url": "https://cookpad.com/id/resep/24348392",
     "excerpt": "Resep ide jualan modal ~Rp 21.500, hasil 20 porsi (20 Potong).",
     "category": "jajanan-sekolah",
@@ -10811,7 +11284,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 Potong",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — 223. CENTE CANTIK MANIS | COCOK BUAT SUGUHAN ARISAN / IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Cantik Manis Mutiara memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 21500
@@ -10894,16 +11367,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/7d69d4e283f3331d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/223-cente-cantik-manis-cocok-buat-suguhan-arisan-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:28.979Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "223. CENTE CANTIK MANIS | COCOK BUAT SUGUHAN ARISAN / IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:11.617Z"
   },
   "sambal-bawang-ide-jualan": {
     "id": "sambal-bawang-ide-jualan",
     "slug": "sambal-bawang-ide-jualan",
-    "title": "Sambal Bawang ide jualan",
+    "title": "Sambal Bawang Pedas Gurih",
     "source_url": "https://cookpad.com/id/resep/24577845",
     "excerpt": "Resep ide jualan modal ~Rp 16.500, hasil 10 porsi (10 orang).",
     "category": "minuman",
@@ -10917,7 +11395,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 orang",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Sambal Bawang ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Sambal Bawang Pedas Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 16500
@@ -10998,16 +11476,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/1d57f141194e9dda/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/sambal-bawang-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:33.973Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Sambal Bawang ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:11.617Z"
   },
   "ide-jualan-pizza-mini": {
     "id": "ide-jualan-pizza-mini",
     "slug": "ide-jualan-pizza-mini",
-    "title": "Ide Jualan Pizza Mini",
+    "title": "Pizza Mini Empuk Gurih",
     "source_url": "https://cookpad.com/id/resep/24396283",
     "excerpt": "Resep ide jualan modal ~Rp 25.000, hasil 20 porsi (20pcs).",
     "category": "gorengan",
@@ -11021,7 +11504,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20pcs",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide Jualan Pizza Mini memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Pizza Mini Empuk Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 25000
@@ -11099,16 +11582,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b98941264d75e6ee/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-pizza-mini.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:38.193Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide Jualan Pizza Mini",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:11.617Z"
   },
   "bakwan-sayur-untuk-jualanacara": {
     "id": "bakwan-sayur-untuk-jualanacara",
     "slug": "bakwan-sayur-untuk-jualanacara",
-    "title": "Bakwan Sayur (untuk Jualan/acara)",
+    "title": "Bakwan Sayur Crispy Gurih",
     "source_url": "https://cookpad.com/id/resep/24565324",
     "excerpt": "Resep ide jualan modal ~Rp 22.000, hasil 110 porsi (110 pcs).",
     "category": "minuman",
@@ -11122,7 +11610,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "110 pcs",
     "default_portions": 110,
     "business_analysis": {
-      "market_demand": "Tinggi — Bakwan Sayur (untuk Jualan/acara) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bakwan Sayur Crispy Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 22000
@@ -11196,16 +11684,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b895e4aa612e9ca1/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bakwan-sayur-untuk-jualanacara.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:43.107Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bakwan Sayur (untuk Jualan/acara)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:11.617Z"
   },
   "stik-singkong-keju-ide-jualan-jajanan-viral": {
     "id": "stik-singkong-keju-ide-jualan-jajanan-viral",
     "slug": "stik-singkong-keju-ide-jualan-jajanan-viral",
-    "title": "Stik singkong keju (ide jualan jajanan viral)",
+    "title": "Stik Singkong Keju Crispy",
     "source_url": "https://cookpad.com/id/resep/24560421",
     "excerpt": "Resep ide jualan modal ~Rp 31.000, hasil 5 porsi (5 orang).",
     "category": "gorengan",
@@ -11219,7 +11712,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "5 orang",
     "default_portions": 5,
     "business_analysis": {
-      "market_demand": "Tinggi — Stik singkong keju (ide jualan jajanan viral) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Stik Singkong Keju Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 31000
@@ -11297,16 +11790,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/f7ab5b791f7c5149/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/stik-singkong-keju-ide-jualan-jajanan-viral.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:47.834Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Stik singkong keju (ide jualan jajanan viral)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:11.617Z"
   },
   "221-matcha-almond-cookies-renyah-wangi-cocok-untuk-ide-jualan": {
     "id": "221-matcha-almond-cookies-renyah-wangi-cocok-untuk-ide-jualan",
     "slug": "221-matcha-almond-cookies-renyah-wangi-cocok-untuk-ide-jualan",
-    "title": "221. MATCHA ALMOND COOKIES || RENYAH WANGI & COCOK UNTUK IDE JUALAN",
+    "title": "Matcha Almond Cookies Renyah",
     "source_url": "https://cookpad.com/id/resep/24514964",
     "excerpt": "Resep ide jualan modal ~Rp 22.500, hasil 10 porsi (10 pcs).",
     "category": "minuman",
@@ -11320,7 +11818,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 pcs",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — 221. MATCHA ALMOND COOKIES || RENYAH WANGI & COCOK UNTUK IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Matcha Almond Cookies Renyah memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 22500
@@ -11375,16 +11873,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/8db261d2f9b3a20f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/221-matcha-almond-cookies-renyah-wangi-cocok-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:51.956Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "221. MATCHA ALMOND COOKIES || RENYAH WANGI & COCOK UNTUK IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:11.618Z"
   },
   "99-ice-cream-cookies-and-strawberry-ide-jualan-market-day": {
     "id": "99-ice-cream-cookies-and-strawberry-ide-jualan-market-day",
     "slug": "99-ice-cream-cookies-and-strawberry-ide-jualan-market-day",
-    "title": "99. Ice cream cookies and strawberry, ide jualan market day",
+    "title": "Es Krim Strawberry Cookies",
     "source_url": "https://cookpad.com/id/resep/24497368",
     "excerpt": "Resep ide jualan modal ~Rp 17.000, hasil 30 porsi (30 cone es cream).",
     "category": "minuman",
@@ -11398,7 +11901,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "30 cone es cream",
     "default_portions": 30,
     "business_analysis": {
-      "market_demand": "Tinggi — 99. Ice cream cookies and strawberry, ide jualan market day memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Krim Strawberry Cookies memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 17000
@@ -11460,16 +11963,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b3b797745aacee82/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/99-ice-cream-cookies-and-strawberry-ide-jualan-market-day.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:17:56.198Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "99. Ice cream cookies and strawberry, ide jualan market day",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:23.954Z"
   },
   "es-susu-cokelat-ide-jualan": {
     "id": "es-susu-cokelat-ide-jualan",
     "slug": "es-susu-cokelat-ide-jualan",
-    "title": "Es Susu Cokelat (Ide Jualan)",
+    "title": "Es Susu Cokelat Creamy",
     "source_url": "https://cookpad.com/id/resep/24489380",
     "excerpt": "Resep ide jualan modal ~Rp 15.500, hasil 11 porsi (11 pcs).",
     "category": "minuman",
@@ -11483,7 +11991,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "11 pcs",
     "default_portions": 11,
     "business_analysis": {
-      "market_demand": "Tinggi — Es Susu Cokelat (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Susu Cokelat Creamy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 15500
@@ -11521,16 +12029,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/5e19abbd955373de/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/es-susu-cokelat-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:00.660Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Es Susu Cokelat (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:23.954Z"
   },
   "tahu-cetak-untuk-jualan": {
     "id": "tahu-cetak-untuk-jualan",
     "slug": "tahu-cetak-untuk-jualan",
-    "title": "Tahu Cetak (untuk jualan)",
+    "title": "Tahu Cetak Sayur Gurih",
     "source_url": "https://cookpad.com/id/resep/24492136",
     "excerpt": "Resep ide jualan modal ~Rp 16.000, hasil 120 porsi (120pcs).",
     "category": "jajanan-sekolah",
@@ -11544,7 +12057,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "120pcs",
     "default_portions": 120,
     "business_analysis": {
-      "market_demand": "Tinggi — Tahu Cetak (untuk jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Tahu Cetak Sayur Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 16000
@@ -11624,16 +12137,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/0cc622164b5dfa12/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/tahu-cetak-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:05.222Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Tahu Cetak (untuk jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:23.954Z"
   },
   "219-jagung-bakar-mozzarella-manis-gurih-cocok-untuk-ide-jualan": {
     "id": "219-jagung-bakar-mozzarella-manis-gurih-cocok-untuk-ide-jualan",
     "slug": "219-jagung-bakar-mozzarella-manis-gurih-cocok-untuk-ide-jualan",
-    "title": "219. JAGUNG BAKAR MOZZARELLA | MANIS GURIH & COCOK UNTUK IDE JUALAN",
+    "title": "Jagung Bakar Keju Mozzarella",
     "source_url": "https://cookpad.com/id/resep/24319842",
     "excerpt": "Resep ide jualan modal ~Rp 37.500, hasil 3 porsi (3 Porsi).",
     "category": "jajanan-sekolah",
@@ -11647,7 +12165,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "3 Porsi",
     "default_portions": 3,
     "business_analysis": {
-      "market_demand": "Tinggi — 219. JAGUNG BAKAR MOZZARELLA | MANIS GURIH & COCOK UNTUK IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Jagung Bakar Keju Mozzarella memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 37500
@@ -11710,16 +12228,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b517508478863968/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/219-jagung-bakar-mozzarella-manis-gurih-cocok-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:09.293Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "219. JAGUNG BAKAR MOZZARELLA | MANIS GURIH & COCOK UNTUK IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:23.954Z"
   },
   "donat-jualan-jual-1000": {
     "id": "donat-jualan-jual-1000",
     "slug": "donat-jualan-jual-1000",
-    "title": "Donat Jualan (jual 1000)",
+    "title": "Donat Mini Lembut Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24456388",
     "excerpt": "Resep ide jualan modal ~Rp 24.000, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -11734,7 +12257,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Donat Jualan (jual 1000) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Donat Mini Lembut Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 24000
@@ -11813,16 +12336,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/4c1cf51480eaa292/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/donat-jualan-jual-1000.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:13.704Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Donat Jualan (jual 1000)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:23.954Z"
   },
   "kue-sus-krim-vanila-ide-jualan": {
     "id": "kue-sus-krim-vanila-ide-jualan",
     "slug": "kue-sus-krim-vanila-ide-jualan",
-    "title": "Kue sus krim vanila (Ide Jualan)",
+    "title": "Kue Sus Vla Vanilla Lembut",
     "source_url": "https://cookpad.com/id/resep/24449330",
     "excerpt": "Resep ide jualan modal ~Rp 27.000, hasil 24 porsi (24 pcs).",
     "category": "kue",
@@ -11836,7 +12364,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "24 pcs",
     "default_portions": 24,
     "business_analysis": {
-      "market_demand": "Tinggi — Kue sus krim vanila (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Sus Vla Vanilla Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 27000
@@ -11928,16 +12456,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e7d5cf9ab988e593/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kue-sus-krim-vanila-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:17.767Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kue sus krim vanila (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:23.954Z"
   },
   "nastar-ekonomis-ide-jualan-kue-kering": {
     "id": "nastar-ekonomis-ide-jualan-kue-kering",
     "slug": "nastar-ekonomis-ide-jualan-kue-kering",
-    "title": "Nastar Ekonomis | Ide Jualan Kue Kering",
+    "title": "Nastar Lumer Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24429204",
     "excerpt": "Resep ide jualan modal ~Rp 28.500, hasil 40 porsi (40-55 pcs).",
     "category": "kue",
@@ -11952,7 +12485,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "40-55 pcs",
     "default_portions": 40,
     "business_analysis": {
-      "market_demand": "Tinggi — Nastar Ekonomis | Ide Jualan Kue Kering memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Nastar Lumer Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 28500
@@ -12033,16 +12566,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/869a5b9dd8041d00/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/nastar-ekonomis-ide-jualan-kue-kering.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:22.731Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Nastar Ekonomis | Ide Jualan Kue Kering",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:23.954Z"
   },
   "722-dimsum-ayam-ide-bakulan": {
     "id": "722-dimsum-ayam-ide-bakulan",
     "slug": "722-dimsum-ayam-ide-bakulan",
-    "title": "722. Dimsum Ayam (Ide Bakulan)",
+    "title": "Dimsum Ayam Gurih Juicy",
     "source_url": "https://cookpad.com/id/resep/24120184",
     "excerpt": "Resep ide jualan modal ~Rp 61.500, hasil 30 porsi (30 pcs).",
     "category": "minuman",
@@ -12056,7 +12594,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "30 pcs",
     "default_portions": 30,
     "business_analysis": {
-      "market_demand": "Tinggi — 722. Dimsum Ayam (Ide Bakulan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Dimsum Ayam Gurih Juicy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 61500
@@ -12169,16 +12707,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/22da68be1d384bd1/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/722-dimsum-ayam-ide-bakulan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:29.123Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "722. Dimsum Ayam (Ide Bakulan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:23.954Z"
   },
   "1065-churros-frozen-ide-jualan": {
     "id": "1065-churros-frozen-ide-jualan",
     "slug": "1065-churros-frozen-ide-jualan",
-    "title": "1065. Churros Frozen ide jualan",
+    "title": "Churros Frozen Crispy",
     "source_url": "https://cookpad.com/id/resep/24369420",
     "excerpt": "Resep ide jualan modal ~Rp 27.500, hasil 3 porsi (3-5 orang).",
     "category": "jajanan-sekolah",
@@ -12192,7 +12735,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "3-5 orang",
     "default_portions": 3,
     "business_analysis": {
-      "market_demand": "Tinggi — 1065. Churros Frozen ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Churros Frozen Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 27500
@@ -12254,16 +12797,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/ef0491133b21c504/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/1065-churros-frozen-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:34.022Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "1065. Churros Frozen ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:23.954Z"
   },
   "asinan-buah-ide-jualan": {
     "id": "asinan-buah-ide-jualan",
     "slug": "asinan-buah-ide-jualan",
-    "title": "Asinan Buah (Ide jualan)",
+    "title": "Asinan Buah Segar Pedas Manis",
     "source_url": "https://cookpad.com/id/resep/24392543",
     "excerpt": "Resep ide jualan modal ~Rp 23.000, hasil 10 porsi (±10 cup).",
     "category": "jajanan-sekolah",
@@ -12277,7 +12825,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "±10 cup",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Asinan Buah (Ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Asinan Buah Segar Pedas Manis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 23000
@@ -12366,16 +12914,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/37f1b0e3d88e0928/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/asinan-buah-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:38.226Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Asinan Buah (Ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:23.954Z"
   },
   "klepon-kentang-enak-praktis-untuk-ide-jualan": {
     "id": "klepon-kentang-enak-praktis-untuk-ide-jualan",
     "slug": "klepon-kentang-enak-praktis-untuk-ide-jualan",
-    "title": "Klepon Kentang, Enak Praktis Untuk Ide Jualan",
+    "title": "Klepon Kentang Pandan Legit",
     "source_url": "https://cookpad.com/id/resep/24391381",
     "excerpt": "Resep ide jualan modal ~Rp 15.000, hasil 25 porsi (25 porsi).",
     "category": "jajanan-sekolah",
@@ -12389,7 +12942,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "25 porsi",
     "default_portions": 25,
     "business_analysis": {
-      "market_demand": "Tinggi — Klepon Kentang, Enak Praktis Untuk Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Klepon Kentang Pandan Legit memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 15000
@@ -12454,16 +13007,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e5f8609397d4a631/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/klepon-kentang-enak-praktis-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:42.570Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Klepon Kentang, Enak Praktis Untuk Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:35.455Z"
   },
   "spageti-ceker-ala-ala-jualan-rumahan": {
     "id": "spageti-ceker-ala-ala-jualan-rumahan",
     "slug": "spageti-ceker-ala-ala-jualan-rumahan",
-    "title": "Spageti ceker ala ala jualan rumahan",
+    "title": "Spaghetti Ceker Pedas Gurih",
     "source_url": "https://cookpad.com/id/resep/24386238",
     "excerpt": "Resep ide jualan modal ~Rp 21.000, hasil 1 porsi (1 orang).",
     "category": "jajanan-sekolah",
@@ -12477,7 +13035,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 orang",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Spageti ceker ala ala jualan rumahan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Spaghetti Ceker Pedas Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 21000
@@ -12565,16 +13123,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/2c461ad41c5efa5c/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/spageti-ceker-ala-ala-jualan-rumahan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:47.528Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Spageti ceker ala ala jualan rumahan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:35.455Z"
   },
   "mie-ayam-sakura-ide-jualan": {
     "id": "mie-ayam-sakura-ide-jualan",
     "slug": "mie-ayam-sakura-ide-jualan",
-    "title": "Mie Ayam Sakura ide jualan",
+    "title": "Mie Ayam Sakura Spesial",
     "source_url": "https://cookpad.com/id/resep/24373293",
     "excerpt": "Resep ide jualan modal ~Rp 48.000, hasil 10 porsi (10-15 porsi).",
     "category": "minuman",
@@ -12588,7 +13151,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10-15 porsi",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Mie Ayam Sakura ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Mie Ayam Sakura Spesial memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 48000
@@ -12708,16 +13271,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/78d965efd0d85c8f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/mie-ayam-sakura-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:51.944Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Mie Ayam Sakura ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:35.455Z"
   },
   "orak-arik-telur-ide-jualan": {
     "id": "orak-arik-telur-ide-jualan",
     "slug": "orak-arik-telur-ide-jualan",
-    "title": "Orak arik telur ide jualan",
+    "title": "Orak Arik Telur Sayur",
     "source_url": "https://cookpad.com/id/resep/24365938",
     "excerpt": "Resep ide jualan modal ~Rp 20.000, hasil 215 porsi (215 orang).",
     "category": "jajanan-sekolah",
@@ -12731,7 +13299,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "215 orang",
     "default_portions": 215,
     "business_analysis": {
-      "market_demand": "Tinggi — Orak arik telur ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Orak Arik Telur Sayur memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 20000
@@ -12802,16 +13370,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/9afe389a9d346b6d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/orak-arik-telur-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:18:56.284Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Orak arik telur ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:35.455Z"
   },
   "risol-rogut-ayam-mak-enonide-jualan": {
     "id": "risol-rogut-ayam-mak-enonide-jualan",
     "slug": "risol-rogut-ayam-mak-enonide-jualan",
-    "title": "Risol Rogut Ayam (Mak Enon,ide jualan)",
+    "title": "Risol Ragout Ayam Crispy",
     "source_url": "https://cookpad.com/id/resep/24364077",
     "excerpt": "Resep ide jualan modal ~Rp 47.500, hasil 22 porsi (22 risol).",
     "category": "gorengan",
@@ -12825,7 +13398,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "22 risol",
     "default_portions": 22,
     "business_analysis": {
-      "market_demand": "Tinggi — Risol Rogut Ayam (Mak Enon,ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Risol Ragout Ayam Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 47500
@@ -12894,16 +13467,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/4faeeefe06677d14/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/risol-rogut-ayam-mak-enonide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:01.085Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Risol Rogut Ayam (Mak Enon,ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:35.455Z"
   },
   "pastel-super-renyah-rogut-ayam-ide-jualan": {
     "id": "pastel-super-renyah-rogut-ayam-ide-jualan",
     "slug": "pastel-super-renyah-rogut-ayam-ide-jualan",
-    "title": "Pastel Super Renyah Rogut Ayam (ide Jualan)",
+    "title": "Pastel Renyah Ragout Ayam",
     "source_url": "https://cookpad.com/id/resep/24352461",
     "excerpt": "Resep ide jualan modal ~Rp 39.500, hasil 20 porsi (20 pastel).",
     "category": "minuman",
@@ -12917,7 +13495,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 pastel",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Pastel Super Renyah Rogut Ayam (ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Pastel Renyah Ragout Ayam memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 39500
@@ -12973,16 +13551,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/a0bba4b347931a06/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/pastel-super-renyah-rogut-ayam-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:05.634Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Pastel Super Renyah Rogut Ayam (ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:35.455Z"
   },
   "risol-mayo-mak-enonide-jualan": {
     "id": "risol-mayo-mak-enonide-jualan",
     "slug": "risol-mayo-mak-enonide-jualan",
-    "title": "Risol Mayo (Mak Enon,ide jualan)",
+    "title": "Risol Mayo Lumer Crispy",
     "source_url": "https://cookpad.com/id/resep/24347105",
     "excerpt": "Resep ide jualan modal ~Rp 47.500, hasil 22 porsi (22 risol).",
     "category": "gorengan",
@@ -12996,7 +13579,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "22 risol",
     "default_portions": 22,
     "business_analysis": {
-      "market_demand": "Tinggi — Risol Mayo (Mak Enon,ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Risol Mayo Lumer Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 47500
@@ -13083,16 +13666,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/f65f650dc5e52057/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/risol-mayo-mak-enonide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:09.902Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Risol Mayo (Mak Enon,ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:35.455Z"
   },
   "puding-coklat-simpel-anti-gagal-ide-jualan": {
     "id": "puding-coklat-simpel-anti-gagal-ide-jualan",
     "slug": "puding-coklat-simpel-anti-gagal-ide-jualan",
-    "title": "Puding Coklat simpel, anti gagal (ide jualan)",
+    "title": "Puding Cokelat Cup Lembut",
     "source_url": "https://cookpad.com/id/resep/24347590",
     "excerpt": "Resep ide jualan modal ~Rp 37.000, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -13106,7 +13694,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Puding Coklat simpel, anti gagal (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Puding Cokelat Cup Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 37000
@@ -13182,16 +13770,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/24d430b54d071e7f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/puding-coklat-simpel-anti-gagal-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:14.120Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Puding Coklat simpel, anti gagal (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:35.455Z"
   },
   "bolen-pisang-keju-coklat-ide-bakulan-tehnik-double-dough": {
     "id": "bolen-pisang-keju-coklat-ide-bakulan-tehnik-double-dough",
     "slug": "bolen-pisang-keju-coklat-ide-bakulan-tehnik-double-dough",
-    "title": "Bolen Pisang Keju Coklat / Ide Bakulan (tehnik double dough)",
+    "title": "Bolen Pisang Cokelat Keju",
     "source_url": "https://cookpad.com/id/resep/24330447",
     "excerpt": "Resep ide jualan modal ~Rp 70.000, hasil 16 porsi (16 pcs).",
     "category": "minuman",
@@ -13205,7 +13798,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "16 pcs",
     "default_portions": 16,
     "business_analysis": {
-      "market_demand": "Tinggi — Bolen Pisang Keju Coklat / Ide Bakulan (tehnik double dough) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bolen Pisang Cokelat Keju memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 70000
@@ -13315,16 +13908,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/724c95366d006cd0/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bolen-pisang-keju-coklat-ide-bakulan-tehnik-double-dough.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:18.374Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bolen Pisang Keju Coklat / Ide Bakulan (tehnik double dough)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:35.455Z"
   },
   "pastel-gulung-viral-isi-ragout-ide-jualan": {
     "id": "pastel-gulung-viral-isi-ragout-ide-jualan",
     "slug": "pastel-gulung-viral-isi-ragout-ide-jualan",
-    "title": "Pastel Gulung Viral Isi Ragout (Ide Jualan)",
+    "title": "Pastel Gulung Ragout Crispy",
     "source_url": "https://cookpad.com/id/resep/24306908",
     "excerpt": "Resep ide jualan modal ~Rp 65.500, hasil 30 porsi (30 pcs).",
     "category": "gorengan",
@@ -13338,7 +13936,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "30 pcs",
     "default_portions": 30,
     "business_analysis": {
-      "market_demand": "Tinggi — Pastel Gulung Viral Isi Ragout (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Pastel Gulung Ragout Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 65500
@@ -13468,16 +14066,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/f703c86b797a2b7e/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/pastel-gulung-viral-isi-ragout-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:23.265Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Pastel Gulung Viral Isi Ragout (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:35.455Z"
   },
   "mango-cheese-jelly-ball-ide-jualan": {
     "id": "mango-cheese-jelly-ball-ide-jualan",
     "slug": "mango-cheese-jelly-ball-ide-jualan",
-    "title": "Mango Cheese Jelly Ball (Ide Jualan)",
+    "title": "Mango Cheese Jelly Ball",
     "source_url": "https://cookpad.com/id/resep/24314568",
     "excerpt": "Resep ide jualan modal ~Rp 36.500, hasil 2 porsi (2 cup).",
     "category": "minuman",
@@ -13491,7 +14094,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "2 cup",
     "default_portions": 2,
     "business_analysis": {
-      "market_demand": "Tinggi — Mango Cheese Jelly Ball (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Mango Cheese Jelly Ball memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 36500
@@ -13554,16 +14157,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/8a5a5d7c87f899d4/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/mango-cheese-jelly-ball-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:27.454Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Mango Cheese Jelly Ball (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:43.610Z"
   },
   "nasi-dagang-express-khas-malaysia": {
     "id": "nasi-dagang-express-khas-malaysia",
     "slug": "nasi-dagang-express-khas-malaysia",
-    "title": "Nasi Dagang Express khas Malaysia",
+    "title": "Nasi Dagang Khas Malaysia",
     "source_url": "https://cookpad.com/id/resep/24288750",
     "excerpt": "Resep ide jualan modal ~Rp 89.500, hasil 4 porsi (4 porsi).",
     "category": "gorengan",
@@ -13577,7 +14185,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "4 porsi",
     "default_portions": 4,
     "business_analysis": {
-      "market_demand": "Tinggi — Nasi Dagang Express khas Malaysia memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Nasi Dagang Khas Malaysia memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 89500
@@ -13788,16 +14396,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/edfe70c632c33b7c/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/nasi-dagang-express-khas-malaysia.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:32.631Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Nasi Dagang Express khas Malaysia",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:43.610Z"
   },
   "lele-goreng-ala-jualan-kaki-lima": {
     "id": "lele-goreng-ala-jualan-kaki-lima",
     "slug": "lele-goreng-ala-jualan-kaki-lima",
-    "title": "Lele Goreng ala jualan kaki lima",
+    "title": "Lele Goreng Crispy Gurih",
     "source_url": "https://cookpad.com/id/resep/24259609",
     "excerpt": "Resep ide jualan modal ~Rp 18.500, hasil 5 porsi (5 Orang).",
     "category": "minuman",
@@ -13811,7 +14424,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "5 Orang",
     "default_portions": 5,
     "business_analysis": {
-      "market_demand": "Tinggi — Lele Goreng ala jualan kaki lima memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Lele Goreng Crispy Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 18500
@@ -13893,16 +14506,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/dc9353acb4863bd9/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/lele-goreng-ala-jualan-kaki-lima.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:36.837Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Lele Goreng ala jualan kaki lima",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:43.610Z"
   },
   "bolu-gulung-ekonomis-lembutnya-kebangetan-ide-jualan": {
     "id": "bolu-gulung-ekonomis-lembutnya-kebangetan-ide-jualan",
     "slug": "bolu-gulung-ekonomis-lembutnya-kebangetan-ide-jualan",
-    "title": "Bolu Gulung Ekonomis, lembutnya kebangetan/ ide jualan",
+    "title": "Bolu Gulung Lembut Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24258163",
     "excerpt": "Resep ide jualan modal ~Rp 32.000, hasil 20 porsi (20 porsi).",
     "category": "kue",
@@ -13917,7 +14535,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Bolu Gulung Ekonomis, lembutnya kebangetan/ ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bolu Gulung Lembut Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 32000
@@ -13998,16 +14616,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/46e71021608c6d69/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bolu-gulung-ekonomis-lembutnya-kebangetan-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:41.044Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bolu Gulung Ekonomis, lembutnya kebangetan/ ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:43.610Z"
   },
   "487-sambal-pecel-kemasan-untuk-stok-atau-dijual": {
     "id": "487-sambal-pecel-kemasan-untuk-stok-atau-dijual",
     "slug": "487-sambal-pecel-kemasan-untuk-stok-atau-dijual",
-    "title": "487. Sambal Pecel Kemasan (untuk stok atau dijual)",
+    "title": "Sambal Pecel Kemasan Praktis",
     "source_url": "https://cookpad.com/id/resep/24253687",
     "excerpt": "Resep ide jualan modal ~Rp 16.500, hasil 2 porsi (+/- 2 kg bumbu pecel).",
     "category": "jajanan-sekolah",
@@ -14021,7 +14644,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "+/- 2 kg bumbu pecel",
     "default_portions": 2,
     "business_analysis": {
-      "market_demand": "Tinggi — 487. Sambal Pecel Kemasan (untuk stok atau dijual) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Sambal Pecel Kemasan Praktis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 16500
@@ -14092,16 +14715,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/a3a19d42a7e4fbfb/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/487-sambal-pecel-kemasan-untuk-stok-atau-dijual.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:46.089Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "487. Sambal Pecel Kemasan (untuk stok atau dijual)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:43.610Z"
   },
   "isian-risoles-ayam-sayur-rogout-untuk-jualan": {
     "id": "isian-risoles-ayam-sayur-rogout-untuk-jualan",
     "slug": "isian-risoles-ayam-sayur-rogout-untuk-jualan",
-    "title": "Isian Risoles ayam sayur rogout untuk jualan",
+    "title": "Ragout Ayam Sayur Isian Risol",
     "source_url": "https://cookpad.com/id/resep/24244121",
     "excerpt": "Resep ide jualan modal ~Rp 39.500, hasil 64 porsi (64 - 68 pcs).",
     "category": "minuman",
@@ -14115,7 +14743,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "64 - 68 pcs",
     "default_portions": 64,
     "business_analysis": {
-      "market_demand": "Tinggi — Isian Risoles ayam sayur rogout untuk jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Ragout Ayam Sayur Isian Risol memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 39500
@@ -14230,16 +14858,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/115cee9be7a61e48/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/isian-risoles-ayam-sayur-rogout-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:50.710Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Isian Risoles ayam sayur rogout untuk jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:43.610Z"
   },
   "tahu-aci-simpel-mudah-ga-alot-ga-keras-saat-dingin-ide-jualan": {
     "id": "tahu-aci-simpel-mudah-ga-alot-ga-keras-saat-dingin-ide-jualan",
     "slug": "tahu-aci-simpel-mudah-ga-alot-ga-keras-saat-dingin-ide-jualan",
-    "title": "Tahu aci (simpel, mudah, ga alot, ga keras saat dingin) ide jualan",
+    "title": "Tahu Aci Crispy Lembut",
     "source_url": "https://cookpad.com/id/resep/24243242",
     "excerpt": "Resep ide jualan modal ~Rp 12.500, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -14253,7 +14886,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Tahu aci (simpel, mudah, ga alot, ga keras saat dingin) ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Tahu Aci Crispy Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 12500
@@ -14318,16 +14951,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/9a6fec43f0bc9657/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/tahu-aci-simpel-mudah-ga-alot-ga-keras-saat-dingin-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:54.813Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Tahu aci (simpel, mudah, ga alot, ga keras saat dingin) ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:43.610Z"
   },
   "bolu-kukus-putih-telur-ide-jualan": {
     "id": "bolu-kukus-putih-telur-ide-jualan",
     "slug": "bolu-kukus-putih-telur-ide-jualan",
-    "title": "Bolu Kukus Putih telur / ide jualan",
+    "title": "Bolu Kukus Putih Telur",
     "source_url": "https://cookpad.com/id/resep/24236342",
     "excerpt": "Resep ide jualan modal ~Rp 28.000, hasil 20 porsi (20 porsi).",
     "category": "kue",
@@ -14341,7 +14979,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Bolu Kukus Putih telur / ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bolu Kukus Putih Telur memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 28000
@@ -14424,16 +15062,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/029d0d3c9cbea0dd/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bolu-kukus-putih-telur-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:19:59.326Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bolu Kukus Putih telur / ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:43.610Z"
   },
   "kulit-risoles-jualan": {
     "id": "kulit-risoles-jualan",
     "slug": "kulit-risoles-jualan",
-    "title": "Kulit risoles jualan",
+    "title": "Kulit Risoles Lentur Lembut",
     "source_url": "https://cookpad.com/id/resep/24231695",
     "excerpt": "Resep ide jualan modal ~Rp 15.000, hasil 50 porsi (50 lbr +/-).",
     "category": "minuman",
@@ -14447,7 +15090,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "50 lbr +/-",
     "default_portions": 50,
     "business_analysis": {
-      "market_demand": "Tinggi — Kulit risoles jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kulit Risoles Lentur Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 15000
@@ -14499,16 +15142,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/8f234b7570de0286/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kulit-risoles-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:03.683Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kulit risoles jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:43.610Z"
   },
   "pizza-smoked-beef-cheese-extra-moza-ide-jualan-auto-laris-manis-dan-nagih": {
     "id": "pizza-smoked-beef-cheese-extra-moza-ide-jualan-auto-laris-manis-dan-nagih",
     "slug": "pizza-smoked-beef-cheese-extra-moza-ide-jualan-auto-laris-manis-dan-nagih",
-    "title": "Pizza smoked beef cheese extra moza / ide jualan, auto laris manis dan nagih",
+    "title": "Pizza Smoked Beef Mozzarella",
     "source_url": "https://cookpad.com/id/resep/24227927",
     "excerpt": "Resep ide jualan modal ~Rp 62.000, hasil 20 porsi (20 porsi).",
     "category": "kue",
@@ -14522,7 +15170,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Pizza smoked beef cheese extra moza / ide jualan, auto laris manis dan nagih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Pizza Smoked Beef Mozzarella memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 62000
@@ -14658,16 +15306,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/3b04d4e44bf06966/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/pizza-smoked-beef-cheese-extra-moza-ide-jualan-auto-laris-manis-dan-nagih.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:08.568Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Pizza smoked beef cheese extra moza / ide jualan, auto laris manis dan nagih",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:43.610Z"
   },
   "risol-mayo-smoked-beef-egg-ide-jualan-auto-best-seller": {
     "id": "risol-mayo-smoked-beef-egg-ide-jualan-auto-best-seller",
     "slug": "risol-mayo-smoked-beef-egg-ide-jualan-auto-best-seller",
-    "title": "Risol Mayo Smoked Beef Egg / ide jualan auto best seller",
+    "title": "Risol Mayo Smoked Beef Egg",
     "source_url": "https://cookpad.com/id/resep/24226607",
     "excerpt": "Resep ide jualan modal ~Rp 46.000, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -14681,7 +15334,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Risol Mayo Smoked Beef Egg / ide jualan auto best seller memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Risol Mayo Smoked Beef Egg memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 46000
@@ -14788,16 +15441,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/2821a352ccc876f6/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/risol-mayo-smoked-beef-egg-ide-jualan-auto-best-seller.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:12.677Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Risol Mayo Smoked Beef Egg / ide jualan auto best seller",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:56.755Z"
   },
   "fudgy-brownies-resep-ala-jualan-aku": {
     "id": "fudgy-brownies-resep-ala-jualan-aku",
     "slug": "fudgy-brownies-resep-ala-jualan-aku",
-    "title": "Fudgy Brownies (Resep ala Jualan aku)",
+    "title": "Fudgy Chocolate Brownies",
     "source_url": "https://cookpad.com/id/resep/24217697",
     "excerpt": "Resep ide jualan modal ~Rp 32.500, hasil 3 porsi (3-4 Orang).",
     "category": "minuman",
@@ -14811,7 +15469,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "3-4 Orang",
     "default_portions": 3,
     "business_analysis": {
-      "market_demand": "Tinggi — Fudgy Brownies (Resep ala Jualan aku) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Fudgy Chocolate Brownies memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 32500
@@ -14893,16 +15551,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/9838e78d0d7ae19e/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/fudgy-brownies-resep-ala-jualan-aku.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:17.052Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Fudgy Brownies (Resep ala Jualan aku)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:56.755Z"
   },
   "ricebowl-ayam-suwir-ide-jualan": {
     "id": "ricebowl-ayam-suwir-ide-jualan",
     "slug": "ricebowl-ayam-suwir-ide-jualan",
-    "title": "Ricebowl ayam suwir (ide jualan)",
+    "title": "Rice Bowl Ayam Suwir Pedas",
     "source_url": "https://cookpad.com/id/resep/24205263",
     "excerpt": "Resep ide jualan modal ~Rp 29.500, hasil 15 porsi (15 porsi).",
     "category": "jajanan-sekolah",
@@ -14916,7 +15579,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "15 porsi",
     "default_portions": 15,
     "business_analysis": {
-      "market_demand": "Tinggi — Ricebowl ayam suwir (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Rice Bowl Ayam Suwir Pedas memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 29500
@@ -15004,16 +15667,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/566a36a047782166/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ricebowl-ayam-suwir-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:21.376Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ricebowl ayam suwir (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:56.755Z"
   },
   "mochi-ekonomis-ide-jualan": {
     "id": "mochi-ekonomis-ide-jualan",
     "slug": "mochi-ekonomis-ide-jualan",
-    "title": "Mochi ekonomis (ide jualan)",
+    "title": "Mochi Kenyal Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24205315",
     "excerpt": "Resep ide jualan modal ~Rp 33.500, hasil 25 porsi (25-+).",
     "category": "gorengan",
@@ -15028,7 +15696,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "25-+",
     "default_portions": 25,
     "business_analysis": {
-      "market_demand": "Tinggi — Mochi ekonomis (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Mochi Kenyal Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 33500
@@ -15110,16 +15778,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/2072e30139c43e35/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/mochi-ekonomis-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:25.941Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Mochi ekonomis (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:56.755Z"
   },
   "risol-full-mince-paha-ayam-dan-wortel-dengan-saus-ala-aida-kalo-dijual-5rb-sebiji-juga-rugi": {
     "id": "risol-full-mince-paha-ayam-dan-wortel-dengan-saus-ala-aida-kalo-dijual-5rb-sebiji-juga-rugi",
     "slug": "risol-full-mince-paha-ayam-dan-wortel-dengan-saus-ala-aida-kalo-dijual-5rb-sebiji-juga-rugi",
-    "title": "Risol full Mince Paha Ayam dan Wortel dengan saus ala Aida kalo dijual 5rb sebiji juga rugi :(",
+    "title": "Risol Ragout Ayam Wortel",
     "source_url": "https://cookpad.com/id/resep/24183963",
     "excerpt": "Resep ide jualan modal ~Rp 62.500, hasil 20 porsi (se RT Bisa asal jangan ada yang maruk).",
     "category": "gorengan",
@@ -15133,7 +15806,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "se RT Bisa asal jangan ada yang maruk",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Risol full Mince Paha Ayam dan Wortel dengan saus ala Aida kalo dijual 5rb sebiji juga rugi :( memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Risol Ragout Ayam Wortel memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 62500
@@ -15278,16 +15951,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/a098476e6df39f47/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/risol-full-mince-paha-ayam-dan-wortel-dengan-saus-ala-aida-kalo-dijual-5rb-sebiji-juga-rugi.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:30.309Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Risol full Mince Paha Ayam dan Wortel dengan saus ala Aida kalo dijual 5rb sebiji juga rugi :(",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:56.755Z"
   },
   "marmer-cake-law-thomas-jualan": {
     "id": "marmer-cake-law-thomas-jualan",
     "slug": "marmer-cake-law-thomas-jualan",
-    "title": "Marmer Cake Law Thomas (Jualan)",
+    "title": "Marmer Cake Butter Premium",
     "source_url": "https://cookpad.com/id/resep/15742685",
     "excerpt": "Resep ide jualan modal ~Rp 29.500, hasil 20 porsi (20 porsi).",
     "category": "kue",
@@ -15301,7 +15979,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Marmer Cake Law Thomas (Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Marmer Cake Butter Premium memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 29500
@@ -15370,16 +16048,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/965427880d1dae32/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/marmer-cake-law-thomas-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:34.914Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Marmer Cake Law Thomas (Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:56.755Z"
   },
   "252-mie-goreng-resep-jualan": {
     "id": "252-mie-goreng-resep-jualan",
     "slug": "252-mie-goreng-resep-jualan",
-    "title": "#252 Mie Goreng / Resep Jualan",
+    "title": "Mie Goreng Ayam Spesial",
     "source_url": "https://cookpad.com/id/resep/22667646",
     "excerpt": "Resep ide jualan modal ~Rp 31.500, hasil 5 porsi (5 orang).",
     "category": "gorengan",
@@ -15393,7 +16076,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "5 orang",
     "default_portions": 5,
     "business_analysis": {
-      "market_demand": "Tinggi — #252 Mie Goreng / Resep Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Mie Goreng Ayam Spesial memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 31500
@@ -15485,16 +16168,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/db30ad937a53df8f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/252-mie-goreng-resep-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:39.240Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "#252 Mie Goreng / Resep Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:56.755Z"
   },
   "kerupuk-puli-gendar-tanpa-bleng-olahan-nasi-resep-jualan-ibu": {
     "id": "kerupuk-puli-gendar-tanpa-bleng-olahan-nasi-resep-jualan-ibu",
     "slug": "kerupuk-puli-gendar-tanpa-bleng-olahan-nasi-resep-jualan-ibu",
-    "title": "Kerupuk Puli / Gendar tanpa Bleng (olahan nasi) resep jualan ibu",
+    "title": "Kerupuk Gendar Nasi Gurih",
     "source_url": "https://cookpad.com/id/resep/24176777",
     "excerpt": "Resep ide jualan modal ~Rp 21.500, hasil 150 porsi (150gr).",
     "category": "jajanan-sekolah",
@@ -15508,7 +16196,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "150gr",
     "default_portions": 150,
     "business_analysis": {
-      "market_demand": "Tinggi — Kerupuk Puli / Gendar tanpa Bleng (olahan nasi) resep jualan ibu memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kerupuk Gendar Nasi Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 21500
@@ -15562,16 +16250,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/d7b646e260f16f3b/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kerupuk-puli-gendar-tanpa-bleng-olahan-nasi-resep-jualan-ibu.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:44.014Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kerupuk Puli / Gendar tanpa Bleng (olahan nasi) resep jualan ibu",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:56.755Z"
   },
   "menu-kimbab-sushi-ide-jualan-ekonomis": {
     "id": "menu-kimbab-sushi-ide-jualan-ekonomis",
     "slug": "menu-kimbab-sushi-ide-jualan-ekonomis",
-    "title": "Menu kimbab sushi ide jualan ekonomis",
+    "title": "Kimbab Roll Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24155992",
     "excerpt": "Resep ide jualan modal ~Rp 17.000, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -15586,7 +16279,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Menu kimbab sushi ide jualan ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kimbab Roll Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 17000
@@ -15638,16 +16331,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/c449a7e29d43457b/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/menu-kimbab-sushi-ide-jualan-ekonomis.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:48.374Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Menu kimbab sushi ide jualan ekonomis",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:56.755Z"
   },
   "29-growol-enak-ide-buat-jualan": {
     "id": "29-growol-enak-ide-buat-jualan",
     "slug": "29-growol-enak-ide-buat-jualan",
-    "title": "29. GROWOL enak ide buat jualan",
+    "title": "Growol Singkong Gula Jawa",
     "source_url": "https://cookpad.com/id/resep/24022537",
     "excerpt": "Resep ide jualan modal ~Rp 7.000, hasil 2 porsi (2 orang).",
     "category": "jajanan-sekolah",
@@ -15661,7 +16359,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "2 orang",
     "default_portions": 2,
     "business_analysis": {
-      "market_demand": "Tinggi — 29. GROWOL enak ide buat jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Growol Singkong Gula Jawa memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 7000
@@ -15700,16 +16398,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/4b7f4ecc7fddcc5d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/29-growol-enak-ide-buat-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:52.963Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "29. GROWOL enak ide buat jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:06:56.755Z"
   },
   "putri-salju-ekonomis-rasa-premium-cocok-untuk-ide-jualan-nih-bunda": {
     "id": "putri-salju-ekonomis-rasa-premium-cocok-untuk-ide-jualan-nih-bunda",
     "slug": "putri-salju-ekonomis-rasa-premium-cocok-untuk-ide-jualan-nih-bunda",
-    "title": "Putri Salju Ekonomis Rasa Premium/ Cocok untuk Ide Jualan nih Bunda😍",
+    "title": "Putri Salju Lumer Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24138778",
     "excerpt": "Resep ide jualan modal ~Rp 26.000, hasil 3 porsi (3-5 orang).",
     "category": "minuman",
@@ -15724,7 +16427,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "3-5 orang",
     "default_portions": 3,
     "business_analysis": {
-      "market_demand": "Tinggi — Putri Salju Ekonomis Rasa Premium/ Cocok untuk Ide Jualan nih Bunda😍 memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Putri Salju Lumer Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 26000
@@ -15793,16 +16496,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/ae4f766515cf7a6a/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/putri-salju-ekonomis-rasa-premium-cocok-untuk-ide-jualan-nih-bunda.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:20:57.211Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Putri Salju Ekonomis Rasa Premium/ Cocok untuk Ide Jualan nih Bunda😍",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:12.703Z"
   },
   "es-putri-salju-ide-jualan": {
     "id": "es-putri-salju-ide-jualan",
     "slug": "es-putri-salju-ide-jualan",
-    "title": "Es Putri Salju (Ide Jualan)",
+    "title": "Es Putri Salju Leci Segar",
     "source_url": "https://cookpad.com/id/resep/24136125",
     "excerpt": "Resep ide jualan modal ~Rp 16.500, hasil 5 porsi (5 orang).",
     "category": "minuman",
@@ -15816,7 +16524,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "5 orang",
     "default_portions": 5,
     "business_analysis": {
-      "market_demand": "Tinggi — Es Putri Salju (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Putri Salju Leci Segar memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 16500
@@ -15874,16 +16582,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/a1d64dd4f76ca749/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/es-putri-salju-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:01.916Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Es Putri Salju (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:12.703Z"
   },
   "susu-kedelai-sule-bisa-untuk-jualan": {
     "id": "susu-kedelai-sule-bisa-untuk-jualan",
     "slug": "susu-kedelai-sule-bisa-untuk-jualan",
-    "title": "Susu kedelai (sule) bisa untuk jualan",
+    "title": "Susu Kedelai Murni Segar",
     "source_url": "https://cookpad.com/id/resep/24127366",
     "excerpt": "Resep ide jualan modal ~Rp 9.000, hasil 20 porsi (20 orang).",
     "category": "jajanan-sekolah",
@@ -15897,7 +16610,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 orang",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Susu kedelai (sule) bisa untuk jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Susu Kedelai Murni Segar memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 9000
@@ -15943,16 +16656,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/16183d75c8d378fd/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/susu-kedelai-sule-bisa-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:06.549Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Susu kedelai (sule) bisa untuk jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:12.703Z"
   },
   "ide-jualan-cenil-dari-tepung-ketan": {
     "id": "ide-jualan-cenil-dari-tepung-ketan",
     "slug": "ide-jualan-cenil-dari-tepung-ketan",
-    "title": "Ide jualan Cenil dari tepung ketan",
+    "title": "Cenil Ketan Kenyal Manis",
     "source_url": "https://cookpad.com/id/resep/24123494",
     "excerpt": "Resep ide jualan modal ~Rp 27.500, hasil 20 porsi (-).",
     "category": "jajanan-sekolah",
@@ -15966,7 +16684,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "-",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide jualan Cenil dari tepung ketan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Cenil Ketan Kenyal Manis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 27500
@@ -16056,16 +16774,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/5a24c9632a551714/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-cenil-dari-tepung-ketan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:10.990Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide jualan Cenil dari tepung ketan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:12.703Z"
   },
   "ide-jualan-bolu-pisang-keju-simpleno-mixerno-oven": {
     "id": "ide-jualan-bolu-pisang-keju-simpleno-mixerno-oven",
     "slug": "ide-jualan-bolu-pisang-keju-simpleno-mixerno-oven",
-    "title": "(Ide Jualan) Bolu Pisang Keju simple(No Mixer,No Oven)",
+    "title": "Bolu Pisang Keju Lembut",
     "source_url": "https://cookpad.com/id/resep/16110758",
     "excerpt": "Resep ide jualan modal ~Rp 35.000, hasil 2 porsi (2 pack 500Ml).",
     "category": "kue",
@@ -16079,7 +16802,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "2 pack 500Ml",
     "default_portions": 2,
     "business_analysis": {
-      "market_demand": "Tinggi — (Ide Jualan) Bolu Pisang Keju simple(No Mixer,No Oven) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bolu Pisang Keju Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 35000
@@ -16161,16 +16884,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/3953b797269ac73c/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-bolu-pisang-keju-simpleno-mixerno-oven.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:15.352Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "(Ide Jualan) Bolu Pisang Keju simple(No Mixer,No Oven)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:12.703Z"
   },
   "telor-congkel-ide-jualan": {
     "id": "telor-congkel-ide-jualan",
     "slug": "telor-congkel-ide-jualan",
-    "title": "Telor Congkel (Ide Jualan)",
+    "title": "Telor Congkel Sayur Gurih",
     "source_url": "https://cookpad.com/id/resep/24080912",
     "excerpt": "Resep ide jualan modal ~Rp 39.000, hasil 3 porsi (3 orang).",
     "category": "gorengan",
@@ -16184,7 +16912,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "3 orang",
     "default_portions": 3,
     "business_analysis": {
-      "market_demand": "Tinggi — Telor Congkel (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Telor Congkel Sayur Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 39000
@@ -16254,16 +16982,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/0631e715593b18ee/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/telor-congkel-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:20.016Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Telor Congkel (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:12.703Z"
   },
   "cilok-kuah-seblak-ide-jualan": {
     "id": "cilok-kuah-seblak-ide-jualan",
     "slug": "cilok-kuah-seblak-ide-jualan",
-    "title": "Cilok kuah seblak, ide jualan",
+    "title": "Cilok Kuah Seblak Pedas",
     "source_url": "https://cookpad.com/id/resep/24067157",
     "excerpt": "Resep ide jualan modal ~Rp 42.000, hasil 20 porsi (banyak).",
     "category": "gorengan",
@@ -16277,7 +17010,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "banyak",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Cilok kuah seblak, ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Cilok Kuah Seblak Pedas memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 42000
@@ -16413,16 +17146,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/513e93fa29fb6009/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cilok-kuah-seblak-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:24.581Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cilok kuah seblak, ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:12.703Z"
   },
   "sate-pisang-coklat-fla-ide-jualan": {
     "id": "sate-pisang-coklat-fla-ide-jualan",
     "slug": "sate-pisang-coklat-fla-ide-jualan",
-    "title": "Sate Pisang Coklat Fla (IDE JUALAN)",
+    "title": "Sate Pisang Cokelat Fla",
     "source_url": "https://cookpad.com/id/resep/24061061",
     "excerpt": "Resep ide jualan modal ~Rp 37.000, hasil 7 porsi (7 porsi).",
     "category": "gorengan",
@@ -16436,7 +17174,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "7 porsi",
     "default_portions": 7,
     "business_analysis": {
-      "market_demand": "Tinggi — Sate Pisang Coklat Fla (IDE JUALAN) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Sate Pisang Cokelat Fla memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 37000
@@ -16528,16 +17266,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/bf7bc7d7c26f3297/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/sate-pisang-coklat-fla-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:28.974Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Sate Pisang Coklat Fla (IDE JUALAN)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:12.703Z"
   },
   "bakso-sapi-kress-seperti-yang-di-jual-jual": {
     "id": "bakso-sapi-kress-seperti-yang-di-jual-jual",
     "slug": "bakso-sapi-kress-seperti-yang-di-jual-jual",
-    "title": "Bakso sapi kress seperti yang di jual-jual",
+    "title": "Bakso Sapi Kres Gurih",
     "source_url": "https://cookpad.com/id/resep/24060394",
     "excerpt": "Resep ide jualan modal ~Rp 26.000, hasil 44 porsi (44 butir).",
     "category": "minuman",
@@ -16551,7 +17294,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "44 butir",
     "default_portions": 44,
     "business_analysis": {
-      "market_demand": "Tinggi — Bakso sapi kress seperti yang di jual-jual memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bakso Sapi Kres Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 26000
@@ -16614,16 +17357,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b8b0ebf227cfa99d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bakso-sapi-kress-seperti-yang-di-jual-jual.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:33.745Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bakso sapi kress seperti yang di jual-jual",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:12.703Z"
   },
   "sosis-crispy-ide-jualan-terbaru-2024": {
     "id": "sosis-crispy-ide-jualan-terbaru-2024",
     "slug": "sosis-crispy-ide-jualan-terbaru-2024",
-    "title": "Sosis Crispy Ide Jualan Terbaru 2024",
+    "title": "Sosis Mini Crispy Renyah",
     "source_url": "https://cookpad.com/id/resep/24013074",
     "excerpt": "Resep ide jualan modal ~Rp 21.500, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -16637,7 +17385,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Sosis Crispy Ide Jualan Terbaru 2024 memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Sosis Mini Crispy Renyah memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 21500
@@ -16730,16 +17478,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e965f5d66bb2e782/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/sosis-crispy-ide-jualan-terbaru-2024.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:38.246Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Sosis Crispy Ide Jualan Terbaru 2024",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:12.703Z"
   },
   "kue-talam-mantang-ubi-modal-ekonomis-bisa-untuk-ide-jualan": {
     "id": "kue-talam-mantang-ubi-modal-ekonomis-bisa-untuk-ide-jualan",
     "slug": "kue-talam-mantang-ubi-modal-ekonomis-bisa-untuk-ide-jualan",
-    "title": "Kue Talam Mantang / Ubi Modal Ekonomis, Bisa untuk ide jualan",
+    "title": "Kue Talam Ubi Legit",
     "source_url": "https://cookpad.com/id/resep/23976584",
     "excerpt": "Resep ide jualan modal ~Rp 27.500, hasil 20 porsi (20 potong).",
     "category": "kue",
@@ -16754,7 +17507,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 potong",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Kue Talam Mantang / Ubi Modal Ekonomis, Bisa untuk ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Talam Ubi Legit memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 27500
@@ -16842,16 +17595,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/651af88d7995b959/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kue-talam-mantang-ubi-modal-ekonomis-bisa-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:42.672Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kue Talam Mantang / Ubi Modal Ekonomis, Bisa untuk ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:25.714Z"
   },
   "batagor-home-made-ide-jualan": {
     "id": "batagor-home-made-ide-jualan",
     "slug": "batagor-home-made-ide-jualan",
-    "title": "Batagor / Home Made / Ide Jualan",
+    "title": "Batagor Tahu Crispy",
     "source_url": "https://cookpad.com/id/resep/23976537",
     "excerpt": "Resep ide jualan modal ~Rp 25.000, hasil 20 porsi (20 porsi).",
     "category": "gorengan",
@@ -16865,7 +17623,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Batagor / Home Made / Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Batagor Tahu Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 25000
@@ -16948,16 +17706,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/8cbe767f95e086f0/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/batagor-home-made-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:49.792Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Batagor / Home Made / Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:25.714Z"
   },
   "putu-mayang-kuah-kinca-ide-jualan-tanpa-cetakan": {
     "id": "putu-mayang-kuah-kinca-ide-jualan-tanpa-cetakan",
     "slug": "putu-mayang-kuah-kinca-ide-jualan-tanpa-cetakan",
-    "title": "Putu Mayang Kuah Kinca (Ide Jualan) tanpa cetakan",
+    "title": "Putu Mayang Kuah Kinca",
     "source_url": "https://cookpad.com/id/resep/23909796",
     "excerpt": "Resep ide jualan modal ~Rp 46.500, hasil 10 porsi (10 orang).",
     "category": "jajanan-sekolah",
@@ -16971,7 +17734,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 orang",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Putu Mayang Kuah Kinca (Ide Jualan) tanpa cetakan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Putu Mayang Kuah Kinca memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 46500
@@ -17082,16 +17845,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/5608fe88e24e83de/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/putu-mayang-kuah-kinca-ide-jualan-tanpa-cetakan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:21:54.648Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Putu Mayang Kuah Kinca (Ide Jualan) tanpa cetakan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:25.714Z"
   },
   "16-risol-isi-rogut-sayur-dan-jagung-ide-jualanfrozen-food": {
     "id": "16-risol-isi-rogut-sayur-dan-jagung-ide-jualanfrozen-food",
     "slug": "16-risol-isi-rogut-sayur-dan-jagung-ide-jualanfrozen-food",
-    "title": "16 Risol Isi Rogut Sayur dan Jagung (Ide jualan/Frozen food)",
+    "title": "Risol Rogout Sayur Jagung",
     "source_url": "https://cookpad.com/id/resep/23934894",
     "excerpt": "Resep ide jualan modal ~Rp 45.500, hasil 5 porsi (5 porsi).",
     "category": "gorengan",
@@ -17105,7 +17873,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "5 porsi",
     "default_portions": 5,
     "business_analysis": {
-      "market_demand": "Tinggi — 16 Risol Isi Rogut Sayur dan Jagung (Ide jualan/Frozen food) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Risol Rogout Sayur Jagung memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 45500
@@ -17225,16 +17993,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/ed7ad0c8e1fe24cf/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/16-risol-isi-rogut-sayur-dan-jagung-ide-jualanfrozen-food.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:00.247Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "16 Risol Isi Rogut Sayur dan Jagung (Ide jualan/Frozen food)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:25.714Z"
   },
   "telor-gulung-ala-abang2-jualan": {
     "id": "telor-gulung-ala-abang2-jualan",
     "slug": "telor-gulung-ala-abang2-jualan",
-    "title": "Telor gulung ala abang2 jualan",
+    "title": "Telur Gulung Crispy",
     "source_url": "https://cookpad.com/id/resep/23967374",
     "excerpt": "Resep ide jualan modal ~Rp 25.500, hasil 20 porsi (20 porsi).",
     "category": "gorengan",
@@ -17248,7 +18021,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Telor gulung ala abang2 jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Telur Gulung Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 25500
@@ -17299,16 +18072,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/74e1fc8b9fbe1d41/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/telor-gulung-ala-abang2-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:04.651Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Telor gulung ala abang2 jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:25.714Z"
   },
   "pizza-untuk-jualan-versi-ekonomis": {
     "id": "pizza-untuk-jualan-versi-ekonomis",
     "slug": "pizza-untuk-jualan-versi-ekonomis",
-    "title": "Pizza untuk Jualan versi Ekonomis",
+    "title": "Pizza Mini Ekonomis",
     "source_url": "https://cookpad.com/id/resep/23953980",
     "excerpt": "Resep ide jualan modal ~Rp 42.000, hasil 20 porsi (20 porsi).",
     "category": "kue",
@@ -17323,7 +18101,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Pizza untuk Jualan versi Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Pizza Mini Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 42000
@@ -17412,16 +18190,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/4b391fda3e3e0334/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/pizza-untuk-jualan-versi-ekonomis.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:11.766Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Pizza untuk Jualan versi Ekonomis",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:25.714Z"
   },
   "salad-buah-ide-jualan": {
     "id": "salad-buah-ide-jualan",
     "slug": "salad-buah-ide-jualan",
-    "title": "Salad Buah Ide Jualan",
+    "title": "Salad Buah Creamy Segar",
     "source_url": "https://cookpad.com/id/resep/23962132",
     "excerpt": "Resep ide jualan modal ~Rp 25.000, hasil 15 porsi (15 porsi).",
     "category": "minuman",
@@ -17435,7 +18218,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "15 porsi",
     "default_portions": 15,
     "business_analysis": {
-      "market_demand": "Tinggi — Salad Buah Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Salad Buah Creamy Segar memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 25000
@@ -17515,16 +18298,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/936071dcf1ddec2d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/salad-buah-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:16.864Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Salad Buah Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:25.714Z"
   },
   "ide-jualan-ayam-geprek-ekonomis-50rb-jadi-24potong": {
     "id": "ide-jualan-ayam-geprek-ekonomis-50rb-jadi-24potong",
     "slug": "ide-jualan-ayam-geprek-ekonomis-50rb-jadi-24potong",
-    "title": "Ide jualan ayam geprek ekonomis (50rb jadi 24potong)",
+    "title": "Ayam Geprek Mini Crispy",
     "source_url": "https://cookpad.com/id/resep/23955695",
     "excerpt": "Resep ide jualan modal ~Rp 37.000, hasil 24 porsi (24 porsi).",
     "category": "jajanan-sekolah",
@@ -17539,7 +18327,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "24 porsi",
     "default_portions": 24,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide jualan ayam geprek ekonomis (50rb jadi 24potong) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Ayam Geprek Mini Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 37000
@@ -17610,16 +18398,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e30fe9454b6270bd/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-ayam-geprek-ekonomis-50rb-jadi-24potong.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:21.266Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide jualan ayam geprek ekonomis (50rb jadi 24potong)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:25.714Z"
   },
   "ide-jualan-es-lilin-kacang-hijau": {
     "id": "ide-jualan-es-lilin-kacang-hijau",
     "slug": "ide-jualan-es-lilin-kacang-hijau",
-    "title": "Ide jualan es lilin kacang hijau",
+    "title": "Es Lilin Kacang Hijau",
     "source_url": "https://cookpad.com/id/resep/23946610",
     "excerpt": "Resep ide jualan modal ~Rp 11.500, hasil 1 porsi (1 bungkus 1000an).",
     "category": "minuman",
@@ -17633,7 +18426,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 bungkus 1000an",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide jualan es lilin kacang hijau memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Lilin Kacang Hijau memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 11500
@@ -17684,16 +18477,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/dd7c6f3770d831a8/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-es-lilin-kacang-hijau.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:25.379Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide jualan es lilin kacang hijau",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:25.715Z"
   },
   "kroket-kentang-keju-lumer-ide-frozen-food-ide-jualan": {
     "id": "kroket-kentang-keju-lumer-ide-frozen-food-ide-jualan",
     "slug": "kroket-kentang-keju-lumer-ide-frozen-food-ide-jualan",
-    "title": "Kroket Kentang Keju Lumer | Ide Frozen Food | Ide Jualan",
+    "title": "Kroket Kentang Keju Lumer",
     "source_url": "https://cookpad.com/id/resep/23931771",
     "excerpt": "Resep ide jualan modal ~Rp 40.500, hasil 12 porsi (12 pcs).",
     "category": "kue",
@@ -17707,7 +18505,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "12 pcs",
     "default_portions": 12,
     "business_analysis": {
-      "market_demand": "Tinggi — Kroket Kentang Keju Lumer | Ide Frozen Food | Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kroket Kentang Keju Lumer memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 40500
@@ -17789,16 +18587,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/3f43e19e244b2241/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kroket-kentang-keju-lumer-ide-frozen-food-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:29.644Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kroket Kentang Keju Lumer | Ide Frozen Food | Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:25.715Z"
   },
   "resep-jualan-resep-krispi-gurih-dan-keriting-ayam-ekoranayam-filletikan-fillet": {
     "id": "resep-jualan-resep-krispi-gurih-dan-keriting-ayam-ekoranayam-filletikan-fillet",
     "slug": "resep-jualan-resep-krispi-gurih-dan-keriting-ayam-ekoranayam-filletikan-fillet",
-    "title": "Resep jualan : Resep krispi, gurih dan keriting ayam ekoran/ayam fillet/ikan fillet",
+    "title": "Ayam Crispy Keriting Gurih",
     "source_url": "https://cookpad.com/id/resep/23914497",
     "excerpt": "Resep ide jualan modal ~Rp 38.000, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -17812,7 +18615,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Resep jualan : Resep krispi, gurih dan keriting ayam ekoran/ayam fillet/ikan fillet memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Ayam Crispy Keriting Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 38000
@@ -17917,16 +18720,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/a243d0290ccd0ffc/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/resep-jualan-resep-krispi-gurih-dan-keriting-ayam-ekoranayam-filletikan-fillet.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:34.409Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Resep jualan : Resep krispi, gurih dan keriting ayam ekoran/ayam fillet/ikan fillet",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:41.057Z"
   },
   "bubur-kacang-ijo-enak-untuk-jualanhajatan-metode-7307": {
     "id": "bubur-kacang-ijo-enak-untuk-jualanhajatan-metode-7307",
     "slug": "bubur-kacang-ijo-enak-untuk-jualanhajatan-metode-7307",
-    "title": "Bubur kacang ijo enak untuk jualan/hajatan |Metode 7.30.7",
+    "title": "Bubur Kacang Hijau Pandan",
     "source_url": "https://cookpad.com/id/resep/14081125",
     "excerpt": "Resep ide jualan modal ~Rp 15.000, hasil 10 porsi (10 porsi).",
     "category": "jajanan-sekolah",
@@ -17940,7 +18748,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 porsi",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Bubur kacang ijo enak untuk jualan/hajatan |Metode 7.30.7 memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bubur Kacang Hijau Pandan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 15000
@@ -17999,16 +18807,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/a7fb4a899014f217/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bubur-kacang-ijo-enak-untuk-jualanhajatan-metode-7307.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:39.207Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bubur kacang ijo enak untuk jualan/hajatan |Metode 7.30.7",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:41.057Z"
   },
   "kroket-kentang-bisa-untuk-jualan": {
     "id": "kroket-kentang-bisa-untuk-jualan",
     "slug": "kroket-kentang-bisa-untuk-jualan",
-    "title": "Kroket Kentang Bisa Untuk Jualan",
+    "title": "Kroket Kentang Gurih Lembut",
     "source_url": "https://cookpad.com/id/resep/23899984",
     "excerpt": "Resep ide jualan modal ~Rp 82.500, hasil 100 porsi (kurleb 100 pcs).",
     "category": "jajanan-sekolah",
@@ -18022,7 +18835,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "kurleb 100 pcs",
     "default_portions": 100,
     "business_analysis": {
-      "market_demand": "Tinggi — Kroket Kentang Bisa Untuk Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kroket Kentang Gurih Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 82500
@@ -18204,16 +19017,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/0e123b151967b718/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kroket-kentang-bisa-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:43.971Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kroket Kentang Bisa Untuk Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:41.057Z"
   },
   "ide-jualan-mudah-chocolatos-beku": {
     "id": "ide-jualan-mudah-chocolatos-beku",
     "slug": "ide-jualan-mudah-chocolatos-beku",
-    "title": "Ide Jualan Mudah: Chocolatos beku",
+    "title": "Es Chocolatos Cokelat Beku",
     "source_url": "https://cookpad.com/id/resep/23880102",
     "excerpt": "Resep ide jualan modal ~Rp 12.000, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -18227,7 +19045,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide Jualan Mudah: Chocolatos beku memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Chocolatos Cokelat Beku memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 12000
@@ -18261,16 +19079,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/7cb2a520e09bf8d2/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-mudah-chocolatos-beku.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:48.038Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide Jualan Mudah: Chocolatos beku",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:41.057Z"
   },
   "ide-jualan-mudah-marsmallow-oreo": {
     "id": "ide-jualan-mudah-marsmallow-oreo",
     "slug": "ide-jualan-mudah-marsmallow-oreo",
-    "title": "Ide Jualan Mudah: Marsmallow Oreo",
+    "title": "Sate Marshmallow Cokelat Oreo",
     "source_url": "https://cookpad.com/id/resep/23880089",
     "excerpt": "Resep ide jualan modal ~Rp 12.000, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -18284,7 +19107,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide Jualan Mudah: Marsmallow Oreo memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Sate Marshmallow Cokelat Oreo memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 12000
@@ -18320,16 +19143,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/02184d80b82cb1d7/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-jualan-mudah-marsmallow-oreo.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:52.096Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide Jualan Mudah: Marsmallow Oreo",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:41.057Z"
   },
   "goyumsam-bisa-buat-ide-jualan-olahan-ayam-enak-banget": {
     "id": "goyumsam-bisa-buat-ide-jualan-olahan-ayam-enak-banget",
     "slug": "goyumsam-bisa-buat-ide-jualan-olahan-ayam-enak-banget",
-    "title": "GOYUMSAM (Bisa buat ide jualan) Olahan Ayam Enak banget",
+    "title": "Goyumsam Ayam Gurih Crispy",
     "source_url": "https://cookpad.com/id/resep/22658175",
     "excerpt": "Resep ide jualan modal ~Rp 53.000, hasil 4 porsi (4 orang).",
     "category": "minuman",
@@ -18343,7 +19171,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "4 orang",
     "default_portions": 4,
     "business_analysis": {
-      "market_demand": "Tinggi — GOYUMSAM (Bisa buat ide jualan) Olahan Ayam Enak banget memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Goyumsam Ayam Gurih Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 53000
@@ -18487,16 +19315,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/2654c4df09603440/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/goyumsam-bisa-buat-ide-jualan-olahan-ayam-enak-banget.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:22:56.652Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "GOYUMSAM (Bisa buat ide jualan) Olahan Ayam Enak banget",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:41.057Z"
   },
   "7-donat-tanpa-telur-cocok-buat-jualan": {
     "id": "7-donat-tanpa-telur-cocok-buat-jualan",
     "slug": "7-donat-tanpa-telur-cocok-buat-jualan",
-    "title": "7. Donat Tanpa Telur (Cocok buat Jualan)",
+    "title": "Donat Lembut Tanpa Telur",
     "source_url": "https://cookpad.com/id/resep/23868122",
     "excerpt": "Resep ide jualan modal ~Rp 13.000, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -18510,7 +19343,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — 7. Donat Tanpa Telur (Cocok buat Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Donat Lembut Tanpa Telur memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 13000
@@ -18564,16 +19397,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b0047c1bc8cbdc44/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/7-donat-tanpa-telur-cocok-buat-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:01.424Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "7. Donat Tanpa Telur (Cocok buat Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:41.057Z"
   },
   "burger-hemat-untuk-jualan": {
     "id": "burger-hemat-untuk-jualan",
     "slug": "burger-hemat-untuk-jualan",
-    "title": "Burger hemat untuk jualan",
+    "title": "Burger Daging Mayo Ekonomis",
     "source_url": "https://cookpad.com/id/resep/23853171",
     "excerpt": "Resep ide jualan modal ~Rp 28.500, hasil 25 porsi (25 pax).",
     "category": "kue",
@@ -18587,7 +19425,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "25 pax",
     "default_portions": 25,
     "business_analysis": {
-      "market_demand": "Tinggi — Burger hemat untuk jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Burger Daging Mayo Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 28500
@@ -18638,16 +19476,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/d11a0076cc070e40/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/burger-hemat-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:05.471Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Burger hemat untuk jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:41.058Z"
   },
   "donat-kukus-siram-ide-jualan": {
     "id": "donat-kukus-siram-ide-jualan",
     "slug": "donat-kukus-siram-ide-jualan",
-    "title": "Donat Kukus Siram (Ide Jualan)",
+    "title": "Donat Kukus Siram Lumer",
     "source_url": "https://cookpad.com/id/resep/23850101",
     "excerpt": "Resep ide jualan modal ~Rp 17.000, hasil 12 porsi (-+12 orang).",
     "category": "jajanan-sekolah",
@@ -18661,7 +19504,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "-+12 orang",
     "default_portions": 12,
     "business_analysis": {
-      "market_demand": "Tinggi — Donat Kukus Siram (Ide Jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Donat Kukus Siram Lumer memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 17000
@@ -18730,16 +19573,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/9f8194028d881b45/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/donat-kukus-siram-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:10.278Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Donat Kukus Siram (Ide Jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:41.058Z"
   },
   "812-susu-kurma-ide-jualan": {
     "id": "812-susu-kurma-ide-jualan",
     "slug": "812-susu-kurma-ide-jualan",
-    "title": "#812 Susu Kurma (ide jualan)",
+    "title": "Susu Kurma Segar Creamy",
     "source_url": "https://cookpad.com/id/resep/23851426",
     "excerpt": "Resep ide jualan modal ~Rp 11.000, hasil 1 porsi (1 gelas).",
     "category": "jajanan-sekolah",
@@ -18753,7 +19601,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 gelas",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — #812 Susu Kurma (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Susu Kurma Segar Creamy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 11000
@@ -18797,16 +19645,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/49b882abf3d57946/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/812-susu-kurma-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:16.720Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "#812 Susu Kurma (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:41.058Z"
   },
   "ide-usaha-pisang-goreng-madu-bu-nanik": {
     "id": "ide-usaha-pisang-goreng-madu-bu-nanik",
     "slug": "ide-usaha-pisang-goreng-madu-bu-nanik",
-    "title": "Ide Usaha Pisang Goreng Madu Bu Nanik",
+    "title": "Pisang Goreng Madu Karamel",
     "source_url": "https://cookpad.com/id/resep/23840305",
     "excerpt": "Resep ide jualan modal ~Rp 46.500, hasil 15 porsi (15 s.d 20 pcs).",
     "category": "kue",
@@ -18820,7 +19673,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "15 s.d 20 pcs",
     "default_portions": 15,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide Usaha Pisang Goreng Madu Bu Nanik memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Pisang Goreng Madu Karamel memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 46500
@@ -18937,16 +19790,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/12ec98b50a722a2f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-usaha-pisang-goreng-madu-bu-nanik.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:21.003Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide Usaha Pisang Goreng Madu Bu Nanik",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:53.352Z"
   },
   "naskun-ekonomis-ide-jualan": {
     "id": "naskun-ekonomis-ide-jualan",
     "slug": "naskun-ekonomis-ide-jualan",
-    "title": "Naskun ekonomis (ide jualan)",
+    "title": "Nasi Kuning Ayam Suwir",
     "source_url": "https://cookpad.com/id/resep/22676520",
     "excerpt": "Resep ide jualan modal ~Rp 27.000, hasil 20 porsi (20 porsi).",
     "category": "gorengan",
@@ -18961,7 +19819,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Naskun ekonomis (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Nasi Kuning Ayam Suwir memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 27000
@@ -19019,16 +19877,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/88b5c9111fd64344/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/naskun-ekonomis-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:25.341Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Naskun ekonomis (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:53.352Z"
   },
   "cilok-kuah-ide-jualan": {
     "id": "cilok-kuah-ide-jualan",
     "slug": "cilok-kuah-ide-jualan",
-    "title": "Cilok Kuah (ide jualan)",
+    "title": "Cilok Kuah Kaldu Gurih",
     "source_url": "https://cookpad.com/id/resep/22668103",
     "excerpt": "Resep ide jualan modal ~Rp 39.500, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -19042,7 +19905,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Cilok Kuah (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Cilok Kuah Kaldu Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 39500
@@ -19157,16 +20020,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6727785717681af5/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cilok-kuah-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:29.484Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cilok Kuah (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:53.352Z"
   },
   "brownis-anti-gagal-bisa-dibuat-ide-jualan": {
     "id": "brownis-anti-gagal-bisa-dibuat-ide-jualan",
     "slug": "brownis-anti-gagal-bisa-dibuat-ide-jualan",
-    "title": "Brownis anti gagal bisa dibuat ide jualan",
+    "title": "Brownies Cokelat Panggang Lumer",
     "source_url": "https://cookpad.com/id/resep/22666524",
     "excerpt": "Resep ide jualan modal ~Rp 52.500, hasil 20 porsi (20 porsi).",
     "category": "gorengan",
@@ -19180,7 +20048,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Brownis anti gagal bisa dibuat ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Brownies Cokelat Panggang Lumer memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 52500
@@ -19256,16 +20124,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/5a1094797e4ad62a/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/brownis-anti-gagal-bisa-dibuat-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:34.094Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Brownis anti gagal bisa dibuat ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:53.352Z"
   },
   "es-lumut-choco-milo-ide-jualan": {
     "id": "es-lumut-choco-milo-ide-jualan",
     "slug": "es-lumut-choco-milo-ide-jualan",
-    "title": "Es Lumut Choco Milo Ide Jualan",
+    "title": "Es Lumut Choco Milo",
     "source_url": "https://cookpad.com/id/resep/22589053",
     "excerpt": "Resep ide jualan modal ~Rp 36.500, hasil 10 porsi (10 botol @250 ml).",
     "category": "minuman",
@@ -19279,7 +20152,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 botol @250 ml",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Es Lumut Choco Milo Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Lumut Choco Milo memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 36500
@@ -19360,16 +20233,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/5e9f89748aca8b05/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/es-lumut-choco-milo-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:38.431Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Es Lumut Choco Milo Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:53.352Z"
   },
   "kebab-pedas-manis-ide-jualan-simple-di-jamin-laris-manis": {
     "id": "kebab-pedas-manis-ide-jualan-simple-di-jamin-laris-manis",
     "slug": "kebab-pedas-manis-ide-jualan-simple-di-jamin-laris-manis",
-    "title": "Kebab pedas manis ide jualan simple di jamin laris manis",
+    "title": "Kebab Mini Pedas Manis",
     "source_url": "https://cookpad.com/id/resep/22661762",
     "excerpt": "Resep ide jualan modal ~Rp 15.000, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -19383,7 +20261,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Kebab pedas manis ide jualan simple di jamin laris manis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kebab Mini Pedas Manis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 15000
@@ -19424,16 +20302,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/97ded3ba1dabf8ed/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/kebab-pedas-manis-ide-jualan-simple-di-jamin-laris-manis.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:42.513Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Kebab pedas manis ide jualan simple di jamin laris manis",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:53.352Z"
   },
   "puding-lumut-mentega-butter-cup-ide-untuk-jualan-enak-dan-terjangkau": {
     "id": "puding-lumut-mentega-butter-cup-ide-untuk-jualan-enak-dan-terjangkau",
     "slug": "puding-lumut-mentega-butter-cup-ide-untuk-jualan-enak-dan-terjangkau",
-    "title": "Puding Lumut Mentega Butter Cup (ide untuk jualan enak dan terjangkau)",
+    "title": "Puding Lumut Mentega Cup",
     "source_url": "https://cookpad.com/id/resep/22625890",
     "excerpt": "Resep ide jualan modal ~Rp 43.500, hasil 60 porsi (60 cup 100ml).",
     "category": "jajanan-sekolah",
@@ -19447,7 +20330,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "60 cup 100ml",
     "default_portions": 60,
     "business_analysis": {
-      "market_demand": "Tinggi — Puding Lumut Mentega Butter Cup (ide untuk jualan enak dan terjangkau) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Puding Lumut Mentega Cup memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 43500
@@ -19581,16 +20464,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/94ab5f464faea405/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/puding-lumut-mentega-butter-cup-ide-untuk-jualan-enak-dan-terjangkau.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:47.037Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Puding Lumut Mentega Butter Cup (ide untuk jualan enak dan terjangkau)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:53.352Z"
   },
   "es-susu-jelly-ide-jualan-laris-manis": {
     "id": "es-susu-jelly-ide-jualan-laris-manis",
     "slug": "es-susu-jelly-ide-jualan-laris-manis",
-    "title": "ES SUSU JELLY ‼️ ide jualan laris manis",
+    "title": "Es Susu Jelly Mangga",
     "source_url": "https://cookpad.com/id/resep/22599734",
     "excerpt": "Resep ide jualan modal ~Rp 29.000, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -19604,7 +20492,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — ES SUSU JELLY ‼️ ide jualan laris manis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Susu Jelly Mangga memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 29000
@@ -19692,16 +20580,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6008068a84e4a5a6/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/es-susu-jelly-ide-jualan-laris-manis.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:51.070Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "ES SUSU JELLY ‼️ ide jualan laris manis",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:53.352Z"
   },
   "susu-jelly-lumut-bisa-untuk-ide-jualan": {
     "id": "susu-jelly-lumut-bisa-untuk-ide-jualan",
     "slug": "susu-jelly-lumut-bisa-untuk-ide-jualan",
-    "title": "SUSU JELLY LUMUT ‼️ BISA UNTUK IDE JUALAN",
+    "title": "Es Susu Jelly Lumut",
     "source_url": "https://cookpad.com/id/resep/22567647",
     "excerpt": "Resep ide jualan modal ~Rp 41.000, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -19715,7 +20608,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — SUSU JELLY LUMUT ‼️ BISA UNTUK IDE JUALAN memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Susu Jelly Lumut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 41000
@@ -19803,16 +20696,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/94c13a4f90e4ad2e/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/susu-jelly-lumut-bisa-untuk-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:55.109Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "SUSU JELLY LUMUT ‼️ BISA UNTUK IDE JUALAN",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:53.352Z"
   },
   "risol-ekonomis-ide-jualan": {
     "id": "risol-ekonomis-ide-jualan",
     "slug": "risol-ekonomis-ide-jualan",
-    "title": "Risol ekonomis ide jualan",
+    "title": "Risol Sayur Crispy",
     "source_url": "https://cookpad.com/id/resep/22561684",
     "excerpt": "Resep ide jualan modal ~Rp 46.000, hasil 25 porsi (25 porsi).",
     "category": "gorengan",
@@ -19827,7 +20725,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "25 porsi",
     "default_portions": 25,
     "business_analysis": {
-      "market_demand": "Tinggi — Risol ekonomis ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Risol Sayur Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 46000
@@ -19949,16 +20847,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6d02fd7d23c160c8/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/risol-ekonomis-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:23:59.509Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Risol ekonomis ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:07:53.353Z"
   },
   "bakso-goreng-tanpa-ayam-ide-jualan-camilan": {
     "id": "bakso-goreng-tanpa-ayam-ide-jualan-camilan",
     "slug": "bakso-goreng-tanpa-ayam-ide-jualan-camilan",
-    "title": "Bakso goreng tanpa ayam #ide jualan #camilan",
+    "title": "Bakso Goreng Mekar Crispy",
     "source_url": "https://cookpad.com/id/resep/22554298",
     "excerpt": "Resep ide jualan modal ~Rp 25.500, hasil 1 porsi (1 porsi).",
     "category": "gorengan",
@@ -19972,7 +20875,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 porsi",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Bakso goreng tanpa ayam #ide jualan #camilan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bakso Goreng Mekar Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 25500
@@ -20040,16 +20943,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/b1aed84b5eb37387/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bakso-goreng-tanpa-ayam-ide-jualan-camilan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:03.738Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bakso goreng tanpa ayam #ide jualan #camilan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:08:10.948Z"
   },
   "nasi-kuning-simple-jualan-ku": {
     "id": "nasi-kuning-simple-jualan-ku",
     "slug": "nasi-kuning-simple-jualan-ku",
-    "title": "Nasi kuning simple jualan ku",
+    "title": "Nasi Kuning Wangi Gurih",
     "source_url": "https://cookpad.com/id/resep/22547487",
     "excerpt": "Resep ide jualan modal ~Rp 14.500, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -20063,7 +20971,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Nasi kuning simple jualan ku memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Nasi Kuning Wangi Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 14500
@@ -20126,16 +21034,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/68ed93f9f2626153/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/nasi-kuning-simple-jualan-ku.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:08.148Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Nasi kuning simple jualan ku",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:08:10.948Z"
   },
   "takoyaki-ide-jualan-1000": {
     "id": "takoyaki-ide-jualan-1000",
     "slug": "takoyaki-ide-jualan-1000",
-    "title": "Takoyaki ide jualan 1000",
+    "title": "Takoyaki Mini Gurih Lembut",
     "source_url": "https://cookpad.com/id/resep/17317216",
     "excerpt": "Resep ide jualan modal ~Rp 43.500, hasil 30 porsi (30butir).",
     "category": "gorengan",
@@ -20150,7 +21063,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "30butir",
     "default_portions": 30,
     "business_analysis": {
-      "market_demand": "Tinggi — Takoyaki ide jualan 1000 memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Takoyaki Mini Gurih Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 43500
@@ -20230,16 +21143,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/4a554ddfccc361f5/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/takoyaki-ide-jualan-1000.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:12.819Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Takoyaki ide jualan 1000",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:08:10.948Z"
   },
   "brownies-mini-ide-jualan-1000an": {
     "id": "brownies-mini-ide-jualan-1000an",
     "slug": "brownies-mini-ide-jualan-1000an",
-    "title": "Brownies mini | ide jualan 1000an |",
+    "title": "Brownies Mini Cokelat Lumer",
     "source_url": "https://cookpad.com/id/resep/16323887",
     "excerpt": "Resep ide jualan modal ~Rp 28.000, hasil 38 porsi (38 porsi).",
     "category": "minuman",
@@ -20254,7 +21172,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "38 porsi",
     "default_portions": 38,
     "business_analysis": {
-      "market_demand": "Tinggi — Brownies mini | ide jualan 1000an | memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Brownies Mini Cokelat Lumer memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 28000
@@ -20318,16 +21236,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/1782aa999fc298e8/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/brownies-mini-ide-jualan-1000an.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:17.021Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Brownies mini | ide jualan 1000an |",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:08:10.948Z"
   },
   "es-kopyor-untuk-jualan": {
     "id": "es-kopyor-untuk-jualan",
     "slug": "es-kopyor-untuk-jualan",
-    "title": "Es kopyor untuk Jualan",
+    "title": "Es Kopyor Segar Manis",
     "source_url": "https://cookpad.com/id/resep/17306973",
     "excerpt": "Resep ide jualan modal ~Rp 17.500, hasil 10 porsi (10 porsi).",
     "category": "minuman",
@@ -20341,7 +21264,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "10 porsi",
     "default_portions": 10,
     "business_analysis": {
-      "market_demand": "Tinggi — Es kopyor untuk Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Es Kopyor Segar Manis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 17500
@@ -20411,16 +21334,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e9736803da4a9c5f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/es-kopyor-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:21.550Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Es kopyor untuk Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:08:10.948Z"
   },
   "dadar-gulung-murah-meriah-untuk-di-jual": {
     "id": "dadar-gulung-murah-meriah-untuk-di-jual",
     "slug": "dadar-gulung-murah-meriah-untuk-di-jual",
-    "title": "Dadar gulung murah meriah untuk di jual",
+    "title": "Dadar Gulung Manis Lembut",
     "source_url": "https://cookpad.com/id/resep/17297682",
     "excerpt": "Resep ide jualan modal ~Rp 35.500, hasil 120 porsi (120 porsi).",
     "category": "gorengan",
@@ -20434,7 +21362,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "120 porsi",
     "default_portions": 120,
     "business_analysis": {
-      "market_demand": "Tinggi — Dadar gulung murah meriah untuk di jual memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Dadar Gulung Manis Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 35500
@@ -20518,16 +21446,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/97050a70ca85d9bd/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/dadar-gulung-murah-meriah-untuk-di-jual.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:26.043Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Dadar gulung murah meriah untuk di jual",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:08:10.948Z"
   },
   "177-kurcok-si-kurma-coklat-ide-jualan-menyambut-lebaran": {
     "id": "177-kurcok-si-kurma-coklat-ide-jualan-menyambut-lebaran",
     "slug": "177-kurcok-si-kurma-coklat-ide-jualan-menyambut-lebaran",
-    "title": "177. KurCok si Kurma Coklat (ide jualan menyambut lebaran)",
+    "title": "Kurma Cokelat Biskuit Crispy",
     "source_url": "https://cookpad.com/id/resep/17295042",
     "excerpt": "Resep ide jualan modal ~Rp 16.000, hasil 1 porsi (1 toples ukuran 0.5liter).",
     "category": "jajanan-sekolah",
@@ -20541,7 +21474,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 toples ukuran 0.5liter",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — 177. KurCok si Kurma Coklat (ide jualan menyambut lebaran) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kurma Cokelat Biskuit Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 16000
@@ -20587,16 +21520,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/8897770424934643/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/177-kurcok-si-kurma-coklat-ide-jualan-menyambut-lebaran.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:30.577Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "177. KurCok si Kurma Coklat (ide jualan menyambut lebaran)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:08:10.948Z"
   },
   "ayam-goreng-korea-ricebowl-ide-jualan": {
     "id": "ayam-goreng-korea-ricebowl-ide-jualan",
     "slug": "ayam-goreng-korea-ricebowl-ide-jualan",
-    "title": "Ayam goreng korea /ricebowl /ide jualan",
+    "title": "Rice Bowl Ayam Korea Crispy",
     "source_url": "https://cookpad.com/id/resep/17293966",
     "excerpt": "Resep ide jualan modal ~Rp 51.500, hasil 20 porsi (20 porsi).",
     "category": "gorengan",
@@ -20610,7 +21548,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Ayam goreng korea /ricebowl /ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Rice Bowl Ayam Korea Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 51500
@@ -20722,16 +21660,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/f507650812c8bfb9/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ayam-goreng-korea-ricebowl-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:36.738Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ayam goreng korea /ricebowl /ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:08:10.948Z"
   },
   "sari-india-cup-200ml-untuk-jualan": {
     "id": "sari-india-cup-200ml-untuk-jualan",
     "slug": "sari-india-cup-200ml-untuk-jualan",
-    "title": "Sari India cup 200ml untuk jualan",
+    "title": "Kue Sari India Lembut Cup",
     "source_url": "https://cookpad.com/id/resep/17287257",
     "excerpt": "Resep ide jualan modal ~Rp 11.000, hasil 6 porsi (6 orang).",
     "category": "jajanan-sekolah",
@@ -20745,7 +21688,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "6 orang",
     "default_portions": 6,
     "business_analysis": {
-      "market_demand": "Tinggi — Sari India cup 200ml untuk jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Sari India Lembut Cup memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 11000
@@ -20799,16 +21742,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/a8cca39db1b9623f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/sari-india-cup-200ml-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:41.664Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Sari India cup 200ml untuk jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:08:10.948Z"
   },
   "nastar-clasik-ekonomis-untuk-jualan": {
     "id": "nastar-clasik-ekonomis-untuk-jualan",
     "slug": "nastar-clasik-ekonomis-untuk-jualan",
-    "title": "Nastar clasik ekonomis untuk jualan",
+    "title": "Nastar Klasik Lumer Lembut",
     "source_url": "https://cookpad.com/id/resep/17285802",
     "excerpt": "Resep ide jualan modal ~Rp 42.000, hasil 3200 porsi (3200 gr).",
     "category": "kue",
@@ -20823,7 +21771,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "3200 gr",
     "default_portions": 3200,
     "business_analysis": {
-      "market_demand": "Tinggi — Nastar clasik ekonomis untuk jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Nastar Klasik Lumer Lembut memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 42000
@@ -20951,16 +21899,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/1dfe4ebf8ec46eb8/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/nastar-clasik-ekonomis-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:48.864Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Nastar clasik ekonomis untuk jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:08:10.948Z"
   },
   "isian-risol-ekonomis-untuk-jualan": {
     "id": "isian-risol-ekonomis-untuk-jualan",
     "slug": "isian-risol-ekonomis-untuk-jualan",
-    "title": "Isian Risol ekonomis untuk jualan",
+    "title": "Isian Risol Sayur Gurih",
     "source_url": "https://cookpad.com/id/resep/17284992",
     "excerpt": "Resep ide jualan modal ~Rp 33.500, hasil 130 porsi (130 psc).",
     "category": "gorengan",
@@ -20975,7 +21928,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "130 psc",
     "default_portions": 130,
     "business_analysis": {
-      "market_demand": "Tinggi — Isian Risol ekonomis untuk jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Isian Risol Sayur Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 33500
@@ -21090,16 +22043,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/dc0d4d6c614e4dc4/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/isian-risol-ekonomis-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:53.871Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Isian Risol ekonomis untuk jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:51.368Z"
   },
   "bolu-kukus-ekonomis-ide-jualan-seribuan": {
     "id": "bolu-kukus-ekonomis-ide-jualan-seribuan",
     "slug": "bolu-kukus-ekonomis-ide-jualan-seribuan",
-    "title": "Bolu Kukus Ekonomis Ide Jualan Seribuan",
+    "title": "Bolu Kukus Mini Ekonomis",
     "source_url": "https://cookpad.com/id/resep/17282753",
     "excerpt": "Resep ide jualan modal ~Rp 19.000, hasil 25 porsi (25 porsi).",
     "category": "kue",
@@ -21114,7 +22072,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "25 porsi",
     "default_portions": 25,
     "business_analysis": {
-      "market_demand": "Tinggi — Bolu Kukus Ekonomis Ide Jualan Seribuan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bolu Kukus Mini Ekonomis memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 19000
@@ -21187,16 +22145,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/bf966abef5be105f/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bolu-kukus-ekonomis-ide-jualan-seribuan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:24:58.068Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bolu Kukus Ekonomis Ide Jualan Seribuan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:51.368Z"
   },
   "bawang-goreng-rebon-kriuk-awet-untuk-stok-jualan": {
     "id": "bawang-goreng-rebon-kriuk-awet-untuk-stok-jualan",
     "slug": "bawang-goreng-rebon-kriuk-awet-untuk-stok-jualan",
-    "title": "Bawang Goreng Rebon kriuk awet untuk stok / jualan",
+    "title": "Bawang Goreng Rebon Crispy",
     "source_url": "https://cookpad.com/id/resep/17277380",
     "excerpt": "Resep ide jualan modal ~Rp 13.000, hasil 20 porsi (20 porsi).",
     "category": "minuman",
@@ -21210,7 +22173,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Bawang Goreng Rebon kriuk awet untuk stok / jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bawang Goreng Rebon Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 13000
@@ -21258,16 +22221,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/a8a217bcf7a75455/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bawang-goreng-rebon-kriuk-awet-untuk-stok-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:02.656Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bawang Goreng Rebon kriuk awet untuk stok / jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:51.368Z"
   },
   "podeng-roti-tawar-ala-bejo-untuk-ide-jualan-yang-menguntungkan": {
     "id": "podeng-roti-tawar-ala-bejo-untuk-ide-jualan-yang-menguntungkan",
     "slug": "podeng-roti-tawar-ala-bejo-untuk-ide-jualan-yang-menguntungkan",
-    "title": "PODENG ROTI 🍞 TAWAR ala Bejo (untuk ide jualan yang menguntungkan)",
+    "title": "Podeng Roti Tawar Santan",
     "source_url": "https://cookpad.com/id/resep/17269120",
     "excerpt": "Resep ide jualan modal ~Rp 13.000, hasil 5 porsi (5 Cup).",
     "category": "kue",
@@ -21281,7 +22249,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "5 Cup",
     "default_portions": 5,
     "business_analysis": {
-      "market_demand": "Tinggi — PODENG ROTI 🍞 TAWAR ala Bejo (untuk ide jualan yang menguntungkan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Podeng Roti Tawar Santan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 13000
@@ -21340,16 +22308,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/684b637e0e616929/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/podeng-roti-tawar-ala-bejo-untuk-ide-jualan-yang-menguntungkan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:07.013Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "PODENG ROTI 🍞 TAWAR ala Bejo (untuk ide jualan yang menguntungkan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:51.369Z"
   },
   "mochi-lava-aka-mochi-lumermakanan-kekinianide-bakulan": {
     "id": "mochi-lava-aka-mochi-lumermakanan-kekinianide-bakulan",
     "slug": "mochi-lava-aka-mochi-lumermakanan-kekinianide-bakulan",
-    "title": "Mochi Lava aka Mochi Lumer|Makanan Kekinian|Ide bakulan",
+    "title": "Mochi Lava Lumer",
     "source_url": "https://cookpad.com/id/resep/17269503",
     "excerpt": "Resep ide jualan modal ~Rp 51.000, hasil 30 porsi (30pcs mochi ukuran sedang).",
     "category": "gorengan",
@@ -21363,7 +22336,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "30pcs mochi ukuran sedang",
     "default_portions": 30,
     "business_analysis": {
-      "market_demand": "Tinggi — Mochi Lava aka Mochi Lumer|Makanan Kekinian|Ide bakulan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Mochi Lava Lumer memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 51000
@@ -21468,16 +22441,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/2b94bb8f8ed162e8/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/mochi-lava-aka-mochi-lumermakanan-kekinianide-bakulan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:11.651Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Mochi Lava aka Mochi Lumer|Makanan Kekinian|Ide bakulan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:51.369Z"
   },
   "chiken-ayam-mini-ide-jualan-simple": {
     "id": "chiken-ayam-mini-ide-jualan-simple",
     "slug": "chiken-ayam-mini-ide-jualan-simple",
-    "title": "Chiken Ayam mini ide jualan simple",
+    "title": "Chicken Mini Crispy",
     "source_url": "https://cookpad.com/id/resep/17269477",
     "excerpt": "Resep ide jualan modal ~Rp 36.000, hasil 2 porsi (2 orang).",
     "category": "jajanan-sekolah",
@@ -21491,7 +22469,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "2 orang",
     "default_portions": 2,
     "business_analysis": {
-      "market_demand": "Tinggi — Chiken Ayam mini ide jualan simple memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Chicken Mini Crispy memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 36000
@@ -21547,16 +22525,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/e34fe640cabc99da/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/chiken-ayam-mini-ide-jualan-simple.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:16.332Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Chiken Ayam mini ide jualan simple",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:51.369Z"
   },
   "stik-bawang-renyah-untuk-jualan": {
     "id": "stik-bawang-renyah-untuk-jualan",
     "slug": "stik-bawang-renyah-untuk-jualan",
-    "title": "Stik Bawang Renyah untuk Jualan",
+    "title": "Stik Bawang Renyah Gurih",
     "source_url": "https://cookpad.com/id/resep/17269194",
     "excerpt": "Resep ide jualan modal ~Rp 41.000, hasil 1500 porsi (1500 gram).",
     "category": "kue",
@@ -21570,7 +22553,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1500 gram",
     "default_portions": 1500,
     "business_analysis": {
-      "market_demand": "Tinggi — Stik Bawang Renyah untuk Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Stik Bawang Renyah Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 41000
@@ -21653,16 +22636,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/8d43d6656ec48816/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/stik-bawang-renyah-untuk-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:20.905Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Stik Bawang Renyah untuk Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:51.369Z"
   },
   "bolu-jadul-marmer-ide-jumat-berkahide-jualan": {
     "id": "bolu-jadul-marmer-ide-jumat-berkahide-jualan",
     "slug": "bolu-jadul-marmer-ide-jumat-berkahide-jualan",
-    "title": "Bolu Jadul Marmer_Ide Jum'at Berkah/Ide Jualan",
+    "title": "Bolu Marmer Jadul Klasik",
     "source_url": "https://cookpad.com/id/resep/16639695",
     "excerpt": "Resep ide jualan modal ~Rp 28.500, hasil 1 porsi (1 loyang 20pcs).",
     "category": "kue",
@@ -21676,7 +22664,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "1 loyang 20pcs",
     "default_portions": 1,
     "business_analysis": {
-      "market_demand": "Tinggi — Bolu Jadul Marmer_Ide Jum'at Berkah/Ide Jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bolu Marmer Jadul Klasik memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 28500
@@ -21741,16 +22729,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/fb8dee68ec3d4cf6/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bolu-jadul-marmer-ide-jumat-berkahide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:25.827Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bolu Jadul Marmer_Ide Jum'at Berkah/Ide Jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:51.369Z"
   },
   "143-semprit-cokelat-simple-ide-jualan": {
     "id": "143-semprit-cokelat-simple-ide-jualan",
     "slug": "143-semprit-cokelat-simple-ide-jualan",
-    "title": "143. Semprit Cokelat ||Simple, Ide Jualan ||",
+    "title": "Kue Semprit Cokelat Klasik",
     "source_url": "https://cookpad.com/id/resep/17259425",
     "excerpt": "Resep ide jualan modal ~Rp 26.500, hasil 404 porsi (404 gr | 2 Jar @175 g).",
     "category": "jajanan-sekolah",
@@ -21764,7 +22757,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "404 gr | 2 Jar @175 g",
     "default_portions": 404,
     "business_analysis": {
-      "market_demand": "Tinggi — 143. Semprit Cokelat ||Simple, Ide Jualan || memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Kue Semprit Cokelat Klasik memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 26500
@@ -21830,16 +22823,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/0fa8cc7f19b57c59/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/143-semprit-cokelat-simple-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:29.988Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "143. Semprit Cokelat ||Simple, Ide Jualan ||",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:51.369Z"
   },
   "poffertjes-bites-with-mocha-sauce-ide-bakulan": {
     "id": "poffertjes-bites-with-mocha-sauce-ide-bakulan",
     "slug": "poffertjes-bites-with-mocha-sauce-ide-bakulan",
-    "title": "Poffertjes Bites with Mocha Sauce, ide bakulan",
+    "title": "Poffertjes Bites Saus Moka",
     "source_url": "https://cookpad.com/id/resep/17254053",
     "excerpt": "Resep ide jualan modal ~Rp 49.500, hasil 30 porsi (30 pc).",
     "category": "minuman",
@@ -21853,7 +22851,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "30 pc",
     "default_portions": 30,
     "business_analysis": {
-      "market_demand": "Tinggi — Poffertjes Bites with Mocha Sauce, ide bakulan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Poffertjes Bites Saus Moka memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 49500
@@ -21975,16 +22973,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/09acdd211a9291b4/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/poffertjes-bites-with-mocha-sauce-ide-bakulan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:34.124Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Poffertjes Bites with Mocha Sauce, ide bakulan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:14:51.369Z"
   },
   "cireng-isi-ayam-suwir-pedas-ide-jualan": {
     "id": "cireng-isi-ayam-suwir-pedas-ide-jualan",
     "slug": "cireng-isi-ayam-suwir-pedas-ide-jualan",
-    "title": "Cireng isi ayam suwir pedas (ide jualan)",
+    "title": "Cireng Isi Ayam Suwir Pedas",
     "source_url": "https://cookpad.com/id/resep/17256271",
     "excerpt": "Resep ide jualan modal ~Rp 40.000, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -21998,7 +23001,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Cireng isi ayam suwir pedas (ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Cireng Isi Ayam Suwir Pedas memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 40000
@@ -22116,16 +23119,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/9a3813441b162c7e/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cireng-isi-ayam-suwir-pedas-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:41.205Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cireng isi ayam suwir pedas (ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:15:05.009Z"
   },
   "ide-usaha-wingko-babat-lamongan": {
     "id": "ide-usaha-wingko-babat-lamongan",
     "slug": "ide-usaha-wingko-babat-lamongan",
-    "title": "Ide Usaha, wingko babat lamongan",
+    "title": "Wingko Babat Khas Lamongan",
     "source_url": "https://cookpad.com/id/resep/17256211",
     "excerpt": "Resep ide jualan modal ~Rp 19.000, hasil 20 porsi (-).",
     "category": "jajanan-sekolah",
@@ -22139,7 +23147,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "-",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Ide Usaha, wingko babat lamongan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Wingko Babat Khas Lamongan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 19000
@@ -22209,16 +23217,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/3cb58a42a841efea/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/ide-usaha-wingko-babat-lamongan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:46.179Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Ide Usaha, wingko babat lamongan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:15:05.009Z"
   },
   "cireng-crispy-versi-mini-ide-jualan-frozen-food": {
     "id": "cireng-crispy-versi-mini-ide-jualan-frozen-food",
     "slug": "cireng-crispy-versi-mini-ide-jualan-frozen-food",
-    "title": "Cireng Crispy (versi Mini) ide jualan Frozen food",
+    "title": "Cireng Mini Crispy Frozen",
     "source_url": "https://cookpad.com/id/resep/17250225",
     "excerpt": "Resep ide jualan modal ~Rp 15.500, hasil 50 porsi (50an lebih).",
     "category": "jajanan-sekolah",
@@ -22232,7 +23245,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "50an lebih",
     "default_portions": 50,
     "business_analysis": {
-      "market_demand": "Tinggi — Cireng Crispy (versi Mini) ide jualan Frozen food memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Cireng Mini Crispy Frozen memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 15500
@@ -22299,16 +23312,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/94245d1e108aa4f6/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cireng-crispy-versi-mini-ide-jualan-frozen-food.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:51.367Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cireng Crispy (versi Mini) ide jualan Frozen food",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:15:05.009Z"
   },
   "bumbu-dasar-nasi-goreng-abang-jual": {
     "id": "bumbu-dasar-nasi-goreng-abang-jual",
     "slug": "bumbu-dasar-nasi-goreng-abang-jual",
-    "title": "Bumbu Dasar Nasi Goreng (abang² jual)",
+    "title": "Bumbu Dasar Nasi Goreng Spesial",
     "source_url": "https://cookpad.com/id/resep/17220664",
     "excerpt": "Resep ide jualan modal ~Rp 13.500, hasil 20 porsi (20 porsi).",
     "category": "gorengan",
@@ -22322,7 +23340,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Bumbu Dasar Nasi Goreng (abang² jual) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Bumbu Dasar Nasi Goreng Spesial memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 13500
@@ -22367,16 +23385,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/63cd9dc0aecc98e6/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/bumbu-dasar-nasi-goreng-abang-jual.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:25:55.562Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Bumbu Dasar Nasi Goreng (abang² jual)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:15:05.009Z"
   },
   "nugget-ayam-simpel-takaran-sendok-stok-lauk-dan-ide-jualan": {
     "id": "nugget-ayam-simpel-takaran-sendok-stok-lauk-dan-ide-jualan",
     "slug": "nugget-ayam-simpel-takaran-sendok-stok-lauk-dan-ide-jualan",
-    "title": "Nugget Ayam Simpel Takaran Sendok (Stok lauk dan ide jualan)",
+    "title": "Nugget Ayam Sayur Homemade",
     "source_url": "https://cookpad.com/id/resep/17247789",
     "excerpt": "Resep ide jualan modal ~Rp 37.000, hasil 70 porsi (>70 biji).",
     "category": "minuman",
@@ -22390,7 +23413,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": ">70 biji",
     "default_portions": 70,
     "business_analysis": {
-      "market_demand": "Tinggi — Nugget Ayam Simpel Takaran Sendok (Stok lauk dan ide jualan) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Nugget Ayam Sayur Homemade memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 37000
@@ -22488,16 +23511,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/9ba5077159c46d4a/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/nugget-ayam-simpel-takaran-sendok-stok-lauk-dan-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:26:00.047Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Nugget Ayam Simpel Takaran Sendok (Stok lauk dan ide jualan)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:15:05.009Z"
   },
   "142-ongol-ongol-sagu-gula-aren-ide-jualan-nihh": {
     "id": "142-ongol-ongol-sagu-gula-aren-ide-jualan-nihh",
     "slug": "142-ongol-ongol-sagu-gula-aren-ide-jualan-nihh",
-    "title": "142. Ongol-ongol Sagu Gula Aren |Ide Jualan nihh😁",
+    "title": "Ongol-Ongol Sagu Gula Aren",
     "source_url": "https://cookpad.com/id/resep/17242931",
     "excerpt": "Resep ide jualan modal ~Rp 11.000, hasil 20 porsi (20 porsi).",
     "category": "kue",
@@ -22511,7 +23539,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — 142. Ongol-ongol Sagu Gula Aren |Ide Jualan nihh😁 memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Ongol-Ongol Sagu Gula Aren memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 11000
@@ -22565,16 +23593,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6b385ab6514837cc/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/142-ongol-ongol-sagu-gula-aren-ide-jualan-nihh.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:26:04.199Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "142. Ongol-ongol Sagu Gula Aren |Ide Jualan nihh😁",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:15:05.009Z"
   },
   "cilok-enak-empuk-bisa-jadi-ide-jualan": {
     "id": "cilok-enak-empuk-bisa-jadi-ide-jualan",
     "slug": "cilok-enak-empuk-bisa-jadi-ide-jualan",
-    "title": "Cilok Enak Empuk | Bisa jadi ide jualan",
+    "title": "Cilok Empuk Gurih",
     "source_url": "https://cookpad.com/id/resep/17242009",
     "excerpt": "Resep ide jualan modal ~Rp 17.000, hasil 20 porsi (20 porsi).",
     "category": "jajanan-sekolah",
@@ -22588,7 +23621,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Cilok Enak Empuk | Bisa jadi ide jualan memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Cilok Empuk Gurih memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 17000
@@ -22657,16 +23690,21 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/50966b8f220d376d/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/cilok-enak-empuk-bisa-jadi-ide-jualan.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:26:08.984Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Cilok Enak Empuk | Bisa jadi ide jualan",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:15:05.009Z"
   },
   "black-forest-peanut-cookieside-jualankuker-lebaran": {
     "id": "black-forest-peanut-cookieside-jualankuker-lebaran",
     "slug": "black-forest-peanut-cookieside-jualankuker-lebaran",
-    "title": "Black Forest peanut cookies(ide jualan,kuker lebaran)",
+    "title": "Black Forest Peanut Cookies",
     "source_url": "https://cookpad.com/id/resep/17239900",
     "excerpt": "Resep ide jualan modal ~Rp 66.500, hasil 20 porsi (20 porsi).",
     "category": "gorengan",
@@ -22680,7 +23718,7 @@ window.SCRAPED_DRAFTS = {
     "yield_text": "20 porsi",
     "default_portions": 20,
     "business_analysis": {
-      "market_demand": "Tinggi — Black Forest peanut cookies(ide jualan,kuker lebaran) memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
+      "market_demand": "Tinggi — Black Forest Peanut Cookies memiliki target pasar jelas di kalangan anak sekolah, mahasiswa, dan lingkungan perumahan.",
       "ease_of_making": "Mudah — dapat diproduksi dalam skala rumahan dengan peralatan standar dapur.",
       "ingredient_availability": "Sangat mudah — seluruh bahan baku dapat ditemukan di toko kelontong atau pasar tradisional.",
       "estimated_initial_capital": 66500
@@ -22797,10 +23835,15 @@ window.SCRAPED_DRAFTS = {
     ],
     "media": {
       "source_photo": "https://img-global.cpcdn.com/recipes/6d3674d44b6a2cdc/1200x630cq80/photo.jpg",
-      "ai_polished_photo": "",
-      "status": "pending_review",
-      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI."
+      "ai_polished_photo": "img/recipes/polished/black-forest-peanut-cookieside-jualankuker-lebaran.jpg",
+      "status": "ready_for_review",
+      "notes": "Foto asli Cookpad sebagai acuan grounding wadah/porsi. Belum melalui polesan AI.",
+      "mode": "cloudflare_flux",
+      "polished_at": "2026-10-18T02:26:13.484Z"
     },
-    "promo_images": []
+    "promo_images": [],
+    "original_title": "Black Forest peanut cookies(ide jualan,kuker lebaran)",
+    "title_polished": true,
+    "title_polished_at": "2026-10-18T03:15:05.009Z"
   }
 };
