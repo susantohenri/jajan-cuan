@@ -4,7 +4,7 @@
 const firebaseConfig = {
   apiKey: "AIzaSyDcNmkB3OC1xFqicMF3Mn0M__chbVAVDBk",
   authDomain: "jajan-cuan.firebaseapp.com",
-  databaseURL: "https://jajan-cuan-default-rtdb.firebaseio.com",
+  databaseURL: "https://jajan-cuan-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "jajan-cuan",
   storageBucket: "jajan-cuan.firebasestorage.app",
   messagingSenderId: "1032979243442",

@@ -125,7 +125,8 @@ const ADMIN_STORAGE_KEY = 'jajan_cuan_curated_drafts';
 // --- DB-LEVEL PAGINATION CONFIG FOR END-USERS (5 items per page) ---
 const PAGE_SIZE = 5;
 let currentPage = 1;
-let currentFilter = 'all';
+const initialUrlFilter = (urlParams.get('filter') || 'all').replace(/[^\w-]/g, '');
+let currentFilter = initialUrlFilter;
 let pageCursors = [null]; // pageCursors[0] = null (page 1), pageCursors[1] = cursor key for page 2, etc.
 let hasNextPage = false;
 let isFetchingPage = false;
@@ -134,6 +135,18 @@ let isFetchingPage = false;
 document.addEventListener('DOMContentLoaded', () => {
   initWaitlistModal();
   initFilters();
+
+  // Set visual active state on matching filter button immediately
+  if (currentFilter !== 'all') {
+    const filterButtons = document.querySelectorAll('.filter-tag');
+    filterButtons.forEach(btn => {
+      if (btn.getAttribute('data-filter') === currentFilter) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    });
+  }
 
   // Jika sedang di localhost tapi belum buka ?admin=true, tampilkan hint banner
   const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
@@ -147,7 +160,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loadAdminPosts();
   } else {
     setupPaginationListeners();
-    loadUserPage(1, 'all');
+    loadUserPage(1, currentFilter);
   }
 });
 
@@ -338,55 +351,79 @@ async function loadUserPage(page = 1, filter = currentFilter) {
           query = query.startAt(cursor);
         }
         query = query.limitToFirst(PAGE_SIZE + 1);
-      } else if (filter === 'kue' || filter === 'gorengan' || filter === 'minuman') {
-        query = db.ref('posts').orderByChild('category');
-        if (cursor) {
-          query = query.startAt(filter, cursor).endAt(filter);
-        } else {
-          query = query.startAt(filter).endAt(filter);
-        }
-        query = query.limitToFirst(PAGE_SIZE + 1);
-      } else {
-        // Tag filter (misal: modal-kecil, viral)
-        query = db.ref('posts').orderByKey();
-        if (cursor) {
-          query = query.startAt(cursor);
-        }
-        query = query.limitToFirst(PAGE_SIZE + 1);
-      }
 
-      const snapshot = await fetchWithTimeout(query.once('value'), 4000);
-      const items = [];
-      
-      snapshot.forEach((child) => {
-        const val = child.val();
-        if (val && val.published !== false) {
-          if (filter === 'modal-kecil') {
-            const cap = val.business_analysis?.estimated_initial_capital || 0;
-            const tags = val.tags || [];
-            if (!tags.includes('modal-kecil') && cap > 50000) return;
-          } else if (filter === 'viral') {
-            const tags = val.tags || [];
-            if (!tags.includes('viral')) return;
+        const snapshot = await fetchWithTimeout(query.once('value'), 4000);
+        const items = [];
+        snapshot.forEach((child) => {
+          const val = child.val();
+          if (val && val.published !== false) {
+            items.push({
+              id: child.key,
+              slug: val.slug || child.key,
+              emoji: val.emoji || getEmojiForCategory(val.category),
+              ...val
+            });
           }
+        });
 
-          items.push({
-            id: child.key,
-            slug: val.slug || child.key,
-            emoji: val.emoji || getEmojiForCategory(val.category),
-            ...val
+        if (items.length > PAGE_SIZE) {
+          hasMore = true;
+          pagedRecipes = items.slice(0, PAGE_SIZE);
+          pageCursors[page] = items[PAGE_SIZE].id;
+        } else {
+          hasMore = false;
+          pagedRecipes = items;
+          pageCursors[page] = null;
+        }
+
+      } else if (filter === 'kue' || filter === 'gorengan' || filter === 'minuman') {
+        // Query RTDB terindeks pada field category
+        query = db.ref('posts').orderByChild('category').equalTo(filter);
+        const snapshot = await fetchWithTimeout(query.once('value'), 4000);
+        const items = [];
+        snapshot.forEach((child) => {
+          const val = child.val();
+          if (val && val.published !== false) {
+            items.push({
+              id: child.key,
+              slug: val.slug || child.key,
+              emoji: val.emoji || getEmojiForCategory(val.category),
+              ...val
+            });
+          }
+        });
+
+        const startIdx = (page - 1) * PAGE_SIZE;
+        pagedRecipes = items.slice(startIdx, startIdx + PAGE_SIZE);
+        hasMore = items.length > startIdx + PAGE_SIZE;
+
+      } else {
+        // Filter Tag (modal-kecil, viral)
+        let sourceList = [];
+        if (typeof window.SCRAPED_DRAFTS !== 'undefined' && window.SCRAPED_DRAFTS) {
+          sourceList = Object.values(window.SCRAPED_DRAFTS);
+        } else {
+          const snap = await fetchWithTimeout(db.ref('posts').once('value'), 4000);
+          snap.forEach(c => {
+            const val = c.val();
+            if (val && val.published !== false) sourceList.push({ id: c.key, ...val });
           });
         }
-      });
 
-      if (items.length > PAGE_SIZE) {
-        hasMore = true;
-        pagedRecipes = items.slice(0, PAGE_SIZE);
-        pageCursors[page] = items[PAGE_SIZE].id; // Kunci ke-6 menjadi cursor untuk halaman berikutnya
-      } else {
-        hasMore = false;
-        pagedRecipes = items;
-        pageCursors[page] = null;
+        sourceList = sourceList.filter(r => {
+          const tags = r.tags || [];
+          if (filter === 'modal-kecil') {
+            return tags.includes('modal-kecil') || (r.business_analysis?.estimated_initial_capital <= 40000);
+          }
+          if (filter === 'viral') {
+            return tags.includes('viral');
+          }
+          return tags.includes(filter);
+        });
+
+        const startIdx = (page - 1) * PAGE_SIZE;
+        pagedRecipes = sourceList.slice(startIdx, startIdx + PAGE_SIZE);
+        hasMore = sourceList.length > startIdx + PAGE_SIZE;
       }
     } else {
       throw new Error('Database offline / not initialized');
@@ -794,6 +831,27 @@ function renderRecipes(recipes) {
   if (isAdmin) {
     setupAdminDeleteListeners();
   }
+
+  // Handle deep-link to specific recipe (?recipe=slug or #card-slug)
+  handleTargetRecipeDeepLink();
+}
+
+// Auto-scroll and auto-expand target recipe card if specified in URL
+function handleTargetRecipeDeepLink() {
+  const targetRecipe = (urlParams.get('recipe') || location.hash.replace('#card-', '') || '').replace(/[^\w-]/g, '');
+  if (!targetRecipe) return;
+
+  setTimeout(() => {
+    const card = document.getElementById(`card-${targetRecipe}`);
+    if (card) {
+      card.classList.add('highlight-target');
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      const toggleBtn = card.querySelector('.btn-toggle-detail');
+      if (toggleBtn && !toggleBtn.classList.contains('expanded')) {
+        toggleBtn.click();
+      }
+    }
+  }, 250);
 }
 
 // Event Listener khusus Hard Delete di Mode Admin

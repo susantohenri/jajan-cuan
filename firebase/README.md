@@ -3,7 +3,7 @@
 ## Project Info
 - Project ID: `jajan-cuan`
 - RTDB Instance: `jajan-cuan-default-rtdb`
-- Database URL: `https://jajan-cuan-default-rtdb.firebaseio.com`
+- Database URL: `https://jajan-cuan-default-rtdb.asia-southeast1.firebasedatabase.app`
 - Default Domain: `https://jajan-cuan.web.app`
 - Status: Test Mode (sebelum go-live, terapkan rules dari `database.rules.json`)
 

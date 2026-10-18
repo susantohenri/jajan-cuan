@@ -6,84 +6,14 @@
   <meta name="robots" content="noindex, nofollow">
   <title>Katalog Resep — Jajan Cuan</title>
 
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <!-- Google Fonts: Inter & Plus Jakarta Sans with display=swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 
-  <!-- Stylesheet -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    /* Experience page layout tweaks */
-    body {
-      padding-bottom: 90px; /* Space for sticky bar */
-    }
-    .loading-state {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--color-text-secondary);
-    }
-    .spinner {
-      display: inline-block;
-      width: 36px;
-      height: 36px;
-      border: 3px solid var(--color-border);
-      border-top-color: var(--color-primary);
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin-bottom: 1rem;
-    }
-    /* Pagination UI */
-    .pagination-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 1rem;
-      margin-top: 2rem;
-      margin-bottom: 2rem;
-      flex-wrap: wrap;
-    }
-    .pagination-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.65rem 1.25rem;
-      font-size: 0.9rem;
-      font-weight: 700;
-      border-radius: 8px;
-      border: 1px solid #E5E7EB;
-      background: #FFFFFF;
-      color: #111827;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-    }
-    .pagination-btn:hover:not(:disabled) {
-      background: #FF6B35;
-      color: #FFFFFF;
-      border-color: #FF6B35;
-      transform: translateY(-1px);
-    }
-    .pagination-btn:disabled {
-      opacity: 0.45;
-      cursor: not-allowed;
-      background: #F3F4F6;
-      color: #9CA3AF;
-      box-shadow: none;
-    }
-    .pagination-badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      background: #F3F4F6;
-      border-radius: 9999px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #4B5563;
-      border: 1px solid #E5E7EB;
-    }
-  </style>
+  <link rel="stylesheet" href="css/upgrade.css">
 
   <!-- Google tag (gtag.js) GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKCSWCG5W1"></script>
@@ -94,13 +24,13 @@
     gtag('config', 'G-SKCSWCG5W1');
   </script>
 </head>
-<body>
+<body class="jc-exp">
 
   <!-- Localhost Admin Hint Banner -->
-  <div id="localhostHintBanner" style="display: none; background: #EEF2FF; border-bottom: 1px solid #C7D2FE; padding: 0.65rem 1rem; text-align: center; font-size: 0.85rem; color: #3730A3;">
-    🛠️ <strong>Server Lokal Terdeteksi:</strong> Kamu sedang melihat katalog reguler (5 resep/halaman). Untuk menyeleksi <strong>209 resep draft hasil scraping</strong> dan memakai fitur <strong>Hard Delete</strong>, 
-    <a href="?admin=true" style="color: #4338CA; font-weight: 800; text-decoration: underline; margin-left: 0.35rem;">
-      Klik di sini untuk Masuk ke Mode Admin (?admin=true) →
+  <div id="localhostHintBanner" class="jc-hint" style="display: none;">
+    🛠️ <strong>Server lokal terdeteksi.</strong> Untuk kurasi draft hasil scraping dan Hard Delete, 
+    <a href="?admin=true" style="font-weight: 800; text-decoration: underline; margin-left: 0.25rem;">
+      masuk Mode Admin (?admin=true) →
     </a>
   </div>
 
@@ -111,7 +41,7 @@
         🍳 Jajan<span>Cuan</span>
       </a>
       <a href="index.html" class="btn btn-outline btn-sm">
-        ← Kembali ke Beranda
+        ← Beranda
       </a>
     </div>
   </header>
@@ -120,82 +50,86 @@
   <main class="container" style="padding-top: 2rem;">
 
     <!-- Admin Curation Toolbar (Hanya Muncul Jika URL ?admin=true) -->
-    <div id="adminToolbar" style="display: none; background: #FFFBEB; border: 2px dashed #F59E0B; border-radius: 12px; padding: 1.25rem; margin-bottom: 2rem;">
-      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+    <div id="adminToolbar" class="jc-admin" style="display: none;">
+      <div class="row">
         <div>
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="background: #F59E0B; color: #fff; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.5rem; border-radius: 6px;">ADMIN MODE</span>
-            <strong style="color: #92400E; font-size: 1.05rem;">Panel Kurasi Resep Lokal (Hard Delete)</strong>
-          </div>
-          <p style="margin: 0.35rem 0 0 0; font-size: 0.85rem; color: #78350F;">
-            Pilih resep yang layak jual. Klik tombol merah <strong>🗑️ Hapus Resep</strong> untuk membuang resep yang tidak sesuai.
-          </p>
+          <strong>⚙️ ADMIN MODE: Kurasi Resep Lokal</strong><br>
+          <small>Klik <b>🗑️ Hapus Resep</b> pada resep yang tidak layak jual.</small>
         </div>
-
-        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+        <div class="row">
           <span id="adminRecipeCount" style="background: #FEF3C7; color: #B45309; font-weight: 700; font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: 8px; border: 1px solid #FDE68A;">
             7 Resep Aktif
           </span>
-          <button id="loadDraftsBtn" class="btn btn-sm" style="background: #3B82F6; color: #fff; font-weight: 700; border: none; padding: 0.5rem 0.9rem; border-radius: 8px; cursor: pointer;" title="Paksa baca ulang file draft dari disk (bypass browser cache)">
+          <button id="loadDraftsBtn" class="jc-ab" style="background: #3B82F6;" title="Paksa baca ulang draft dari disk (bypass cache)">
             📋 Muat Draft Terbaru (Sync Disk)
           </button>
-          <button id="exportJsonBtn" class="btn btn-sm" style="background: #10B981; color: #fff; font-weight: 700; border: none; padding: 0.5rem 0.9rem; border-radius: 8px; cursor: pointer;">
+          <button id="exportJsonBtn" class="jc-ab" style="background: #10B981;">
             📥 Export JSON Bersih
           </button>
-          <button id="resetDraftsBtn" class="btn btn-sm" style="background: #F3F4F6; color: #374151; border: 1px solid #D1D5DB; font-weight: 600; padding: 0.5rem 0.8rem; border-radius: 8px; cursor: pointer;" title="Kembalikan semua resep yang terhapus">
+          <button id="resetDraftsBtn" class="jc-ab" style="background: #6B7280;" title="Kembalikan semua resep yang terhapus">
             🔄 Reset
           </button>
         </div>
       </div>
     </div>
 
+    <!-- Header & Interactive Step Flow -->
     <div class="experience-header" style="border: none; padding-bottom: 0.5rem;">
-      <span class="section-tag">Interactive Catalog</span>
+      <span class="section-tag">Katalog Interaktif</span>
       <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Katalog Ide Jajanan Siap Jual</h1>
-      <p>Klik kartu resep untuk melihat analisis margin keuntungan, langkah memasak, dan kalkulator HPP otomatis.</p>
+      <p>Tap kartu resep untuk lihat analisis untung, cara masak, dan kalkulator HPP otomatis.</p>
+      <ol class="jc-flow">
+        <li>1 Pilih resep</li>
+        <li>2 Cek analisis &amp; cara masak</li>
+        <li>3 Hitung modal &amp; untung</li>
+      </ol>
     </div>
 
-    <!-- Section 1: Filter Kategori -->
-    <div class="filter-tags-scroll" id="filterContainer">
-      <button class="filter-tag active" data-filter="all">Semua Resep</button>
-      <button class="filter-tag" data-filter="modal-kecil">Modal &lt; 50rb</button>
-      <button class="filter-tag" data-filter="viral">Viral TikTok</button>
-      <button class="filter-tag" data-filter="kue">Kue & Roti</button>
-      <button class="filter-tag" data-filter="gorengan">Gorengan</button>
-      <button class="filter-tag" data-filter="minuman">Minuman</button>
+    <!-- Filter Kategori (Mendukung deep-link URL ?filter=...) -->
+    <div class="filter-tags-scroll" id="filterContainer" role="group" aria-label="Filter kategori resep" style="margin-top: 1rem;">
+      <button class="filter-tag active" data-filter="all">🍽️ Semua Resep</button>
+      <button class="filter-tag" data-filter="modal-kecil">💰 Modal &lt; 50rb</button>
+      <button class="filter-tag" data-filter="viral">🔥 Viral TikTok</button>
+      <button class="filter-tag" data-filter="kue">🍰 Kue &amp; Roti</button>
+      <button class="filter-tag" data-filter="gorengan">🍤 Gorengan</button>
+      <button class="filter-tag" data-filter="minuman">🧋 Minuman</button>
     </div>
 
-    <!-- Section 2: Grid Kartu Resep (Dynamic RTDB / Fallback) -->
-    <div id="recipesContainer" style="margin-top: 1.5rem;">
+    <!-- Grid Kartu Resep -->
+    <div id="recipesContainer" style="margin-top: 1.5rem;" aria-live="polite">
       <div class="loading-state" id="loadingState">
         <div class="spinner"></div>
-        <p>Memuat resep & kalkulator cuan...</p>
+        <p>Memuat resep &amp; kalkulator cuan...</p>
       </div>
     </div>
 
-    <!-- Section 3: DB Pagination Controls (Load from DB by Request: 5 item / page) -->
+    <!-- Pagination Controls (DB-Level 5 item per request) -->
     <div id="paginationControls" class="pagination-container" style="display: none;">
       <button id="prevPageBtn" class="pagination-btn" disabled>
-        ← Halaman Sebelumnya
+        ← Sebelumnya
       </button>
       <span class="pagination-badge">
-        Halaman <strong id="currentPageNum" style="color: var(--color-primary, #FF6B35); margin-left: 0.35rem;">1</strong>
+        Halaman <strong id="currentPageNum">1</strong>
       </span>
       <button id="nextPageBtn" class="pagination-btn" disabled>
-        Halaman Selanjutnya →
+        Selanjutnya →
       </button>
     </div>
+
   </main>
 
-  <!-- Sticky Bottom Bar -->
-  <div class="sticky-bar">
+  <!-- Sticky Bottom Bar (Muncul setelah scroll, bisa ditutup) -->
+  <div class="sticky-bar" id="expStickyBar">
     <div class="container">
       <div class="sticky-bar-text">
-        Mau akses ratusan resep & kalkulator langsung di HP?
+        Mau semua resep &amp; kalkulator langsung di HP?
       </div>
-      <button class="btn btn-primary btn-sm trigger-waitlist" data-source="experience_sticky">
-        🔔 Ingatkan Saya Saat Rilis
-      </button>
+      <div class="sticky-bar-actions">
+        <button class="btn btn-primary btn-sm trigger-waitlist" data-source="experience_sticky">
+          🔔 Ingatkan Saya Saat Rilis
+        </button>
+        <button class="jc-x" id="closeStickyBtn" aria-label="Tutup bar pemberitahuan">&times;</button>
+      </div>
     </div>
   </div>
 
@@ -259,5 +193,36 @@
   <script src="js/firebase-init.js"></script>
   <script src="js/scraped-drafts.js?v=209"></script>
   <script src="js/experience.js"></script>
+
+  <!-- Non-intrusive Sticky Bar Behavior -->
+  <script>
+    (function(){
+      var s = document.getElementById('expStickyBar');
+      var x = document.getElementById('closeStickyBtn');
+      if (!s) return;
+
+      try {
+        if (sessionStorage.getItem('jc_hide_sticky')) {
+          s.remove();
+          return;
+        }
+      } catch (e) {}
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 320) {
+          s.classList.add('show');
+        } else {
+          s.classList.remove('show');
+        }
+      }, { passive: true });
+
+      if (x) {
+        x.addEventListener('click', function() {
+          s.remove();
+          try { sessionStorage.setItem('jc_hide_sticky', '1'); } catch (e) {}
+        });
+      }
+    })();
+  </script>
 </body>
 </html>

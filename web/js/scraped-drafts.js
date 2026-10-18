@@ -9,8 +9,7 @@ window.SCRAPED_DRAFTS = {
     "tags": [
       "gorengan",
       "modal-kecil",
-      "viral",
-      "ekonomis"
+      "viral"
     ],
     "published": true,
     "created_at": "2026-10-17T23:37:36.148Z",
@@ -113,9 +112,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Tteokbokki Kenyal Ekonomis",
     "source_url": "https://cookpad.com/id/resep/26721382",
     "excerpt": "Resep ide jualan modal ~Rp 32.500, hasil 30 porsi (30 mika).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
+      "gorengan",
       "modal-kecil",
       "viral",
       "ekonomis"
@@ -249,11 +248,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Sosis Telur Sayur Gurih",
     "source_url": "https://cookpad.com/id/resep/26717009",
     "excerpt": "Resep ide jualan modal ~Rp 29.000, hasil 10 porsi (10 bungkus).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-17T23:37:36.155Z",
@@ -357,12 +355,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Turon Pisang Nangka Crispy",
     "source_url": "https://cookpad.com/id/resep/26400747",
     "excerpt": "Resep ide jualan modal ~Rp 31.000, hasil 10 porsi (10 buah).",
-    "category": "kue",
+    "category": "gorengan",
     "tags": [
-      "kue",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-17T23:37:36.157Z",
@@ -540,11 +536,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Pie Susu Mini Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24507079",
     "excerpt": "Resep ide jualan modal ~Rp 21.500, hasil 14 porsi (14-18 pc).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
+      "kue",
       "modal-kecil",
-      "viral",
       "ekonomis"
     ],
     "published": true,
@@ -640,8 +635,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-17T23:37:36.161Z",
@@ -717,11 +711,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kue Janda Genit Premium",
     "source_url": "https://cookpad.com/id/resep/26594862",
     "excerpt": "Resep ide jualan modal ~Rp 37.500, hasil 1 porsi (± 1 toples ukuran 500–600 gram).",
-    "category": "gorengan",
+    "category": "kue",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:30:30.027Z",
@@ -895,11 +888,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Bolu Panggang Jadul Lembut",
     "source_url": "https://cookpad.com/id/resep/26576358",
     "excerpt": "Resep ide jualan modal ~Rp 19.500, hasil 1 porsi (1 loyang ukuran 20cm).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:30:34.655Z",
@@ -987,7 +979,6 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
       "viral"
     ],
     "published": true,
@@ -1131,8 +1122,7 @@ window.SCRAPED_DRAFTS = {
     "category": "minuman",
     "tags": [
       "minuman",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:30:39.261Z",
@@ -1209,8 +1199,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:30:41.613Z",
@@ -1316,11 +1305,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Japanese Salted Butter Bread",
     "source_url": "https://cookpad.com/id/resep/17262285",
     "excerpt": "Resep ide jualan modal ~Rp 26.000, hasil 10 porsi (10 salted bread 46 gram).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:30:43.753Z",
@@ -1434,9 +1422,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Pepaya Mustofa Crispy Renyah",
     "source_url": "https://cookpad.com/id/resep/26270784",
     "excerpt": "Resep ide jualan modal ~Rp 35.500, hasil 1000 porsi (1000 gram).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
+      "gorengan",
       "modal-kecil",
       "viral"
     ],
@@ -1567,9 +1555,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:30:48.278Z",
@@ -1672,8 +1658,7 @@ window.SCRAPED_DRAFTS = {
     "category": "minuman",
     "tags": [
       "minuman",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:30:50.717Z",
@@ -1776,8 +1761,7 @@ window.SCRAPED_DRAFTS = {
     "category": "minuman",
     "tags": [
       "minuman",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:30:52.835Z",
@@ -1851,11 +1835,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kue Bugis Talam Ubi Ungu",
     "source_url": "https://cookpad.com/id/resep/25956451",
     "excerpt": "Resep ide jualan modal ~Rp 32.500, hasil 20 porsi (20 buah).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:30:54.945Z",
@@ -1996,9 +1979,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Nastar Butter Lumer Premium",
     "source_url": "https://cookpad.com/id/resep/25473207",
     "excerpt": "Resep ide jualan modal ~Rp 32.500, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
+      "kue",
       "modal-kecil",
       "viral"
     ],
@@ -2119,11 +2102,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Brownies Kukus Ketan Hitam Lembut",
     "source_url": "https://cookpad.com/id/resep/25825240",
     "excerpt": "Resep ide jualan modal ~Rp 34.000, hasil 20 porsi (20 potong).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:30:59.626Z",
@@ -2232,8 +2214,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:01.843Z",
@@ -2320,8 +2301,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:03.990Z",
@@ -2488,9 +2468,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 41.500, hasil 20 porsi (20 porsi).",
     "category": "kue",
     "tags": [
-      "kue",
-      "modal-kecil",
-      "viral"
+      "kue"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:08.232Z",
@@ -2602,9 +2580,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Brownies Kukus Cokelat Lumer",
     "source_url": "https://cookpad.com/id/resep/25708444",
     "excerpt": "Resep ide jualan modal ~Rp 31.500, hasil 1 porsi (1 loyang jadi 4 kotak).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
+      "kue",
       "modal-kecil",
       "viral"
     ],
@@ -2703,11 +2681,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Shiny Fudgy Brownies Panggang",
     "source_url": "https://cookpad.com/id/resep/25694608",
     "excerpt": "Resep ide jualan modal ~Rp 39.500, hasil 25 porsi (25 potong).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:12.854Z",
@@ -2806,8 +2783,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:14.991Z",
@@ -2952,11 +2928,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Bumbu Pecel Kacang Gurih",
     "source_url": "https://cookpad.com/id/resep/25456668",
     "excerpt": "Resep ide jualan modal ~Rp 18.500, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:17.105Z",
@@ -3061,8 +3036,7 @@ window.SCRAPED_DRAFTS = {
     "category": "minuman",
     "tags": [
       "minuman",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:19.219Z",
@@ -3267,8 +3241,6 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral",
       "ekonomis"
     ],
     "published": true,
@@ -3392,9 +3364,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 41.500, hasil 4 porsi (4 Porsi).",
     "category": "minuman",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "minuman"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:26.049Z",
@@ -3550,9 +3520,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 62.000, hasil 40 porsi (40 pieces kurang lebih).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:28.103Z",
@@ -3729,11 +3697,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Ayam Bakar Bumbu Pedas",
     "source_url": "https://cookpad.com/id/resep/25372854",
     "excerpt": "Resep ide jualan modal ~Rp 46.000, hasil 8 porsi (8 potong).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:30.243Z",
@@ -3875,11 +3841,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Mie Ayam Khas Lampung",
     "source_url": "https://cookpad.com/id/resep/25364931",
     "excerpt": "Resep ide jualan modal ~Rp 63.000, hasil 12 porsi (12 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:32.354Z",
@@ -4060,11 +4024,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Keripik Tempe Pelangi Crispy",
     "source_url": "https://cookpad.com/id/resep/24789418",
     "excerpt": "Resep ide jualan modal ~Rp 13.500, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:34.583Z",
@@ -4151,11 +4114,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Cheese Chicken Nugget Crispy",
     "source_url": "https://cookpad.com/id/resep/25354162",
     "excerpt": "Resep ide jualan modal ~Rp 41.000, hasil 40 porsi (40 buah).",
-    "category": "kue",
+    "category": "gorengan",
     "tags": [
-      "kue",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:36.986Z",
@@ -4271,7 +4232,6 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
       "viral"
     ],
     "published": true,
@@ -4389,9 +4349,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 64.500, hasil 20 porsi (20 porsi).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:41.674Z",
@@ -4585,9 +4543,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 51.000, hasil 20 porsi (20 porsi).",
     "category": "kue",
     "tags": [
-      "kue",
-      "modal-kecil",
-      "viral"
+      "kue"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:44.196Z",
@@ -4720,11 +4676,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Bolu Pisang Kukus Lembut",
     "source_url": "https://cookpad.com/id/resep/24979056",
     "excerpt": "Resep ide jualan modal ~Rp 31.000, hasil 31 porsi (31 pcs).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:46.648Z",
@@ -4818,9 +4773,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Tteokbokki Rice Paper Mozzarella",
     "source_url": "https://cookpad.com/id/resep/24329939",
     "excerpt": "Resep ide jualan modal ~Rp 36.500, hasil 2 porsi (2 Porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
+      "gorengan",
       "modal-kecil",
       "viral"
     ],
@@ -4943,11 +4898,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Soto Ayam Kuah Gobyos",
     "source_url": "https://cookpad.com/id/resep/5247842",
     "excerpt": "Resep ide jualan modal ~Rp 60.500, hasil 8 porsi (8 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:51.218Z",
@@ -5139,9 +5092,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 58.500, hasil 10 porsi (10 porsi).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:53.363Z",
@@ -5299,11 +5250,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Cokodok Pisang Manis Crispy",
     "source_url": "https://cookpad.com/id/resep/25151778",
     "excerpt": "Resep ide jualan modal ~Rp 19.000, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:31:55.573Z",
@@ -5390,9 +5340,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Mochi Pelangi Aneka Rasa",
     "source_url": "https://cookpad.com/id/resep/25121724",
     "excerpt": "Resep ide jualan modal ~Rp 36.500, hasil 8 porsi (8 porsi kecil).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
+      "kue",
       "modal-kecil",
       "viral"
     ],
@@ -5519,8 +5469,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:00.249Z",
@@ -5615,11 +5564,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Martabak Telur Khas Aceh",
     "source_url": "https://cookpad.com/id/resep/25117502",
     "excerpt": "Resep ide jualan modal ~Rp 16.000, hasil 1 porsi (1 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:02.415Z",
@@ -5711,11 +5659,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Artisan Sourdough Cinnamon Roll",
     "source_url": "https://cookpad.com/id/resep/25113539",
     "excerpt": "Resep ide jualan modal ~Rp 16.000, hasil 18 porsi (18 pcs).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:04.500Z",
@@ -5803,9 +5750,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 53.500, hasil 3 porsi (3 porsi kecil).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:06.613Z",
@@ -5995,8 +5940,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:08.762Z",
@@ -6080,11 +6024,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Rice Bowl Ayam Lada Hitam",
     "source_url": "https://cookpad.com/id/resep/25037871",
     "excerpt": "Resep ide jualan modal ~Rp 34.000, hasil 3 porsi (3 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:10.873Z",
@@ -6325,11 +6268,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Brownies Kukus Cokelat Lembut",
     "source_url": "https://cookpad.com/id/resep/25088450",
     "excerpt": "Resep ide jualan modal ~Rp 47.000, hasil 12 porsi (12 porsi kecil).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:15.362Z",
@@ -6429,12 +6370,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kue Getas Ketan Manis",
     "source_url": "https://cookpad.com/id/resep/25068543",
     "excerpt": "Resep ide jualan modal ~Rp 31.500, hasil 20 porsi (20-25 biji).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:17.738Z",
@@ -6533,11 +6472,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Donat Burger Mini Spesial",
     "source_url": "https://cookpad.com/id/resep/25066935",
     "excerpt": "Resep ide jualan modal ~Rp 39.000, hasil 20 porsi (20-25 porsi kecil).",
-    "category": "gorengan",
+    "category": "kue",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:19.899Z",
@@ -6650,11 +6588,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Sambal Rujak Kacang Kental",
     "source_url": "https://cookpad.com/id/resep/17231513",
     "excerpt": "Resep ide jualan modal ~Rp 10.500, hasil 300 porsi (300 gr (diameter9cm tinggi 7 cm)).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:22.230Z",
@@ -6725,8 +6662,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:24.633Z",
@@ -6810,12 +6746,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kue Getas Ketan Salju",
     "source_url": "https://cookpad.com/id/resep/25050058",
     "excerpt": "Resep ide jualan modal ~Rp 27.000, hasil 25 porsi (-+25bj).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T00:32:26.674Z",
@@ -6915,11 +6849,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Manisan Pepaya Kriuk Segar",
     "source_url": "https://cookpad.com/id/resep/25049755",
     "excerpt": "Resep ide jualan modal ~Rp 13.000, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:06:52.085Z",
@@ -7007,9 +6940,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 47.000, hasil 5 porsi (5 porsi kecil).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:06:54.171Z",
@@ -7151,11 +7082,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Cireng Crispy Ayam Suwir",
     "source_url": "https://cookpad.com/id/resep/24244551",
     "excerpt": "Resep ide jualan modal ~Rp 33.000, hasil 40 porsi (40+ pcs).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:06:56.249Z",
@@ -7273,11 +7203,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Jamur Tiram Crispy Gurih",
     "source_url": "https://cookpad.com/id/resep/25016621",
     "excerpt": "Resep ide jualan modal ~Rp 22.000, hasil 1 porsi (1 toples besar).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:06:58.234Z",
@@ -7376,11 +7305,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Puding Kelapa Muda Segar",
     "source_url": "https://cookpad.com/id/resep/25008138",
     "excerpt": "Resep ide jualan modal ~Rp 15.500, hasil 14 porsi (14 Porsi).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:00.263Z",
@@ -7464,12 +7392,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Lumpia Pizza Mini Crispy",
     "source_url": "https://cookpad.com/id/resep/24991233",
     "excerpt": "Resep ide jualan modal ~Rp 20.000, hasil 25 porsi (25 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:02.383Z",
@@ -7543,7 +7469,6 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
       "viral"
     ],
     "published": true,
@@ -7771,11 +7696,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Makaroni Schotel Kukus Gurih",
     "source_url": "https://cookpad.com/id/resep/24985525",
     "excerpt": "Resep ide jualan modal ~Rp 22.000, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:07.160Z",
@@ -7869,12 +7793,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Martabak Tahu Mini Crispy",
     "source_url": "https://cookpad.com/id/resep/24969900",
     "excerpt": "Resep ide jualan modal ~Rp 15.500, hasil 18 porsi (18 buah).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:09.124Z",
@@ -7955,10 +7877,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Dimsum Goreng Telur Puyuh",
     "source_url": "https://cookpad.com/id/resep/24962271",
     "excerpt": "Resep ide jualan modal ~Rp 53.000, hasil 25 porsi (25 pcs).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
+      "gorengan",
       "viral"
     ],
     "published": true,
@@ -8112,9 +8033,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 87.000, hasil 4 porsi (4 orang).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:14.037Z",
@@ -8346,9 +8265,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 55.000, hasil 20 porsi (20-40 porsi).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:16.139Z",
@@ -8495,11 +8412,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Rice Box Chicken Karaage",
     "source_url": "https://cookpad.com/id/resep/24928559",
     "excerpt": "Resep ide jualan modal ~Rp 36.000, hasil 3 porsi (3 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:18.183Z",
@@ -8614,10 +8530,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Dimsum Ayam Gurih Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24930604",
     "excerpt": "Resep ide jualan modal ~Rp 51.000, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
+      "gorengan",
       "viral",
       "ekonomis"
     ],
@@ -8843,11 +8758,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Risoles Kentang Sayur Crispy",
     "source_url": "https://cookpad.com/id/resep/24924318",
     "excerpt": "Resep ide jualan modal ~Rp 36.500, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:24.525Z",
@@ -8986,9 +8900,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Donat Bomboloni Lembut Empuk",
     "source_url": "https://cookpad.com/id/resep/24915204",
     "excerpt": "Resep ide jualan modal ~Rp 39.500, hasil 23 porsi (23 pcs).",
-    "category": "gorengan",
+    "category": "kue",
     "tags": [
-      "gorengan",
+      "kue",
       "modal-kecil",
       "viral"
     ],
@@ -9102,11 +9016,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Brownies Hias Cokelat Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24890587",
     "excerpt": "Resep ide jualan modal ~Rp 39.000, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
+      "kue",
       "modal-kecil",
-      "viral",
       "ekonomis"
     ],
     "published": true,
@@ -9226,11 +9139,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Double Chocolate Soft Cookies",
     "source_url": "https://cookpad.com/id/resep/24887210",
     "excerpt": "Resep ide jualan modal ~Rp 23.000, hasil 18 porsi (18 buah).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:31.173Z",
@@ -9440,11 +9352,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Brownies Cokelat Mini Cup",
     "source_url": "https://cookpad.com/id/resep/16549182",
     "excerpt": "Resep ide jualan modal ~Rp 40.000, hasil 40 porsi (40 cup).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:35.289Z",
@@ -9555,11 +9466,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Pempek Kapal Selam Kuah Cuko",
     "source_url": "https://cookpad.com/id/resep/24877020",
     "excerpt": "Resep ide jualan modal ~Rp 51.000, hasil 12 porsi (12 buah).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:37.374Z",
@@ -9801,7 +9710,6 @@ window.SCRAPED_DRAFTS = {
     "tags": [
       "kue",
       "modal-kecil",
-      "viral",
       "ekonomis"
     ],
     "published": true,
@@ -9915,11 +9823,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Seblak Kuah Pedas Gurih",
     "source_url": "https://cookpad.com/id/resep/24842506",
     "excerpt": "Resep ide jualan modal ~Rp 40.000, hasil 1 porsi (1 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:43.906Z",
@@ -10043,11 +9950,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Es Kue Hunkwe Jadul",
     "source_url": "https://cookpad.com/id/resep/17077013",
     "excerpt": "Resep ide jualan modal ~Rp 9.000, hasil 60 porsi (±60's).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:45.980Z",
@@ -10117,11 +10023,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Bistik Daging Sapi Frozen",
     "source_url": "https://cookpad.com/id/resep/24715299",
     "excerpt": "Resep ide jualan modal ~Rp 41.000, hasil 6 porsi (6 Cup).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:48.078Z",
@@ -10252,11 +10156,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Cilok Kenyal Bumbu Kacang",
     "source_url": "https://cookpad.com/id/resep/24780775",
     "excerpt": "Resep ide jualan modal ~Rp 33.000, hasil 2 porsi (2 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:50.093Z",
@@ -10501,11 +10404,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Prol Tape Brownies Panggang",
     "source_url": "https://cookpad.com/id/resep/24735036",
     "excerpt": "Resep ide jualan modal ~Rp 59.000, hasil 2 porsi (2 loyang size 20x10cm).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:54.056Z",
@@ -10665,11 +10566,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Abon Lele Gurih Renyah",
     "source_url": "https://cookpad.com/id/resep/24730580",
     "excerpt": "Resep ide jualan modal ~Rp 24.000, hasil 1 porsi (1 toples kecil).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:07:56.224Z",
@@ -10788,9 +10688,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Mochi Lembut Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24727112",
     "excerpt": "Resep ide jualan modal ~Rp 20.000, hasil 30 porsi (30 - 40 biji).",
-    "category": "gorengan",
+    "category": "kue",
     "tags": [
-      "gorengan",
+      "kue",
       "modal-kecil",
       "viral",
       "ekonomis"
@@ -10883,11 +10783,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Tahu Bakso Ayam Gurih",
     "source_url": "https://cookpad.com/id/resep/24297202",
     "excerpt": "Resep ide jualan modal ~Rp 82.000, hasil 20 porsi (20 potong).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:00.338Z",
@@ -11092,8 +10990,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:02.743Z",
@@ -11193,11 +11090,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Dodol Ketan Cokelat Legit",
     "source_url": "https://cookpad.com/id/resep/24614735",
     "excerpt": "Resep ide jualan modal ~Rp 18.500, hasil 10 porsi (10 orang).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:05.145Z",
@@ -11273,11 +11169,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kue Cantik Manis Mutiara",
     "source_url": "https://cookpad.com/id/resep/24348392",
     "excerpt": "Resep ide jualan modal ~Rp 21.500, hasil 20 porsi (20 Potong).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:07.269Z",
@@ -11384,11 +11279,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Sambal Bawang Pedas Gurih",
     "source_url": "https://cookpad.com/id/resep/24577845",
     "excerpt": "Resep ide jualan modal ~Rp 16.500, hasil 10 porsi (10 orang).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:09.423Z",
@@ -11496,8 +11390,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:14.633Z",
@@ -11599,11 +11492,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Bakwan Sayur Crispy Gurih",
     "source_url": "https://cookpad.com/id/resep/24565324",
     "excerpt": "Resep ide jualan modal ~Rp 22.000, hasil 110 porsi (110 pcs).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:16.716Z",
@@ -11704,8 +11596,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:19.194Z",
@@ -11807,11 +11698,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Matcha Almond Cookies Renyah",
     "source_url": "https://cookpad.com/id/resep/24514964",
     "excerpt": "Resep ide jualan modal ~Rp 22.500, hasil 10 porsi (10 pcs).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:21.344Z",
@@ -11890,11 +11780,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Es Krim Strawberry Cookies",
     "source_url": "https://cookpad.com/id/resep/24497368",
     "excerpt": "Resep ide jualan modal ~Rp 17.000, hasil 30 porsi (30 cone es cream).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:23.662Z",
@@ -12046,11 +11935,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Tahu Cetak Sayur Gurih",
     "source_url": "https://cookpad.com/id/resep/24492136",
     "excerpt": "Resep ide jualan modal ~Rp 16.000, hasil 120 porsi (120pcs).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:27.751Z",
@@ -12154,11 +12042,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Jagung Bakar Keju Mozzarella",
     "source_url": "https://cookpad.com/id/resep/24319842",
     "excerpt": "Resep ide jualan modal ~Rp 37.500, hasil 3 porsi (3 Porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:29.853Z",
@@ -12245,11 +12132,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Donat Mini Lembut Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24456388",
     "excerpt": "Resep ide jualan modal ~Rp 24.000, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
+      "kue",
       "modal-kecil",
-      "viral",
       "ekonomis"
     ],
     "published": true,
@@ -12356,8 +12242,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:33.994Z",
@@ -12583,10 +12468,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Dimsum Ayam Gurih Juicy",
     "source_url": "https://cookpad.com/id/resep/24120184",
     "excerpt": "Resep ide jualan modal ~Rp 61.500, hasil 30 porsi (30 pcs).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
+      "gorengan",
       "viral"
     ],
     "published": true,
@@ -12724,9 +12608,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Churros Frozen Crispy",
     "source_url": "https://cookpad.com/id/resep/24369420",
     "excerpt": "Resep ide jualan modal ~Rp 27.500, hasil 3 porsi (3-5 orang).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
+      "kue",
       "modal-kecil",
       "viral"
     ],
@@ -12814,11 +12698,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Asinan Buah Segar Pedas Manis",
     "source_url": "https://cookpad.com/id/resep/24392543",
     "excerpt": "Resep ide jualan modal ~Rp 23.000, hasil 10 porsi (±10 cup).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:42.365Z",
@@ -12931,11 +12814,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Klepon Kentang Pandan Legit",
     "source_url": "https://cookpad.com/id/resep/24391381",
     "excerpt": "Resep ide jualan modal ~Rp 15.000, hasil 25 porsi (25 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:44.379Z",
@@ -13024,9 +12906,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Spaghetti Ceker Pedas Gurih",
     "source_url": "https://cookpad.com/id/resep/24386238",
     "excerpt": "Resep ide jualan modal ~Rp 21.000, hasil 1 porsi (1 orang).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
+      "gorengan",
       "modal-kecil",
       "viral"
     ],
@@ -13140,11 +13022,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Mie Ayam Sakura Spesial",
     "source_url": "https://cookpad.com/id/resep/24373293",
     "excerpt": "Resep ide jualan modal ~Rp 48.000, hasil 10 porsi (10-15 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:48.428Z",
@@ -13288,11 +13168,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Orak Arik Telur Sayur",
     "source_url": "https://cookpad.com/id/resep/24365938",
     "excerpt": "Resep ide jualan modal ~Rp 20.000, hasil 215 porsi (215 orang).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:50.513Z",
@@ -13389,9 +13268,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 47.500, hasil 22 porsi (22 risol).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:52.549Z",
@@ -13484,11 +13361,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Pastel Renyah Ragout Ayam",
     "source_url": "https://cookpad.com/id/resep/24352461",
     "excerpt": "Resep ide jualan modal ~Rp 39.500, hasil 20 porsi (20 pastel).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:54.615Z",
@@ -13571,7 +13447,6 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
       "viral"
     ],
     "published": true,
@@ -13683,11 +13558,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Puding Cokelat Cup Lembut",
     "source_url": "https://cookpad.com/id/resep/24347590",
     "excerpt": "Resep ide jualan modal ~Rp 37.000, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:08:59.136Z",
@@ -13787,11 +13661,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Bolen Pisang Cokelat Keju",
     "source_url": "https://cookpad.com/id/resep/24330447",
     "excerpt": "Resep ide jualan modal ~Rp 70.000, hasil 16 porsi (16 pcs).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:01.290Z",
@@ -13927,9 +13799,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 65.500, hasil 30 porsi (30 pcs).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:07.482Z",
@@ -14083,11 +13953,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Mango Cheese Jelly Ball",
     "source_url": "https://cookpad.com/id/resep/24314568",
     "excerpt": "Resep ide jualan modal ~Rp 36.500, hasil 2 porsi (2 cup).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:05.403Z",
@@ -14176,9 +14045,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 89.500, hasil 4 porsi (4 porsi).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:09.786Z",
@@ -14413,11 +14280,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Lele Goreng Crispy Gurih",
     "source_url": "https://cookpad.com/id/resep/24259609",
     "excerpt": "Resep ide jualan modal ~Rp 18.500, hasil 5 porsi (5 Orang).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:11.809Z",
@@ -14527,7 +14393,6 @@ window.SCRAPED_DRAFTS = {
     "tags": [
       "kue",
       "modal-kecil",
-      "viral",
       "ekonomis"
     ],
     "published": true,
@@ -14633,11 +14498,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Sambal Pecel Kemasan Praktis",
     "source_url": "https://cookpad.com/id/resep/24253687",
     "excerpt": "Resep ide jualan modal ~Rp 16.500, hasil 2 porsi (+/- 2 kg bumbu pecel).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:15.848Z",
@@ -14732,11 +14596,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Ragout Ayam Sayur Isian Risol",
     "source_url": "https://cookpad.com/id/resep/24244121",
     "excerpt": "Resep ide jualan modal ~Rp 39.500, hasil 64 porsi (64 - 68 pcs).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:17.930Z",
@@ -14875,11 +14738,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Tahu Aci Crispy Lembut",
     "source_url": "https://cookpad.com/id/resep/24243242",
     "excerpt": "Resep ide jualan modal ~Rp 12.500, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:19.938Z",
@@ -14971,8 +14833,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:22.060Z",
@@ -15079,11 +14940,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kulit Risoles Lentur Lembut",
     "source_url": "https://cookpad.com/id/resep/24231695",
     "excerpt": "Resep ide jualan modal ~Rp 15.000, hasil 50 porsi (50 lbr +/-).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:24.176Z",
@@ -15159,11 +15019,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Pizza Smoked Beef Mozzarella",
     "source_url": "https://cookpad.com/id/resep/24227927",
     "excerpt": "Resep ide jualan modal ~Rp 62.000, hasil 20 porsi (20 porsi).",
-    "category": "kue",
+    "category": "gorengan",
     "tags": [
-      "kue",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:26.246Z",
@@ -15323,10 +15181,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Risol Mayo Smoked Beef Egg",
     "source_url": "https://cookpad.com/id/resep/24226607",
     "excerpt": "Resep ide jualan modal ~Rp 46.000, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
+      "gorengan",
       "viral"
     ],
     "published": true,
@@ -15458,11 +15315,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Fudgy Chocolate Brownies",
     "source_url": "https://cookpad.com/id/resep/24217697",
     "excerpt": "Resep ide jualan modal ~Rp 32.500, hasil 3 porsi (3-4 Orang).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:30.504Z",
@@ -15568,11 +15424,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Rice Bowl Ayam Suwir Pedas",
     "source_url": "https://cookpad.com/id/resep/24205263",
     "excerpt": "Resep ide jualan modal ~Rp 29.500, hasil 15 porsi (15 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:32.568Z",
@@ -15684,9 +15539,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Mochi Kenyal Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24205315",
     "excerpt": "Resep ide jualan modal ~Rp 33.500, hasil 25 porsi (25-+).",
-    "category": "gorengan",
+    "category": "kue",
     "tags": [
-      "gorengan",
+      "kue",
       "modal-kecil",
       "viral",
       "ekonomis"
@@ -15797,9 +15652,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 62.500, hasil 20 porsi (se RT Bisa asal jangan ada yang maruk).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:36.682Z",
@@ -15971,8 +15824,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:38.679Z",
@@ -16068,8 +15920,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:40.686Z",
@@ -16185,11 +16036,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kerupuk Gendar Nasi Gurih",
     "source_url": "https://cookpad.com/id/resep/24176777",
     "excerpt": "Resep ide jualan modal ~Rp 21.500, hasil 150 porsi (150gr).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:42.691Z",
@@ -16267,11 +16117,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kimbab Roll Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24155992",
     "excerpt": "Resep ide jualan modal ~Rp 17.000, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
+      "gorengan",
       "modal-kecil",
-      "viral",
       "ekonomis"
     ],
     "published": true,
@@ -16348,11 +16197,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Growol Singkong Gula Jawa",
     "source_url": "https://cookpad.com/id/resep/24022537",
     "excerpt": "Resep ide jualan modal ~Rp 7.000, hasil 2 porsi (2 orang).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:46.842Z",
@@ -16415,9 +16263,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Putri Salju Lumer Ekonomis",
     "source_url": "https://cookpad.com/id/resep/24138778",
     "excerpt": "Resep ide jualan modal ~Rp 26.000, hasil 3 porsi (3-5 orang).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
+      "kue",
       "modal-kecil",
       "viral",
       "ekonomis"
@@ -16513,11 +16361,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Es Putri Salju Leci Segar",
     "source_url": "https://cookpad.com/id/resep/24136125",
     "excerpt": "Resep ide jualan modal ~Rp 16.500, hasil 5 porsi (5 orang).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:51.150Z",
@@ -16599,11 +16446,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Susu Kedelai Murni Segar",
     "source_url": "https://cookpad.com/id/resep/24127366",
     "excerpt": "Resep ide jualan modal ~Rp 9.000, hasil 20 porsi (20 orang).",
-    "category": "jajanan-sekolah",
+    "category": "minuman",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "minuman",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:53.134Z",
@@ -16673,11 +16519,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Cenil Ketan Kenyal Manis",
     "source_url": "https://cookpad.com/id/resep/24123494",
     "excerpt": "Resep ide jualan modal ~Rp 27.500, hasil 20 porsi (-).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:55.116Z",
@@ -16794,8 +16639,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:57.536Z",
@@ -16904,8 +16748,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:09:59.897Z",
@@ -17001,9 +16844,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 42.000, hasil 20 porsi (banyak).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:01.931Z",
@@ -17166,8 +17007,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:04.016Z",
@@ -17283,11 +17123,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Bakso Sapi Kres Gurih",
     "source_url": "https://cookpad.com/id/resep/24060394",
     "excerpt": "Resep ide jualan modal ~Rp 26.000, hasil 44 porsi (44 butir).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:06.082Z",
@@ -17374,11 +17213,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Sosis Mini Crispy Renyah",
     "source_url": "https://cookpad.com/id/resep/24013074",
     "excerpt": "Resep ide jualan modal ~Rp 21.500, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:08.114Z",
@@ -17498,9 +17336,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:10.098Z",
@@ -17615,8 +17451,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:12.259Z",
@@ -17723,11 +17558,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Putu Mayang Kuah Kinca",
     "source_url": "https://cookpad.com/id/resep/23909796",
     "excerpt": "Resep ide jualan modal ~Rp 46.500, hasil 10 porsi (10 orang).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:14.328Z",
@@ -17864,9 +17697,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 45.500, hasil 5 porsi (5 porsi).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:16.418Z",
@@ -18013,8 +17844,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:18.649Z",
@@ -18089,11 +17919,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Pizza Mini Ekonomis",
     "source_url": "https://cookpad.com/id/resep/23953980",
     "excerpt": "Resep ide jualan modal ~Rp 42.000, hasil 20 porsi (20 porsi).",
-    "category": "kue",
+    "category": "gorengan",
     "tags": [
-      "kue",
-      "modal-kecil",
-      "viral",
+      "gorengan",
       "ekonomis"
     ],
     "published": true,
@@ -18207,9 +18035,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Salad Buah Creamy Segar",
     "source_url": "https://cookpad.com/id/resep/23962132",
     "excerpt": "Resep ide jualan modal ~Rp 25.000, hasil 15 porsi (15 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
+      "gorengan",
       "modal-kecil",
       "viral"
     ],
@@ -18315,12 +18143,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Ayam Geprek Mini Crispy",
     "source_url": "https://cookpad.com/id/resep/23955695",
     "excerpt": "Resep ide jualan modal ~Rp 37.000, hasil 24 porsi (24 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:24.913Z",
@@ -18418,8 +18244,7 @@ window.SCRAPED_DRAFTS = {
     "category": "minuman",
     "tags": [
       "minuman",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:27.355Z",
@@ -18494,10 +18319,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Kroket Kentang Keju Lumer",
     "source_url": "https://cookpad.com/id/resep/23931771",
     "excerpt": "Resep ide jualan modal ~Rp 40.500, hasil 12 porsi (12 pcs).",
-    "category": "kue",
+    "category": "gorengan",
     "tags": [
-      "kue",
-      "modal-kecil",
+      "gorengan",
       "viral"
     ],
     "published": true,
@@ -18604,11 +18428,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Ayam Crispy Keriting Gurih",
     "source_url": "https://cookpad.com/id/resep/23914497",
     "excerpt": "Resep ide jualan modal ~Rp 38.000, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:32.002Z",
@@ -18737,11 +18560,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Bubur Kacang Hijau Pandan",
     "source_url": "https://cookpad.com/id/resep/14081125",
     "excerpt": "Resep ide jualan modal ~Rp 15.000, hasil 10 porsi (10 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:34.474Z",
@@ -18824,10 +18646,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Kroket Kentang Gurih Lembut",
     "source_url": "https://cookpad.com/id/resep/23899984",
     "excerpt": "Resep ide jualan modal ~Rp 82.500, hasil 100 porsi (kurleb 100 pcs).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
+      "gorengan",
       "viral"
     ],
     "published": true,
@@ -19037,8 +18858,7 @@ window.SCRAPED_DRAFTS = {
     "category": "minuman",
     "tags": [
       "minuman",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:38.715Z",
@@ -19096,11 +18916,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Sate Marshmallow Cokelat Oreo",
     "source_url": "https://cookpad.com/id/resep/23880089",
     "excerpt": "Resep ide jualan modal ~Rp 12.000, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:40.766Z",
@@ -19160,11 +18979,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Goyumsam Ayam Gurih Crispy",
     "source_url": "https://cookpad.com/id/resep/22658175",
     "excerpt": "Resep ide jualan modal ~Rp 53.000, hasil 4 porsi (4 orang).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:42.815Z",
@@ -19332,11 +19149,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Donat Lembut Tanpa Telur",
     "source_url": "https://cookpad.com/id/resep/23868122",
     "excerpt": "Resep ide jualan modal ~Rp 13.000, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:45.257Z",
@@ -19414,11 +19230,12 @@ window.SCRAPED_DRAFTS = {
     "title": "Burger Daging Mayo Ekonomis",
     "source_url": "https://cookpad.com/id/resep/23853171",
     "excerpt": "Resep ide jualan modal ~Rp 28.500, hasil 25 porsi (25 pax).",
-    "category": "kue",
+    "category": "gorengan",
     "tags": [
-      "kue",
+      "gorengan",
       "modal-kecil",
-      "viral"
+      "viral",
+      "ekonomis"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:47.285Z",
@@ -19493,9 +19310,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Donat Kukus Siram Lumer",
     "source_url": "https://cookpad.com/id/resep/23850101",
     "excerpt": "Resep ide jualan modal ~Rp 17.000, hasil 12 porsi (-+12 orang).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
+      "kue",
       "modal-kecil",
       "viral"
     ],
@@ -19590,9 +19407,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Susu Kurma Segar Creamy",
     "source_url": "https://cookpad.com/id/resep/23851426",
     "excerpt": "Resep ide jualan modal ~Rp 11.000, hasil 1 porsi (1 gelas).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
+      "kue",
       "modal-kecil",
       "viral"
     ],
@@ -19662,11 +19479,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Pisang Goreng Madu Karamel",
     "source_url": "https://cookpad.com/id/resep/23840305",
     "excerpt": "Resep ide jualan modal ~Rp 46.500, hasil 15 porsi (15 s.d 20 pcs).",
-    "category": "kue",
+    "category": "gorengan",
     "tags": [
-      "kue",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:53.933Z",
@@ -19810,9 +19625,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:55.950Z",
@@ -19894,11 +19707,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Cilok Kuah Kaldu Gurih",
     "source_url": "https://cookpad.com/id/resep/22668103",
     "excerpt": "Resep ide jualan modal ~Rp 39.500, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:10:57.994Z",
@@ -20037,10 +19849,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Brownies Cokelat Panggang Lumer",
     "source_url": "https://cookpad.com/id/resep/22666524",
     "excerpt": "Resep ide jualan modal ~Rp 52.500, hasil 20 porsi (20 porsi).",
-    "category": "gorengan",
+    "category": "kue",
     "tags": [
-      "gorengan",
-      "modal-kecil",
+      "kue",
       "viral"
     ],
     "published": true,
@@ -20250,11 +20061,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kebab Mini Pedas Manis",
     "source_url": "https://cookpad.com/id/resep/22661762",
     "excerpt": "Resep ide jualan modal ~Rp 15.000, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:04.934Z",
@@ -20319,10 +20129,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Puding Lumut Mentega Cup",
     "source_url": "https://cookpad.com/id/resep/22625890",
     "excerpt": "Resep ide jualan modal ~Rp 43.500, hasil 60 porsi (60 cup 100ml).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
+      "kue",
       "viral"
     ],
     "published": true,
@@ -20484,8 +20293,7 @@ window.SCRAPED_DRAFTS = {
     "category": "minuman",
     "tags": [
       "minuman",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:09.478Z",
@@ -20600,7 +20408,6 @@ window.SCRAPED_DRAFTS = {
     "category": "minuman",
     "tags": [
       "minuman",
-      "modal-kecil",
       "viral"
     ],
     "published": true,
@@ -20715,10 +20522,7 @@ window.SCRAPED_DRAFTS = {
     "excerpt": "Resep ide jualan modal ~Rp 46.000, hasil 25 porsi (25 porsi).",
     "category": "gorengan",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:13.694Z",
@@ -20867,8 +20671,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:15.995Z",
@@ -20960,11 +20763,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Nasi Kuning Wangi Gurih",
     "source_url": "https://cookpad.com/id/resep/22547487",
     "excerpt": "Resep ide jualan modal ~Rp 14.500, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:18.266Z",
@@ -21054,9 +20856,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "viral"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:20.364Z",
@@ -21160,12 +20960,11 @@ window.SCRAPED_DRAFTS = {
     "title": "Brownies Mini Cokelat Lumer",
     "source_url": "https://cookpad.com/id/resep/16323887",
     "excerpt": "Resep ide jualan modal ~Rp 28.000, hasil 38 porsi (38 porsi).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
+      "kue",
       "modal-kecil",
-      "viral",
-      "ekonomis"
+      "viral"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:22.409Z",
@@ -21256,8 +21055,7 @@ window.SCRAPED_DRAFTS = {
     "category": "minuman",
     "tags": [
       "minuman",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:24.533Z",
@@ -21351,11 +21149,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Dadar Gulung Manis Lembut",
     "source_url": "https://cookpad.com/id/resep/17297682",
     "excerpt": "Resep ide jualan modal ~Rp 35.500, hasil 120 porsi (120 porsi).",
-    "category": "gorengan",
+    "category": "kue",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:26.530Z",
@@ -21463,11 +21260,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kurma Cokelat Biskuit Crispy",
     "source_url": "https://cookpad.com/id/resep/17295042",
     "excerpt": "Resep ide jualan modal ~Rp 16.000, hasil 1 porsi (1 toples ukuran 0.5liter).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:28.517Z",
@@ -21540,7 +21336,6 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
       "viral"
     ],
     "published": true,
@@ -21677,11 +21472,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kue Sari India Lembut Cup",
     "source_url": "https://cookpad.com/id/resep/17287257",
     "excerpt": "Resep ide jualan modal ~Rp 11.000, hasil 6 porsi (6 orang).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:33.333Z",
@@ -21762,9 +21556,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "viral"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:35.778Z",
@@ -21919,9 +21711,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral",
-      "ekonomis"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:38.327Z",
@@ -22064,7 +21854,6 @@ window.SCRAPED_DRAFTS = {
     "tags": [
       "kue",
       "modal-kecil",
-      "viral",
       "ekonomis"
     ],
     "published": true,
@@ -22162,11 +21951,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Bawang Goreng Rebon Crispy",
     "source_url": "https://cookpad.com/id/resep/17277380",
     "excerpt": "Resep ide jualan modal ~Rp 13.000, hasil 20 porsi (20 porsi).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:42.683Z",
@@ -22241,8 +22029,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:45.262Z",
@@ -22325,10 +22112,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Mochi Lava Lumer",
     "source_url": "https://cookpad.com/id/resep/17269503",
     "excerpt": "Resep ide jualan modal ~Rp 51.000, hasil 30 porsi (30pcs mochi ukuran sedang).",
-    "category": "gorengan",
+    "category": "kue",
     "tags": [
-      "gorengan",
-      "modal-kecil",
+      "kue",
       "viral"
     ],
     "published": true,
@@ -22458,11 +22244,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Chicken Mini Crispy",
     "source_url": "https://cookpad.com/id/resep/17269477",
     "excerpt": "Resep ide jualan modal ~Rp 36.000, hasil 2 porsi (2 orang).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:49.686Z",
@@ -22542,11 +22327,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Stik Bawang Renyah Gurih",
     "source_url": "https://cookpad.com/id/resep/17269194",
     "excerpt": "Resep ide jualan modal ~Rp 41.000, hasil 1500 porsi (1500 gram).",
-    "category": "kue",
+    "category": "gorengan",
     "tags": [
-      "kue",
-      "modal-kecil",
-      "viral"
+      "gorengan"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:51.749Z",
@@ -22656,8 +22439,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:54.084Z",
@@ -22746,11 +22528,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Kue Semprit Cokelat Klasik",
     "source_url": "https://cookpad.com/id/resep/17259425",
     "excerpt": "Resep ide jualan modal ~Rp 26.500, hasil 404 porsi (404 gr | 2 Jar @175 g).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:56.169Z",
@@ -22840,11 +22621,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Poffertjes Bites Saus Moka",
     "source_url": "https://cookpad.com/id/resep/17254053",
     "excerpt": "Resep ide jualan modal ~Rp 49.500, hasil 30 porsi (30 pc).",
-    "category": "minuman",
+    "category": "kue",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "kue"
     ],
     "published": true,
     "created_at": "2026-10-18T01:11:58.546Z",
@@ -22990,11 +22769,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Cireng Isi Ayam Suwir Pedas",
     "source_url": "https://cookpad.com/id/resep/17256271",
     "excerpt": "Resep ide jualan modal ~Rp 40.000, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:12:01.063Z",
@@ -23136,11 +22914,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Wingko Babat Khas Lamongan",
     "source_url": "https://cookpad.com/id/resep/17256211",
     "excerpt": "Resep ide jualan modal ~Rp 19.000, hasil 20 porsi (-).",
-    "category": "jajanan-sekolah",
+    "category": "kue",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "kue",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:12:03.124Z",
@@ -23234,11 +23011,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Cireng Mini Crispy Frozen",
     "source_url": "https://cookpad.com/id/resep/17250225",
     "excerpt": "Resep ide jualan modal ~Rp 15.500, hasil 50 porsi (50an lebih).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:12:05.405Z",
@@ -23332,8 +23108,7 @@ window.SCRAPED_DRAFTS = {
     "category": "gorengan",
     "tags": [
       "gorengan",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:12:07.627Z",
@@ -23402,11 +23177,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Nugget Ayam Sayur Homemade",
     "source_url": "https://cookpad.com/id/resep/17247789",
     "excerpt": "Resep ide jualan modal ~Rp 37.000, hasil 70 porsi (>70 biji).",
-    "category": "minuman",
+    "category": "gorengan",
     "tags": [
-      "minuman",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:12:09.644Z",
@@ -23531,8 +23305,7 @@ window.SCRAPED_DRAFTS = {
     "category": "kue",
     "tags": [
       "kue",
-      "modal-kecil",
-      "viral"
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:12:11.623Z",
@@ -23610,11 +23383,10 @@ window.SCRAPED_DRAFTS = {
     "title": "Cilok Empuk Gurih",
     "source_url": "https://cookpad.com/id/resep/17242009",
     "excerpt": "Resep ide jualan modal ~Rp 17.000, hasil 20 porsi (20 porsi).",
-    "category": "jajanan-sekolah",
+    "category": "gorengan",
     "tags": [
-      "jajanan-sekolah",
-      "modal-kecil",
-      "viral"
+      "gorengan",
+      "modal-kecil"
     ],
     "published": true,
     "created_at": "2026-10-18T01:12:13.667Z",
@@ -23707,11 +23479,9 @@ window.SCRAPED_DRAFTS = {
     "title": "Black Forest Peanut Cookies",
     "source_url": "https://cookpad.com/id/resep/17239900",
     "excerpt": "Resep ide jualan modal ~Rp 66.500, hasil 20 porsi (20 porsi).",
-    "category": "gorengan",
+    "category": "kue",
     "tags": [
-      "gorengan",
-      "modal-kecil",
-      "viral"
+      "kue"
     ],
     "published": true,
     "created_at": "2026-10-18T01:12:15.694Z",

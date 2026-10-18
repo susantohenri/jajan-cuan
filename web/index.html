@@ -20,13 +20,14 @@
   <meta name="twitter:description" content="Temukan resep jajanan viral siap jual, kalkulator HPP otomatis, dan foto promosi gratis.">
   <meta name="twitter:image" content="https://jajan-cuan.web.app/img/og-cover.png">
 
-  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <!-- Google Fonts: Inter & Plus Jakarta Sans with display=swap -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
 
-  <!-- Stylesheet -->
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/upgrade.css">
 
   <!-- Google tag (gtag.js) GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SKCSWCG5W1"></script>
@@ -45,9 +46,9 @@
       <a href="index.html" class="brand-logo">
         🍳 Jajan<span>Cuan</span>
       </a>
-      <div style="display: flex; align-items: center; gap: 1rem;">
-        <a href="experience.html" class="btn btn-outline btn-sm">Intip Katalog</a>
-        <button class="btn btn-primary btn-sm trigger-waitlist" data-source="nav_button">Daftar Rilis</button>
+      <div class="jc-nav">
+        <a href="experience.html" class="btn btn-primary btn-sm">Lihat Resep</a>
+        <button class="btn btn-outline btn-sm trigger-waitlist" data-source="nav_button">Daftar Rilis</button>
       </div>
     </div>
   </nav>
@@ -56,13 +57,16 @@
   <header class="hero">
     <div class="container">
       <div class="hero-content">
-        <span class="section-tag">Toolkit Bisnis Kuliner Rumahan #1</span>
-        <h1>Mau Jualan Jajanan Viral Tapi <span class="highlight">Bingung Mulai dari Mana?</span></h1>
+        <span class="section-tag">Toolkit Bisnis Kuliner Rumahan</span>
+        <h1>Jualan Jajanan Viral, <span class="highlight">Modal Kecil, Untung Jelas</span></h1>
         <p class="hero-subtitle">
-          Jajan Cuan bantu kamu dari cari ide, resep anti-gagal, hitung modal otomatis, sampai foto promosi siap share ke WhatsApp.
+          Resep anti-gagal, hitung modal otomatis, sampai foto promosi siap share ke WhatsApp. Cocok buat pemula!
         </p>
 
         <div class="hero-actions">
+          <!-- Primary CTA: Direct Free Access to Recipes -->
+          <a href="experience.html" class="btn btn-cta">🍳 Lihat Resep Gratis</a>
+
           <!-- Google Play Badge Style Button -->
           <button class="btn-playstore trigger-waitlist" data-source="hero_badge" aria-label="Download di Play Store - Segera Hadir">
             <span class="btn-playstore-icon">📲</span>
@@ -71,43 +75,45 @@
               <strong>Google Play</strong>
             </div>
           </button>
-
-          <!-- Secondary Ghost CTA -->
-          <button class="btn btn-outline trigger-waitlist" data-source="hero_ghost">
-            🔔 Ingatkan Saya Saat Rilis
-          </button>
         </div>
 
-        <!-- Visual Mockup -->
+        <!-- Trust Signals: Eliminate First-3-Seconds Doubt -->
+        <ul class="jc-trust">
+          <li>✅ Resep &amp; cara masak gratis</li>
+          <li>✅ Tanpa daftar</li>
+          <li>✅ Langsung coba di web</li>
+        </ul>
+
+        <!-- Visual Mockup with Direct Interactive Links -->
         <div class="hero-mockup-wrapper">
           <div class="hero-mockup">
             <div class="hero-mockup-screen">
               <div class="mockup-header">
                 <div class="mockup-header-title">Jajan Cuan App</div>
-                <small style="opacity: 0.9; font-size: 0.75rem;">Ide Hari Ini: Margin > 100%</small>
+                <small style="opacity: 0.9; font-size: 0.75rem;">Ide Hari Ini: Margin &gt; 100%</small>
               </div>
               <div class="mockup-body">
-                <div class="mockup-item">
+                <a class="mockup-item" href="experience.html?filter=gorengan&recipe=pangsit-goreng-viral" title="Buka resep Pangsit Goreng Viral">
                   <div class="mockup-item-icon">🥟</div>
                   <div class="mockup-item-info">
                     <div class="mockup-item-name">Pangsit Goreng Viral</div>
                     <div class="mockup-item-cuan">Untung Rp 70.000 / resep</div>
                   </div>
-                </div>
-                <div class="mockup-item">
+                </a>
+                <a class="mockup-item" href="experience.html?filter=kue&recipe=kue-bolu-keju" title="Buka resep Bolu Keju Lumer">
                   <div class="mockup-item-icon">🧀</div>
                   <div class="mockup-item-info">
                     <div class="mockup-item-name">Bolu Keju Lumer</div>
                     <div class="mockup-item-cuan">Margin 120% • Siap Jual</div>
                   </div>
-                </div>
-                <div class="mockup-item">
+                </a>
+                <a class="mockup-item" href="experience.html?filter=gorengan&recipe=risol-mayo-lumer" title="Buka resep Risol Mayo Lumer">
                   <div class="mockup-item-icon">🌯</div>
                   <div class="mockup-item-info">
                     <div class="mockup-item-name">Risol Mayo Lumer</div>
                     <div class="mockup-item-cuan">Modal Rp 2.000 / pcs</div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -117,205 +123,232 @@
     </div>
   </header>
 
-  <!-- Section 2: Problem & Solution -->
+  <!-- Section 2: Quick Intent Filter Chips -->
+  <section class="container jc-quick">
+    <h2 class="jc-h">Mau jualan apa hari ini? 👇</h2>
+    <div class="jc-chips">
+      <a href="experience.html?filter=modal-kecil">💰 Modal &lt; 50rb</a>
+      <a href="experience.html?filter=viral">🔥 Viral TikTok</a>
+      <a href="experience.html?filter=kue">🍰 Kue &amp; Roti</a>
+      <a href="experience.html?filter=gorengan">🍤 Gorengan</a>
+      <a href="experience.html?filter=minuman">🧋 Minuman</a>
+    </div>
+  </section>
+
+  <!-- Section 3: Interactive Mini HPP Calculator (Permen Utama) -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag" style="background-color: #FEE2E2; color: #DC2626;">Tantangan Pemula</span>
-        <h2>Kenapa Banyak yang Gagal Mulai Usaha Jajanan?</h2>
-        <p>Memulai bisnis kuliner sering kali terasa membingungkan dan berisiko jika salah langkah di awal.</p>
-      </div>
-
-      <div class="grid-4col">
-        <div class="pain-card">
-          <div class="pain-icon">😵</div>
-          <div>
-            <h4>Bingung Pilih Menu</h4>
-            <p>Takut masakannya nggak laku atau trennya keburu basi sebelum sempat balik modal.</p>
-          </div>
+      <div class="jc-calc">
+        <div>
+          <span class="section-tag">Coba sekarang, 10 detik</span>
+          <h2 style="font-size: 1.85rem; margin-top: 0.5rem; margin-bottom: 0.75rem;">Hitung cuan jajananmu</h2>
+          <p>
+            Isi angka modal kira-kira, langsung tahu harga jual yang aman dan anti-boncos. Versi lengkap per bahan ada di katalog resep.
+          </p>
         </div>
-
-        <div class="pain-card">
-          <div class="pain-icon">💸</div>
-          <div>
-            <h4>Takut Rugi Modal</h4>
-            <p>Salah hitung HPP dan biaya tersembunyi, akhirnya jualan laris tapi dompet tetap kering.</p>
+        <div>
+          <div class="jc-in">
+            <label>
+              Modal belanja (Rp)
+              <input id="cModal" type="number" inputmode="numeric" min="0" value="30000" step="5000">
+            </label>
+            <label>
+              Jadi berapa biji?
+              <input id="cQty" type="number" inputmode="numeric" min="1" value="50">
+            </label>
+            <label>
+              Target untung (%)
+              <input id="cMargin" type="number" inputmode="numeric" min="0" value="100" step="10">
+            </label>
           </div>
-        </div>
-
-        <div class="pain-card">
-          <div class="pain-icon">📸</div>
-          <div>
-            <h4>Nggak Punya Foto Bagus</h4>
-            <p>Sulit menarik pelanggan di WhatsApp Story karena foto makanan seadanya dan buram.</p>
+          <div class="jc-out" aria-live="polite">
+            <div>
+              <small>Modal / biji</small>
+              <b id="rHpp">Rp 600</b>
+            </div>
+            <div>
+              <small>Harga jual</small>
+              <b id="rPrice">Rp 1.200</b>
+            </div>
+            <div>
+              <small>Untung jika habis</small>
+              <b id="rProfit">Rp 30.000</b>
+            </div>
           </div>
+          <p class="jc-note">
+            * Harga jual otomatis dibulatkan ke nominal wajar pasaran. Belum termasuk gas, kemasan, dan tenaga.
+          </p>
+          <a href="experience.html" class="btn btn-primary" style="display: inline-block;">
+            Pakai harga bahan asli di katalog →
+          </a>
         </div>
-
-        <div class="pain-card">
-          <div class="pain-icon">🤷</div>
-          <div>
-            <h4>Bingung Harga Jual</h4>
-            <p>Ragu menentukan margin untung yang pas: kemahalan nggak laku, kemurahan malah nombok.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="problem-transition">
-        Tenang, Jajan Cuan punya solusinya untukmu 👇
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Fitur Unggulan -->
+  <!-- Section 4: Contoh Resep & Cuannya (Teaser) -->
   <section class="section" style="background-color: #FFFFFF;">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Fitur Unggulan</span>
-        <h2>Semua Kebutuhan Jualan Ada di Sakumu</h2>
-        <p>Dirancang khusus untuk ibu rumah tangga, pemula, dan pejuang UMKM rumahan.</p>
-      </div>
-
-      <div class="grid-4col">
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">📖</div>
-          <h3>Katalog Resep Viral Terkurasi</h3>
-          <p>Bukan asal resep. Setiap menu sudah dianalisis: modal terjangkau, bahan mudah didapat, dan tren pasarnya jelas.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">🧮</div>
-          <h3>Kalkulator HPP Otomatis</h3>
-          <p>Masukkan harga bahan di pasar kamu, tentukan target untung — langsung tahu harga jual rekomendasi per biji.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">⏱️</div>
-          <h3>Timer Masak Anti-Gagal</h3>
-          <p>Alarm otomatis di setiap langkah kritis memasak. Nggak ada lagi cerita adonan gosong atau kurang matang.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrapper">📸</div>
-          <h3>Foto Promosi Siap Pakai</h3>
-          <p>Download langsung poster dan foto estetik, share ke WA Status & Instagram tanpa perlu sewa fotografer.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section 4: Preview Simulasi (Teaser Experience) -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Intip Menu</span>
-        <h2>Intip Seperti Apa Isinya</h2>
-        <p>Contoh resep viral yang sudah dilengkapi analisis bisnis dan estimasi keuntungan bersih.</p>
+        <span class="section-tag">Ide Terpilih</span>
+        <h2>Contoh resep &amp; cuannya</h2>
+        <p>Tap kartu untuk langsung membuka analisis bisnis, langkah masak, dan kalkulator HPP otomatis.</p>
+        <ol class="jc-flow">
+          <li>1 Pilih resep</li>
+          <li>2 Cek analisis</li>
+          <li>3 Masak pakai timer</li>
+          <li>4 Hitung &amp; promosi</li>
+        </ol>
       </div>
 
       <div class="grid-3col">
         <!-- Preview Card 1 -->
-        <div class="mini-card">
+        <a class="mini-card jc-link" href="experience.html?filter=gorengan&recipe=pangsit-goreng-viral">
           <div class="mini-card-banner">🥟</div>
           <div class="mini-card-body">
             <span class="mini-card-tag">Gorengan • Modal Kecil</span>
             <h3 class="mini-card-title">Pangsit Goreng Viral</h3>
-            <p>Kulit renyah dengan isian ayam gurih. Sangat diminati anak sekolah dan pekerja kantoran.</p>
+            <p>Kulit renyah isian ayam gurih, favorit anak sekolah dan pekerja kantoran.</p>
             <div class="mini-card-modal">
               <span>Modal: <strong>Rp 30.000</strong></span>
-              <span style="color: var(--color-success); font-weight: 700;">Isi 50 Biji</span>
+              <span class="jc-badge">Isi 50 biji</span>
             </div>
+            <span class="jc-go">Buka resep &amp; hitung cuan →</span>
           </div>
-        </div>
+        </a>
 
         <!-- Preview Card 2 -->
-        <div class="mini-card">
+        <a class="mini-card jc-link" href="experience.html?filter=kue&recipe=kue-bolu-keju">
           <div class="mini-card-banner" style="background: linear-gradient(135deg, #2EC4B6 0%, #FBBF24 100%);">🧀</div>
           <div class="mini-card-body">
             <span class="mini-card-tag" style="background: var(--color-secondary-light); color: var(--color-secondary-dark);">Kue • Viral</span>
             <h3 class="mini-card-title">Kue Bolu Keju Lumer</h3>
-            <p>Tekstur lembut berpadu limpahan keju leleh. Favorit pesanan arisan dan snack box.</p>
+            <p>Lembut dengan keju leleh, favorit pesanan arisan dan snack box pengajian.</p>
             <div class="mini-card-modal">
               <span>Modal: <strong>Rp 45.000</strong></span>
-              <span style="color: var(--color-success); font-weight: 700;">Margin 120%</span>
+              <span class="jc-badge">Margin 120%</span>
             </div>
+            <span class="jc-go">Buka resep &amp; hitung cuan →</span>
           </div>
-        </div>
+        </a>
 
         <!-- Preview Card 3 -->
-        <div class="mini-card">
+        <a class="mini-card jc-link" href="experience.html?filter=gorengan&recipe=risol-mayo-lumer">
           <div class="mini-card-banner" style="background: linear-gradient(135deg, #E55A2B 0%, #2EC4B6 100%);">🌯</div>
           <div class="mini-card-body">
             <span class="mini-card-tag">Gorengan • Modal Kecil</span>
             <h3 class="mini-card-title">Risol Mayo Lumer</h3>
-            <p>Smoked beef dan keju leleh dengan mayo creamy. Jajanan hits no.1 dengan perputaran modal cepat.</p>
+            <p>Smoked beef, keju, dan mayo creamy. Jajanan hits dengan perputaran modal cepat.</p>
             <div class="mini-card-modal">
               <span>Modal: <strong>Rp 40.000</strong></span>
-              <span style="color: var(--color-success); font-weight: 700;">Isi 20 Biji</span>
+              <span class="jc-badge">Isi 20 biji</span>
             </div>
+            <span class="jc-go">Buka resep &amp; hitung cuan →</span>
           </div>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 2.5rem;">
-        <a href="experience.html" class="btn btn-primary">
-          Lihat Katalog Lengkap & Coba Kalkulator →
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Section 5: Cara Kerja (How It Works) -->
-  <section class="section" style="background-color: #FFFFFF;">
+  <!-- Section 5: Merged Problem & Solution (Formula PAS) -->
+  <section class="section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Langkah Mudah</span>
-        <h2>4 Langkah Mudah Memulai Cuanmu</h2>
-        <p>Dari nol sampai closing jualan pertama kamu.</p>
+        <span class="section-tag" style="background-color: #FEE2E2; color: #DC2626;">Solusi Praktis</span>
+        <h2>Takut gagal? Ini solusinya</h2>
+        <p>Empat hal yang paling bikin pemula ragu memulai bisnis kuliner, masing-masing sudah ada jawabannya.</p>
       </div>
 
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <p>Pilih resep jajanan yang sedang viral di aplikasi</p>
+      <div class="grid-4col">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">📖</div>
+          <span class="jc-pain">😵 Bingung pilih menu?</span>
+          <h3>Resep Viral Terkurasi</h3>
+          <p>Tiap menu sudah dianalisis: modal terjangkau, bahan mudah dicari di pasar, dan tren peminatnya jelas.</p>
         </div>
 
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <p>Cek analisis bisnisnya — kenapa jajanan ini layak dan pasti cuan?</p>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">🧮</div>
+          <span class="jc-pain">💸 Takut rugi &amp; bingung harga?</span>
+          <h3>Kalkulator HPP Otomatis</h3>
+          <p>Masukkan harga bahan asli di tokomu, langsung keluar harga jual aman dan estimasi laba bersih.</p>
         </div>
 
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <p>Ikuti panduan masak step-by-step lengkap dengan timer anti-gagal</p>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">⏱️</div>
+          <span class="jc-pain">🔥 Takut gosong / gagal?</span>
+          <h3>Timer Masak Anti-Gagal</h3>
+          <p>Alarm otomatis di langkah kritis proses memasak. Nggak ada lagi adonan bantat atau gorengan gosong.</p>
         </div>
 
-        <div class="step-card">
-          <div class="step-number">4</div>
-          <p>Hitung modal dengan kalkulator, pasang harga, dan promosi langsung!</p>
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">📸</div>
+          <span class="jc-pain">📵 Foto jualan buram?</span>
+          <h3>Foto Promosi Siap Pakai</h3>
+          <p>Unduh poster estetik siap share ke WA Status atau Instagram tanpa perlu keluar biaya fotografer.</p>
         </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 3rem;">
-        <button class="btn btn-cta trigger-waitlist" data-source="how_it_works_cta">
-          🚀 Siap Mulai Usaha? Daftar Antrean Sekarang
-        </button>
       </div>
     </div>
   </section>
 
-  <!-- Section 6: Footer -->
+  <!-- Section 6: FAQ Accordion -->
+  <section class="section" style="background-color: #FFFFFF;">
+    <div class="container jc-faq">
+      <div class="section-header" style="margin-bottom: 2rem;">
+        <span class="section-tag">Tanya Jawab</span>
+        <h2>Pertanyaan yang sering muncul</h2>
+      </div>
+
+      <details open>
+        <summary>Apakah resep dan fitur Jajan Cuan ini gratis?</summary>
+        <p>
+          Ya! Semua resep terkurasi dan langkah memasak bisa diakses 100% gratis. Fitur tambahan seperti timer interaktif, kalkulator HPP detail, dan unduh foto promosi dapat dinikmati tanpa biaya langganan berbayar.
+        </p>
+      </details>
+
+      <details>
+        <summary>Perlu daftar akun dulu untuk mencoba kalkulator &amp; resep?</summary>
+        <p>
+          Tidak perlu. Anda bisa langsung membuka katalog di browser HP atau laptop dan mencoba menghitung HPP resep tanpa perlu registrasi atau login.
+        </p>
+      </details>
+
+      <details>
+        <summary>Kapan aplikasi Jajan Cuan rilis di Google Play Store?</summary>
+        <p>
+          Segera dalam tahap pengujian akhir. Silakan daftarkan nomor WhatsApp atau email Anda pada formulir antrean di bawah, dan kami akan mengirimkan link download segera setelah aplikasi resmi tayang.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Section 7: Final CTA -->
+  <section class="section">
+    <div class="container">
+      <div class="jc-cta">
+        <h2>Siap mulai cuan pertamamu? 🚀</h2>
+        <p>Buka katalognya sekarang, gratis. Mau kabar rilis aplikasi Android? Masuk antrean di bawah.</p>
+        <div>
+          <a href="experience.html" class="btn jc-w">🍳 Buka Katalog Resep</a>
+          <button class="btn btn-outline trigger-waitlist" data-source="how_it_works_cta">🔔 Daftar Antrean Rilis</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 8: Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <div class="footer-logo">🍳 Jajan<span>Cuan</span></div>
         <p style="color: #9CA3AF; max-width: 500px;">
-          Platform panduan usaha kuliner rumahan terlengkap. Bikin bisnis jajanan viral jadi mudah, terukur, dan menguntungkan.
+          Panduan usaha kuliner rumahan: bikin bisnis jajanan viral jadi mudah, terukur, dan menguntungkan.
         </p>
         <div class="footer-links">
           <a href="index.html">Beranda</a>
           <a href="experience.html">Katalog Resep</a>
-          <a href="#privacy" onclick="alert('Kebijakan Privasi: Data kontak Anda hanya digunakan untuk pemberitahuan rilis aplikasi Jajan Cuan dan tidak akan disebarluaskan.'); return false;">Kebijakan Privasi</a>
-          <a href="#terms" onclick="alert('Syarat & Ketentuan: Konten resep dan kalkulasi disediakan sebagai panduan simulasi bisnis kuliner.'); return false;">Syarat Ketentuan</a>
+          <a href="privacy.html">Kebijakan Privasi</a>
+          <a href="terms.html">Syarat &amp; Ketentuan</a>
         </div>
         <div class="footer-bottom">
           &copy; 2026 Jajan Cuan. Hak Cipta Dilindungi.
@@ -383,5 +416,42 @@
   <!-- App Scripts -->
   <script src="js/firebase-init.js"></script>
   <script src="js/app.js"></script>
+
+  <!-- Mini HPP Calculator Logic with Single GA4 Tracking -->
+  <script>
+    (function(){
+      var $ = function(i){ return document.getElementById(i); };
+      var sent = 0;
+      var fmt = function(n){ return 'Rp ' + Math.round(n).toLocaleString('id-ID'); };
+
+      function calc(e){
+        var m = Math.max(0, +$('cModal').value || 0);
+        var q = Math.max(1, +$('cQty').value || 1);
+        var g = Math.max(0, +$('cMargin').value || 0);
+
+        var hpp = m / q;
+        var raw = hpp * (1 + g / 100);
+        var s = raw < 3000 ? 100 : 500;
+        var price = Math.ceil(raw / s) * s;
+        var profit = (price * q) - m;
+
+        $('rHpp').textContent = fmt(hpp);
+        $('rPrice').textContent = fmt(price);
+        $('rProfit').textContent = fmt(profit);
+
+        if (e && !sent && typeof window.gtag === 'function') {
+          sent = 1;
+          gtag('event', 'calculator_try', { source: 'landing_quick' });
+        }
+      }
+
+      ['cModal', 'cQty', 'cMargin'].forEach(function(id){
+        var el = $(id);
+        if (el) el.addEventListener('input', calc);
+      });
+
+      calc();
+    })();
+  </script>
 </body>
 </html>

@@ -54,7 +54,7 @@ if (fs.existsSync(seederHtmlPath)) {
 
 // 4. Push ke Firebase Realtime Database via REST API
 console.log(`\n☁️ [2/4] Mengirim ${activeCount} resep ke Firebase RTDB (/posts)...`);
-const rtdbUrl = 'https://jajan-cuan-default-rtdb.firebaseio.com/posts.json';
+const rtdbUrl = 'https://jajan-cuan-default-rtdb.asia-southeast1.firebasedatabase.app/posts.json';
 
 function pushToRtdb(data) {
   return new Promise((resolve, reject) => {
@@ -84,9 +84,13 @@ function pushToRtdb(data) {
 }
 
 async function runRelease() {
+  let dbSuccess = false;
+  let deploySuccess = false;
+
   try {
     await pushToRtdb(finalPosts);
     console.log(`   ✅ BERHASIL PUSH! Seluruh resep kini live di Firebase Realtime Database.`);
+    dbSuccess = true;
   } catch (err) {
     console.warn(`   ⚠️ Catatan RTDB REST Push: ${err.message}`);
     console.log(`   👉 Buka scripts/seed-database.html di browser Anda dan klik '🚀 Push Seed Data ke RTDB'.`);
@@ -96,19 +100,33 @@ async function runRelease() {
   console.log(`\n🌐 [3/4] Melakukan build & deploy ke Firebase Hosting...`);
   try {
     console.log('   Menjalankan: firebase deploy --only hosting ...');
-    const deployOutput = execSync('firebase deploy --only hosting', { encoding: 'utf8', cwd: path.join(__dirname, '..') });
+    let deployOutput;
+    try {
+      deployOutput = execSync('firebase deploy --only hosting', { encoding: 'utf8', cwd: path.join(__dirname, '..') });
+    } catch (e1) {
+      console.log('   Mencoba via npx firebase-tools ...');
+      deployOutput = execSync('npx -p firebase-tools firebase deploy --only hosting', { encoding: 'utf8', cwd: path.join(__dirname, '..') });
+    }
     console.log(deployOutput);
     console.log(`   ✅ DEPLOY HOSTING BERHASIL!`);
+    deploySuccess = true;
   } catch (err) {
-    console.warn(`   ⚠️ Catatan Deploy: Firebase CLI belum login atau butuh perintah manual.`);
-    console.log(`   Anda bisa deploy kapan saja dengan: firebase deploy --only hosting`);
+    console.warn(`   ⚠️ Catatan Deploy: Firebase CLI belum login atau butuh otentikasi.`);
+    console.log(`   Penyebab: ${err.message.split('\n')[0]}`);
+    console.log(`   👉 Jalankan 'npx firebase-tools login' sekali di terminal untuk login.`);
   }
 
   console.log(`\n====================================================`);
-  console.log(`🎉 RELEASE SELESAI!`);
-  console.log(`- Total Resep Live: ${activeCount} resep.`);
+  if (deploySuccess && dbSuccess) {
+    console.log(`🎉 RELEASE SELESAI & LIVE DI CLOUD!`);
+  } else if (dbSuccess) {
+    console.log(`⚠️ DATA DATABASE LIVE, TAPI HOSTING BELUM TER-DEPLOY!`);
+  } else {
+    console.log(`❌ RELEASE BELUM SELESAI.`);
+  }
+  console.log(`- Total Resep Siap: ${activeCount} resep.`);
+  console.log(`- Database Cloud: jajan-cuan-default-rtdb (asia-southeast1) node /posts`);
   console.log(`- Web Live URL: https://jajan-cuan.web.app/experience.html`);
-  console.log(`- Database Cloud: jajan-cuan-default-rtdb node /posts`);
   console.log(`- Aplikasi Android: Otomatis membaca resep baru seketika!`);
   console.log(`====================================================\n`);
 }
