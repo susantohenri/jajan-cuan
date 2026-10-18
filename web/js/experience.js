@@ -116,15 +116,133 @@ function formatRupiah(num) {
   return 'Rp ' + Math.round(num).toLocaleString('id-ID');
 }
 
-// Global active recipes state
+// Global active recipes state & Admin Mode Detection
 let allRecipes = [];
+const urlParams = new URLSearchParams(window.location.search);
+const isAdmin = urlParams.get('admin') === 'true';
+const ADMIN_STORAGE_KEY = 'jajan_cuan_curated_drafts';
+
+// --- DB-LEVEL PAGINATION CONFIG FOR END-USERS (5 items per page) ---
+const PAGE_SIZE = 5;
+let currentPage = 1;
+let currentFilter = 'all';
+let pageCursors = [null]; // pageCursors[0] = null (page 1), pageCursors[1] = cursor key for page 2, etc.
+let hasNextPage = false;
+let isFetchingPage = false;
 
 // --- MAIN INIT ---
 document.addEventListener('DOMContentLoaded', () => {
   initWaitlistModal();
   initFilters();
-  loadPosts();
+
+  // Jika sedang di localhost tapi belum buka ?admin=true, tampilkan hint banner
+  const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+  if (isLocalhost && !isAdmin) {
+    const hintBanner = document.getElementById('localhostHintBanner');
+    if (hintBanner) hintBanner.style.display = 'block';
+  }
+
+  if (isAdmin) {
+    setupAdminToolbar();
+    loadAdminPosts();
+  } else {
+    setupPaginationListeners();
+    loadUserPage(1, 'all');
+  }
 });
+
+// Setup Toolbar Admin jika ?admin=true
+function setupAdminToolbar() {
+  const toolbar = document.getElementById('adminToolbar');
+  if (toolbar) {
+    toolbar.style.display = 'block';
+  }
+
+  // Tombol Paksa Muat Draft Cookpad (Bypass Cache & Sync Disk)
+  const loadDraftsBtn = document.getElementById('loadDraftsBtn');
+  if (loadDraftsBtn) {
+    loadDraftsBtn.addEventListener('click', async () => {
+      loadDraftsBtn.disabled = true;
+      loadDraftsBtn.textContent = '⏳ Membaca disk...';
+      const freshDrafts = await fetchLatestDraftsFromDisk();
+      if (freshDrafts && freshDrafts.length > 0) {
+        allRecipes = freshDrafts;
+        localStorage.setItem(ADMIN_STORAGE_KEY, JSON.stringify(allRecipes));
+        updateAdminCount();
+        renderRecipes(allRecipes);
+        alert(`✅ Sukses membaca disk! Memuat ${allRecipes.length} resep draft hasil scraping Cookpad.`);
+      } else {
+        alert('Data draft belum tersedia di disk.');
+      }
+      loadDraftsBtn.disabled = false;
+      loadDraftsBtn.textContent = '📋 Muat Draft Terbaru (Sync Disk)';
+    });
+  }
+
+  // Tombol Export JSON Bersih
+  const exportBtn = document.getElementById('exportJsonBtn');
+  if (exportBtn) {
+    exportBtn.addEventListener('click', () => {
+      const exportData = {};
+      allRecipes.forEach(r => {
+        const key = r.slug || r.id;
+        exportData[key] = r;
+      });
+
+      const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'jajan-cuan-curated-posts.json';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      alert(`🎉 Sebanyak ${allRecipes.length} resep terkurasi berhasil di-export ke "jajan-cuan-curated-posts.json"!`);
+    });
+  }
+
+  // Tombol Reset Draft
+  const resetBtn = document.getElementById('resetDraftsBtn');
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (confirm('Reset kurasi ke data draft scraping semula? Semua resep yang tadi dihapus akan muncul kembali.')) {
+        localStorage.removeItem(ADMIN_STORAGE_KEY);
+        location.reload();
+      }
+    });
+  }
+}
+
+function updateAdminCount() {
+  const countEl = document.getElementById('adminRecipeCount');
+  if (countEl) {
+    countEl.textContent = `${allRecipes.length} Resep Aktif`;
+  }
+}
+
+// Helper: Ambil data draft paling segar dari disk via dynamic fetch anti-cache
+async function fetchLatestDraftsFromDisk() {
+  try {
+    const res = await fetch('js/scraped-drafts.js?t=' + Date.now(), { cache: 'no-store' });
+    if (res.ok) {
+      const text = await res.text();
+      const match = text.match(/window\.SCRAPED_DRAFTS\s*=\s*(\{[\s\S]*\});?/);
+      if (match) {
+        const parsed = JSON.parse(match[1]);
+        window.SCRAPED_DRAFTS = parsed;
+        return Object.values(parsed);
+      }
+    }
+  } catch(e) {
+    console.warn('Dynamic fetch draft failed, fallback to window.SCRAPED_DRAFTS:', e);
+  }
+
+  if (typeof window.SCRAPED_DRAFTS !== 'undefined' && window.SCRAPED_DRAFTS) {
+    return Object.values(window.SCRAPED_DRAFTS);
+  }
+  return [];
+}
 
 // Helper: Fetch dengan timeout fallback agar UI tidak pernah stuck loading
 function fetchWithTimeout(promise, ms = 3000) {
@@ -144,35 +262,210 @@ function fetchWithTimeout(promise, ms = 3000) {
   });
 }
 
-// --- DATA FETCHING (RTDB + Fallback) ---
-async function loadPosts() {
+// --- DATA FETCHING (Local Curation for Admin vs On-Demand DB Pagination for Users) ---
+
+// 1. Data Fetching khusus Admin (?admin=true)
+async function loadAdminPosts() {
   try {
-    if (typeof db !== 'undefined' && db) {
-      // Baca langsung node posts (sama seperti tester seed-database.html) dengan timeout 3 detik
-      const snapshot = await fetchWithTimeout(db.ref('posts').once('value'), 3000);
-      const data = snapshot.val();
-      if (data && Object.keys(data).length > 0) {
-        allRecipes = Object.keys(data)
-          .map(key => ({
-            id: key,
-            slug: data[key].slug || key,
-            emoji: data[key].emoji || getEmojiForCategory(data[key].category),
-            ...data[key]
-          }))
-          .filter(recipe => recipe.published !== false);
-      } else {
-        allRecipes = SEED_DATA;
-      }
+    const freshDrafts = await fetchLatestDraftsFromDisk();
+    const cached = localStorage.getItem(ADMIN_STORAGE_KEY);
+    let localList = [];
+    if (cached) {
+      try { localList = JSON.parse(cached); } catch(e) {}
+    }
+
+    if (freshDrafts.length > localList.length) {
+      allRecipes = freshDrafts;
+      localStorage.setItem(ADMIN_STORAGE_KEY, JSON.stringify(allRecipes));
+    } else if (localList.length > 0) {
+      allRecipes = localList;
+    } else if (freshDrafts.length > 0) {
+      allRecipes = freshDrafts;
+      localStorage.setItem(ADMIN_STORAGE_KEY, JSON.stringify(allRecipes));
     } else {
       allRecipes = SEED_DATA;
     }
+
+    updateAdminCount();
+    const paginationControls = document.getElementById('paginationControls');
+    if (paginationControls) paginationControls.style.display = 'none';
+    renderRecipes(allRecipes);
   } catch (error) {
-    console.warn('RTDB fetch failed or timed out, rendering SEED_DATA fallback:', error);
+    console.warn('Admin load drafts error:', error);
     allRecipes = SEED_DATA;
+    renderRecipes(allRecipes);
+  }
+}
+
+// 2. Data Fetching Pengunjung Biasa — ON-DEMAND DB PAGINATION (5 ITEM PER REQUEST)
+// PENTING: Dilarang fetch all lalu slice di JS. Query RTDB dibatasi limitToFirst(PAGE_SIZE + 1).
+async function loadUserPage(page = 1, filter = currentFilter) {
+  if (isFetchingPage) return;
+  isFetchingPage = true;
+  currentPage = page;
+  currentFilter = filter;
+
+  const container = document.getElementById('recipesContainer');
+  const paginationControls = document.getElementById('paginationControls');
+  const prevBtn = document.getElementById('prevPageBtn');
+  const nextBtn = document.getElementById('nextPageBtn');
+  const pageNumEl = document.getElementById('currentPageNum');
+
+  if (pageNumEl) pageNumEl.textContent = currentPage;
+  if (prevBtn) prevBtn.disabled = (currentPage === 1);
+  if (nextBtn) nextBtn.disabled = true;
+
+  if (container) {
+    container.innerHTML = `
+      <div class="loading-state">
+        <div class="spinner"></div>
+        <p>Memuat resep halaman ${currentPage} dari database...</p>
+      </div>
+    `;
   }
 
-  // Render recipes to DOM
-  renderRecipes(allRecipes);
+  try {
+    let pagedRecipes = [];
+    let hasMore = false;
+
+    if (typeof db !== 'undefined' && db) {
+      let query;
+      const cursor = pageCursors[page - 1]; // Cursor key untuk halaman ini
+
+      if (filter === 'all') {
+        query = db.ref('posts').orderByKey();
+        if (cursor) {
+          query = query.startAt(cursor);
+        }
+        query = query.limitToFirst(PAGE_SIZE + 1);
+      } else if (filter === 'kue' || filter === 'gorengan' || filter === 'minuman') {
+        query = db.ref('posts').orderByChild('category');
+        if (cursor) {
+          query = query.startAt(filter, cursor).endAt(filter);
+        } else {
+          query = query.startAt(filter).endAt(filter);
+        }
+        query = query.limitToFirst(PAGE_SIZE + 1);
+      } else {
+        // Tag filter (misal: modal-kecil, viral)
+        query = db.ref('posts').orderByKey();
+        if (cursor) {
+          query = query.startAt(cursor);
+        }
+        query = query.limitToFirst(PAGE_SIZE + 1);
+      }
+
+      const snapshot = await fetchWithTimeout(query.once('value'), 4000);
+      const items = [];
+      
+      snapshot.forEach((child) => {
+        const val = child.val();
+        if (val && val.published !== false) {
+          if (filter === 'modal-kecil') {
+            const cap = val.business_analysis?.estimated_initial_capital || 0;
+            const tags = val.tags || [];
+            if (!tags.includes('modal-kecil') && cap > 50000) return;
+          } else if (filter === 'viral') {
+            const tags = val.tags || [];
+            if (!tags.includes('viral')) return;
+          }
+
+          items.push({
+            id: child.key,
+            slug: val.slug || child.key,
+            emoji: val.emoji || getEmojiForCategory(val.category),
+            ...val
+          });
+        }
+      });
+
+      if (items.length > PAGE_SIZE) {
+        hasMore = true;
+        pagedRecipes = items.slice(0, PAGE_SIZE);
+        pageCursors[page] = items[PAGE_SIZE].id; // Kunci ke-6 menjadi cursor untuk halaman berikutnya
+      } else {
+        hasMore = false;
+        pagedRecipes = items;
+        pageCursors[page] = null;
+      }
+    } else {
+      throw new Error('Database offline / not initialized');
+    }
+
+    hasNextPage = hasMore;
+    allRecipes = pagedRecipes;
+    renderRecipes(allRecipes);
+
+    if (paginationControls) {
+      paginationControls.style.display = 'flex';
+    }
+    if (prevBtn) prevBtn.disabled = (currentPage === 1);
+    if (nextBtn) nextBtn.disabled = !hasNextPage;
+
+  } catch (err) {
+    console.warn('DB Pagination fallback (Offline/Localhost):', err);
+    // Fallback Offline/Localhost: Potong 5 item sesuai permintaan halaman
+    let sourceList = [];
+    if (typeof window.SCRAPED_DRAFTS !== 'undefined' && window.SCRAPED_DRAFTS) {
+      sourceList = Object.values(window.SCRAPED_DRAFTS);
+    } else {
+      sourceList = SEED_DATA;
+    }
+
+    if (filter !== 'all') {
+      sourceList = sourceList.filter(r => {
+        const tags = r.tags || [];
+        const category = r.category || '';
+        if (filter === 'modal-kecil') {
+          return tags.includes('modal-kecil') || (r.business_analysis?.estimated_initial_capital <= 50000);
+        }
+        if (filter === 'viral') {
+          return tags.includes('viral');
+        }
+        return category === filter || tags.includes(filter);
+      });
+    }
+
+    const startIdx = (page - 1) * PAGE_SIZE;
+    allRecipes = sourceList.slice(startIdx, startIdx + PAGE_SIZE);
+    hasNextPage = sourceList.length > startIdx + PAGE_SIZE;
+
+    renderRecipes(allRecipes);
+
+    if (paginationControls) {
+      paginationControls.style.display = 'flex';
+    }
+    if (prevBtn) prevBtn.disabled = (currentPage === 1);
+    if (nextBtn) nextBtn.disabled = !hasNextPage;
+  } finally {
+    isFetchingPage = false;
+  }
+}
+
+// Setup Event Listener Tombol Pagination
+function setupPaginationListeners() {
+  const prevBtn = document.getElementById('prevPageBtn');
+  const nextBtn = document.getElementById('nextPageBtn');
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (currentPage > 1 && !isFetchingPage) {
+        loadUserPage(currentPage - 1, currentFilter);
+        const filterEl = document.getElementById('filterContainer');
+        if (filterEl) filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      if (hasNextPage && !isFetchingPage) {
+        loadUserPage(currentPage + 1, currentFilter);
+        const filterEl = document.getElementById('filterContainer');
+        if (filterEl) filterEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 }
 
 function getEmojiForCategory(cat) {
@@ -203,20 +496,42 @@ function renderRecipes(recipes) {
     const portions = recipe.default_portions || 20;
     const hppEstimate = Math.round(initialCapital / portions);
     const emoji = recipe.emoji || getEmojiForCategory(recipe.category);
+    const sourcePhoto = recipe.media?.source_photo || recipe.og_image || '';
 
     return `
       <article class="recipe-card" id="card-${slug}" data-category="${recipe.category}" data-tags='${JSON.stringify(recipe.tags || [])}'>
         <div class="recipe-card-header">
-          <div class="recipe-card-banner">
-            <span>${emoji}</span>
+          <div class="recipe-card-banner" style="${sourcePhoto ? 'padding: 0; overflow: hidden; background: #e5e7eb;' : ''}">
+            ${sourcePhoto 
+              ? `<img src="${sourcePhoto}" alt="${recipe.title}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.parentElement.innerHTML='<span>${emoji}</span>';">` 
+              : `<span>${emoji}</span>`}
           </div>
           <div class="recipe-card-info">
             <div class="recipe-card-meta">
               <span class="mini-card-tag">${recipe.category}</span>
               ${(recipe.tags || []).map(t => `<span class="section-tag" style="font-size: 0.7rem; padding: 0.15rem 0.5rem; margin-bottom: 0;">#${t}</span>`).join('')}
             </div>
-            <h3 class="recipe-card-title">${recipe.title}</h3>
+            
+            ${isAdmin ? `
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.5rem; margin: 0.35rem 0 0.5rem 0;">
+                <h3 class="recipe-card-title" style="margin: 0;">${recipe.title}</h3>
+                <button class="btn-hard-delete" data-slug="${slug}" style="background: #FEE2E2; color: #DC2626; border: 1px solid #FCA5A5; padding: 0.35rem 0.65rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer; white-space: nowrap; flex-shrink: 0;" title="Hard Delete resep ini dari kurasi lokal">
+                  🗑️ Hapus Resep
+                </button>
+              </div>
+            ` : `
+              <h3 class="recipe-card-title">${recipe.title}</h3>
+            `}
+
             <p class="recipe-card-excerpt text-secondary">${recipe.excerpt}</p>
+            
+            ${isAdmin && recipe.yield_text ? `
+              <div style="margin: 0.25rem 0 0.5rem 0;">
+                <span style="font-size: 0.75rem; background: #EEF2FF; color: #4338CA; border: 1px solid #C7D2FE; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 600;">
+                  🎯 Porsi Asli Cookpad: ${recipe.yield_text}
+                </span>
+              </div>
+            ` : ''}
             
             <div class="recipe-card-stats">
               <div class="stat-item">
@@ -394,6 +709,59 @@ function renderRecipes(recipes) {
           <div class="tab-content" id="tab-${slug}-promo">
             <h4 style="margin-bottom: 0.75rem;">Foto & Template Promosi Siap Share</h4>
             <p style="margin-bottom: 1.25rem;">Download gambar estetik jajanan ini untuk promosi di WhatsApp Status & Instagram Story.</p>
+
+            ${sourcePhoto ? `
+              <!-- Visual Grounding Review Panel (SOP Anti-Halusinasi AI) -->
+              <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 10px; padding: 1.25rem; margin-bottom: 1.5rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                  <span style="font-size: 1.1rem;">🖼️</span>
+                  <strong style="color: #0F172A; font-size: 0.95rem;">Review Visual Grounding (Polesan AI Berbasis Foto Asli)</strong>
+                </div>
+                <p style="font-size: 0.8rem; color: #475569; margin-bottom: 1rem; line-height: 1.4;">
+                  <strong>Peringatan Keras PRD:</strong> AI dilarang men-generate gambar baru dari teks (text-to-image murni). Pemolesan wajib berbasis foto asli di bawah agar bentuk fisik, porsi (${portions}), dan wadah riil (mika/cup/plastik) tetap otentik dan akurat saat dijual.
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                  <!-- Kolom 1: Foto Asli -->
+                  <div style="border: 1px solid #CBD5E1; border-radius: 8px; padding: 0.75rem; background: #fff;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                      <span style="font-size: 0.75rem; font-weight: 700; color: #475569;">1. FOTO ASLI (COOKPAD)</span>
+                      <span style="font-size: 0.7rem; background: #E2E8F0; padding: 0.1rem 0.4rem; border-radius: 4px;">Grounding</span>
+                    </div>
+                    <img src="${sourcePhoto}" style="width: 100%; height: 160px; object-fit: cover; border-radius: 6px;" alt="Foto asli ${recipe.title}">
+                  </div>
+
+                  <!-- Kolom 2: Slot Polesan AI -->
+                  <div style="border: ${recipe.media?.ai_polished_photo ? '2px solid #10B981' : '2px dashed #94A3B8'}; border-radius: 8px; padding: 0.75rem; background: #F8FAFC; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; min-height: 200px;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 0.5rem;">
+                      <span style="font-size: 0.75rem; font-weight: 700; color: #047857;">2. POLESAN AI (IMG2IMG)</span>
+                      ${recipe.media?.ai_polished_photo ? `<span style="font-size: 0.7rem; background: #D1FAE5; color: #065F46; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 700;">Siap Review</span>` : ''}
+                    </div>
+
+                    ${recipe.media?.ai_polished_photo ? `
+                      <img src="${recipe.media.ai_polished_photo}" style="width: 100%; height: 160px; object-fit: cover; border-radius: 6px; margin-bottom: 0.75rem;" alt="Hasil polesan AI ${recipe.title}">
+                      <div style="display: flex; gap: 0.5rem; width: 100%;">
+                        <button class="btn btn-sm btn-approve-photo" data-slug="${slug}" style="background: #10B981; color: #fff; font-size: 0.75rem; font-weight: 700; flex: 1; padding: 0.4rem; border: none; border-radius: 6px; cursor: pointer;">
+                          ✅ Approve Foto Ini
+                        </button>
+                        <button class="btn btn-sm btn-reject-photo" data-slug="${slug}" style="background: #FEE2E2; color: #DC2626; font-size: 0.75rem; font-weight: 700; padding: 0.4rem 0.6rem; border: 1px solid #FCA5A5; border-radius: 6px; cursor: pointer;">
+                          ❌ Tolak
+                        </button>
+                      </div>
+                    ` : `
+                      <span style="font-size: 2rem; margin: 0.5rem 0 0.25rem 0;">✨</span>
+                      <p style="font-size: 0.75rem; color: #64748B; margin: 0 0 0.5rem 0;">Belum dipoles AI</p>
+                      <code style="font-size: 0.7rem; background: #E2E8F0; padding: 0.25rem 0.5rem; border-radius: 4px; display: block; margin-bottom: 0.75rem; word-break: break-all;">
+                        node scripts/polish-image.js ${slug}
+                      </code>
+                      <button class="btn btn-sm" style="background: #6366F1; color: #fff; font-size: 0.75rem; font-weight: 600; padding: 0.35rem 0.75rem; border-radius: 6px;" onclick="navigator.clipboard.writeText('node scripts/polish-image.js ${slug}'); alert('Perintah disalin ke clipboard! Buka terminal dan jalankan: node scripts/polish-image.js ${slug}');">
+                        📋 Salin Command Terminal
+                      </button>
+                    `}
+                  </div>
+                </div>
+              </div>
+            ` : ''}
             
             <div class="promo-grid">
               <div class="promo-placeholder">
@@ -423,6 +791,72 @@ function renderRecipes(recipes) {
   setupAccordionListeners();
   setupTabListeners();
   setupCalculatorListeners();
+  if (isAdmin) {
+    setupAdminDeleteListeners();
+  }
+}
+
+// Event Listener khusus Hard Delete di Mode Admin
+function setupAdminDeleteListeners() {
+  document.querySelectorAll('.btn-hard-delete').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const slug = btn.getAttribute('data-slug');
+      const target = allRecipes.find(r => (r.slug || r.id) === slug);
+      const title = target ? target.title : slug;
+      
+      if (confirm(`⚠️ YAKIN HARD DELETE?\n\nResep "${title}" akan dihapus permanen dari kurasi lokal ini.`)) {
+        allRecipes = allRecipes.filter(r => (r.slug || r.id) !== slug);
+        localStorage.setItem(ADMIN_STORAGE_KEY, JSON.stringify(allRecipes));
+        
+        const card = document.getElementById(`card-${slug}`);
+        if (card) {
+          card.style.transition = 'all 0.3s ease';
+          card.style.opacity = '0';
+          card.style.transform = 'scale(0.95)';
+          setTimeout(() => {
+            card.remove();
+            updateAdminCount();
+            if (allRecipes.length === 0) {
+              renderRecipes([]);
+            }
+          }, 300);
+        }
+      }
+    });
+  });
+
+  // Listener Approve Foto Polesan AI Jadi Foto Utama Resep
+  document.querySelectorAll('.btn-approve-photo').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const slug = btn.getAttribute('data-slug');
+      const recipe = allRecipes.find(r => (r.slug || r.id) === slug);
+      if (recipe && recipe.media?.ai_polished_photo) {
+        recipe.og_image = recipe.media.ai_polished_photo;
+        recipe.media.status = 'approved';
+        localStorage.setItem(ADMIN_STORAGE_KEY, JSON.stringify(allRecipes));
+        alert(`✅ Foto polesan AI disetujui sebagai foto utama untuk "${recipe.title}"!`);
+        renderRecipes(allRecipes);
+      }
+    });
+  });
+
+  // Listener Tolak Foto Polesan AI
+  document.querySelectorAll('.btn-reject-photo').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const slug = btn.getAttribute('data-slug');
+      const recipe = allRecipes.find(r => (r.slug || r.id) === slug);
+      if (recipe) {
+        recipe.media.ai_polished_photo = '';
+        recipe.media.status = 'rejected';
+        localStorage.setItem(ADMIN_STORAGE_KEY, JSON.stringify(allRecipes));
+        alert(`❌ Foto polesan AI ditolak. Resep "${recipe.title}" kembali menggunakan foto asli Cookpad.`);
+        renderRecipes(allRecipes);
+      }
+    });
+  });
 }
 
 // --- ACCORDION LOGIC ---
@@ -548,7 +982,15 @@ function initFilters() {
       btn.classList.add('active');
 
       const filter = btn.getAttribute('data-filter');
-      filterRecipes(filter);
+      if (!isAdmin) {
+        // Mode Pengunjung: Reset DB pagination ke halaman 1 untuk filter ini (load on-demand)
+        currentPage = 1;
+        pageCursors = [null];
+        currentFilter = filter;
+        loadUserPage(1, filter);
+      } else {
+        filterRecipes(filter);
+      }
     });
   });
 }

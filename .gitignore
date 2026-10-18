@@ -41,6 +41,12 @@ firebase-debug.log
 # Node (jika nanti pakai npm)
 node_modules/
 
+# Environment / Secrets
+.env
+.env.*
+*.env
+!.env.example
+
 # OS
 .DS_Store
 Thumbs.db

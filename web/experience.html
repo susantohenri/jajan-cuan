@@ -34,8 +34,54 @@
       animation: spin 0.8s linear infinite;
       margin-bottom: 1rem;
     }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+    /* Pagination UI */
+    .pagination-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+    .pagination-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      border-radius: 8px;
+      border: 1px solid #E5E7EB;
+      background: #FFFFFF;
+      color: #111827;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    }
+    .pagination-btn:hover:not(:disabled) {
+      background: #FF6B35;
+      color: #FFFFFF;
+      border-color: #FF6B35;
+      transform: translateY(-1px);
+    }
+    .pagination-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      background: #F3F4F6;
+      color: #9CA3AF;
+      box-shadow: none;
+    }
+    .pagination-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background: #F3F4F6;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #4B5563;
+      border: 1px solid #E5E7EB;
     }
   </style>
 
@@ -49,6 +95,14 @@
   </script>
 </head>
 <body>
+
+  <!-- Localhost Admin Hint Banner -->
+  <div id="localhostHintBanner" style="display: none; background: #EEF2FF; border-bottom: 1px solid #C7D2FE; padding: 0.65rem 1rem; text-align: center; font-size: 0.85rem; color: #3730A3;">
+    🛠️ <strong>Server Lokal Terdeteksi:</strong> Kamu sedang melihat katalog reguler (5 resep/halaman). Untuk menyeleksi <strong>209 resep draft hasil scraping Cookpad</strong> dan memakai fitur <strong>Hard Delete</strong>, 
+    <a href="?admin=true" style="color: #4338CA; font-weight: 800; text-decoration: underline; margin-left: 0.35rem;">
+      Klik di sini untuk Masuk ke Mode Admin (?admin=true) →
+    </a>
+  </div>
 
   <!-- Header / Navbar -->
   <header class="navbar">
@@ -64,6 +118,37 @@
 
   <!-- Main Experience Header & Filter -->
   <main class="container" style="padding-top: 2rem;">
+
+    <!-- Admin Curation Toolbar (Hanya Muncul Jika URL ?admin=true) -->
+    <div id="adminToolbar" style="display: none; background: #FFFBEB; border: 2px dashed #F59E0B; border-radius: 12px; padding: 1.25rem; margin-bottom: 2rem;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="background: #F59E0B; color: #fff; font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.5rem; border-radius: 6px;">ADMIN MODE</span>
+            <strong style="color: #92400E; font-size: 1.05rem;">Panel Kurasi Resep Lokal (Hard Delete)</strong>
+          </div>
+          <p style="margin: 0.35rem 0 0 0; font-size: 0.85rem; color: #78350F;">
+            Pilih resep yang layak jual. Klik tombol merah <strong>🗑️ Hapus Resep</strong> untuk membuang resep yang tidak sesuai.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <span id="adminRecipeCount" style="background: #FEF3C7; color: #B45309; font-weight: 700; font-size: 0.85rem; padding: 0.4rem 0.8rem; border-radius: 8px; border: 1px solid #FDE68A;">
+            7 Resep Aktif
+          </span>
+          <button id="loadDraftsBtn" class="btn btn-sm" style="background: #3B82F6; color: #fff; font-weight: 700; border: none; padding: 0.5rem 0.9rem; border-radius: 8px; cursor: pointer;" title="Paksa baca ulang file draft dari disk (bypass browser cache)">
+            📋 Muat Draft Terbaru (Sync Disk)
+          </button>
+          <button id="exportJsonBtn" class="btn btn-sm" style="background: #10B981; color: #fff; font-weight: 700; border: none; padding: 0.5rem 0.9rem; border-radius: 8px; cursor: pointer;">
+            📥 Export JSON Bersih
+          </button>
+          <button id="resetDraftsBtn" class="btn btn-sm" style="background: #F3F4F6; color: #374151; border: 1px solid #D1D5DB; font-weight: 600; padding: 0.5rem 0.8rem; border-radius: 8px; cursor: pointer;" title="Kembalikan semua resep yang terhapus">
+            🔄 Reset
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="experience-header" style="border: none; padding-bottom: 0.5rem;">
       <span class="section-tag">Interactive Catalog</span>
       <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Katalog Ide Jajanan Siap Jual</h1>
@@ -86,6 +171,19 @@
         <div class="spinner"></div>
         <p>Memuat resep & kalkulator cuan...</p>
       </div>
+    </div>
+
+    <!-- Section 3: DB Pagination Controls (Load from DB by Request: 5 item / page) -->
+    <div id="paginationControls" class="pagination-container" style="display: none;">
+      <button id="prevPageBtn" class="pagination-btn" disabled>
+        ← Halaman Sebelumnya
+      </button>
+      <span class="pagination-badge">
+        Halaman <strong id="currentPageNum" style="color: var(--color-primary, #FF6B35); margin-left: 0.35rem;">1</strong>
+      </span>
+      <button id="nextPageBtn" class="pagination-btn" disabled>
+        Halaman Selanjutnya →
+      </button>
     </div>
   </main>
 
@@ -159,6 +257,7 @@
 
   <!-- App Scripts -->
   <script src="js/firebase-init.js"></script>
+  <script src="js/scraped-drafts.js?v=209"></script>
   <script src="js/experience.js"></script>
 </body>
 </html>

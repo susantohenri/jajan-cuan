@@ -21,7 +21,7 @@ Aplikasi memanfaatkan infrastruktur cloud Firebase untuk kemudahan operasional d
 | :-------------------------------- | :------------------------------------------------------------------------------------------------------------------------- |
 | **Firebase Remote Config**        | Mengelola parameter aplikasi secara dinamis tanpa update APK (misal: ID unit iklan, resep unggulan mingguan, pengumuman).  |
 | **Cloud Firestore / Realtime DB** | Menyimpan database terstruktur: katalog resep, kategori bahan, takaran default, dan data acuan HPP.                        |
-| **Firebase Storage**              | Media hosting aset visual resolusi tinggi: foto utama resep, gambar per tahap cara memasak, dan materi promosi siap unduh. |
+| **Firebase Storage**              | Media hosting aset visual resolusi tinggi: foto utama resep (hero/commercial photo) dan materi promosi siap unduh. |
 | **Firebase Hosting**              | Hosting berbasis CDN global untuk Landing Page & Experience Layer, mendukung SPA rewrite native, multi-site, dan SSL gratis.|
 | **Google Analytics for Firebase** | Melacak perilaku pengguna: resep paling sering dibuka, interaksi kalkulator, konversi rewarded ads, dan retensi sesi.      |
 
@@ -45,9 +45,10 @@ Aplikasi memanfaatkan infrastruktur cloud Firebase untuk kemudahan operasional d
       * Harga Pokok Penjualan (HPP) per porsi/biji.
       * Rekomendasi harga jual ideal per porsi/biji agar terhindar dari kerugian.
 
-### C. Timer Notifikasi Memasak
+### C. Timer Notifikasi Memasak (Unlocked via Rewarded Ads)
 
   * Tombol timer tertanam langsung di setiap instruksi memasak yang membutuhkan penanda waktu (misal: "Kukus adonan selama 15 menit").
+  * Pengguna menonton video iklan singkat (*Rewarded Ads*) secara sukarela untuk mengaktifkan fungsi pengingat waktu memasak (*smart kitchen assistant*).
   * Pengguna dapat mengatur label dan durasi waktu memasak.
   * Aplikasi mengirimkan alarm notifikasi lokal (*local push notification*) saat waktu habis sehingga masakan matang sempurna tanpa risiko gosong.
 
@@ -78,7 +79,7 @@ Aplikasi memanfaatkan infrastruktur cloud Firebase untuk kemudahan operasional d
   * **Foto Utama:** Tampilan visual produk jadi berkualitas tinggi.
   * **Pros (Analisis Bisnis):** Ulasan peluang pasar, tingkat kemudahan bahan dan pembuatan, serta perkiraan modal awal.
   * **Komposisi:** Rincian takaran dan daftar bahan baku.
-  * **Cara Memasak (Unlocked via Rewarded Ads):** Panduan bertahap menggunakan *slideshow* foto dan teks petunjuk, dilengkapi tombol pintas ke *Timer Notifikasi*.
+  * **Cara Memasak (Langsung Terbuka / Tanpa Gating):** Panduan langkah demi langkah berbasis daftar teks (*glanceable list*) yang praktis dibaca saat memasak di dapur tanpa ribet *swipe* atau *buffering* gambar. Dilengkapi tombol pintas ke *Timer Notifikasi*.
   * **Kalkulator (Unlocked via Rewarded Ads):** Alat hitung modal bahan dan penetapan harga jual dinamis.
   * **Konten Promosi (Unlocked via Rewarded Ads):** Galeri foto promosi dengan fungsi *pop-up*, unduh, dan *share*.
 
@@ -111,10 +112,10 @@ Aplikasi memanfaatkan infrastruktur cloud Firebase untuk kemudahan operasional d
 
 ### Tahap 3: Proses Memasak & Produksi
 
-  * Pengguna menekan menu **Cara Memasak**.
-  * Aplikasi memunculkan penawaran **Rewarded Video Ads**; pengguna menonton video iklan singkat untuk membuka panduan langkah demi langkah.
-  * Pengguna mengikuti instruksi bertahap melalui tampilan *slideshow* foto dan teks.
-  * Pada langkah yang memerlukan durasi tertentu (misal: menggoreng atau mengukus), pengguna menekan tombol **Timer**, memasukkan durasi waktu, dan menerima notifikasi alarm tepat waktu saat masakan siap diangkat.
+  * Pengguna langsung membaca panduan **Cara Memasak** yang disajikan secara transparan di halaman detail (daftar langkah berbasis teks yang bersih, mudah di-scroll, dan ramah dapur tanpa *slideshow* yang merepotkan).
+  * Pada langkah yang memerlukan durasi tertentu (misal: menggoreng 5 menit atau mengukus 30 menit), pengguna menekan tombol **Timer**.
+  * Aplikasi memunculkan penawaran **Rewarded Video Ads**; pengguna menonton video iklan singkat secara sukarela untuk mengaktifkan fungsi alarm otomatis.
+  * Alarm notifikasi lokal (*local push notification*) berbunyi tepat waktu saat masakan siap diangkat tanpa khawatir gosong.
 
 ### Tahap 4: Kalkulasi Modal & Harga Jual
 
@@ -140,10 +141,10 @@ Aplikasi memanfaatkan infrastruktur cloud Firebase untuk kemudahan operasional d
 
   * **Banner Ads:** Tampil statis pada area atas atau bawah di halaman *Home* dan *Bahan*.
   * **Native Ads:** Tampil terintegrasi secara visual di antara kartu thumbnail pada daftar resep di halaman *Home* dan halaman *Filter Bahan*.
-  * **Rewarded Video Ads:** Monetisasi dengan nilai eCPM tinggi menggunakan sistem pertukaran manfaat (*value exchange*). Pengguna menonton video iklan berdurasi singkat secara sukarela untuk membuka 3 fitur bernilai tinggi:
-    1.  Akses panduan lengkap *Cara Memasak* beserta integrasi *Timer*.
-    2.  Akses *Kalkulator HPP & Harga Jual Dinamis*.
-    3.  Akses unduh dan berbagi aset *Konten Promosi*.
+  * **Rewarded Video Ads:** Monetisasi dengan nilai eCPM tinggi menggunakan sistem pertukaran manfaat (*value exchange*) tanpa mengorbankan kepuasan inti pengguna (resep dan cara memasak tetap 100% gratis terbuka). Pengguna menonton video iklan berdurasi singkat secara sukarela untuk membuka 3 utilitas bisnis & masak bernilai tinggi:
+    1.  Aktivasi *Timer Notifikasi Memasak* (asisten alarm anti-gosong).
+    2.  Akses *Kalkulator HPP & Harga Jual Dinamis* (kustomisasi modal bahan riil).
+    3.  Akses unduh dan berbagi aset *Konten Promosi* HD siap jualan.
 
 -----
 
@@ -290,4 +291,182 @@ Aplikasi memanfaatkan infrastruktur cloud Firebase untuk kemudahan operasional d
 * Konten detail hanya sebagai *proof-of-concept/experience*, bukan sasaran SEO programmatic massal pada tahap awal ini.
 * Penggunaan Firebase Hosting dan Realtime Database menyederhanakan stack (*operational simplicity*) karena seluruh komponen teknis berada di bawah satu atap Firebase.
 
+-----
 
+## 9. Mempersiapkan Data (SOP Alur Kerja & Panduan Command Lengkap)
+
+> [!IMPORTANT]
+> Seluruh alur penyiapan data jajanan viral dilakukan secara **Local-First** untuk menjamin akurasi HPP, keaslian wadah/kemasan fisik (Anti-Halusinasi AI), dan kurasi visual ketat sebelum dipublikasikan ke production.
+
+```mermaid
+flowchart LR
+    A["1. Server Lokal<br/>(localhost:3000)"] --> B["2. Scrape Cookpad<br/>(Multi-page & Portions)"]
+    B --> C["3. Poles AI / Grounding<br/>(Gemini / Free Tier)"]
+    C --> D["4. Kurasi Admin<br/>(?admin=true & Hard Delete)"]
+    D --> E["5. Rilis Otomatis<br/>(RTDB & Hosting)"]
+```
+
+---
+
+### A. Panduan Eksekusi 5 Langkah Terurut (Sequential Execution Workflow)
+
+#### Langkah 1: Menjalankan Server Lokal (Local Web Server)
+Pastikan server lokal web aktif sebelum melakukan kurasi atau preview web app:
+```bash
+# Opsi 1: Menggunakan serve (Port 3000)
+npx serve web -p 3000
+
+# Opsi 2: Menggunakan http-server
+npx http-server web -p 3000
+
+# Opsi 3: Menggunakan Python built-in server
+python -m http.server 3000 --directory web
+```
+* **URL Pengunjung Publik (DB Pagination 5 item/halaman):** `http://localhost:3000/experience`
+* **URL Kurasi Admin (Hard Delete & Review Grounding):** `http://localhost:3000/experience?admin=true`
+
+---
+
+#### Langkah 2: Mengambil & Menyiapkan Data Mentah (Scraping Cookpad)
+Script: [`scripts/fetch-cookpad.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/fetch-cookpad.js)
+* **Porsi Otentik:** Nilai porsi diekstrak langsung dari kolom porsi asli sumber (Schema.org `recipeYield`, misal: *"25 mika"*, *"30 biji"*, *"20 porsi"*) menggunakan regex integer parser.
+* **Kamus HPP Acuan:** Memetakan bahan baku ke [`scripts/ingredient-dictionary.json`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/ingredient-dictionary.json) (60+ bahan lokal) agar estimasi modal awal terisi otomatis tanpa nilai `NaN`.
+* **Merge Anti-Duplikat:** URL yang sudah tersimpan di draft lokal tidak akan di-scrape ulang.
+
+Command yang dapat dijalankan:
+```bash
+# 1. Scrape langsung dari Halaman Pencarian (Multi-Page, misal 7 halaman = ~200+ resep)
+node scripts/fetch-cookpad.js "https://cookpad.com/id/cari/ide%20jualan" --pages 7
+
+# 2. Scrape 1 resep spesifik
+node scripts/fetch-cookpad.js "https://cookpad.com/id/resep/xxxx"
+
+# 3. Scrape batch dari daftar URL di scripts/urls.txt
+node scripts/fetch-cookpad.js
+```
+*Output tersimpan di: `data/scraped-drafts.json` dan `web/js/scraped-drafts.js`.*
+
+---
+
+#### Langkah 3: Pemolesan Foto Makanan via AI (Image-to-Image / Visual Grounding)
+Script: [`scripts/polish-image.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/polish-image.js)
+* **SOP Anti-Halusinasi:** Dilarang *text-to-image* murni. Wajib *Image-to-Image* dengan foto asli Cookpad sebagai acuan dasar (*grounding reference*). Bentuk fisik, jumlah porsi, dan wadah kemasan riil (mika plastik bening, cup, tusuk sate) wajib dipertahankan. AI hanya memoles pencahayaan studio komersial dan membersihkan meja latar belakang.
+* **Multi-Provider AI:** Mendukung **Cloudflare Workers AI** (model FLUX.1-schnell & SDXL, gratis 10.000 Neurons/hari) dan **Google AI Studio** (`gemini-3.1-flash-image`, `gemini-2.5-flash-image`, `imagen-3`).
+
+##### Konfigurasi `.env` (Praktis & Otomatis)
+Salin template [`.env.example`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/.env.example) menjadi `.env`:
+```bash
+cp .env.example .env
+```
+Isi kredensial yang Anda miliki di dalam `.env`:
+```ini
+# Pilihan 1: Cloudflare Workers AI (Gratis 10.000 Neurons/hari)
+CLOUDFLARE_API_TOKEN=cfut_xxx...
+CLOUDFLARE_ACCOUNT_ID=a52b38...
+
+# Pilihan 2: Google AI Studio (Paid Tier)
+GEMINI_API_KEY=AIzaSy...
+```
+
+##### Command yang dapat dijalankan:
+```bash
+# 1. Mode Otomatis (Membaca Token dari file .env)
+node scripts/polish-image.js --batch --limit 5
+node scripts/polish-image.js --all
+
+# 2. Mode Cloudflare Workers AI via CLI Flags (FLUX.1-schnell 1024x1024 px)
+node scripts/polish-image.js --batch --limit 5 --cf-token <API_TOKEN> --cf-account <ACCOUNT_ID>
+
+# 3. Mode Google AI Studio API Key (Paid Tier)
+node scripts/polish-image.js --batch --limit 5 --key <API_KEY>
+
+# 4. Mode AI dengan Proteksi Fallback Otomatis ke Foto Asli jika Kuota/Tier Habis
+node scripts/polish-image.js --batch --limit 10 --fallback-source
+
+# 5. Mode Menggunakan Foto Asli Cookpad Resolusi Tinggi (100% GRATIS & TANPA API KEY)
+node scripts/polish-image.js --all --use-source
+node scripts/polish-image.js --batch --limit 10 --use-source
+
+# 6. Poles 1 resep tertentu berdasarkan slug
+node scripts/polish-image.js mini-spaghetti-ekonomis-untuk-jualan-2ribuan
+```
+*Hasil disimpan di direktori: `web/img/recipes/polished/{slug}.jpg` (Rasio ideal 1:1, 1024x1024 px).*
+
+---
+
+#### Langkah 4: Kurasi Visual Lokal & Hard Delete via Web Admin
+* Buka browser di URL: **`http://localhost:3000/experience?admin=true`**
+* **Review Visual Grounding Berdampingan:** Pada tab **"📸 Promo Siap Share"**, bandingkan foto asli Cookpad vs hasil polesan AI secara *side-by-side*:
+  * Klik **`✅ Approve Foto Ini`**: Menyepakati foto polesan AI sebagai foto utama cover resep.
+  * Klik **`❌ Tolak`**: Menolak polesan yang berhalusinasi, otomatis kembali menggunakan foto asli Cookpad.
+* **Mekanisme Hard Delete:** Klik tombol merah **`🗑️ Hapus Resep`** untuk menghapus resep yang tidak prospektif atau tidak layak jual langsung dari memori kurasi lokal seketika.
+* **Sync Disk (Bypass Cache):** Klik tombol **`📋 Muat Draft Terbaru (Sync Disk)`** jika baru selesai scraping/polishing di terminal untuk memuat draft segar tanpa kendala cache browser.
+* **Export Cadangan:** Klik **`📥 Export JSON Bersih`** untuk mengunduh berkas `jajan-cuan-curated-posts.json`.
+
+---
+
+#### Langkah 5: Rilis & Publikasi ke Cloud Production (One-Click Release)
+Script: [`scripts/release.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/release.js)
+* Menjalankan otomatis 4 tahap rilis:
+  1. Menyaring draft aktif (`published !== false`) dan menetapkan foto cover terkurasi.
+  2. Menyimpan data bersih ke [`data/seed-posts.json`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/data/seed-posts.json).
+  3. Memperbarui konstanta payload di developer seeder tool ([`scripts/seed-database.html`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/seed-database.html)).
+  4. Mengirim data ke Firebase Realtime Database node `/posts` via REST API endpoint.
+  5. Melakukan deploy web ke Firebase Hosting (`firebase deploy --only hosting`).
+
+Command rilis sekali klik:
+```bash
+node scripts/release.js
+```
+*Alternatif rilis manual via browser:*
+1. Buka `scripts/seed-database.html` di browser lokal, lalu klik tombol **`🚀 Push Seed Data ke RTDB`**.
+2. Deploy hosting: `firebase deploy --only hosting`.
+
+---
+
+### B. Arsitektur Data Fetching: Pagination On-Demand (DB-Level 5 Items/Page)
+1. **Prinsip Utama: Load by Request (Anti-Fetch All):**
+   * **PANDUAN KETAT:** Halaman katalog pengunjung publik (`experience.html`) **dilarang keras** menarik seluruh data database (`.once('value')`) lalu melakukan slicing/paginasi di memori browser.
+   * **Ukuran Halaman:** Tepat 5 item per request halaman (`PAGE_SIZE = 5`).
+2. **Mekanisme Cursor-Based Query di Firebase RTDB:**
+   * Setiap request menarik `PAGE_SIZE + 1` (6 item) untuk mendeteksi ketersediaan halaman berikutnya (`hasNextPage`) tanpa query count tambahan.
+   * Kunci dari item ke-6 disimpan ke dalam riwayat cursor (`pageCursors[page] = item6.id`).
+   * Pindah ke halaman berikutnya: `.orderByKey().startAt(cursor).limitToFirst(6)`.
+   * Pindah ke halaman sebelumnya: menggunakan cursor yang tersimpan pada indeks stack halaman sebelumnya.
+3. **Filter Kategori On-Demand:**
+   * Filter kategori (`kue`, `gorengan`, `minuman`) memicu kueri spesifik `.orderByChild('category').startAt(category, cursor).endAt(category).limitToFirst(6)`.
+   * Index RTDB pada `database.rules.json` telah diperbarui (`.indexOn: ["published", "category"]`).
+   * Setiap pergantian filter kategori mereset navigasi kembali ke Halaman 1 secara on-demand.
+
+---
+
+### C. Arsitektur Penyimpanan: Firebase Storage
+1. **Standar Berkas & Kompresi:**
+   * **Format:** WebP (rasio kompresi tinggi dengan degradasi visual minimal).
+   * **Ukuran Berkas:** Maksimal 200 KB per gambar untuk efisiensi transfer data dan kecepatan mobile.
+   * **Dimensi:**
+     * Cover / Banner Resep: 1200 x 630 px (Rasio 1.91:1, optimal untuk Open Graph dan Banner Aplikasi).
+     * Promo Image / Pop-up: 800 x 800 px (Rasio 1:1, optimal untuk status WhatsApp dan feed media sosial).
+2. **Struktur Folder Bucket (`jajan-cuan.firebasestorage.app`):**
+   ```
+   recipes/
+     └── {recipe-slug}/
+           ├── cover.webp         <-- Foto utama kartu resep & meta OG
+           └── promo/
+                 ├── promo-1.webp <-- Aset promosi siap unduh 1
+                 └── promo-2.webp <-- Aset promosi siap unduh 2
+   ```
+
+-----
+
+## 10. Matriks Verifikasi & Code Review Komponen
+
+| Modul / Berkas | Status Review | Tanggung Jawab & Fitur Utama |
+| :--- | :---: | :--- |
+| [`scripts/fetch-cookpad.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/fetch-cookpad.js) | ✅ Terverifikasi | Multi-page search scraping, JSON-LD Schema.org parser, ekstraksi porsi `recipeYield`, kalkulasi modal awal via kamus benchmark, merge anti-duplikat. |
+| [`scripts/ingredient-dictionary.json`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/ingredient-dictionary.json) | ✅ Terverifikasi | 60+ kata kunci bahan pokok & jajanan street-food Indonesia, mencegah nilai `NaN` pada kalkulator HPP. |
+| [`scripts/polish-image.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/polish-image.js) | ✅ Terverifikasi | Strict Grounding Prompt (anti-halusinasi bentuk/wadah), multi-provider AI (Cloudflare Workers AI FLUX.1-schnell & SDXL, Google Gemini Flash Image, Imagen), pembacaan otomatis `.env`, dukungan `--batch`, `--limit`, `--cf-token`, `--cf-account`, `--key`, `--fallback-source`, dan `--use-source`. |
+| [`web/experience.html`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/web/experience.html) | ✅ Terverifikasi | Toolbar Admin kurasi, banner info localhost, antarmuka kartu resep responsif, panel visual grounding, dan pagination bar UI. |
+| [`web/js/experience.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/web/js/experience.js) | ✅ Terverifikasi | On-demand RTDB Cursor Pagination (`PAGE_SIZE = 5`, `limitToFirst(6)`), On-demand Category query, Realtime HPP calculator engine, dynamic accordion & tabs, Hard Delete event listeners. |
+| [`database.rules.json`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/database.rules.json) | ✅ Terverifikasi | Keamanan read publik pada `/posts`, write-protection, indexing performa tinggi pada `.indexOn: ["published", "category"]`. |
+| [`scripts/release.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/release.js) | ✅ Terverifikasi | Otomasi ekspor ke `seed-posts.json`, pembaruan otomatis payload `seed-database.html`, push REST ke `/posts.json`, dan eksekusi deploy Firebase Hosting. |

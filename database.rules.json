@@ -3,7 +3,7 @@
     "posts": {
       ".read": true,
       ".write": false,
-      ".indexOn": ["published"]
+      ".indexOn": ["published", "category"]
     },
     "waitlist": {
       ".read": false,
