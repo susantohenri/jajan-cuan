@@ -524,8 +524,9 @@ node scripts/release.js
 | [`scripts/ingredient-dictionary.json`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/ingredient-dictionary.json) | ✅ Terverifikasi | 60+ kata kunci bahan pokok & jajanan street-food Indonesia, mencegah nilai `NaN` pada kalkulator HPP. |
 | [`scripts/polish-image.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/polish-image.js) | ✅ Terverifikasi | Strict Grounding Prompt (anti-halusinasi bentuk/wadah), multi-provider AI (Cloudflare Workers AI FLUX.1-schnell & SDXL, Google Gemini Flash Image, Imagen), pembacaan otomatis `.env`, dukungan `--batch`, `--limit`, `--cf-token`, `--cf-account`, `--key`, `--fallback-source`, dan `--use-source`. |
 | [`scripts/polish-titles.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/polish-titles.js) | ✅ Terverifikasi | Copywriting menu komersial via Gemini API batching, eliminasi noise UGC Cookpad, preservasi keutuhan `id`/`slug` & aset gambar, arsip `original_title`, dan update deskripsi analisis pasar. |
-| [`web/experience.html`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/web/experience.html) | ✅ Terverifikasi | Toolbar Admin kurasi, banner info localhost, antarmuka kartu resep responsif, panel visual grounding, dan pagination bar UI. |
-| [`web/js/experience.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/web/js/experience.js) | ✅ Terverifikasi | On-demand RTDB Cursor Pagination (`PAGE_SIZE = 5`, `limitToFirst(6)`), On-demand Category query, Realtime HPP calculator engine, dynamic accordion & tabs, Hard Delete event listeners. |
+| [`web/experience.html`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/web/experience.html) | ✅ Terverifikasi | Toolbar Admin kurasi, Search Bar interaktif, antarmuka kartu resep responsif, panel visual grounding, dan pagination bar UI. |
+| [`web/js/experience.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/web/js/experience.js) | ✅ Terverifikasi | Smart Search Engine (debounce 250ms, multi-parameter matching judul/bahan/tag, match badge, empty search state dengan saran chip), On-demand RTDB Cursor Pagination, Realtime HPP calculator, delegasi bookmark hook ke waitlist modal. |
+| [`web/css/upgrade.css`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/web/css/upgrade.css) | ✅ Terverifikasi | Styling Search Bar interaktif, tombol clear, search stats counter, empty search state card, saran kata kunci chips, dan tombol bookmark pancingan install app. |
 | [`database.rules.json`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/database.rules.json) | ✅ Terverifikasi | Keamanan read publik pada `/posts`, write-protection, indexing performa tinggi pada `.indexOn: ["published", "category"]`. |
 | [`scripts/release.js`](file:///c:/Users/webhe/Downloads/MSI/Local%20Sites/jajan-cuan/scripts/release.js) | ✅ Terverifikasi | Otomasi ekspor ke `seed-posts.json`, pembaruan otomatis payload `seed-database.html`, push REST ke `/posts.json`, dan eksekusi deploy Firebase Hosting. |
 
@@ -716,11 +717,11 @@ flowchart LR
 ```
 
 #### Milestone 1: Implementasi Web Experience Layer (`web/`)
-- [ ] Buat markup Search Bar di `web/experience.html` lengkap dengan tombol reset `✕` dan placeholder informatif.
-- [ ] Hubungkan event listener search dengan *debounce* 300 ms untuk memfilter daftar resep secara instan (0 ms delay).
-- [ ] Pasang tombol ikon hati di template kartu resep (`renderRecipeCard`) yang terhubung langsung ke pembuka modal pop-up pancingan install aplikasi (`trigger-waitlist` / `data-source="card_bookmark_hook"`).
-- [ ] Perbarui teks modal soft opt-in saat dipicu dari tombol bookmark: *"Mau simpan resep favorit & buka offline di pasar? Download Jajan Cuan di Google Play!"*.
-- [ ] Tambahkan styling CSS untuk Search Bar dan tombol pancingan hati di `web/css/upgrade.css`.
+- [x] Buat markup Search Bar di `web/experience.html` lengkap dengan tombol reset `✕` dan placeholder informatif.
+- [x] Hubungkan event listener search dengan *debounce* 250 ms untuk memfilter daftar resep secara instan (0 ms delay).
+- [x] Pasang tombol ikon hati di template kartu resep (`renderRecipeCard`) yang terhubung langsung ke pembuka modal pop-up pancingan install aplikasi (`trigger-waitlist` / `data-source="card_bookmark_hook"`).
+- [x] Perbarui teks modal soft opt-in saat dipicu dari tombol bookmark: *"Mau simpan resep favorit & buka offline di pasar? Download Jajan Cuan di Google Play!"*.
+- [x] Tambahkan styling CSS untuk Search Bar dan tombol pancingan hati di `web/css/upgrade.css`.
 
 #### Milestone 2: Refactoring Navigasi Android (Menu Bahan ➔ Favorit)
 - [ ] Modifikasi berkas `menu/bottom_nav_menu.xml`: hapus item `navigation_ingredients` ("Bahan") dan gantikan dengan `navigation_favorites` ("Favorit", ikon `ic_favorite`).

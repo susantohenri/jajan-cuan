@@ -1,0 +1,126 @@
+{
+  "project": {
+    "title": "Sostel Ekonomis - Jajan Cuan",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "totalDurationInFrames": 1210,
+    "websiteUrl": "jajan-cuan.web.app",
+    "audio": {
+      "voiceoverSrc": "audio/tts-full.mp3"
+    }
+  },
+  "recipeData": {
+    "title": "Sostel (Sosis Telur) Tanpa Alat",
+    "yield": "10 Bungkus",
+    "estimatedRevenue": "Rp 20.000",
+    "sellingPrice": "Rp 2.000"
+  },
+  "scenes": [
+    {
+      "id": "scene-1-hook",
+      "name": "Hook AI Doodle Pop (Google Flow)",
+      "startFrame": 0,
+      "durationInFrames": 140,
+      "durationInSeconds": 4.66,
+      "imageSrc": "img/scene-1-hook.jpg",
+      "videoSrc": "video/intro-iframe.mp4",
+      "transitionType": "fade",
+      "badge": "🔥 1 RESEP = 10 BUNGKUS",
+      "caption": {
+        "headline": "",
+        "subText": "",
+        "highlightWords": []
+      },
+      "voiceoverScript": "Ide jualan simpel untung lumayan! Bikin Sosis Telur atau Sostel tanpa alat pembuat sostel mahal, jual dua ribuan aja pasti ludes diserbu bocil! Satu resep ini bisa jadi sepuluh bungkus lho."
+    },
+    {
+      "id": "scene-2-prep",
+      "name": "Campur Adonan Sostel",
+      "startFrame": 140,
+      "durationInFrames": 300,
+      "durationInSeconds": 10,
+      "imageSrc": "img/scene-2.jpg",
+      "transitionType": "slide-left",
+      "badge": "🍳 LANGKAH 1: CAMPUR BUMBU & TELUR",
+      "ingredients": {
+        "title": "Bahan Adonan",
+        "items": [
+          "3 Telur, 5 sdm terigu, 150ml air",
+          "Wortel parut, daun bawang, bumbu penyedap",
+          "10 Sosis utuh & Plastik es mambo"
+        ]
+      },
+      "caption": {
+        "headline": "TUANG KE PLASTIK ES!",
+        "subText": "Masukan sosis ke plastik, tuang adonan telur pakai corong, ikat rapat",
+        "highlightWords": ["PLASTIK ES", "CORONG", "IKAT RAPAT"]
+      },
+      "voiceoverScript": "Pertama, kocok tiga butir telur, campur dengan lima sendok makan terigu, seratus lima puluh mili air, parutan wortel, irisan daun bawang, dan bumbu penyedap. Siapkan sepuluh plastik es mambo, masukin satu sosis utuh ke masing-masing plastik, lalu tuang adonan telur tadi pakai bantuan corong dan ikat rapat."
+    },
+    {
+      "id": "scene-3-cook",
+      "name": "Rebus Jangan Kelamaan",
+      "startFrame": 440,
+      "durationInFrames": 300,
+      "durationInSeconds": 10,
+      "imageSrc": "img/scene-3.jpg",
+      "transitionType": "slide-left",
+      "badge": "🔥 LANGKAH 2: REBUS SOSTEL",
+      "ingredients": {
+        "title": "Proses Merebus",
+        "items": [
+          "Didihkan air secukupnya di panci",
+          "Rebus sostel sampai mengapung",
+          "TIPS: Jangan terlalu lama agar plastik tidak pecah!"
+        ]
+      },
+      "caption": {
+        "headline": "REBUS SAMPAI MENGAPUNG!",
+        "subText": "Jangan direbus kelamaan biar plastik tidak pecah saat sosis mengembang",
+        "highlightWords": ["MENGAPUNG", "JANGAN KELAMAAN"]
+      },
+      "voiceoverScript": "Selanjutnya, rebus di air mendidih sampai mengapung. Ingat ya, jangan direbus terlalu lama biar plastiknya nggak pecah karena sosisnya bakal mengembang!"
+    },
+    {
+      "id": "scene-4-packaging",
+      "name": "Goreng & Kemas",
+      "startFrame": 740,
+      "durationInFrames": 210,
+      "durationInSeconds": 7,
+      "imageSrc": "img/scene-4.jpg",
+      "transitionType": "slide-left",
+      "badge": "🧀 LANGKAH 3: GORENG & SAJIKAN",
+      "ingredients": {
+        "title": "Penyajian & Simpan",
+        "items": [
+          "Buka plastik saat sostel sudah dingin & set",
+          "Bisa dibalur tepung panir agar krispi",
+          "Bisa juga disimpan di kulkas untuk stok"
+        ]
+      },
+      "caption": {
+        "headline": "SIAP DIGORENG & DIJUAL!",
+        "subText": "Goreng krispi pakai panir atau simpan di kulkas buat besok",
+        "highlightWords": ["DIGORENG", "STOK KULKAS"]
+      },
+      "voiceoverScript": "Kalau sudah dingin dan set, buka plastiknya. Kamu bisa langsung goreng, dibalur tepung panir dulu biar makin krispi, atau simpan di kulkas buat stok jualan besok. Praktis banget kan?"
+    },
+    {
+      "id": "scene-5-cta",
+      "name": "50+ Resep Viral Lainnya",
+      "startFrame": 950,
+      "durationInFrames": 260,
+      "durationInSeconds": 8.66,
+      "imageSrc": "img/scene-5-cta.jpg",
+      "transitionType": "zoom-in",
+      "badge": "📚 50+ RESEP VIRAL LAINNYA",
+      "caption": {
+        "headline": "CEK 50+ RESEP VIRAL LAINNYA",
+        "subText": "Kunjungi website untuk ide jualan + kalkulator modal otomatis",
+        "highlightWords": ["50+ RESEP VIRAL", "KALKULATOR MODAL", "WEBSITE"]
+      },
+      "voiceoverScript": "Mau tahu 50 lebih resep viral lainnya plus kalkulator HPP otomatis? Yuk cek langsung ke jajan strip cuan dot web dot app sekarang juga!"
+    }
+  ]
+}

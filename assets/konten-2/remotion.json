@@ -1,0 +1,126 @@
+{
+  "project": {
+    "title": "Tteokpokki Ekonomis - Jajan Cuan",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "totalDurationInFrames": 1210,
+    "websiteUrl": "jajan-cuan.web.app",
+    "audio": {
+      "voiceoverSrc": "audio/tts-full.mp3"
+    }
+  },
+  "recipeData": {
+    "title": "Tteokpokki/Topokki Ekonomis",
+    "yield": "30 Mika",
+    "estimatedRevenue": "Rp 60.000",
+    "sellingPrice": "Rp 2.000"
+  },
+  "scenes": [
+    {
+      "id": "scene-1-hook",
+      "name": "Hook AI Doodle Pop (Google Flow)",
+      "startFrame": 0,
+      "durationInFrames": 140,
+      "durationInSeconds": 4.66,
+      "imageSrc": "img/scene-1-hook.jpg",
+      "videoSrc": "video/intro-iframe.mp4",
+      "transitionType": "fade",
+      "badge": "🔥 1 RESEP = 30 MIKA",
+      "caption": {
+        "headline": "",
+        "subText": "",
+        "highlightWords": []
+      },
+      "voiceoverScript": "Ide jualan modal minim untung maksimal! Bikin Tteokpokki ekonomis jual dua ribuan aja, satu resep bisa jadi 30 mika lho, dijamin laris manis di kantin sekolah!"
+    },
+    {
+      "id": "scene-2-prep",
+      "name": "Bikin Adonan Tteok",
+      "startFrame": 140,
+      "durationInFrames": 300,
+      "durationInSeconds": 10,
+      "imageSrc": "img/scene-2.jpg",
+      "transitionType": "slide-left",
+      "badge": "🍳 LANGKAH 1: BIKIN ADONAN",
+      "ingredients": {
+        "title": "Takaran Bahan Tteok",
+        "items": [
+          "500gr tepung beras (sangrai) & 250gr kanji",
+          "Air mendidih secukupnya",
+          "Tips: Bilas tteok matang dengan air mengalir agar tidak lengket"
+        ]
+      },
+      "caption": {
+        "headline": "ULENI SAMPAI KALIS!",
+        "subText": "Sangrai tepung beras, campur bahan, bentuk, lalu rebus",
+        "highlightWords": ["TEPUNG BERAS", "KALIS", "REBUS"]
+      },
+      "voiceoverScript": "Pertama, sangrai 500 gram tepung beras. Campur sama 250 gram tepung kanji dan sedikit garam. Tuang air mendidih perlahan sambil diuleni sampai kalis. Gulung memanjang dan potong kecil-kecil, lalu rebus sampai mengambang. Jangan lupa, bilas air mengalir biar tteok nggak lengket ya!"
+    },
+    {
+      "id": "scene-3-cook",
+      "name": "Masak Saus Merah",
+      "startFrame": 440,
+      "durationInFrames": 300,
+      "durationInSeconds": 10,
+      "imageSrc": "img/scene-3.jpg",
+      "transitionType": "slide-left",
+      "badge": "🥫 LANGKAH 2: SAUS TANPA GOCHUJANG",
+      "ingredients": {
+        "title": "Racikan Bumbu / Saus",
+        "items": [
+          "2 centong saus tomat & 2 centong saus sambal",
+          "1 sdm minyak wijen & 1 sdm kecap asin",
+          "Bawang putih, lada, bubuk cabe, garam, gula"
+        ]
+      },
+      "caption": {
+        "headline": "SAUS KENTAL TANPA GOCHUJANG",
+        "subText": "Tumis bawang, masukkan aneka saus, masak tteok hingga menyusut",
+        "highlightWords": ["TANPA GOCHUJANG", "MENYUSUT"]
+      },
+      "voiceoverScript": "Untuk sausnya, tumis bawang putih cincang, masukin saus tomat, saus sambal, kecap asin, minyak wijen, dan bumbu pelengkap. Nggak perlu gochujang mahal kok! Masukkan tteok, masak sampai kuahnya mengental."
+    },
+    {
+      "id": "scene-4-packaging",
+      "name": "Kemas Ke Mika",
+      "startFrame": 740,
+      "durationInFrames": 210,
+      "durationInSeconds": 7,
+      "imageSrc": "img/scene-4.jpg",
+      "transitionType": "slide-left",
+      "badge": "🧀 LANGKAH 3: KEMAS & TOPPING",
+      "ingredients": {
+        "title": "Kemas & Topping",
+        "items": [
+          "Tunggu agak dingin sebelum dikemas",
+          "Kemas ke 30 mika kecil (isi 8-9 potong)",
+          "Topping: Taburan Wijen Sangrai"
+        ]
+      },
+      "caption": {
+        "headline": "KEMAS JADI 30 MIKA!",
+        "subText": "Isi 8-9 potong per mika, beri taburan wijen sangrai",
+        "highlightWords": ["30 MIKA", "8-9 POTONG", "WIJEN SANGRAI"]
+      },
+      "voiceoverScript": "Tunggu agak dingin, lalu kemas ke mika kecil isi 8 sampai 9 potong. Taburi wijen sangrai biar makin cakep dan menggugah selera. Auto cuan nih!"
+    },
+    {
+      "id": "scene-5-cta",
+      "name": "50+ Resep Viral Lainnya",
+      "startFrame": 950,
+      "durationInFrames": 260,
+      "durationInSeconds": 8.66,
+      "imageSrc": "img/scene-5-cta.jpg",
+      "transitionType": "zoom-in",
+      "badge": "📚 50+ RESEP VIRAL LAINNYA",
+      "caption": {
+        "headline": "CEK 50+ RESEP VIRAL LAINNYA",
+        "subText": "Kunjungi website untuk ide jualan + kalkulator modal otomatis",
+        "highlightWords": ["50+ RESEP VIRAL", "KALKULATOR MODAL", "WEBSITE"]
+      },
+      "voiceoverScript": "Mau tahu 50 lebih resep viral lainnya plus kalkulator HPP otomatis? Yuk cek langsung ke jajan strip cuan dot web dot app sekarang juga!"
+    }
+  ]
+}
