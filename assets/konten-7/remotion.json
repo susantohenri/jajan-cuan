@@ -1,0 +1,177 @@
+{
+  "project": {
+    "title": "Brownies Kukus - Jajan Cuan",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "totalDurationInFrames": 1260,
+    "websiteUrl": "https://jajan-cuan.web.app",
+    "audio": {
+      "voiceoverSrc": "audio/tts-full.mp3",
+      "estimatedDurationSeconds": 42.0
+    }
+  },
+  "recipeData": {
+    "title": "Brownies Kukus Cocok Untuk Jualan",
+    "yield": "1 loyang jadi 4 kotak",
+    "estimatedRevenue": null,
+    "sellingPrice": null
+  },
+  "scenes": [
+    {
+      "id": "scene-1-hook",
+      "name": "Hook",
+      "startFrame": 0,
+      "durationInFrames": 165,
+      "durationInSeconds": 5.5,
+      "imageSrc": "img/scene-1.jpg",
+      "videoSrc": "video/intro-hook.mp4",
+      "transitionType": "fade",
+      "badge": "IDE USAHA",
+      "ingredients": {
+        "title": "Brownies Kukus",
+        "items": []
+      },
+      "caption": {
+        "headline": "BROWNIES KUKUS LEMBUT",
+        "subText": "Lumer di mulut & gampang dibikin!",
+        "highlightWords": [
+          "LEMBUT",
+          "LUMER"
+        ]
+      },
+      "voiceoverScript": "Brownies kukus selembut sutra ini lumer di mulut dan gampang banget dibikin!"
+    },
+    {
+      "id": "scene-2-ingredients",
+      "name": "Bahan",
+      "startFrame": 165,
+      "durationInFrames": 255,
+      "durationInSeconds": 8.5,
+      "imageSrc": "img/scene-2.jpg",
+      "transitionType": "slide-left",
+      "badge": "BAHAN-BAHAN",
+      "ingredients": {
+        "title": "Komposisi Utama",
+        "items": [
+          "100 gr DCC",
+          "120 gr minyak sayur",
+          "150 gr gula pasir",
+          "4 butir telur utuh",
+          "80 gr terigu segitiga",
+          "35 gr cokelat bubuk",
+          "1 sdt SP, baking powder, vanili"
+        ]
+      },
+      "caption": {
+        "headline": "SIAPKAN BAHANNYA",
+        "subText": "Takaran pas untuk hasil maksimal",
+        "highlightWords": [
+          "BAHANNYA"
+        ]
+      },
+      "voiceoverScript": "Siapin dark cooking chocolate, minyak sayur, gula pasir, empat butir telur, terigu, cokelat bubuk, SP, baking powder, dan vanili."
+    },
+    {
+      "id": "scene-3-preparation",
+      "name": "Persiapan",
+      "startFrame": 420,
+      "durationInFrames": 195,
+      "durationInSeconds": 6.5,
+      "imageSrc": "img/scene-3.jpg",
+      "transitionType": "slide-left",
+      "badge": "CARA MEMBUAT",
+      "ingredients": {
+        "title": "Pencampuran Adonan",
+        "items": [
+          "Lelehkan minyak & DCC",
+          "Mikser telur, gula & SP kecepatan tinggi"
+        ]
+      },
+      "caption": {
+        "headline": "MIKSER SAMPAI PUTIH",
+        "subText": "Kocok telur, gula, dan SP",
+        "highlightWords": [
+          "PUTIH BERJEJAK"
+        ]
+      },
+      "voiceoverScript": "Lelehin cokelat dan minyak, lalu mikser telur, gula, dan SP sampai putih berjejak."
+    },
+    {
+      "id": "scene-4-cooking",
+      "name": "Memasak",
+      "startFrame": 615,
+      "durationInFrames": 255,
+      "durationInSeconds": 8.5,
+      "imageSrc": "img/scene-4.jpg",
+      "transitionType": "slide-left",
+      "badge": "PENGUKUSAN",
+      "ingredients": {
+        "title": "Tahap Akhir Adonan",
+        "items": [
+          "Masukkan terigu, cokelat bubuk, vanili, baking powder",
+          "Masukkan lelehan cokelat",
+          "Kukus 45 menit"
+        ]
+      },
+      "caption": {
+        "headline": "KUKUS 45 MENIT",
+        "subText": "Aduk rata kecepatan rendah lalu kukus",
+        "highlightWords": [
+          "45 MENIT"
+        ]
+      },
+      "voiceoverScript": "Masukin bahan kering dan lelehan cokelat dengan kecepatan rendah, aduk rata, lalu kukus selama empat puluh lima menit."
+    },
+    {
+      "id": "scene-5-finished-dish",
+      "name": "Hasil Akhir",
+      "startFrame": 870,
+      "durationInFrames": 180,
+      "durationInSeconds": 6.0,
+      "imageSrc": "img/scene-5.jpg",
+      "transitionType": "zoom-in",
+      "badge": "TOPPING",
+      "ingredients": {
+        "title": "Penyajian",
+        "items": [
+          "Potong menjadi 4 bagian",
+          "Beri glaze cokelat & keju parut",
+          "Masukkan ke kotak ukuran 20x6,5"
+        ]
+      },
+      "caption": {
+        "headline": "POTONG & BERI TOPPING",
+        "subText": "Glaze cokelat dan keju parut melimpah",
+        "highlightWords": [
+          "TOPPING"
+        ]
+      },
+      "voiceoverScript": "Potong jadi empat bagian, beri glaze cokelat dan keju parut di atasnya."
+    },
+    {
+      "id": "scene-6-cta",
+      "name": "CTA",
+      "startFrame": 1050,
+      "durationInFrames": 210,
+      "durationInSeconds": 7.0,
+      "imageSrc": "img/scene-6.jpg",
+      "transitionType": "fade",
+      "badge": "JAJAN CUAN",
+      "ingredients": {
+        "title": "Cek Website",
+        "items": [
+          "Temukan berbagai ide usaha kuliner menarik"
+        ]
+      },
+      "caption": {
+        "headline": "IDE USAHA LAINNYA?",
+        "subText": "Kunjungi jajan-cuan.web.app",
+        "highlightWords": [
+          "JAJAN CUAN"
+        ]
+      },
+      "voiceoverScript": "Mau resep praktis lainnya buat ide jualan? Cek langsung di Jajan Cuan web app ya!"
+    }
+  ]
+}
