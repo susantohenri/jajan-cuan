@@ -1,0 +1,213 @@
+{
+  "project": {
+    "title": "Turon Pisang Nangka - Jajan Cuan",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "totalDurationInFrames": 1824,
+    "websiteUrl": "https://jajan-cuan.web.app",
+    "audio": {
+      "voiceoverSrc": "audio/tts-full.mp3"
+    }
+  },
+  "recipeData": {
+    "title": "Kue Turon Khas Filipina (Lumpia Pisang Nangka Karamel)",
+    "yield": "10 Pcs",
+    "estimatedRevenue": "Rp 20.000",
+    "sellingPrice": "Rp 2.000"
+  },
+  "scenes": [
+    {
+      "id": "scene-1-hook",
+      "name": "Hook Video AI",
+      "startFrame": 0,
+      "durationInFrames": 171,
+      "durationInSeconds": 5.7,
+      "imageSrc": "img/scene-1.jpg",
+      "videoSrc": "video/intro-iframe.mp4",
+      "transitionType": "fade",
+      "badge": "🔥 IDE JUALAN 2 RIBUAN",
+      "caption": {
+        "headline": "MODAL TIPIS CUAN SELANGIT",
+        "subText": "Turon pisang nangka khas Filipina crispy banget!",
+        "highlightWords": ["MODAL TIPIS", "CUAN SELANGIT"]
+      },
+      "voiceoverScript": "Modal tipis cuma dua ribuan, tapi cuannya selangit! Cobain Turon pisang nangka khas Filipina crispy banget ini!"
+    },
+    {
+      "id": "scene-2-prep",
+      "name": "Bahan Pokok & Takaran",
+      "startFrame": 171,
+      "durationInFrames": 340,
+      "durationInSeconds": 11.3,
+      "imageSrc": "img/scene-2.jpg",
+      "transitionType": "slide-left",
+      "badge": "📋 BAHAN & TAKARAN",
+      "ingredients": {
+        "title": "Bahan Baku",
+        "items": [
+          "10 lbr kulit lumpia",
+          "4 buah pisang (potong tipis)",
+          "50g buah nangka",
+          "50g gula merah & pasir",
+          "2 sdm terigu + 50ml air (perekat)"
+        ]
+      },
+      "caption": {
+        "headline": "BAHAN EKONOMIS",
+        "subText": "Siapkan lumpia, pisang, nangka, dan gula.",
+        "highlightWords": ["BAHAN", "EKONOMIS"]
+      },
+      "voiceoverScript": "Siapkan sepuluh lembar kulit lumpia, empat buah pisang dipotong tipis, lima puluh gram nangka, lima puluh gram gula merah parut, lima puluh gram gula pasir, dan dua sendok makan terigu untuk lem pencair."
+    },
+    {
+      "id": "scene-3-step1",
+      "name": "Langkah 1: Olah Dasar",
+      "startFrame": 511,
+      "durationInFrames": 141,
+      "durationInSeconds": 4.7,
+      "imageSrc": "img/scene-3.jpg",
+      "transitionType": "slide-left",
+      "badge": "🥣 LANGKAH 1",
+      "ingredients": {
+        "title": "Tips Potong",
+        "items": [
+          "Potong pisang tipis merata"
+        ]
+      },
+      "caption": {
+        "headline": "POTONG PISANG TIPIS",
+        "subText": "Agar matang merata saat digoreng.",
+        "highlightWords": ["POTONG PISANG"]
+      },
+      "voiceoverScript": "Potong buah pisang dengan ketebalan yang pas agar cepat matang merata saat digoreng."
+    },
+    {
+      "id": "scene-4-step2",
+      "name": "Langkah 2: Cetak / Bentuk",
+      "startFrame": 652,
+      "durationInFrames": 171,
+      "durationInSeconds": 5.7,
+      "imageSrc": "img/scene-4.jpg",
+      "transitionType": "slide-left",
+      "badge": "🥧 LANGKAH 2",
+      "ingredients": {
+        "title": "Trik Tata",
+        "items": [
+          "Susun pisang, nangka, taburan gula"
+        ]
+      },
+      "caption": {
+        "headline": "TATA ISIAN LENGKAP",
+        "subText": "Taburkan gula merah dan gula pasir.",
+        "highlightWords": ["TATA ISIAN"]
+      },
+      "voiceoverScript": "Tata irisan pisang di atas kulit lumpia, tambahkan potongan nangka serta taburan gula merah dan gula pasir."
+    },
+    {
+      "id": "scene-5-step3",
+      "name": "Langkah 3: Bumbu / Isian",
+      "startFrame": 823,
+      "durationInFrames": 160,
+      "durationInSeconds": 5.3,
+      "imageSrc": "img/scene-5.jpg",
+      "transitionType": "slide-left",
+      "badge": "🥛 LANGKAH 3",
+      "ingredients": {
+        "title": "Teknik Lipat",
+        "items": [
+          "Lipat lumpia & kunci dengan larutan terigu"
+        ]
+      },
+      "caption": {
+        "headline": "LIPAT DAN KUNCI",
+        "subText": "Gunakan adonan terigu basah agar rapat.",
+        "highlightWords": ["LIPAT", "KUNCI"]
+      },
+      "voiceoverScript": "Lipat rapi seperti lumpia pada umumnya, lalu kunci ujungnya menggunakan adonan terigu basah sampai rapat."
+    },
+    {
+      "id": "scene-6-step4",
+      "name": "Langkah 4: Finishing Olah",
+      "startFrame": 983,
+      "durationInFrames": 160,
+      "durationInSeconds": 5.3,
+      "imageSrc": "img/scene-6.jpg",
+      "transitionType": "slide-left",
+      "badge": "✨ LANGKAH 4",
+      "ingredients": {
+        "title": "Trik Karamel",
+        "items": [
+          "Taburkan gula pasir di minyak panas"
+        ]
+      },
+      "caption": {
+        "headline": "TABUR GULA DI MINYAK",
+        "subText": "Kunci utama karamel crispy menempel.",
+        "highlightWords": ["TABUR GULA"]
+      },
+      "voiceoverScript": "Panaskan minyak sayur, lalu taburkan tiga hingga empat sendok makan gula pasir langsung ke dalam wajan."
+    },
+    {
+      "id": "scene-7-step5",
+      "name": "Langkah 5: Masak Panas / Oven",
+      "startFrame": 1143,
+      "durationInFrames": 171,
+      "durationInSeconds": 5.7,
+      "imageSrc": "img/scene-7.jpg",
+      "transitionType": "slide-left",
+      "badge": "🔥 LANGKAH 5",
+      "ingredients": {
+        "title": "Proses Goreng",
+        "items": [
+          "Aduk terus sampai karamel menempel"
+        ]
+      },
+      "caption": {
+        "headline": "GORENG HINGGA KARAMEL",
+        "subText": "Aduk terus supaya merata sempurna.",
+        "highlightWords": ["GORENG", "KARAMEL"]
+      },
+      "voiceoverScript": "Masukkan semua kue turon saat gula sedikit mencair, aduk terus hingga karamel menempel sempurna ke kulit lumpia."
+    },
+    {
+      "id": "scene-8-pack",
+      "name": "Kemas Mika & Comment Bait",
+      "startFrame": 1314,
+      "durationInFrames": 280,
+      "durationInSeconds": 9.3,
+      "imageSrc": "img/scene-8.jpg",
+      "transitionType": "slide-left",
+      "badge": "📦 KEMAS MIKA JUALAN",
+      "ingredients": {
+        "title": "Potensi Jualan",
+        "items": [
+          "1 Resep = 10 Pcs",
+          "Harga Jual: Rp 2.000 / pcs"
+        ]
+      },
+      "caption": {
+        "headline": "JUALAN 2 RIBUAN",
+        "subText": "Kira-kira di daerahmu pasnya dijual berapa?",
+        "highlightWords": ["KOMEN DI BAWAH"]
+      },
+      "voiceoverScript": "Angkat dan pisahkan segera agar tidak saling menempel, nikmati saat dingin dengan sensasi kriuk yang luar biasa. Kira-kira kalau di daerahmu pasnya dijual berapa? Coba komen di bawah!"
+    },
+    {
+      "id": "scene-9-cta",
+      "name": "CTA Website Jajan Cuan & Loop",
+      "startFrame": 1594,
+      "durationInFrames": 230,
+      "durationInSeconds": 7.7,
+      "imageSrc": "img/scene-9.jpg",
+      "transitionType": "zoom-in",
+      "badge": "📚 50+ RESEP VIRAL LAINNYA",
+      "caption": {
+        "headline": "50+ RESEP VIRAL LAINNYA",
+        "subText": "Cek resep & kalkulator modal di(https://jajan-cuan.web.app)!",
+        "highlightWords": ["JAJAN CUAN", "KALKULATOR MODAL"]
+      },
+      "voiceoverScript": "Temukan lima puluh lebih resep jajanan viral dan kalkulator modal otomatis di website Jajan Cuan, karena modal tipis cuma"
+    }
+  ]
+}

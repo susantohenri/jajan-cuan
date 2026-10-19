@@ -1,0 +1,219 @@
+{
+  "project": {
+    "title": "Ongol-Ongol Bihun Nanas - Jajan Cuan",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "totalDurationInFrames": 2100,
+    "websiteUrl": "https://jajan-cuan.web.app",
+    "audio": {
+      "voiceoverSrc": "audio/tts-full.mp3"
+    }
+  },
+  "recipeData": {
+    "title": "Resep Kue Tradisional Ongol-Ongol Bihun Nanas Mudah dan Ekonomis",
+    "yield": "1 Loyang / Porsi Jualan",
+    "estimatedRevenue": "Rp 35.000",
+    "sellingPrice": "Rp 2.000 / Porsi"
+  },
+  "scenes": [
+    {
+      "id": "scene-1-hook",
+      "name": "Hook Video AI",
+      "startFrame": 0,
+      "durationInFrames": 170,
+      "durationInSeconds": 5.7,
+      "imageSrc": "img/scene-1.jpg",
+      "transitionType": "fade",
+      "badge": "🔥 IDE JUALAN EKONOMIS",
+      "caption": {
+        "headline": "MODAL TIPIS UNTUNG SELANGIT",
+        "subText": "Ongol-ongol bihun nanas manis dan kenyal",
+        "highlightWords": ["MODAL TIPIS", "UNTUNG SELANGIT"]
+      },
+      "voiceoverScript": "Modal tipis untung selangit! Cobain ongol-ongol bihun nanas ekonomis ini, dijamin laris manis buat ide jualan."
+    },
+    {
+      "id": "scene-2-prep",
+      "name": "Bahan Pokok & Takaran",
+      "startFrame": 170,
+      "durationInFrames": 310,
+      "durationInSeconds": 10.3,
+      "imageSrc": "img/scene-2.jpg",
+      "transitionType": "slide-left",
+      "badge": "📋 BAHAN & TAKARAN",
+      "ingredients": {
+        "title": "Bahan Baku",
+        "items": [
+          "1 buah nanas",
+          "200 g tepung sagu",
+          "250 g gula pasir",
+          "1/4 sdt garam & 1 sachet vanili",
+          "1 bungkus agar-agar plain & 50 ml air"
+        ]
+      },
+      "caption": {
+        "headline": "SIAPKAN BAHAN UTAMA",
+        "subText": "Takaran ekonomis pas untuk jualan",
+        "highlightWords": ["TEPUNG SAGU", "AGAR-AGAR"]
+      },
+      "voiceoverScript": "Siapkan satu buah nanas, dua ratus gram tepung sagu, dua ratus lima puluh gram gula pasir, seperempat sendok teh garam, satu sachet vanili, satu bungkus agar-agar plain, dan lima puluh mililiter air."
+    },
+    {
+      "id": "scene-3-step1",
+      "name": "Langkah 1: Olah Dasar",
+      "startFrame": 480,
+      "durationInFrames": 210,
+      "durationInSeconds": 7.0,
+      "imageSrc": "img/scene-3.jpg",
+      "transitionType": "slide-left",
+      "badge": "🥣 LANGKAH 1",
+      "ingredients": {
+        "title": "Persiapan Awal",
+        "items": [
+          "Kukus kelapa parut 10 menit",
+          "Rebus bihun sampai lunak",
+          "Bagi 3 & beri pewarna"
+        ]
+      },
+      "caption": {
+        "headline": "REBUS & WARNAI BIHUN",
+        "subText": "Kukus kelapa parut untuk taburan",
+        "highlightWords": ["REBUS BIHUN", "PEWARNA"]
+      },
+      "voiceoverScript": "Kukus kelapa parut selama sepuluh menit. Rebus bihun sampai lunak, lalu bagi menjadi tiga bagian dan beri pewarna makanan berbeda."
+    },
+    {
+      "id": "scene-4-step2",
+      "name": "Langkah 2: Blender & Adonan",
+      "startFrame": 690,
+      "durationInFrames": 200,
+      "durationInSeconds": 6.7,
+      "imageSrc": "img/scene-4.jpg",
+      "transitionType": "slide-left",
+      "badge": "🍍 LANGKAH 2",
+      "ingredients": {
+        "title": "Bikin Adonan Nanas",
+        "items": [
+          "Blender nanas, air, dan gula",
+          "Campur tepung sagu & agar-agar",
+          "Aduk hingga rata"
+        ]
+      },
+      "caption": {
+        "headline": "BLENDER HALUS NANAS",
+        "subText": "Campurkan semua bahan adonan rata",
+        "highlightWords": ["BLENDER NANAS", "ADONAN RATA"]
+      },
+      "voiceoverScript": "Blender nanas bersama air dan gula pasir. Tambahkan tepung sagu, garam, vanili, dan agar-agar, lalu aduk hingga benar-benar merata."
+    },
+    {
+      "id": "scene-5-step3",
+      "name": "Langkah 3: Tata Bihun",
+      "startFrame": 890,
+      "durationInFrames": 150,
+      "durationInSeconds": 5.0,
+      "imageSrc": "img/scene-5.jpg",
+      "transitionType": "slide-left",
+      "badge": "✨ LANGKAH 3",
+      "ingredients": {
+        "title": "Penyusunan Loyang",
+        "items": [
+          "Alasi loyang plastik anti panas",
+          "Tata bihun warna-warni rapi"
+        ]
+      },
+      "caption": {
+        "headline": "TATA BIHUN DI LOYANG",
+        "subText": "Alasi plastik anti panas pada loyang",
+        "highlightWords": ["TATA BIHUN", "LOYANG"]
+      },
+      "voiceoverScript": "Tata bihun warna-warni di dalam loyang yang sudah dialasi plastik anti panas secara merata."
+    },
+    {
+      "id": "scene-6-step4",
+      "name": "Langkah 4: Siram Adonan",
+      "startFrame": 1040,
+      "durationInFrames": 150,
+      "durationInSeconds": 5.0,
+      "imageSrc": "img/scene-6.jpg",
+      "transitionType": "slide-left",
+      "badge": "🔥 LANGKAH 4",
+      "ingredients": {
+        "title": "Penyiraman & Kukus",
+        "items": [
+          "Siram adonan nanas secukupnya",
+          "Kukus selama 7 menit"
+        ]
+      },
+      "caption": {
+        "headline": "SIRAM ADONAN NANAS",
+        "subText": "Kukus lapisan pertama selama 7 menit",
+        "highlightWords": ["SIRAM ADONAN", "KUKUS 7 MENIT"]
+      },
+      "voiceoverScript": "Siram adonan nanas secukupnya asal bisa menutup permukaan bihun, lalu kukus selama tujuh menit."
+    },
+    {
+      "id": "scene-7-step5",
+      "name": "Langkah 5: Lapisan Akhir",
+      "startFrame": 1190,
+      "durationInFrames": 220,
+      "durationInSeconds": 7.3,
+      "imageSrc": "img/scene-7.jpg",
+      "transitionType": "slide-left",
+      "badge": "⏱️ LANGKAH 5",
+      "ingredients": {
+        "title": "Pengukusan Akhir",
+        "items": [
+          "Ulangi tata bihun & adonan",
+          "Kukus lapisan akhir 15-20 menit"
+        ]
+      },
+      "caption": {
+        "headline": "KUKUS LAPISAN AKHIR",
+        "subText": "Masak hingga matang sempurna",
+        "highlightWords": ["KUKUS AKHIR", "MATANG SEMPURNA"]
+      },
+      "voiceoverScript": "Ulangi menuang bihun dan adonan secara berlapis. Pada lapisan terakhir, kukus selama lima belas hingga puluh menit sampai matang sempurna."
+    },
+    {
+      "id": "scene-8-pack",
+      "name": "Kemas Mika & Comment Bait",
+      "startFrame": 1410,
+      "durationInFrames": 220,
+      "durationInSeconds": 7.3,
+      "imageSrc": "img/scene-8.jpg",
+      "transitionType": "slide-left",
+      "badge": "📦 KEMAS MIKA JUALAN",
+      "ingredients": {
+        "title": "Potong & Tabur",
+        "items": [
+          "Keluarkan setelah dingin",
+          "Taburi kelapa parut kukus"
+        ]
+      },
+      "caption": {
+        "headline": "JUALAN LARIS MANIS",
+        "subText": "Kira-kira pasnya dijual berapa?",
+        "highlightWords": ["KOMEN DI BAWAH"]
+      },
+      "voiceoverScript": "Setelah dingin, potong-potong kue dan baluri dengan kelapa parut kukus. Kira-kira kalau di daerahmu pasnya dijual berapa? Coba komen di bawah!"
+    },
+    {
+      "id": "scene-9-cta",
+      "name": "CTA Website Jajan Cuan & Loop",
+      "startFrame": 1630,
+      "durationInFrames": 470,
+      "durationInSeconds": 15.7,
+      "imageSrc": "img/scene-9.jpg",
+      "transitionType": "zoom-in",
+      "badge": "📚 50+ RESEP VIRAL LAINNYA",
+      "caption": {
+        "headline": "50+ RESEP VIRAL LAINNYA",
+        "subText": "Kunjungi jajan-cuan.web.app sekarang!",
+        "highlightWords": ["JAJAN CUAN", "KALKULATOR MODAL"]
+      },
+      "voiceoverScript": "Mau cari inspirasi jajanan serba dua ribuan lainnya? Langsung cek puluhan resep viral dan kalkulator modal di website Jajan-Cuan dot web dot app, karena..."
+    }
+  ]
+}

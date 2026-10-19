@@ -1,126 +1,219 @@
 {
   "project": {
-    "title": "Sostel Ekonomis - Jajan Cuan",
+    "title": "Teh Sereh (Ide Jualan) - Jajan Cuan",
     "fps": 30,
     "width": 1080,
     "height": 1920,
-    "totalDurationInFrames": 1210,
-    "websiteUrl": "jajan-cuan.web.app",
+    "totalDurationInFrames": 1560,
+    "websiteUrl": "https://jajan-cuan.web.app",
     "audio": {
       "voiceoverSrc": "audio/tts-full.mp3"
     }
   },
   "recipeData": {
-    "title": "Sostel (Sosis Telur) Tanpa Alat",
-    "yield": "10 Bungkus",
-    "estimatedRevenue": "Rp 20.000",
-    "sellingPrice": "Rp 2.000"
+    "title": "Teh Sereh (Ide Jualan)",
+    "yield": "Botol 150 ml",
+    "estimatedRevenue": "Rp 50.000",
+    "sellingPrice": "Rp 3.000"
   },
   "scenes": [
     {
       "id": "scene-1-hook",
-      "name": "Hook AI Doodle Pop (Google Flow)",
+      "name": "Hook Video AI",
       "startFrame": 0,
-      "durationInFrames": 140,
-      "durationInSeconds": 4.66,
-      "imageSrc": "img/scene-1-hook.jpg",
+      "durationInFrames": 180,
+      "durationInSeconds": 6.0,
+      "imageSrc": "img/scene-1.jpg",
       "videoSrc": "video/intro-iframe.mp4",
       "transitionType": "fade",
-      "badge": "🔥 1 RESEP = 10 BUNGKUS",
+      "badge": "🔥 IDE JUALAN MINUMAN",
       "caption": {
-        "headline": "",
-        "subText": "",
-        "highlightWords": []
+        "headline": "TEH SEREH KEKINIAN",
+        "subText": "Modal tipis cuan selangit!",
+        "highlightWords": ["TEH SEREH", "CUAN"]
       },
-      "voiceoverScript": "Ide jualan simpel untung lumayan! Bikin Sosis Telur atau Sostel tanpa alat pembuat sostel mahal, jual dua ribuan aja pasti ludes diserbu bocil! Satu resep ini bisa jadi sepuluh bungkus lho."
+      "voiceoverScript": "Modal serai sama jahe dibikin teh kekinian buat jualan? Omzetnya bikin dompet tebel seharian!"
     },
     {
       "id": "scene-2-prep",
-      "name": "Campur Adonan Sostel",
-      "startFrame": 140,
+      "name": "Bahan Pokok & Takaran",
+      "startFrame": 180,
       "durationInFrames": 300,
-      "durationInSeconds": 10,
+      "durationInSeconds": 10.0,
       "imageSrc": "img/scene-2.jpg",
       "transitionType": "slide-left",
-      "badge": "🍳 LANGKAH 1: CAMPUR BUMBU & TELUR",
+      "badge": "📋 BAHAN & TAKARAN",
       "ingredients": {
-        "title": "Bahan Adonan",
+        "title": "Bahan Baku",
         "items": [
-          "3 Telur, 5 sdm terigu, 150ml air",
-          "Wortel parut, daun bawang, bumbu penyedap",
-          "10 Sosis utuh & Plastik es mambo"
+          "15 ruas serai (Digeprek)",
+          "150 gr jahe (Digeprek)",
+          "3 lt air",
+          "3 sdm teh",
+          "Sejumput garam",
+          "200 gr gula pasir"
         ]
       },
       "caption": {
-        "headline": "TUANG KE PLASTIK ES!",
-        "subText": "Masukan sosis ke plastik, tuang adonan telur pakai corong, ikat rapat",
-        "highlightWords": ["PLASTIK ES", "CORONG", "IKAT RAPAT"]
+        "headline": "RESEP EKONOMIS",
+        "subText": "Takaran pas untuk jualan",
+        "highlightWords": ["15 RUAS", "150 GR"]
       },
-      "voiceoverScript": "Pertama, kocok tiga butir telur, campur dengan lima sendok makan terigu, seratus lima puluh mili air, parutan wortel, irisan daun bawang, dan bumbu penyedap. Siapkan sepuluh plastik es mambo, masukin satu sosis utuh ke masing-masing plastik, lalu tuang adonan telur tadi pakai bantuan corong dan ikat rapat."
+      "voiceoverScript": "Siapkan lima belas ruas serai digeprek, seratus lima puluh gram jahe digeprek, tiga liter air, tiga sendok makan teh, sejumput garam, dan duaratus gram gula pasir."
     },
     {
-      "id": "scene-3-cook",
-      "name": "Rebus Jangan Kelamaan",
-      "startFrame": 440,
-      "durationInFrames": 300,
-      "durationInSeconds": 10,
+      "id": "scene-3-step1",
+      "name": "Langkah 1: Olah Dasar",
+      "startFrame": 480,
+      "durationInFrames": 120,
+      "durationInSeconds": 4.0,
       "imageSrc": "img/scene-3.jpg",
       "transitionType": "slide-left",
-      "badge": "🔥 LANGKAH 2: REBUS SOSTEL",
+      "badge": "🥣 LANGKAH 1",
       "ingredients": {
-        "title": "Proses Merebus",
+        "title": "Tips Olah",
         "items": [
-          "Didihkan air secukupnya di panci",
-          "Rebus sostel sampai mengapung",
-          "TIPS: Jangan terlalu lama agar plastik tidak pecah!"
+          "Cuci bersih bahan",
+          "Geprek serai & jahe"
         ]
       },
       "caption": {
-        "headline": "REBUS SAMPAI MENGAPUNG!",
-        "subText": "Jangan direbus kelamaan biar plastik tidak pecah saat sosis mengembang",
-        "highlightWords": ["MENGAPUNG", "JANGAN KELAMAAN"]
+        "headline": "CUCI & GEPREK",
+        "subText": "Keluarkan aroma rempah maksimal",
+        "highlightWords": ["GEPREK"]
       },
-      "voiceoverScript": "Selanjutnya, rebus di air mendidih sampai mengapung. Ingat ya, jangan direbus terlalu lama biar plastiknya nggak pecah karena sosisnya bakal mengembang!"
+      "voiceoverScript": "Pertama, cuci bersih lalu geprek serai dan jahenya sampai harum."
     },
     {
-      "id": "scene-4-packaging",
-      "name": "Goreng & Kemas",
-      "startFrame": 740,
-      "durationInFrames": 210,
-      "durationInSeconds": 7,
+      "id": "scene-4-step2",
+      "name": "Langkah 2: Rebus Air",
+      "startFrame": 600,
+      "durationInFrames": 150,
+      "durationInSeconds": 5.0,
       "imageSrc": "img/scene-4.jpg",
       "transitionType": "slide-left",
-      "badge": "🧀 LANGKAH 3: GORENG & SAJIKAN",
+      "badge": "🔥 LANGKAH 2",
       "ingredients": {
-        "title": "Penyajian & Simpan",
+        "title": "Proses Rebus",
         "items": [
-          "Buka plastik saat sostel sudah dingin & set",
-          "Bisa dibalur tepung panir agar krispi",
-          "Bisa juga disimpan di kulkas untuk stok"
+          "Masukkan air 3 liter",
+          "Rebus serai & jahe"
         ]
       },
       "caption": {
-        "headline": "SIAP DIGORENG & DIJUAL!",
-        "subText": "Goreng krispi pakai panir atau simpan di kulkas buat besok",
-        "highlightWords": ["DIGORENG", "STOK KULKAS"]
+        "headline": "REBUS SAMPAI DIDIH",
+        "subText": "Satukan air dan rempah pilihan",
+        "highlightWords": ["MENDIDIH"]
       },
-      "voiceoverScript": "Kalau sudah dingin dan set, buka plastiknya. Kamu bisa langsung goreng, dibalur tepung panir dulu biar makin krispi, atau simpan di kulkas buat stok jualan besok. Praktis banget kan?"
+      "voiceoverScript": "Masukkan serai dan jahe ke dalam panci berisi air, lalu rebus sampai mendidih."
     },
     {
-      "id": "scene-5-cta",
-      "name": "50+ Resep Viral Lainnya",
-      "startFrame": 950,
-      "durationInFrames": 260,
-      "durationInSeconds": 8.66,
-      "imageSrc": "img/scene-5-cta.jpg",
+      "id": "scene-5-step3",
+      "name": "Langkah 3: Masukkan Gula",
+      "startFrame": 750,
+      "durationInFrames": 150,
+      "durationInSeconds": 5.0,
+      "imageSrc": "img/scene-5.jpg",
+      "transitionType": "slide-left",
+      "badge": "🧂 LANGKAH 3",
+      "ingredients": {
+        "title": "Bumbu Tambahan",
+        "items": [
+          "200 gr gula pasir",
+          "Sejumput garam"
+        ]
+      },
+      "caption": {
+        "headline": "MASUKKAN GULA",
+        "subText": "Rebus 2 menit setelah mendidih",
+        "highlightWords": ["GULA PASIR"]
+      },
+      "voiceoverScript": "Setelah mendidih selama dua menit, masukkan gula pasir dan sejumput garam, lalu aduk rata."
+    },
+    {
+      "id": "scene-6-step4",
+      "name": "Langkah 4: Masukkan Teh",
+      "startFrame": 900,
+      "durationInFrames": 150,
+      "durationInSeconds": 5.0,
+      "imageSrc": "img/scene-6.jpg",
+      "transitionType": "slide-left",
+      "badge": "🍵 LANGKAH 4",
+      "ingredients": {
+        "title": "Seduh Teh",
+        "items": [
+          "3 sdm teh",
+          "Masak 2 menit lalu matikan"
+        ]
+      },
+      "caption": {
+        "headline": "SEDUH TEH",
+        "subText": "Matikan api setelah tercampur",
+        "highlightWords": ["TEH"]
+      },
+      "voiceoverScript": "Tes rasa sesuai selera, masukkan teh, biarkan mendidih dua menit lagi, lalu matikan api."
+    },
+    {
+      "id": "scene-7-step5",
+      "name": "Langkah 5: Saring Rebusan",
+      "startFrame": 1050,
+      "durationInFrames": 150,
+      "durationInSeconds": 5.0,
+      "imageSrc": "img/scene-7.jpg",
+      "transitionType": "slide-left",
+      "badge": "✨ LANGKAH 5",
+      "ingredients": {
+        "title": "Penyaringan",
+        "items": [
+          "Saring ampas rempah",
+          "Dinginkan sebelum kemas"
+        ]
+      },
+      "caption": {
+        "headline": "SARING REMPAH",
+        "subText": "Hasil kuah bersih & jernih",
+        "highlightWords": ["SARING"]
+      },
+      "voiceoverScript": "Saring rebusan rempah agar bersih, lalu biarkan hingga hangat atau dingin sebelum dikemas."
+    },
+    {
+      "id": "scene-8-pack",
+      "name": "Kemas Mika & Comment Bait",
+      "startFrame": 1200,
+      "durationInFrames": 210,
+      "durationInSeconds": 7.0,
+      "imageSrc": "img/scene-8.jpg",
+      "transitionType": "slide-left",
+      "badge": "📦 KEMAS BOTOL",
+      "ingredients": {
+        "title": "Kemas Jualan",
+        "items": [
+          "Botol / mika 150 ml",
+          "Cocok untuk titip warung/hajat"
+        ]
+      },
+      "caption": {
+        "headline": "KIRA-KIRA JUAL BERAPA?",
+        "subText": "Tulis pendapatmu di kolom komentar!",
+        "highlightWords": ["KOMEN DI BAWAH"]
+      },
+      "voiceoverScript": "Kemas ke dalam botol atau mika ukuran seratus lima puluh mililiter. Kira-kira kalau di daerahmu pasnya dijual berapa? Coba komen di bawah!"
+    },
+    {
+      "id": "scene-9-cta",
+      "name": "CTA Website Jajan Cuan & Loop",
+      "startFrame": 1410,
+      "durationInFrames": 150,
+      "durationInSeconds": 5.0,
+      "imageSrc": "img/scene-9.jpg",
       "transitionType": "zoom-in",
       "badge": "📚 50+ RESEP VIRAL LAINNYA",
       "caption": {
-        "headline": "CEK 50+ RESEP VIRAL LAINNYA",
-        "subText": "Kunjungi website untuk ide jualan + kalkulator modal otomatis",
-        "highlightWords": ["50+ RESEP VIRAL", "KALKULATOR MODAL", "WEBSITE"]
+        "headline": "JAJAN CUAN",
+        "subText": "Kunjungi https://jajan-cuan.web.app sekarang!",
+        "highlightWords": ["JAJAN CUAN"]
       },
-      "voiceoverScript": "Mau tahu 50 lebih resep viral lainnya plus kalkulator HPP otomatis? Yuk cek langsung ke jajan strip cuan dot web dot app sekarang juga!"
+      "voiceoverScript": "Mau cari ide jualan modal serai sama jahe dibikin teh kekinian buat jualan? Omzetnya bikin dompet tebel seharian!"
     }
   ]
 }
