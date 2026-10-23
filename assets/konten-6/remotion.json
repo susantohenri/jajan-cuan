@@ -1,0 +1,150 @@
+{
+  "project": {
+    "title": "Kebab Pedas Manis Kulit Lumpia - Jajan Cuan",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "totalDurationInFrames": 1005,
+    "websiteUrl": "https://jajan-cuan.web.app",
+    "audio": {
+      "voiceoverSrc": "audio/tts-full.mp3",
+      "estimatedDurationSeconds": 33.5
+    }
+  },
+  "recipeData": {
+    "title": "Kebab pedas manis ide jualan simple di jamin laris manis",
+    "yield": null,
+    "estimatedRevenue": null,
+    "sellingPrice": null
+  },
+  "scenes": [
+    {
+      "id": "scene-1-hook",
+      "name": "Hook",
+      "startFrame": 0,
+      "durationInFrames": 180,
+      "durationInSeconds": 6.0,
+      "imageSrc": "img/scene-1.jpg",
+      "videoSrc": "video/intro-hook.mp4",
+      "transitionType": "fade",
+      "badge": "IDE JUALAN",
+      "ingredients": {
+        "title": "Menu Utama",
+        "items": []
+      },
+      "caption": {
+        "headline": "KEBAB PEDAS MANIS",
+        "subText": "Paling dicari anak-anak, modal minimal!",
+        "highlightWords": [
+          "PEDAS MANIS",
+          "LARIS"
+        ]
+      },
+      "voiceoverScript": "Kebab pedas manis kulit lumpia paling dicari anak-anak! Modal minimal, ludes dalam sekejap!"
+    },
+    {
+      "id": "scene-2-ingredients",
+      "name": "Bahan",
+      "startFrame": 180,
+      "durationInFrames": 195,
+      "durationInSeconds": 6.5,
+      "imageSrc": "img/scene-2.jpg",
+      "transitionType": "fade",
+      "badge": "BAHAN SEDERHANA",
+      "ingredients": {
+        "title": "Bahan-bahan",
+        "items": [
+          "5 lembar kulit lumpia",
+          "1 butir telur",
+          "Bumbu antaka rasa jagung",
+          "Bon cabe secukupnya"
+        ]
+      },
+      "caption": {
+        "headline": "BAHAN SUPER SIMPEL",
+        "subText": "Siapin 4 bahan utama ini di rumah",
+        "highlightWords": [
+          "KULIT LUMPIA",
+          "TELUR"
+        ]
+      },
+      "voiceoverScript": "Siapin lima kulit lumpia, satu butir telur, bumbu rasa jagung, dan bon cabe sesuai selera."
+    },
+    {
+      "id": "scene-3-process",
+      "name": "Proses",
+      "startFrame": 375,
+      "durationInFrames": 225,
+      "durationInSeconds": 7.5,
+      "imageSrc": "img/scene-3.jpg",
+      "transitionType": "fade",
+      "badge": "CARA MEMBUAT",
+      "ingredients": {
+        "title": "Langkah Memasak",
+        "items": [
+          "Panaskan 1 sendok makan minyak api kecil",
+          "Kocok lepas telur",
+          "Taruh kulit lumpia di wajan lalu beri telur"
+        ]
+      },
+      "caption": {
+        "headline": "MASAK PAKAI API KECIL",
+        "subText": "Gunakan 1 sendok makan minyak saja",
+        "highlightWords": [
+          "API KECIL",
+          "TETAP GURIH"
+        ]
+      },
+      "voiceoverScript": "Setelah minyak panas, taruh kulit lumpia di wajan dan langsung tuang kocokan telur di atasnya."
+    },
+    {
+      "id": "scene-4-result",
+      "name": "Hasil",
+      "startFrame": 600,
+      "durationInFrames": 225,
+      "durationInSeconds": 7.5,
+      "imageSrc": "img/scene-4.jpg",
+      "transitionType": "fade",
+      "badge": "SIAP SAJI",
+      "ingredients": {
+        "title": "Penyelesaian",
+        "items": [
+          "Taburkan bumbu jagung & bon cabe",
+          "Lipat dan panggang hingga matang"
+        ]
+      },
+      "caption": {
+        "headline": "TABUR BUMBU & LIPAT",
+        "subText": "Renyah di luar, gurih di dalam",
+        "highlightWords": [
+          "BUMBU JAGUNG",
+          "RENYAH"
+        ]
+      },
+      "voiceoverScript": "Taburkan bumbu jagung manis dan bon cabe pedas, lipat rapi, lalu panggang sebentar sampai matang renyah."
+    },
+    {
+      "id": "scene-5-cta",
+      "name": "CTA",
+      "startFrame": 825,
+      "durationInFrames": 180,
+      "durationInSeconds": 6.0,
+      "imageSrc": "img/scene-5.jpg",
+      "transitionType": "fade",
+      "badge": "JAJAN CUAN",
+      "ingredients": {
+        "title": "Info Lebih Lanjut",
+        "items": []
+      },
+      "caption": {
+        "headline": "IDE JUALAN LAINNYA?",
+        "subText": "Kunjungi jajan-cuan.web.app sekarang",
+        "highlightWords": [
+          "JAJAN CUAN",
+          "WEBSITE"
+        ]
+      },
+      "voiceoverScript": "Mau resep jualan laris lainnya? Cek langsung website Jajan Cuan sekarang juga!"
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "project": {
+    "title": "Risol Mayo Smoked Beef Egg - Jajan Cuan",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "totalDurationInFrames": 1455,
+    "websiteUrl": "https://jajan-cuan.web.app",
+    "audio": {
+      "voiceoverSrc": "audio/tts-full.mp3",
+      "estimatedDurationSeconds": 48.5
+    }
+  },
+  "recipeData": {
+    "title": "Risol Mayo Smoked Beef Egg / Ide Jualan Auto Best Seller",
+    "yield": null,
+    "estimatedRevenue": null,
+    "sellingPrice": null
+  },
+  "scenes": [
+    {
+      "id": "scene-1-hook",
+      "name": "Hook",
+      "startFrame": 0,
+      "durationInFrames": 240,
+      "durationInSeconds": 8.0,
+      "imageSrc": "img/scene-1.jpg",
+      "videoSrc": "video/intro-hook.mp4",
+      "transitionType": "fade",
+      "badge": "AUTO BEST SELLER",
+      "ingredients": {
+        "title": "Highlight",
+        "items": []
+      },
+      "caption": {
+        "headline": "RISOL MAYO PALING LUMER",
+        "subText": "Jajanan gurih creamy anti gagal",
+        "highlightWords": ["LUMER", "BEST SELLER"]
+      },
+      "voiceoverScript": "Risol mayo smoked beef egg paling lumer di mulut! Jualan ini dijamin auto best seller dan ludes tiap hari!"
+    },
+    {
+      "id": "scene-2-ingredients",
+      "name": "Bahan",
+      "startFrame": 240,
+      "durationInFrames": 180,
+      "durationInSeconds": 6.0,
+      "imageSrc": "img/scene-2.jpg",
+      "transitionType": "slide-left",
+      "badge": "BAHAN KULIT",
+      "ingredients": {
+        "title": "Komposisi Kulit",
+        "items": [
+          "65 gr tepung segitiga",
+          "1 sdm tepung tapioka",
+          "200 gr susu UHT",
+          "1 butir telur & 1 sdm minyak",
+          "Gula & kaldu jamur seikhlasnya"
+        ]
+      },
+      "caption": {
+        "headline": "SIAPIN BAHAN KULITNYA",
+        "subText": "Takaran pas untuk hasil lembut lentur",
+        "highlightWords": ["TEPUNG", "SUSU UHT"]
+      },
+      "voiceoverScript": "Siapin terigu, tapioka, susu UHT, telur, dan bumbu halus buat kulitnya yang lembut lentur."
+    },
+    {
+      "id": "scene-3-preparation",
+      "name": "Persiapan",
+      "startFrame": 420,
+      "durationInFrames": 210,
+      "durationInSeconds": 7.0,
+      "imageSrc": "img/scene-3.jpg",
+      "transitionType": "slide-left",
+      "badge": "PENGADUKAN",
+      "ingredients": {
+        "title": "Teknik Adonan",
+        "items": ["Aduk rata pakai balon wiski", "Pastikan tidak ada yang bergerindil"]
+      },
+      "caption": {
+        "headline": "ADUK SAMPAI LICIN",
+        "subText": "Kunci kulit risol anti robek",
+        "highlightWords": ["ADUK", "LICIN"]
+      },
+      "voiceoverScript": "Aduk semua bahan kering dan cair pakai balon wiski sampai larut dan licin tanpa bergerindil."
+    },
+    {
+      "id": "scene-4-cooking",
+      "name": "Memasak",
+      "startFrame": 630,
+      "durationInFrames": 195,
+      "durationInSeconds": 6.5,
+      "imageSrc": "img/scene-4.jpg",
+      "transitionType": "slide-left",
+      "badge": "DADAR KULIT",
+      "ingredients": {
+        "title": "Proses Masak",
+        "items": ["Gunakan api kecil cenderung sedang", "Tuang 1 centong sayur per lembar"]
+      },
+      "caption": {
+        "headline": "DADAR TIPIS MERATA",
+        "subText": "Masak sebentar hingga kering",
+        "highlightWords": ["DADAR TIPIS", "API KECIL"]
+      },
+      "voiceoverScript": "Dadar tipis di teflon api kecil sampai matang merata. Angkat perlahan tanpa disobek ya!"
+    },
+    {
+      "id": "scene-5-assembly",
+      "name": "Perakitan",
+      "startFrame": 825,
+      "durationInFrames": 210,
+      "durationInSeconds": 7.0,
+      "imageSrc": "img/scene-5.jpg",
+      "transitionType": "slide-left",
+      "badge": "ISIAN MELIMPAH",
+      "ingredients": {
+        "title": "Komposisi Isian",
+        "items": [
+          "Smoked beef potong",
+          "Telur rebus potong",
+          "Mayones & saus sambal"
+        ]
+      },
+      "caption": {
+        "headline": "TATA ISIAN LENGKAP",
+        "subText": "Mayones dan smoked beef berlimpah",
+        "highlightWords": ["MAYONES", "SMOKED BEEF"]
+      },
+      "voiceoverScript": "Susun isian telur rebus, mayones berlimpah, saus, dan potongan smoked beef di tengah kulit risol."
+    },
+    {
+      "id": "scene-6-finishing",
+      "name": "Baluran",
+      "startFrame": 1035,
+      "durationInFrames": 165,
+      "durationInSeconds": 5.5,
+      "imageSrc": "img/scene-6.jpg",
+      "transitionType": "slide-left",
+      "badge": "PANIR HALUS",
+      "ingredients": {
+        "title": "Finishing Luar",
+        "items": ["Celup putih telur", "Gulingkan ke panir halus"]
+      },
+      "caption": {
+        "headline": "BALUR PANIR HALUS",
+        "subText": "Hasil akhir rapi dan krispi",
+        "highlightWords": ["PANIR", "KRISPI"]
+      },
+      "voiceoverScript": "Lipat rapi, balur putih telur, gulingkan ke panir halus hingga tertutup sempurna."
+    },
+    {
+      "id": "scene-7-cta",
+      "name": "Hasil dan CTA",
+      "startFrame": 1200,
+      "durationInFrames": 255,
+      "durationInSeconds": 8.5,
+      "imageSrc": "img/scene-7.jpg",
+      "transitionType": "fade",
+      "badge": "IDE JUALAN",
+      "ingredients": {
+        "title": "Situs Web",
+        "items": ["Kunjungi jajan-cuan.web.app"]
+      },
+      "caption": {
+        "headline": "RESEP LENGKAP DI WEB",
+        "subText": "Cek ide jualan cuan lainnya",
+        "highlightWords": ["JAJAN-CUAN.WEB.APP", "RESEP LENGKAP"]
+      },
+      "voiceoverScript": "Goreng keemasan, luar kriuk isi lumer! Mau resep lengkap dan ide jualan cuan lainnya? Cek langsung jajan-cuan.web.app!"
+    }
+  ]
+}

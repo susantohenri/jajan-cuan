@@ -1,0 +1,157 @@
+{
+  "project": {
+    "title": "Tteokpokki Ekonomis - Jajan Cuan",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "totalDurationInFrames": 1170,
+    "websiteUrl": "https://jajan-cuan.web.app",
+    "audio": {
+      "voiceoverSrc": "audio/tts-full.mp3",
+      "estimatedDurationSeconds": 39.0
+    }
+  },
+  "recipeData": {
+    "title": "Tteokpokki/Topokki ekonomis untuk jualan harga 2ribu",
+    "yield": "30 mika",
+    "estimatedRevenue": null,
+    "sellingPrice": 2000
+  },
+  "scenes": [
+    {
+      "id": "scene-1-hook",
+      "name": "Hook",
+      "startFrame": 0,
+      "durationInFrames": 150,
+      "durationInSeconds": 5.0,
+      "imageSrc": "img/scene-1.jpg",
+      "videoSrc": "video/intro-hook.mp4",
+      "transitionType": "fade",
+      "badge": "JAJANAN 2 RIBUAN",
+      "ingredients": {
+        "title": "",
+        "items": []
+      },
+      "caption": {
+        "headline": "TTEOKPOKKI EKONOMIS",
+        "subText": "Modal hemat, untung berlipat!",
+        "highlightWords": [
+          "EKONOMIS",
+          "2 RIBU"
+        ]
+      },
+      "voiceoverScript": "Tteokpokki kenyal gurih ala jajanan madrasah, modal ekonomis tanpa gochujang!"
+    },
+    {
+      "id": "scene-2-ingredients",
+      "name": "Bahan",
+      "startFrame": 150,
+      "durationInFrames": 225,
+      "durationInSeconds": 7.5,
+      "imageSrc": "img/scene-2.jpg",
+      "transitionType": "slide-left",
+      "badge": "BAHAN UTAMA",
+      "ingredients": {
+        "title": "Bahan Adonan & Saus",
+        "items": [
+          "500 gr tepung beras",
+          "250 gr tepung aci / kanji",
+          "Garam & air mendidih",
+          "Saus tomat & saus sambal",
+          "Minyak wijen & kecap asin"
+        ]
+      },
+      "caption": {
+        "headline": "BAHAN SEDERHANA",
+        "subText": "Tanpa gochujang, tetap nagih!",
+        "highlightWords": [
+          "TEPUNG BERAS",
+          "TEPUNG ACI"
+        ]
+      },
+      "voiceoverScript": "Siapkan lima ratus gram tepung beras, dua ratus lima puluh gram tepung aci, garam, dan air mendidih."
+    },
+    {
+      "id": "scene-3-preparation",
+      "name": "Proses",
+      "startFrame": 375,
+      "durationInFrames": 255,
+      "durationInSeconds": 8.5,
+      "imageSrc": "img/scene-3.jpg",
+      "transitionType": "slide-left",
+      "badge": "CARA MEMBUAT",
+      "ingredients": {
+        "title": "Langkah Pembuatan",
+        "items": [
+          "Sangrai tepung beras sampai ringan",
+          "Campur tepung aci & garam",
+          "Uleni dengan air mendidih hingga kalis"
+        ]
+      },
+      "caption": {
+        "headline": "ULENI HINGGA KALIS",
+        "subText": "Tekstur kenyal pas untuk jualan",
+        "highlightWords": [
+          "SANGRAI",
+          "KALIS"
+        ]
+      },
+      "voiceoverScript": "Sangrai tepung beras sampai ringan, campurkan dengan tepung aci dan garam, lalu uleni pakai air mendidih hingga kalis."
+    },
+    {
+      "id": "scene-4-cooking",
+      "name": "Memasak",
+      "startFrame": 630,
+      "durationInFrames": 315,
+      "durationInSeconds": 10.5,
+      "imageSrc": "img/scene-4.jpg",
+      "transitionType": "slide-left",
+      "badge": "MASAK & SAUS",
+      "ingredients": {
+        "title": "Peracikan Saus",
+        "items": [
+          "Rebus adonan tteok",
+          "Tumis bawang putih cincang",
+          "Campur saus tomat, sambal, & kecap asin",
+          "Tambahkan minyak wijen & bubuk cabe"
+        ]
+      },
+      "caption": {
+        "headline": "SAUS PEDAS GURIH",
+        "subText": "Wangi minyak wijen & cabai",
+        "highlightWords": [
+          "SAUS GURIH",
+          "PEDAS"
+        ]
+      },
+      "voiceoverScript": "Rebus adonan yang sudah dibentuk, lalu racik saus gurih pedas menggunakan saus tomat, saus sambal, kecap asin, minyak wijen, dan bubuk cabe."
+    },
+    {
+      "id": "scene-5-cta",
+      "name": "Hasil & CTA",
+      "startFrame": 945,
+      "durationInFrames": 225,
+      "durationInSeconds": 7.5,
+      "imageSrc": "img/scene-5.jpg",
+      "transitionType": "fade",
+      "badge": "IDE JUALAN",
+      "ingredients": {
+        "title": "Penyajian Jualan",
+        "items": [
+          "Isi 8-9 potong per mika",
+          "Harga jual Rp 2.000",
+          "Disukai anak-anak sekolah"
+        ]
+      },
+      "caption": {
+        "headline": "SIAP JUAL 2 RIBUAN",
+        "subText": "Cek resep & ide cuan di jajan-cuan.web.app",
+        "highlightWords": [
+          "JAJAN CUAN",
+          "2 RIBU"
+        ]
+      },
+      "voiceoverScript": "Susun rapi di mika, siram saus melimpah, dan intip ide jualan cuan lainnya di Jajan Cuan!"
+    }
+  ]
+}

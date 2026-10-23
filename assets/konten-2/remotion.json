@@ -1,0 +1,150 @@
+{
+  "project": {
+    "title": "Cireng Isi Ayam Suwir - Jajan Cuan",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "totalDurationInFrames": 1380,
+    "websiteUrl": "https://jajan-cuan.web.app",
+    "audio": {
+      "voiceoverSrc": "audio/tts-full.mp3",
+      "estimatedDurationSeconds": 46.0
+    }
+  },
+  "recipeData": {
+    "title": "Cireng isi ayam suwir (resep jualan)",
+    "yield": "40+ pcs",
+    "estimatedRevenue": null,
+    "sellingPrice": null
+  },
+  "scenes": [
+    {
+      "id": "scene-1-hook",
+      "name": "Hook",
+      "startFrame": 0,
+      "durationInFrames": 285,
+      "durationInSeconds": 9.5,
+      "imageSrc": "img/scene-1.jpg",
+      "videoSrc": "video/intro-hook.mp4",
+      "transitionType": "fade",
+      "badge": "VIRAL",
+      "ingredients": {
+        "title": "",
+        "items": []
+      },
+      "caption": {
+        "headline": "CIRENG ISI AYAM SUWIR",
+        "subText": "Luar kriuk renyah, dalam lumer pedas!",
+        "highlightWords": [
+          "KRIUK",
+          "PEDAS"
+        ]
+      },
+      "voiceoverScript": "Cireng isi ayam suwir pedas gurih, luarnya kriuk renyah di dalam lumer! Bikin sendiri di rumah gampang banget, yuk intip caranya!"
+    },
+    {
+      "id": "scene-2-ingredients",
+      "name": "Bahan",
+      "startFrame": 285,
+      "durationInFrames": 285,
+      "durationInSeconds": 9.5,
+      "imageSrc": "img/scene-2.jpg",
+      "transitionType": "fade",
+      "badge": "BAHAN",
+      "ingredients": {
+        "title": "Bahan Utama & Isian",
+        "items": [
+          "250 gram dada ayam fillet",
+          "500 gram tepung tapioka",
+          "50 gram tepung terigu",
+          "Bawang & cabai halus"
+        ]
+      },
+      "caption": {
+        "headline": "BAHAN-BAHAN EKONOMIS",
+        "subText": "Modal terjangkau untuk hasil 40+ pcs",
+        "highlightWords": [
+          "EKONOMIS",
+          "40+ PCS"
+        ]
+      },
+      "voiceoverScript": "Siapkan 250 gram dada ayam fillet, 500 gram tapioka, 50 gram terigu, serta bumbu halus cabai, bawang, dan daun jeruk."
+    },
+    {
+      "id": "scene-3-preparation",
+      "name": "Proses",
+      "startFrame": 570,
+      "durationInFrames": 255,
+      "durationInSeconds": 8.5,
+      "imageSrc": "img/scene-3.jpg",
+      "transitionType": "fade",
+      "badge": "TIPS",
+      "ingredients": {
+        "title": "Tips Suwir Daging",
+        "items": [
+          "Rebus ayam 15-20 menit",
+          "Suwir pakai mixer saat hangat"
+        ]
+      },
+      "caption": {
+        "headline": "TIPS SUWIR PRAKTIS",
+        "subText": "Gunakan mixer saat ayam masih hangat",
+        "highlightWords": [
+          "PENGGUNAAN MIXER"
+        ]
+      },
+      "voiceoverScript": "Rebus lalu suwir ayam selagi hangat dengan mixer, tumis bersama bumbu halus dan daun jeruk hingga matang harum."
+    },
+    {
+      "id": "scene-4-cooking",
+      "name": "Memasak",
+      "startFrame": 825,
+      "durationInFrames": 285,
+      "durationInSeconds": 9.5,
+      "imageSrc": "img/scene-4.jpg",
+      "transitionType": "fade",
+      "badge": "PEMBUATAN",
+      "ingredients": {
+        "title": "Adonan Kulit",
+        "items": [
+          "Campur tapioka & terigu",
+          "Siram air panas mendidih",
+          "Uleni dan bentuk isian"
+        ]
+      },
+      "caption": {
+        "headline": "BENTUK ADONAN KULIT",
+        "subText": "Siram air mendidih agar adonan kenyal pas",
+        "highlightWords": [
+          "AIR PANAS"
+        ]
+      },
+      "voiceoverScript": "Campur tapioka, terigu, garam, kaldu bubuk, dan bawang putih halus. Siram air panas mendidih, lalu uleni dan cetak adonan isi ayam."
+    },
+    {
+      "id": "scene-5-cta",
+      "name": "Hasil Akhir & CTA",
+      "startFrame": 1110,
+      "durationInFrames": 270,
+      "durationInSeconds": 9.0,
+      "imageSrc": "img/scene-5.jpg",
+      "transitionType": "fade",
+      "badge": "JAJAN CUAN",
+      "ingredients": {
+        "title": "Selesai",
+        "items": [
+          "Goreng hingga keemasan",
+          "Siap disajikan atau dijual"
+        ]
+      },
+      "caption": {
+        "headline": "SIAP JUALAN CUAN",
+        "subText": "Cek resep lengkap di jajan-cuan.web.app",
+        "highlightWords": [
+          "JAJAN CUAN"
+        ]
+      },
+      "voiceoverScript": "Goreng hingga matang renyah keemasan. Mau cari ide resep jualan laris lainnya? Langsung cek website Jajan Cuan ya!"
+    }
+  ]
+}
