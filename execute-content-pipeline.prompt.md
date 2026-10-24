@@ -220,7 +220,7 @@ Angka yang sudah dihitung tidak boleh hanya tersimpan di `remotion.json`, `src/d
 
 **Angka utama wajib dapat dibaca langsung oleh penonton di dalam video final.**
 
-Manfaatkan komponen yang telah tersedia, seperti `Revenue Pill`, `IngredientCard`, dan komponen overlay lain yang ada di proyek. Periksa implementasi aktualnya dan gunakan atau sesuaikan komponen tersebut agar informasi bisnis benar-benar tampil.
+Tampilkan angka simulasi jualan (omzet, modal, estimasi laba kotor) secara langsung dan jelas melalui teks overlay dinamis (`caption.headline` & `caption.subText`) dengan stiker highlight kuning (misalnya `headline: "POTENSI OMZET RP75.000"`, `highlightWords: ["OMZET", "RP75.000"]`) atau manfaatkan efek visual `overlayTemplate: "stat-counter"` / `"comparison-chart"` dari library template Remotion.
 
 Tempatkan simulasi jualan pada scene yang paling relevan, terutama saat hasil masakan sudah jadi, dikemas, atau ditampilkan sebagai produk jualan. Integrasikan dengan gambar yang tersedia; jangan membuat scene gambar tambahan di luar N scene konten.
 
@@ -363,27 +363,18 @@ Sebelum mengubah kode, periksa:
 - ID composition yang benar.
 - Script lint dan command render yang tersedia.
 
-**Pertahankan arsitektur dan struktur data proyek yang sudah berjalan.**
+**Gunakan arsitektur Universal Promo Pipeline (`MainPromo`) yang ada di Remotion.**
 
-Jangan mengasumsikan nama field atau tipe data hanya berdasarkan `remotion.json`. Cocokkan setiap field dengan implementasi aktual.
-
-Jangan mengganti seluruh `src/data.ts` atau melakukan refactor besar jika hanya diperlukan pembaruan data dan pemetaan scene.
-
-Pertahankan mekanisme yang sudah ada untuk:
-
-- Headline besar.
-- Sticker neon kuning untuk `highlightWords`.
-- `IngredientCard`.
-- `Revenue Pill`.
-- `HeaderBar`.
-- `CtaCard`.
-- Pengaturan safe zone untuk antarmuka TikTok.
-
-Gunakan implementasi dan ukuran aktual dalam proyek. Jangan mengubah styling global tanpa alasan teknis.
-
-Pastikan `HeaderBar` dan `CtaCard` menggunakan domain `jajan-cuan.web.app` dan pesan katalog 50+ resep sesuai komponen yang memang sudah tersedia.
-
-Jangan membuat komponen atau field baru yang tidak dibutuhkan oleh implementasi aktual. Namun, **jika komponen yang ada belum mampu menampilkan perhitungan jualan yang valid, lakukan perubahan minimal pada komponen atau tipe data yang relevan agar metrik yang tersedia benar-benar tampil di video**. Jangan mengorbankan akurasi perhitungan hanya untuk menghindari perubahan kode.
+Proyek Remotion saat ini menggunakan sistem render universal berbasis tema dinamis:
+- Komposisi utama bernama **`MainPromo`**.
+- Palet warna resmi Jajan Cuan dioperasikan secara dinamis melalui objek `theme` di `src/data.ts` (jangan mengubah CSS inti proyek):
+  - `primaryColor: "#EA580C"` (Oranye Utama)
+  - `secondaryColor: "#C2410C"` (Oranye Gelap)
+  - `accentColor: "#FFE600"` (Kuning Neon Stiker Highlight)
+  - `textColor: "#000000"`
+- **Safe Zone TikTok (Area Atas Bersih):** Bagian atas layar (0–200px) sengaja dibiarkan bersih tanpa header bar statis agar tidak tertutup oleh search bar dan tombol LIVE/Following TikTok. Jangan membuat ulang komponen `HeaderBar` yang sudah dihilangkan.
+- **Branding Jajan Cuan & 50+ Resep:** Dipusatkan secara elegan pada kartu penutup `CtaCard` di scene akhir (`appName: "JAJAN CUAN"`, `appBadge: "🔥"`, `websiteUrl: "https://jajan-cuan.web.app"`, `ctaHeadline: "JELAJAHI 50+ RESEP VIRAL & KALKULATOR MODAL"`).
+- **Simulasi Jualan & Takaran:** Ditampilkan menggunakan teks dinamis (`CaptionOverlay`) atau memanfaatkan template efek visual (`overlayTemplate: "stat-counter"` / `"comparison-chart"`). Jangan membuat ulang file statis lama seperti `IngredientCard.tsx` atau `Revenue Pill`.
 
 ### Teks dan safe zone
 
@@ -423,13 +414,14 @@ Persyaratan:
 11. Angka bisnis yang digunakan dalam overlay harus berasal dari hasil perhitungan yang dapat dilacak ke data resep, harga, atau asumsi yang dinyatakan secara transparan.
 12. Pastikan angka overlay tidak hanya tersimpan dalam data, tetapi benar-benar dirender oleh komponen di video.
 
-Jika proyek sudah memiliki field seperti `yield`, `sellingPrice`, `estimatedRevenue`, biaya bahan, atau estimasi laba, gunakan field yang sesuai setelah memverifikasi makna dan perhitungannya.
+Struktur `src/data.ts` wajib mengikuti `VideoSchema` universal yang berlaku di Remotion:
+- `project.theme`: Tentukan palet warna khas Jajan Cuan (`primaryColor: "#EA580C"`, `secondaryColor: "#C2410C"`, `accentColor: "#FFE600"`, `textColor: "#000000"`).
+- `project.appName`: "JAJAN CUAN", `project.appBadge`: "🔥", `project.websiteUrl`: "https://jajan-cuan.web.app".
+- `project.ctaHeadline`: "JELAJAHI 50+ RESEP VIRAL & KALKULATOR MODAL".
+- `scenes[i].caption`: Berisi `headline`, `subText`, `highlightWords`, serta opsi layout kinetik (`position`: "center"|"top"|"bottom", `size`: "huge"|"normal"|"compact", `style`: "kinetic-sticker"|"card"|"minimal-pill").
+- `scenes[i].overlayTemplate`: Opsional memanfaatkan efek visual seperti `"stat-counter"` atau `"comparison-chart"` pada scene simulasi jualan.
 
-Apabila dibutuhkan perubahan data agar perhitungan bisnis dapat ditampilkan, lakukan perubahan sekecil mungkin serta ikuti tipe data dan arsitektur yang dipakai proyek. Jangan menambahkan struktur redundan hanya untuk menyimpan angka yang sama dua kali.
-
-Pastikan komponen Remotion benar-benar membaca `totalDurationInFrames` dan daftar scene terbaru. Jika total durasi composition ditentukan pada file lain, perbarui sumber durasi yang sebenarnya juga.
-
-Jangan hanya mengubah angka di `data.ts` jika komposisi utama menggunakan durasi hardcoded.
+Pastikan komponen Remotion benar-benar membaca `totalDurationInFrames` dan daftar scene terbaru. Jangan mengotori proyek dengan membuat ulang file statis kuliner yang sudah ditiadakan.
 
 ---
 
@@ -451,9 +443,9 @@ Buat output di:
 
 `out/[NamaResep].mp4`
 
-Gunakan command berikut apabila ID composition yang ditemukan di proyek memang `JajanCuan`:
+Gunakan perintah render Remotion CLI dengan ID komposisi `MainPromo`:
 
-`npx remotion render src/index.ts JajanCuan out/[NamaResep].mp4`
+`npx remotion render src/index.ts MainPromo out/[NamaResep].mp4`
 
 Jika entry point, ID composition, atau konfigurasi proyek yang sebenarnya berbeda, gunakan nilai yang ditemukan pada proyek. Jangan memaksakan ID yang salah.
 
