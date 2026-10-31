@@ -418,7 +418,7 @@ Struktur `src/data.ts` wajib mengikuti `VideoSchema` universal yang berlaku di R
 - `project.theme`: Tentukan palet warna khas Jajan Cuan (`primaryColor: "#EA580C"`, `secondaryColor: "#C2410C"`, `accentColor: "#FFE600"`, `textColor: "#000000"`).
 - `project.appName`: "JAJAN CUAN", `project.appBadge`: "🔥", `project.websiteUrl`: "https://jajan-cuan.web.app".
 - `project.ctaHeadline`: "JELAJAHI 50+ RESEP VIRAL & KALKULATOR MODAL".
-- `scenes[i].caption`: Berisi `headline`, `subText`, `highlightWords`, serta opsi layout kinetik (`position`: "center"|"top"|"bottom", `size`: "huge"|"normal"|"compact", `style`: "kinetic-sticker"|"card"|"minimal-pill").
+- `scenes[i].caption`: Berisi `headline`, `subtitle` (WAJIB: narasi suara lengkap agar terbaca saat video di-mute), `subText`, `highlightWords`, serta opsi layout kinetik dan style kreatif (`placement`: "center"|"bottom-left"|"top-right"|"top-left"|"bottom-center"|"bottom-right"|"auto", `style`: "kinetic-sticker"|"cyber-neon"|"comic-pop"|"magazine-cutout"|"streetwear-brutal"|"editorial-luxury"|"floating-ghost"|"gradient-glass"|"breaking-badge"|"auto", `animation`: "slam"|"whip"|"pop"|"cascade-words"|"glitch"|"float-gentle").
 - `scenes[i].overlayTemplate`: Opsional memanfaatkan efek visual seperti `"stat-counter"` atau `"comparison-chart"` pada scene simulasi jualan.
 
 Pastikan komponen Remotion benar-benar membaca `totalDurationInFrames` dan daftar scene terbaru. Jangan mengotori proyek dengan membuat ulang file statis kuliner yang sudah ditiadakan.
