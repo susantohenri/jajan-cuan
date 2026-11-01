@@ -9,7 +9,7 @@
 - [x] S5 Data layer
 - [x] S6 Home, Pencarian, Favorit
 - [x] S7 Detail & Kalkulator
-- [ ] S8 Timer
+- [x] S8 Timer
 - [ ] S9 Rewarded & Promo
 - [ ] S10 Settings & Aset
 - [ ] S11 QA & hardening
@@ -63,11 +63,17 @@
 - S7 HPP paritas web: laba/porsi dan laba total dihitung dari harga jual MURNI (bukan harga bulat), sama seperti `experience.js`. Harga bulat Rp 500 hanya nilai tampilan tambahan. Margin default 100% mode PERCENT; margin kosong/NaN/negatif dianggap 0; porsi kosong/0 dianggap 1; harga negatif dianggap 0.
 - S7 state kalkulator: harga disimpan sebagai JSON array `Long` berurutan sesuai bahan. Saat dimuat ulang, harga yang tersimpan dipakai per indeks, bahan baru memakai harga acuan, dan state tanpa baris menghasilkan null. `marginMode` disimpan sebagai nama enum (`PERCENT`/`NOMINAL`).
 - S7 log: `calculate_hpp` dicatat pada edit pertama dalam satu sesi edit (bukan per ketukan); tombol Simpan menutup sesi sehingga edit berikutnya dicatat lagi. `save_calculation` dicatat setelah penyimpanan berhasil. `share_recipe` dicatat saat tombol share ditekan.
-- S7 timer: parser durasi mendukung menit/jam/detik, rentang (`10-15 menit`, `10 sampai 15 menit`) memakai nilai terbesar, desimal koma, dan beberapa durasi dalam satu langkah dijumlahkan. Tombol "Nyalakan Timer (…)" tampil pada langkah berdurasi tetapi aksinya sengaja no-op; aksi timer dipasang di S8 (satu-satunya placeholder yang diizinkan prompt S7).
+- S7 timer: parser durasi mendukung menit/jam/detik, rentang (`10-15 menit`, `10 sampai 15 menit`) memakai nilai terbesar, desimal koma, dan beberapa durasi dalam satu langkah dijumlahkan. Tombol "Nyalakan Timer (…)" tampil pada langkah berdurasi dan sejak S8 membuka dialog timer.
 - S7 slot promo: item `promo` dirender sebagai judul "Konten Promosi" + keterangan belum tersedia; grid, popup, unduh, share, dan penguncian Rewarded dikerjakan S9.
 - S7 share: teks memakai `detail_share_text_format` = judul + excerpt + "Dapatkan Jajan Cuan: https://jajan-cuan.web.app/" dan dikirim lewat `ACTION_SEND` + chooser.
 - S7 tabel: `DetailUiState` tidak menyimpan sumber data; sumber hanya dipakai repository. Status favorit berasal dari `observeIsFavorite` agar konsisten dengan Home/Favorit.
 - S7 test: 103 unit test total (25 baru: 9 HppCalculator, 6 CookingDurationParser, 7 DetailViewModel, 3 RecipeRepository untuk cover favorit/calc_state). Lint 0 error, 114 warning (mayoritas unused resource milik tahap berikutnya dan saran plural bahasa Indonesia).
+- S8 penjadwalan: `AlarmTimerScheduler` memakai `AlarmManager.setAlarmClock()` bila `canScheduleExactAlarms()` bernilai true (API < 31 selalu true), dengan `PendingIntent` broadcast dan `showIntent` activity yang keduanya `FLAG_IMMUTABLE`; request code memakai `notificationId` unik per timer (`MAX(active_timers.notificationId)+1`, diserialisasi `Mutex`). Karena `SCHEDULE_EXACT_ALARM`/`USE_EXACT_ALARM` DILARANG sedangkan Android 12+ mewajibkan salah satunya untuk `setAlarmClock` (tanpa itu `SecurityException`), dipakai fallback `setAndAllowWhileIdle(RTC_WAKEUP, …)` yang tetap membangunkan perangkat namun waktunya bisa meleset beberapa menit. Tidak ada izin exact alarm di manifest sumber maupun hasil merge.
+- S8 notifikasi: channel `cooking_timer` dibuat saat container aplikasi dibuat (IMPORTANCE_HIGH, suara notifikasi default, pola getar). `TimerReceiver` menghapus baris `active_timers` lebih dulu lalu memposting notifikasi berisi label timer + nama resep; content intent membawa `EXTRA_RECIPE_ID`, ditangani `MainActivity` (`singleTop` + `onNewIntent`) untuk navigasi ke rute Detail.
+- S8 izin: dialog `POST_NOTIFICATIONS` diminta sekali saat timer pertama dinyalakan (flag `timer_permission`); timer tetap dijadwalkan walau izin ditolak, countdown tetap berjalan di app, dan Snackbar menjelaskan cara mengaktifkan izin di Pengaturan. API < 33 dianggap selalu diizinkan.
+- S8 countdown: sisa waktu dihitung dari `endAtEpochMillis` absolut dengan pembulatan ke atas (`TimerCountdown`), bukan hitung mundur lokal; daftar timer aktif menampilkan semua resep dan bisa dibatalkan satu per satu. Ticker 1 detik hanya berjalan selama ada timer aktif.
+- S8 startup: baris `active_timers` yang sudah lewat dibersihkan saat container dibuat. Alarm tidak dijadwalkan ulang setelah reboot perangkat (sesuai AGENTS §6, diterima).
+- S8 test: 124 unit test total (21 baru: 4 TimerCountdown, 6 TimerRepository, 4 AlarmTimerScheduler Robolectric, 3 TimerNotifier Robolectric, 3 DetailViewModel timer, 1 rollback repository). Lint 0 error, 108 warning.
 
 ---
 
@@ -92,5 +98,10 @@
 - S7 Mode Rp: pilih "Nominal (Rp)", isi laba Rp 1.000 -> harga jual naik tepat Rp 1.000 dari HPP dan laba total = Rp 1.000 x porsi.
 - S7 Simpan: tekan Simpan -> Snackbar "Perhitungan disimpan"; keluar lalu buka lagi resep yang sama -> harga, porsi, mode margin, dan hasil tetap seperti saat disimpan.
 - S7 Offline: buka detail favorit dalam mode pesawat -> foto, analisis, komposisi, cara memasak, dan kalkulator tetap berfungsi; resep non-favorit yang belum pernah dibuka -> pesan error + "Coba Lagi".
-- S7 Timer: langkah dengan durasi (mis. "10-15 menit") menampilkan tombol "Nyalakan Timer (15 menit)"; tombol belum melakukan apa pun (aksi S8).
+- S7 Timer (sudah diganti pada S8): langkah dengan durasi (mis. "10-15 menit") menampilkan tombol "Nyalakan Timer (15 menit)" yang kini membuka dialog timer.
 - S7 Tablet & gelap: konten Detail maksimal 840dp dan terpusat; form kalkulator tetap terbaca di tema gelap dan saat keyboard terbuka.
+- S8 Timer 1 menit saat app ditutup: buka Detail, nyalakan timer 1 menit, izinkan notifikasi, tutup app (bukan force stop), tunggu -> notifikasi "Waktu Memasak Selesai" muncul berisi label + nama resep; tap notifikasi membuka resep tersebut.
+- S8 Izin ditolak: hapus data app (atau cabut izin notifikasi), nyalakan timer -> dialog izin muncul sekali; tolak -> timer tetap tampil dan countdown berjalan di Detail, Snackbar menjelaskan cara mengaktifkan izin.
+- S8 Dua timer: nyalakan dua timer dari langkah berbeda -> keduanya tampil di bagian "Timer Aktif" dengan countdown masing-masing; batalkan salah satu -> hanya timer itu yang hilang dan alarmnya tidak berbunyi.
+- S8 Ketepatan alarm (Android 12+): karena izin exact alarm dilarang, `setAlarmClock()` tidak tersedia dan timer memakai alarm inexact (`setAndAllowWhileIdle`), jadi notifikasi bisa muncul beberapa detik/menit setelah countdown mencapai nol. Di Android 11 ke bawah alarm clock tetap tepat waktu.
+- S8 Exact alarm: cek `adb shell dumpsys package com.henrisusanto.vitmate | findstr EXACT_ALARM` -> tidak ada `SCHEDULE_EXACT_ALARM`/`USE_EXACT_ALARM`.

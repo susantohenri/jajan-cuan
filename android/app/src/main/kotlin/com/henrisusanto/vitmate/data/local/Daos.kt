@@ -246,6 +246,9 @@ interface ActiveTimerDao {
     @Query("SELECT * FROM active_timers WHERE id = :timerId")
     suspend fun get(timerId: String): ActiveTimerEntity?
 
+    @Query("SELECT MAX(notificationId) FROM active_timers")
+    suspend fun maxNotificationId(): Int?
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(timer: ActiveTimerEntity)
 

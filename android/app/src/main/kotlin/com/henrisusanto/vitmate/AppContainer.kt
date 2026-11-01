@@ -12,9 +12,12 @@ import com.henrisusanto.vitmate.data.image.OkHttpImageDownloader
 import com.henrisusanto.vitmate.data.local.JajanCuanDatabase
 import com.henrisusanto.vitmate.data.remote.OkHttpRecipeRemoteDataSource
 import com.henrisusanto.vitmate.data.repository.RecipeRepository
+import com.henrisusanto.vitmate.data.repository.TimerRepository
 import com.henrisusanto.vitmate.data.sync.SharedPreferencesSyncStateStore
 import com.henrisusanto.vitmate.data.sync.SyncManager
 import com.henrisusanto.vitmate.data.sync.SyncOutcome
+import com.henrisusanto.vitmate.timer.AlarmTimerScheduler
+import com.henrisusanto.vitmate.timer.TimerNotifier
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -73,6 +76,13 @@ class AppContainer(context: Context) {
         coversDirectory = File(appContext.filesDir, "covers")
     )
 
+    val timerNotifier = TimerNotifier(appContext)
+
+    val timerRepository = TimerRepository(
+        dao = database.activeTimerDao(),
+        scheduler = AlarmTimerScheduler(appContext)
+    )
+
     val syncManager = SyncManager(
         database = database,
         remote = recipeRemoteDataSource,
@@ -82,6 +92,9 @@ class AppContainer(context: Context) {
     )
 
     init {
+        timerNotifier.ensureChannel()
+        applicationScope.launch { timerRepository.pruneExpired() }
+
         remoteConfigManager.start()
 
         applicationScope.launch {

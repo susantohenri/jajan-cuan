@@ -8,6 +8,7 @@ import com.henrisusanto.vitmate.data.repository.SavedCalcState
 import com.henrisusanto.vitmate.domain.HppMarginMode
 import com.henrisusanto.vitmate.testutil.RecordingAnalyticsSink
 import com.henrisusanto.vitmate.testutil.RecordingCrashlyticsSink
+import com.henrisusanto.vitmate.ui.testutil.FakeCookingTimers
 import com.henrisusanto.vitmate.ui.testutil.FakeDetailCatalog
 import com.henrisusanto.vitmate.ui.testutil.MainDispatcherRule
 import com.henrisusanto.vitmate.ui.testutil.goldenDetail
@@ -32,6 +33,7 @@ class DetailViewModelTest {
 
     private lateinit var sink: RecordingAnalyticsSink
     private lateinit var catalog: FakeDetailCatalog
+    private lateinit var timers: FakeCookingTimers
     private lateinit var analytics: AnalyticsLogger
     private val collectedEvents = mutableListOf<DetailUiEvent>()
 
@@ -39,6 +41,7 @@ class DetailViewModelTest {
     fun setUp() {
         sink = RecordingAnalyticsSink()
         catalog = FakeDetailCatalog()
+        timers = FakeCookingTimers()
         analytics = AnalyticsLogger(
             analytics = sink,
             crashlytics = RecordingCrashlyticsSink(),
@@ -202,10 +205,73 @@ class DetailViewModelTest {
         assertEquals(14_625.0, state.hpp.sellingPrice, DELTA)
     }
 
+    @Test
+    fun `timer mencatat event dan tampil di daftar aktif`() = runTest {
+        catalog.detailResult = DetailResult.Success(goldenDetail())
+
+        val viewModel = createViewModel()
+        viewModel.startTimer("Tumis bawang putih", 300)
+        advanceUntilIdle()
+
+        val started = timers.started.single()
+        assertEquals("Tumis bawang putih", started.label)
+        assertEquals(300L, started.durationSeconds)
+        assertEquals("Mini Spaghetti Ekonomis", started.recipeTitle)
+        assertEquals(
+            listOf("Tumis bawang putih"),
+            viewModel.state.value.activeTimers.map { it.label }
+        )
+
+        val event = sink.events.single { it.name == "start_cooking_timer" }
+        assertEquals(
+            "mini-spaghetti-ekonomis-untuk-jualan-2ribuan",
+            event.params["recipe_id"]
+        )
+        assertEquals(300L, event.params["duration_sec"])
+    }
+
+    @Test
+    fun `beberapa timer aktif dan bisa dibatalkan`() = runTest {
+        catalog.detailResult = DetailResult.Success(goldenDetail())
+
+        val viewModel = createViewModel()
+        viewModel.startTimer("Langkah satu", 60)
+        viewModel.startTimer("Langkah dua", 120)
+        advanceUntilIdle()
+
+        assertEquals(2, viewModel.state.value.activeTimers.size)
+        val firstId = viewModel.state.value.activeTimers.first().id
+
+        viewModel.onCancelTimer(firstId)
+        advanceUntilIdle()
+
+        assertEquals(listOf(firstId), timers.cancelled)
+        assertEquals(
+            listOf("Langkah dua"),
+            viewModel.state.value.activeTimers.map { it.label }
+        )
+    }
+
+    @Test
+    fun `durasi timer kurang dari satu detik ditolak`() = runTest {
+        catalog.detailResult = DetailResult.Success(goldenDetail())
+
+        val viewModel = createViewModel()
+        val eventsJob = collectEvents(viewModel)
+
+        viewModel.startTimer("Terlalu cepat", 0)
+        advanceUntilIdle()
+
+        assertTrue(timers.started.isEmpty())
+        assertTrue(collectedEvents.contains(DetailUiEvent.TimerFailed))
+        eventsJob.cancel()
+    }
+
     private fun TestScope.createViewModel(): DetailViewModel {
         val viewModel = DetailViewModel(
             recipeId = "mini-spaghetti-ekonomis-untuk-jualan-2ribuan",
             repository = catalog,
+            timers = timers,
             analytics = analytics
         )
         advanceUntilIdle()

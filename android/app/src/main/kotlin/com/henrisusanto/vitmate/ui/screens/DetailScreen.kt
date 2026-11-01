@@ -1,6 +1,9 @@
 package com.henrisusanto.vitmate.ui.screens
 
+import android.Manifest
 import android.content.Intent
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -35,8 +38,10 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableLongStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -53,17 +58,24 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import com.henrisusanto.vitmate.R
 import com.henrisusanto.vitmate.domain.HppMarginMode
+import com.henrisusanto.vitmate.timer.TimerPermissionPrompt
+import com.henrisusanto.vitmate.ui.components.ActiveTimersSection
 import com.henrisusanto.vitmate.ui.components.BusinessAnalysisSection
 import com.henrisusanto.vitmate.ui.components.CookingStepsSection
 import com.henrisusanto.vitmate.ui.components.ErrorState
 import com.henrisusanto.vitmate.ui.components.HppCalculatorSection
 import com.henrisusanto.vitmate.ui.components.IngredientsSection
 import com.henrisusanto.vitmate.ui.components.SectionTitle
+import com.henrisusanto.vitmate.ui.components.TimerDialog
+import com.henrisusanto.vitmate.ui.components.TimerDraft
 import com.henrisusanto.vitmate.ui.components.imageModel
 import com.henrisusanto.vitmate.ui.util.categoryEmoji
 import com.henrisusanto.vitmate.ui.util.formatRupiah
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 private const val TABLET_CONTENT_MAX_WIDTH_DP = 840
+private const val DEFAULT_TIMER_SECONDS = 60
 
 /**
  * Layar Detail Resep. Sumber detail (favorit -> cache -> jaringan) sudah
@@ -80,6 +92,39 @@ fun DetailScreen(
     val snackbarHostState = remember { SnackbarHostState() }
     val context = LocalContext.current
     val haptics = LocalHapticFeedback.current
+    val scope = rememberCoroutineScope()
+
+    var timerStep by remember { mutableStateOf<CookingStepUi?>(null) }
+    var pendingTimer by remember { mutableStateOf<TimerDraft?>(null) }
+    val permissionPrompt = remember(context) { TimerPermissionPrompt(context) }
+    val permissionDeniedMessage = stringResource(R.string.timer_permission_denied)
+    val timerFailedMessage = stringResource(R.string.timer_failed)
+
+    fun startTimer(draft: TimerDraft) {
+        viewModel.startTimer(draft.label, draft.durationSeconds)
+        if (!permissionPrompt.isGranted()) {
+            scope.launch { snackbarHostState.showSnackbar(permissionDeniedMessage) }
+        }
+    }
+
+    val notificationPermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) {
+        val draft = pendingTimer
+        pendingTimer = null
+        // Timer tetap berjalan walau izin ditolak; pesan izin tampil dari startTimer.
+        if (draft != null) startTimer(draft)
+    }
+
+    var nowMillis by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    LaunchedEffect(state.activeTimers.isNotEmpty()) {
+        if (state.activeTimers.isEmpty()) return@LaunchedEffect
+        nowMillis = System.currentTimeMillis()
+        while (true) {
+            delay(1_000L)
+            nowMillis = System.currentTimeMillis()
+        }
+    }
 
     val shareText = stringResource(
         R.string.detail_share_text_format,
@@ -112,6 +157,7 @@ fun DetailScreen(
                 DetailUiEvent.SaveFailed -> snackbarHostState.showSnackbar(
                     context.getString(R.string.detail_calc_save_failed)
                 )
+                DetailUiEvent.TimerFailed -> snackbarHostState.showSnackbar(timerFailedMessage)
                 is DetailUiEvent.Error -> snackbarHostState.showSnackbar(event.message)
             }
         }
@@ -205,11 +251,14 @@ fun DetailScreen(
                 else -> {
                     DetailContent(
                         state = state,
+                        nowMillis = nowMillis,
                         onPriceChange = viewModel::onPriceChange,
                         onPortionsChange = viewModel::onPortionsChange,
                         onMarginModeChange = viewModel::onMarginModeChange,
                         onMarginChange = viewModel::onMarginChange,
                         onSaveCalculation = viewModel::onSaveCalculation,
+                        onTimerClick = { timerStep = it },
+                        onCancelTimer = viewModel::onCancelTimer,
                         modifier = Modifier
                             .fillMaxSize()
                             .widthIn(max = TABLET_CONTENT_MAX_WIDTH_DP.dp)
@@ -218,16 +267,37 @@ fun DetailScreen(
             }
         }
     }
+
+    timerStep?.let { step ->
+        TimerDialog(
+            initialLabel = step.text,
+            initialDurationSeconds = step.durationSeconds ?: DEFAULT_TIMER_SECONDS,
+            onDismiss = { timerStep = null },
+            onConfirm = { draft ->
+                timerStep = null
+                if (permissionPrompt.shouldRequest()) {
+                    pendingTimer = draft
+                    permissionPrompt.markRequested()
+                    notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                } else {
+                    startTimer(draft)
+                }
+            }
+        )
+    }
 }
 
 @Composable
 private fun DetailContent(
     state: DetailUiState,
+    nowMillis: Long,
     onPriceChange: (Int, String) -> Unit,
     onPortionsChange: (String) -> Unit,
     onMarginModeChange: (HppMarginMode) -> Unit,
     onMarginChange: (String) -> Unit,
     onSaveCalculation: () -> Unit,
+    onTimerClick: (CookingStepUi) -> Unit,
+    onCancelTimer: (String) -> Unit,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(
@@ -255,8 +325,15 @@ private fun DetailContent(
         item(key = "steps") {
             CookingStepsSection(
                 steps = state.steps,
-                // Aksi timer dipasang pada S8; tombol sengaja no-op di S7.
-                onTimerClick = {},
+                onTimerClick = onTimerClick,
+                modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+            )
+        }
+        item(key = "timers") {
+            ActiveTimersSection(
+                timers = state.activeTimers,
+                nowMillis = nowMillis,
+                onCancel = onCancelTimer,
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
             )
         }

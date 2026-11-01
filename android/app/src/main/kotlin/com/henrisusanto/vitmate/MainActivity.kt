@@ -1,5 +1,6 @@
 package com.henrisusanto.vitmate
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -19,11 +20,13 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -32,6 +35,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.henrisusanto.vitmate.data.sync.SyncOutcome
+import com.henrisusanto.vitmate.timer.TimerIntents
 import com.henrisusanto.vitmate.ui.navigation.Screen
 import com.henrisusanto.vitmate.ui.screens.DetailScreen
 import com.henrisusanto.vitmate.ui.screens.DetailViewModel
@@ -41,6 +45,8 @@ import com.henrisusanto.vitmate.ui.screens.HomeScreen
 import com.henrisusanto.vitmate.ui.screens.HomeViewModel
 import com.henrisusanto.vitmate.ui.screens.SettingsScreen
 import com.henrisusanto.vitmate.ui.theme.JajanCuanTheme
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 
 data class BottomNavItem(
     val route: String,
@@ -52,10 +58,15 @@ class MainActivity : ComponentActivity() {
     private val container: AppContainer
         get() = (application as JajanCuanApplication).container
 
+    /** Diisi dari notifikasi timer; dikonsumsi setelah navigasi ke Detail. */
+    private val pendingRecipeId = MutableStateFlow<String?>(null)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
+
+        pendingRecipeId.value = TimerIntents.recipeIdFrom(intent)
 
         setContent {
             JajanCuanTheme {
@@ -63,7 +74,14 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainNavigationApp(container)
+                    MainNavigationApp(
+                        container = container,
+                        pendingRecipeId = pendingRecipeId,
+                        onPendingRecipeConsumed = {
+                            pendingRecipeId.value = null
+                            intent.removeExtra(TimerIntents.EXTRA_RECIPE_ID)
+                        }
+                    )
                 }
             }
         }
@@ -73,13 +91,32 @@ class MainActivity : ComponentActivity() {
             container.adsInitializer.initializeIfAllowed()
         }
     }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        TimerIntents.recipeIdFrom(intent)?.let { pendingRecipeId.value = it }
+    }
 }
 
 @Composable
-fun MainNavigationApp(container: AppContainer) {
+fun MainNavigationApp(
+    container: AppContainer,
+    pendingRecipeId: StateFlow<String?>,
+    onPendingRecipeConsumed: () -> Unit
+) {
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
+    val recipeIdToOpen by pendingRecipeId.collectAsStateWithLifecycle()
+
+    LaunchedEffect(recipeIdToOpen) {
+        val recipeId = recipeIdToOpen ?: return@LaunchedEffect
+        navController.navigate(Screen.Detail.createRoute(recipeId)) {
+            launchSingleTop = true
+        }
+        onPendingRecipeConsumed()
+    }
 
     val bottomNavItems = listOf(
         BottomNavItem(Screen.Home.route, R.string.tab_home, Icons.Default.Home),
@@ -192,6 +229,7 @@ fun MainNavigationApp(container: AppContainer) {
                     DetailViewModel(
                         recipeId = recipeId,
                         repository = container.recipeRepository,
+                        timers = container.timerRepository,
                         analytics = container.analytics
                     )
                 }

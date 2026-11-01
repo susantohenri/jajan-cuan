@@ -98,7 +98,19 @@
     <string name="timer_channel_name">Timer Memasak</string>
     <string name="timer_channel_description">Notifikasi pengingat waktu memasak</string>
     <string name="timer_notification_title">Waktu Memasak Selesai</string>
-    <string name="timer_notification_content_format">%s telah selesai memasak</string>
+    <string name="timer_notification_content_format">%1$s (%2$s) telah selesai memasak</string>
+    <string name="timer_active_title">Timer Aktif</string>
+    <string name="timer_recipe_format">Resep: %s</string>
+    <string name="timer_cancel_content_desc">Batalkan timer</string>
+    <string name="timer_failed">Gagal menyalakan timer. Coba lagi.</string>
+    <string name="timer_permission_denied">Notifikasi timer tidak aktif. Timer tetap berjalan di aplikasi; aktifkan izin notifikasi di Pengaturan &gt; Aplikasi &gt; Jajan Cuan &gt; Notifikasi.</string>
+    <string name="timer_dialog_title">Nyalakan Timer</string>
+    <string name="timer_dialog_label">Label timer</string>
+    <string name="timer_dialog_minutes">Menit</string>
+    <string name="timer_dialog_seconds">Detik</string>
+    <string name="timer_dialog_start">Nyalakan</string>
+    <string name="timer_dialog_duration_error">Durasi minimal 1 detik.</string>
+    <string name="timer_finished">Selesai</string>
 
     <!-- Dialogs -->
     <string name="dialog_rewarded_title">Tonton Iklan untuk Membuka %s</string>

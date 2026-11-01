@@ -3,6 +3,8 @@ package com.henrisusanto.vitmate.ui.screens
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.henrisusanto.vitmate.analytics.AnalyticsLogger
+import com.henrisusanto.vitmate.data.repository.ActiveTimer
+import com.henrisusanto.vitmate.data.repository.CookingTimers
 import com.henrisusanto.vitmate.data.repository.DetailCatalog
 import com.henrisusanto.vitmate.data.repository.DetailResult
 import com.henrisusanto.vitmate.data.repository.FavoriteToggleResult
@@ -54,7 +56,8 @@ data class DetailUiState(
     val marginText: String = "100",
     val hpp: HppResult = HppCalculator.calculate(emptyList(), 1),
     val isFavorite: Boolean = false,
-    val isSaving: Boolean = false
+    val isSaving: Boolean = false,
+    val activeTimers: List<ActiveTimer> = emptyList()
 )
 
 sealed interface DetailUiEvent {
@@ -63,6 +66,7 @@ sealed interface DetailUiEvent {
     data object NeedsInternet : DetailUiEvent
     data object CalculationSaved : DetailUiEvent
     data object SaveFailed : DetailUiEvent
+    data object TimerFailed : DetailUiEvent
     data class Error(val message: String) : DetailUiEvent
 }
 
@@ -73,6 +77,7 @@ sealed interface DetailUiEvent {
 class DetailViewModel(
     private val recipeId: String,
     private val repository: DetailCatalog,
+    private val timers: CookingTimers,
     private val analytics: AnalyticsLogger
 ) : ViewModel() {
 
@@ -89,6 +94,11 @@ class DetailViewModel(
         viewModelScope.launch {
             repository.observeIsFavorite(recipeId).collect { isFavorite ->
                 _state.update { it.copy(isFavorite = isFavorite) }
+            }
+        }
+        viewModelScope.launch {
+            timers.observeActive().collect { activeTimers ->
+                _state.update { it.copy(activeTimers = activeTimers) }
             }
         }
         load()
@@ -157,7 +167,8 @@ class DetailViewModel(
             portionsText = portions.toString(),
             marginMode = marginMode,
             marginText = formatMargin(marginValue),
-            isFavorite = _state.value.isFavorite
+            isFavorite = _state.value.isFavorite,
+            activeTimers = _state.value.activeTimers
         )
         _state.value = base.recalculated()
     }
@@ -244,6 +255,38 @@ class DetailViewModel(
         }
     }
 
+    fun onCancelTimer(timerId: String) {
+        viewModelScope.launch {
+            if (runCatching { timers.cancel(timerId) }.isFailure) {
+                _events.emit(DetailUiEvent.TimerFailed)
+            }
+        }
+    }
+
+    fun startTimer(label: String, durationSeconds: Long) {
+        val current = _state.value
+        val effectiveLabel = label.trim().ifBlank { current.title }
+        if (durationSeconds < MIN_TIMER_SECONDS) {
+            viewModelScope.launch { _events.emit(DetailUiEvent.TimerFailed) }
+            return
+        }
+        viewModelScope.launch {
+            val started = runCatching {
+                timers.start(
+                    recipeId = recipeId,
+                    recipeTitle = current.title,
+                    label = effectiveLabel,
+                    durationSeconds = durationSeconds
+                )
+            }.getOrNull()
+            if (started == null) {
+                _events.emit(DetailUiEvent.TimerFailed)
+            } else {
+                analytics.startCookingTimer(recipeId, durationSeconds)
+            }
+        }
+    }
+
     private fun noteEdited() {
         if (hppLogged) return
         hppLogged = true
@@ -286,5 +329,6 @@ class DetailViewModel(
         private const val MAX_PRICE_DIGITS = 12
         private const val MAX_PORTION_DIGITS = 6
         private const val MAX_MARGIN_DIGITS = 8
+        private const val MIN_TIMER_SECONDS = 1L
     }
 }
