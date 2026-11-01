@@ -5,6 +5,14 @@
       ".write": false,
       ".indexOn": ["published", "category"]
     },
+    "search_index": {
+      ".read": true,
+      ".write": false
+    },
+    "meta": {
+      ".read": true,
+      ".write": false
+    },
     "waitlist": {
       ".read": false,
       ".write": true,

@@ -1,0 +1,12 @@
+{
+  "name": "jajan-cuan",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Jajan Cuan content pipeline",
+  "scripts": {
+    "release": "node scripts/release.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
+  }
+}
