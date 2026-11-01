@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Jajan Cuan</string>
+
+    <!-- Bottom Navigation -->
+    <string name="tab_home">Home</string>
+    <string name="tab_favorites">Favorit</string>
+    <string name="tab_settings">Pengaturan</string>
+
+    <!-- Home -->
+    <string name="home_header_title">Jajan Cuan</string>
+    <string name="home_search_hint">Cari resep jajanan…</string>
+    <string name="chip_all">Semua</string>
+    <string name="native_ad_label">Iklan</string>
+
+    <!-- Empty states -->
+    <string name="empty_search_title">Resep tidak ditemukan</string>
+    <string name="empty_search_msg_format">Resep dengan kata kunci \u201c%s\u201d tidak ditemukan</string>
+    <string name="button_show_all">Tampilkan Semua Resep</string>
+    <string name="empty_favorites_title">Belum Ada Resep Favorit</string>
+    <string name="empty_favorites_msg">Kamu belum menyimpan resep jajanan favorit. Simpan resep yang kamu suka dengan menekan ikon hati.</string>
+    <string name="button_explore_recipes">Jelajahi Ide Resep</string>
+
+    <!-- Detail -->
+    <string name="detail_share_text_format">%s\n%s\nDapatkan Jajan Cuan: https://jajan-cuan.web.app/</string>
+    <string name="button_try_again">Coba Lagi</string>
+    <string name="button_save">Simpan</string>
+    <string name="button_timer_free">Nyalakan Timer</string>
+
+    <!-- Kalkulator HPP -->
+    <string name="hpp_calculator">Kalkulator HPP</string>
+    <string name="hpp_total_modal">Total Modal Bahan</string>
+    <string name="hpp_hpp_per_portion">HPP per Porsi</string>
+    <string name="hpp_harga_jual">Harga Jual</string>
+    <string name="hpp_harga_jual_bulat">Harga Jual (Bulat Rp 500)</string>
+    <string name="hpp_laba_per_portion">Laba per Porsi</string>
+    <string name="hpp_laba_total">Laba Total</string>
+    <string name="hpp_margin_mode_percent">Persentase (%)</string>
+    <string name="hpp_margin_mode_nominal">Nominal (Rp)</string>
+
+    <!-- Favorit -->
+    <string name="favorites_header">Resep Favorit Saya (%d)</string>
+    <string name="snackbar_saved">Resep disimpan ke Favorit</string>
+    <string name="snackbar_removed">Resep dihapus dari Favorit</string>
+    <string name="snackbar_need_internet">Perlu internet untuk menyimpan resep ini pertama kali</string>
+    <string name="button_remove_favorite">Hapus Bookmark</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Pengaturan</string>
+    <string name="settings_theme">Tema</string>
+    <string name="settings_theme_system">Ikuti Sistem</string>
+    <string name="settings_theme_light">Terang</string>
+    <string name="settings_theme_dark">Gelap</string>
+    <string name="settings_version">Versi</string>
+    <string name="settings_privacy_policy">Kebijakan Privasi</string>
+    <string name="settings_ads_privacy">Pengaturan Privasi Iklan</string>
+
+    <!-- Timer -->
+    <string name="timer_channel_name">Timer Memasak</string>
+    <string name="timer_channel_description">Notifikasi pengingat waktu memasak</string>
+    <string name="timer_notification_title">Waktu Memasak Selesai</string>
+    <string name="timer_notification_content_format">%s telah selesai memasak</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_rewarded_title">Tonton Iklan untuk Membuka %s</string>
+    <string name="dialog_rewarded_msg">Tonton iklan video untuk membuka fitur %s pada resep ini secara permanen</string>
+    <string name="dialog_button_batal">Batal</string>
+    <string name="dialog_button_tonton">Tonton</string>
+    <string name="rewarded_fallback_msg">Iklan belum tersedia, fitur dibuka sementara untuk sesi ini</string>
+    <string name="rewarded_loading">Menyiapkan iklan\u2026</string>
+    <string name="rewarded_button_format">Tonton iklan untuk membuka %s</string>
+
+    <!-- Promo -->
+    <string name="promo_section_title">Konten Promosi</string>
+    <string name="button_unduh">Unduh</string>
+    <string name="button_share">Share</string>
+    <string name="promo_no_internet">Konten promosi membutuhkan internet</string>
+
+    <!-- Errors -->
+    <string name="error_network">Tidak dapat terhubung ke internet. Menggunakan cache lokal.</string>
+    <string name="error_loading">Gagal memuat data. Silakan coba lagi.</string>
+</resources>
