@@ -1,6 +1,12 @@
 # code indexing
 .codegraph/
 
+# RTDB backup (dihasilkan S2, jangan di-commit)
+data/backup-*.json
+
+# Status internal generator thumbnail (build artifact, bukan aset)
+web/img/recipes/thumbs/.gen-state.json
+
 # Gradle files
 .gradle/
 build/

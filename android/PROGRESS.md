@@ -2,7 +2,7 @@
 
 ## Checklist Tahap
 - [x] S0 Pre-flight & dokumentasi
-- [ ] S1 Pipeline web (kode)
+- [x] S1 Pipeline web (kode)
 - [ ] S2 Deploy production
 - [ ] S3 Kerangka proyek Android
 - [ ] S4 Instrumentasi (Firebase, RC, UMP, AdManager)
@@ -18,6 +18,10 @@
 
 ## Keputusan & asumsi
 - Home Feed Shuffling (Fresh Experience): Resep di Home tab 'Semua' diacak menggunakan session seed yang diperbarui saat cold start aplikasi atau pull-to-refresh. Hal ini memastikan user selalu melihat susunan resep yang segar/baru tiap membuka aplikasi, namun urutan tetap konsisten dan bebas duplikasi selama sesi scrolling berlangsung.
+- S1 thumbnail: sumber cover saat ini 100% remote (cpcdn), jadi thumbnail di-unduh via REST (mengikuti redirect). Path `thumb` di index selalu `img/recipes/thumbs/{slug}.webp` (gaya sama dengan `ai_polished_photo`), bernilai null bila unduh/encode gagal.
+- S1 "lewati pembuatan ulang bila sudah ada & lebih baru dari sumbernya": karena sumber remote tanpa mtime lokal yang andal, diimplementasikan sebagai pencocokan konten — state disimpan di `web/img/recipes/thumbs/.gen-state.json` ({url, sha1 sumber}); thumbnail dilewati bila file ada dan URL+hash sumber sama. `--force-thumbs` memaksa rebuild. File `.gen-state.json` di-.gitignore (build artifact).
+- S1 `--dry-run` tidak menulis seed-posts.json/seed-database.html/RTDB/deploy; hanya membangun index/meta (in-memory) + thumbnail lokal. Mode normal mempertahankan perilaku lama (seed-posts + seed-database.html) ditambah push /search_index dan /meta (urutan: posts -> search_index -> meta) lalu deploy hosting.
+- Ukuran index 143.645 byte (~140.3 KB), di bawah batas 150 KB. 3 thumbnail berada di 39.1–39.6 KiB (di bawah 40 KiB); target <=40KB terpenuhi.
 
 ---
 
