@@ -22,7 +22,7 @@
     <string name="button_explore_recipes">Jelajahi Ide Resep</string>
 
     <!-- Detail -->
-    <string name="detail_share_text_format">%s\n%s\nDapatkan Jajan Cuan: https://jajan-cuan.web.app/</string>
+    <string name="detail_share_text_format">%1$s\n%2$s\nDapatkan Jajan Cuan: https://jajan-cuan.web.app/</string>
     <string name="button_try_again">Coba Lagi</string>
     <string name="button_save">Simpan</string>
     <string name="button_timer_free">Nyalakan Timer</string>

@@ -1,29 +1,28 @@
 package com.henrisusanto.vitmate.ui.screens
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material3.*
-import androidx.compose.runtime.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.henrisusanto.vitmate.R
 
 @Composable
-fun SettingsScreen(modifier: Modifier = Modifier) {
-    Column(
+fun SettingsScreen(
+    modifier: Modifier = Modifier
+) {
+    Box(
         modifier = modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding(16.dp),
+        contentAlignment = Alignment.Center
     ) {
         Text(
-            text = stringResource(R.string.settings_title),
-            style = MaterialTheme.typography.headlineMedium,
-            modifier = Modifier.padding(bottom = 8.dp)
-        )
-        
-        Text(
-            text = "Settings Screen - Pengaturan akan ditampilkan di sini",
-            style = MaterialTheme.typography.bodyMedium
+            text = "Pengaturan (Placeholder S3 — diisi S10)",
+            style = MaterialTheme.typography.titleMedium
         )
     }
 }

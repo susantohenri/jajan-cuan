@@ -15,15 +15,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.JajanCuan"
+        android:enableOnBackInvokedCallback="true"
+        android:theme="@style/Theme.JajanCuan.Starting"
         tools:targetApi="31">
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
-
-        <meta-data
-            android:name="com.google.android.gms.ads.AD_MANAGER_APP_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
 
         <activity
@@ -47,8 +44,6 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/provider_paths" />
         </provider>
-
-        <receiver android:name=".timer.TimerBroadcastReceiver" android:exported="false" />
 
     </application>
 

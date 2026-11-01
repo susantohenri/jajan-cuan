@@ -1,7 +1,11 @@
 plugins {
-    id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("org.jetbrains.kotlin.kapt")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.google.services)
+    alias(libs.plugins.firebase.crashlytics)
 }
 
 android {
@@ -14,6 +18,7 @@ android {
         targetSdk = 36
         versionCode = 1
         versionName = "1.0.0"
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -31,95 +36,79 @@ android {
         }
     }
 
-    buildFeatures {
-        compose = true
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
-    composeOptions {
-        kotlinCompilerExtensionVersion = "2.1.0"
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    buildFeatures {
+        compose = true
+        buildConfig = true
     }
 
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
-        exclude("/META-INF/gradle/attribute")
-    }
-
-    lint {
-        baseline = "lint-baseline.xml"
-        abortOnError = true
-        checkReleaseBuilds = false
     }
 }
 
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
 dependencies {
-    val coreKtx = "1.15.0"
-    val lifecycle = "2.9.1"
-    val activity = "1.10.1"
-    val composeBom = "2025.06.01"
-    val material3 = "1.4.0"
-    val coil = "2.7.0"
-    val datastore = "1.1.7"
-    val room = "2.7.4"
-    val ksp = "2.1.0"
-    val retrofit = "2.12.0"
-    val okHttp = "5.1.0"
-    val kotlinxSerialization = "1.8.1"
-    val firebase = "33.14.0"
-    val remoteConfig = "22.0.1"
-    val ump = "23.0.1"
-    val playServicesAds = "23.6.0"
-    val work = "2.10.2"
+    // AndroidX Core & UI
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.androidx.lifecycle.runtime.compose)
+    implementation(libs.androidx.activity.compose)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.androidx.datastore.preferences)
 
-    implementation("androidx.core:core-ktx:$coreKtx")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:$lifecycle")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:$lifecycle")
-    implementation("androidx.activity:activity-compose:$activity")
-    implementation("androidx.datastore:datastore:$datastore")
+    // Jetpack Compose
+    implementation(platform(libs.androidx.compose.bom))
+    implementation(libs.androidx.compose.ui)
+    implementation(libs.androidx.compose.ui.graphics)
+    implementation(libs.androidx.compose.ui.tooling.preview)
+    implementation(libs.androidx.compose.material3)
+    debugImplementation(libs.androidx.compose.ui.tooling)
 
-    implementation(platform("androidx.compose:compose-bom:$composeBom"))
-    implementation("androidx.compose.ui:ui")
-    implementation("androidx.compose.ui:ui-graphics")
-    implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.material3:material3-window-size-class")
-    implementation("androidx.compose.runtime:runtime-livedata")
-    implementation("androidx.compose.runtime:runtime-rxjava3")
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 
-    implementation("io.coil-kt:coil-compose:$coil")
+    // Networking & Serialization
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging)
+    implementation(libs.kotlinx.serialization.json)
 
-    implementation("androidx.room:room-runtime:$room")
-    implementation("androidx.room:room-ktx:$room")
-    ksp("androidx.room:room-compiler:$room")
+    // Coil
+    implementation(libs.coil.compose)
 
-    implementation("com.squareup.retrofit2:retrofit:$retrofit")
-    implementation("com.squareup.retrofit2:converter-kotlinx-serialization:$retrofit")
-    implementation("com.squareup.okhttp3:okhttp:$okHttp")
-    implementation("com.squareup.okhttp3:logging-interceptor:$okHttp")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlinxSerialization")
+    // Firebase
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
+    implementation(libs.firebase.config)
+    implementation(libs.firebase.crashlytics)
 
-    implementation("com.google.firebase:firebase-crashlytics:$firebase")
-    implementation("com.google.firebase:firebase-analytics:$firebase")
-    implementation("com.google.firebase:firebase-config:$remoteConfig")
-    implementation("com.google.android.ump:user-messaging-platform:$ump")
-    implementation("com.google.android.play:play-services-ads:$playServicesAds")
+    // Monetization (AdMob & UMP)
+    implementation(libs.play.services.ads)
+    implementation(libs.user.messaging.platform)
 
-    implementation("androidx.work:work-runtime-ktx:$work")
-
-    testImplementation("junit:junit:4.13.2")
-    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.10.0")
-    testImplementation("androidx.arch.core:core-testing:2.2.0")
-    testImplementation("io.mockk:mockk:1.14.5")
-    testImplementation("org.robolectric:robolectric:4.14")
-    testImplementation("androidx.test:core:1.6.1")
-    testImplementation("androidx.test.ext:junit:1.2.1")
-
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
-    androidTestImplementation("androidx.test.ext:junit:1.2.1")
-    androidTestImplementation("androidx.test:core:1.6.1")
-    androidTestImplementation("androidx.test:rules:1.6.1")
-    androidTestImplementation("androidx.test:runner:1.6.1")
-    androidTestImplementation("io.mockk:mockk-android:1.14.5")
+    // Unit Testing
+    testImplementation(libs.junit)
+    testImplementation(libs.robolectric)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.okhttp.mockwebserver)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    androidTestImplementation(platform(libs.androidx.compose.bom))
 }

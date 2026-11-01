@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<remoteConfig defaults>
-    <parameter>
+<defaultsMap>
+    <entry>
         <key>isAdsEnabled</key>
         <value>true</value>
-    
+    </entry>
+    <entry>
+        <key>bannerEnabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>nativeEnabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>rewardedEnabled</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>bannerAdUnitId</key>
+        <value>ca-app-pub-3940256099942544/6300978111</value>
+    </entry>
+    <entry>
+        <key>nativeAdUnitId</key>
+        <value>ca-app-pub-3940256099942544/2247696110</value>
+    </entry>
+    <entry>
+        <key>rewardedAdUnitId</key>
+        <value>ca-app-pub-3940256099942544/5224354917</value>
+    </entry>
+    <entry>
+        <key>nativeEveryN</key>
+        <value>5</value>
+    </entry>
+    <entry>
+        <key>rewardedFallbackUnlockOnFailure</key>
+        <value>true</value>
+    </entry>
+    <entry>
+        <key>rewardedReadyTimeoutSec</key>
+        <value>8</value>
+    </entry>
+    <entry>
+        <key>metaCheckIntervalHours</key>
+        <value>6</value>
+    </entry>
+    <entry>
+        <key>pageSize</key>
+        <value>10</value>
+    </entry>
+</defaultsMap>
