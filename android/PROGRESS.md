@@ -6,7 +6,7 @@
 - [x] S2 Deploy production
 - [x] S3 Kerangka proyek Android
 - [x] S4 Instrumentasi (Firebase, RC, UMP, AdManager)
-- [ ] S5 Data layer
+- [x] S5 Data layer
 - [ ] S6 Home, Pencarian, Favorit
 - [ ] S7 Detail & Kalkulator
 - [ ] S8 Timer
@@ -41,6 +41,14 @@
 - S4 Navigasi: listener NavController mencatat `screen_view` (nama rute tanpa argumen), Crashlytics `last_screen`, dan `AdManager.currentScreen` untuk parameter `screen` event iklan. Event layar lain menyusul saat layarnya diisi di S6/S7/S10.
 - S4 verifikasi perangkat: memakai perangkat fisik SM-A045F (bukan emulator). Logcat membuktikan urutan `UMP requestConsentInfoUpdate` -> `UMP consent form selesai` -> `MobileAds.initialize dimulai setelah consent` -> `MobileAds selesai diinisialisasi`, tanpa `FATAL EXCEPTION`. Tidak ada log `Request banner/native/rewarded` karena `isAdsEnabled=false` dari RC; setelah flag diaktifkan, gate consent tetap berlaku.
 - S4 tidak menambah penempatan banner/native ke layar Home/Favorit (S6) maupun FeatureGate Rewarded (S9); komponennya sudah selesai dan siap dipakai.
+- S5 temuan skema: `title_polished` di `/posts` adalah boolean `true` pada 209/209 resep, bukan string seperti tertulis di DATA_SCHEMA.md. DTO menyimpannya sebagai `JsonElement?` agar tidak gagal bila bentuk berubah. `promo_images` kadang tidak dikirim RTDB untuk array kosong, jadi DTO memakai default list kosong.
+- S5 REST: OkHttp + kotlinx.serialization dengan `ignoreUnknownKeys`, `coerceInputValues`, `explicitNulls=false`; hanya endpoint `/meta.json`, `/search_index.json`, dan `/posts/{id}.json`. Retry maksimal 2x untuk GET pada IOException/5xx dengan backoff 250ms/500ms; 404 dan body `null` menjadi `NoData`. Gzip ditangani transparan oleh OkHttp.
+- S5 Room: semua entitas §6 memakai nama kolom camelCase, `exportSchema=true` ke `app/schemas/.../1.json`. Detail non-favorit di-prune ke 30 item setelah setiap simpan. `unlocks` memakai PK gabungan dan insert IGNORE agar tidak menimpa `unlockedAt` pertama. `active_timers` memakai id unik + notificationId untuk S8.
+- S5 state sync: versi `/meta` dan waktu cek terakhir disimpan di SharedPreferences `sync_state` (bukan tabel Room), karena bukan konten katalog. Throttle memakai `metaCheckIntervalHours` dari Remote Config. `SyncManager.sync(force=true)` disediakan untuk pull-to-refresh S6.
+- S5 foreground: ditambahkan `androidx.lifecycle:lifecycle-process` dan observer `ProcessLifecycleOwner` di Application; sync berjalan saat app dibuka dan kembali foreground, bukan hanya sekali di cold start.
+- S5 favorit: snapshot mandiri di tabel `favorites`; file disimpan di `filesDir/covers/{id}/cover` dan `/thumb`. Jika thumbnail gagal diunduh, cover dipakai sebagai thumbnail. Hapus favorit menghapus baris + direktori. Refresh favorit saat versi index berubah mempertahankan snapshot lama bila server 404/null atau jaringan gagal.
+- S5 urutan list: `orderIdx` menyimpan urutan dasar deterministik dari index (diurutkan per id saat sync); pengacakan sesi Home tetap menjadi tugas S6. Query LIKE memakai escape `\`, `%`, dan `_` yang diuji.
+- S5 verifikasi: 70 unit test total (52 test baru S5) hijau; assembleDebug hijau; lint 0 error. Di perangkat SM-A045F, setelah app dibuka database Room berisi 209 baris `recipe_index` dengan field kartu benar, tanpa FATAL EXCEPTION.
 
 ---
 
@@ -50,3 +58,6 @@
 - S4 (opsional): pastikan logcat menampilkan unit test ID `ca-app-pub-3940256099942544/...` di debug, bukan ID produksi.
 - S4 (opsional): cek Firebase Analytics DebugView untuk `screen_view` dan event `jc_ad_*` setelah `isAdsEnabled=true`.
 - S4 komponen banner/native baru akan terlihat setelah dipasang di Home/Favorit pada S6; Rewarded baru diuji penuh pada S9.
+- S5 (sudah diverifikasi di SM-A045F): buka app pertama kali -> tabel `recipe_index` berisi 209 resep. Bisa diulang dengan menghapus data app lalu membuka app lagi.
+- S5 (setelah S6): pull-to-refresh harus memanggil `syncManager.sync(force=true)` dan tetap mempertahankan favorit/unlock; pergantian versi `/meta` baru bisa diuji penuh lewat UI.
+- S5 (opsional): jalankan app dalam mode pesawat setelah index terisi; daftar dari Room harus tetap tampil (UI baru ada di S6).
