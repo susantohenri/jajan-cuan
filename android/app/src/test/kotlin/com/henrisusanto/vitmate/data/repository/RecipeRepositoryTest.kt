@@ -12,6 +12,7 @@ import com.henrisusanto.vitmate.data.remote.RemoteResult
 import com.henrisusanto.vitmate.data.testutil.FakeImageDownloader
 import com.henrisusanto.vitmate.data.testutil.FakeRecipeRemoteDataSource
 import com.henrisusanto.vitmate.data.testutil.Fixtures
+import com.henrisusanto.vitmate.domain.HppMarginMode
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.junit.After
@@ -133,6 +134,44 @@ class RecipeRepositoryTest {
 
         assertTrue(result is DetailResult.Error)
         assertTrue((result as DetailResult.Error).message.contains("memuat"))
+    }
+
+    @Test
+    fun `detail favorit memakai foto lokal agar tampil offline`() = runBlocking {
+        database.favoriteDao().upsert(
+            favorite(churrosId, Fixtures.postJson("churros"))
+        )
+        remote.postResults[churrosId] = RemoteResult.Failure(
+            kind = FailureKind.NETWORK,
+            message = "offline"
+        )
+
+        val result = repository.getDetail(churrosId)
+
+        val detail = (result as DetailResult.Success).detail
+        assertEquals(DetailSource.FAVORITE, detail.source)
+        assertEquals("/tmp/$churrosId-cover", detail.coverUrl)
+        assertEquals(0, remote.postCalls)
+    }
+
+    @Test
+    fun `calc state disimpan dan dimuat ulang`() = runBlocking {
+        val saved = SavedCalcState(
+            prices = listOf(9_000L, 3_000L, 0L),
+            portions = 12,
+            marginMode = HppMarginMode.NOMINAL,
+            marginValue = 1_500.0
+        )
+
+        repository.saveCalcState(churrosId, saved)
+        val loaded = repository.loadCalcState(churrosId)
+
+        assertEquals(saved, loaded)
+    }
+
+    @Test
+    fun `calc state tidak ada menghasilkan null`() = runBlocking {
+        assertNull(repository.loadCalcState(churrosId))
     }
 
     @Test

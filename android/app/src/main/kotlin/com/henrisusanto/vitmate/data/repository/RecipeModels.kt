@@ -26,7 +26,9 @@ enum class DetailSource {
 data class RecipeDetailData(
     val post: PostDto,
     val rawJson: String,
-    val source: DetailSource
+    val source: DetailSource,
+    /** Path file lokal untuk favorit, atau URL penuh untuk cache/jaringan. */
+    val coverUrl: String? = null
 )
 
 sealed interface DetailResult {

@@ -8,7 +8,7 @@
 - [x] S4 Instrumentasi (Firebase, RC, UMP, AdManager)
 - [x] S5 Data layer
 - [x] S6 Home, Pencarian, Favorit
-- [ ] S7 Detail & Kalkulator
+- [x] S7 Detail & Kalkulator
 - [ ] S8 Timer
 - [ ] S9 Rewarded & Promo
 - [ ] S10 Settings & Aset
@@ -58,6 +58,16 @@
 - S6 log: `recipe_search` sekali per term final (setelah debounce), `view_favorites_tab` sekali per ViewModel Favorit dibuat, `change_category` setiap chip dipilih (null = "Semua"), `view_recipe` saat kartu dibuka.
 - S6 test: 78 unit test total, semuanya hijau (5 HomeViewModel + 3 FavoritesViewModel baru). Test debounce memajukan waktu tanpa `advanceUntilIdle` di antara ketikan agar emisi antara benar-benar dibatalkan.
 - S6 catatan lingkungan: `gradlew.bat` di repo ini selalu keluar dengan kode 1 walau build sukses (label `:fail` berada setelah `endlocal`, sehingga eksekusi jatuh ke `exit /b 1`). Verifikasi dinilai dari baris `BUILD SUCCESSFUL`; file wrapper ini tidak diubah karena di luar lingkup S6.
+- S7 kontrak Detail: `DetailCatalog` dipisah dari `RecipeCatalog` agar Home/Favorit tidak bergantung pada kalkulator/calc_state. `RecipeRepository` mengimplementasikan keduanya; urutan sumber tetap favorit (`favorites.detailJson`) -> cache (`recipe_detail`) -> jaringan.
+- S7 foto favorit: `RecipeDetailData.coverUrl` diisi `favorite.coverLocalPath` untuk sumber FAVORITE (file lokal, tampil offline); sumber CACHE/NETWORK memakai cover index lalu `coverFor(post)` sesuai `ImageUrlResolver`.
+- S7 HPP paritas web: laba/porsi dan laba total dihitung dari harga jual MURNI (bukan harga bulat), sama seperti `experience.js`. Harga bulat Rp 500 hanya nilai tampilan tambahan. Margin default 100% mode PERCENT; margin kosong/NaN/negatif dianggap 0; porsi kosong/0 dianggap 1; harga negatif dianggap 0.
+- S7 state kalkulator: harga disimpan sebagai JSON array `Long` berurutan sesuai bahan. Saat dimuat ulang, harga yang tersimpan dipakai per indeks, bahan baru memakai harga acuan, dan state tanpa baris menghasilkan null. `marginMode` disimpan sebagai nama enum (`PERCENT`/`NOMINAL`).
+- S7 log: `calculate_hpp` dicatat pada edit pertama dalam satu sesi edit (bukan per ketukan); tombol Simpan menutup sesi sehingga edit berikutnya dicatat lagi. `save_calculation` dicatat setelah penyimpanan berhasil. `share_recipe` dicatat saat tombol share ditekan.
+- S7 timer: parser durasi mendukung menit/jam/detik, rentang (`10-15 menit`, `10 sampai 15 menit`) memakai nilai terbesar, desimal koma, dan beberapa durasi dalam satu langkah dijumlahkan. Tombol "Nyalakan Timer (…)" tampil pada langkah berdurasi tetapi aksinya sengaja no-op; aksi timer dipasang di S8 (satu-satunya placeholder yang diizinkan prompt S7).
+- S7 slot promo: item `promo` dirender sebagai judul "Konten Promosi" + keterangan belum tersedia; grid, popup, unduh, share, dan penguncian Rewarded dikerjakan S9.
+- S7 share: teks memakai `detail_share_text_format` = judul + excerpt + "Dapatkan Jajan Cuan: https://jajan-cuan.web.app/" dan dikirim lewat `ACTION_SEND` + chooser.
+- S7 tabel: `DetailUiState` tidak menyimpan sumber data; sumber hanya dipakai repository. Status favorit berasal dari `observeIsFavorite` agar konsisten dengan Home/Favorit.
+- S7 test: 103 unit test total (25 baru: 9 HppCalculator, 6 CookingDurationParser, 7 DetailViewModel, 3 RecipeRepository untuk cover favorit/calc_state). Lint 0 error, 114 warning (mayoritas unused resource milik tahap berikutnya dan saran plural bahasa Indonesia).
 
 ---
 
@@ -76,3 +86,11 @@
 - S6 Offline: setelah minimal satu favorit tersimpan (foto terbuka), aktifkan mode pesawat lalu buka tab Favorit -> kartu, foto, dan pencarian lokal tetap berfungsi. Tekan hati pada resep yang belum pernah dibuka saat offline -> Snackbar "Perlu internet untuk menyimpan resep ini pertama kali".
 - S6 Tablet & gelap: jalankan di tablet/landscape -> konten maksimal 840dp dan terpusat; ganti tema sistem ke gelap -> semua layar tetap terbaca.
 - S6 Iklan (setelah `isAdsEnabled=true`): native muncul tiap `nativeEveryN` kartu di Home/Favorit, banner tampil di atas bottom nav tanpa menutupi konten.
+- S7 Detail: buka resep dari Home -> foto utama, judul, kategori/tag, excerpt, estimasi modal, dan porsi tampil; bottom bar hilang; tombol back sistem maupun panah kembali berfungsi.
+- S7 Favorit & share: tekan hati di Detail -> Snackbar + getar + ikon terisi, lalu cek tab Favorit ikut bertambah; tekan share -> chooser berisi judul + excerpt + tautan "Dapatkan Jajan Cuan".
+- S7 Kalkulator: ubah satu harga bahan dan porsi -> hasil berubah realtime; bandingkan satu resep di web dan Android dengan input identik (harga bahan, porsi, margin %) -> Total Modal, HPP/porsi, Harga Jual, dan Laba Total harus sama; harga bulat Rp 500 boleh berbeda karena hanya tambahan Android.
+- S7 Mode Rp: pilih "Nominal (Rp)", isi laba Rp 1.000 -> harga jual naik tepat Rp 1.000 dari HPP dan laba total = Rp 1.000 x porsi.
+- S7 Simpan: tekan Simpan -> Snackbar "Perhitungan disimpan"; keluar lalu buka lagi resep yang sama -> harga, porsi, mode margin, dan hasil tetap seperti saat disimpan.
+- S7 Offline: buka detail favorit dalam mode pesawat -> foto, analisis, komposisi, cara memasak, dan kalkulator tetap berfungsi; resep non-favorit yang belum pernah dibuka -> pesan error + "Coba Lagi".
+- S7 Timer: langkah dengan durasi (mis. "10-15 menit") menampilkan tombol "Nyalakan Timer (15 menit)"; tombol belum melakukan apa pun (aksi S8).
+- S7 Tablet & gelap: konten Detail maksimal 840dp dan terpusat; form kalkulator tetap terbaca di tema gelap dan saat keyboard terbuka.

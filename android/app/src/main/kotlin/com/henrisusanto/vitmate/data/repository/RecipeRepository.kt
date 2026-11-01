@@ -2,6 +2,7 @@ package com.henrisusanto.vitmate.data.repository
 
 import com.henrisusanto.vitmate.data.image.ImageDownloader
 import com.henrisusanto.vitmate.data.image.ImageUrlResolver
+import com.henrisusanto.vitmate.data.local.CalcStateEntity
 import com.henrisusanto.vitmate.data.local.FavoriteEntity
 import com.henrisusanto.vitmate.data.local.JajanCuanDatabase
 import com.henrisusanto.vitmate.data.local.RecipeDetailEntity
@@ -10,6 +11,7 @@ import com.henrisusanto.vitmate.data.local.escapeLikePattern
 import com.henrisusanto.vitmate.data.remote.RecipeRemoteDataSource
 import com.henrisusanto.vitmate.data.remote.RemoteResult
 import com.henrisusanto.vitmate.data.remote.dto.PostDto
+import com.henrisusanto.vitmate.domain.HppMarginMode
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
@@ -19,6 +21,8 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import kotlinx.coroutines.withContext
+import kotlinx.serialization.builtins.ListSerializer
+import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.Json
 import java.io.File
 import java.util.Locale
@@ -38,10 +42,11 @@ class RecipeRepository(
     private val json: Json = RepositoryJson,
     private val clock: () -> Long = System::currentTimeMillis,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
-) : RecipeCatalog {
+) : RecipeCatalog, DetailCatalog {
     private val indexDao = database.recipeIndexDao()
     private val detailDao = database.recipeDetailDao()
     private val favoriteDao = database.favoriteDao()
+    private val calcStateDao = database.calcStateDao()
     private val toggleMutex = Mutex()
 
     override fun observeRecipes(
@@ -92,7 +97,7 @@ class RecipeRepository(
             escapedQuery = escapeLikePattern(query.trim())
         )
 
-    suspend fun getDetail(recipeId: String): DetailResult = withContext(ioDispatcher) {
+    override suspend fun getDetail(recipeId: String): DetailResult = withContext(ioDispatcher) {
         loadDetail(recipeId)
     }
 
@@ -246,12 +251,15 @@ class RecipeRepository(
                     RecipeDetailData(
                         post = parsed,
                         rawJson = favorite.detailJson,
-                        source = DetailSource.FAVORITE
+                        source = DetailSource.FAVORITE,
+                        // Favorit wajib memakai file lokal agar tetap tampil offline.
+                        coverUrl = favorite.coverLocalPath
                     )
                 )
             }
         }
 
+        val index = indexDao.get(recipeId)
         val cached = detailDao.get(recipeId)
         if (cached != null) {
             val parsed = parsePost(cached.json)
@@ -260,7 +268,8 @@ class RecipeRepository(
                     RecipeDetailData(
                         post = parsed,
                         rawJson = cached.json,
-                        source = DetailSource.CACHE
+                        source = DetailSource.CACHE,
+                        coverUrl = detailCover(index?.cover, parsed)
                     )
                 )
             }
@@ -281,7 +290,8 @@ class RecipeRepository(
                     RecipeDetailData(
                         post = result.value.dto,
                         rawJson = result.value.rawJson,
-                        source = DetailSource.NETWORK
+                        source = DetailSource.NETWORK,
+                        coverUrl = detailCover(index?.cover, result.value.dto)
                     )
                 )
             }
@@ -292,6 +302,41 @@ class RecipeRepository(
             )
         }
     }
+
+    private fun detailCover(indexCover: String?, post: PostDto): String? =
+        imageUrlResolver.resolveCover(indexCover) ?: imageUrlResolver.coverFor(post)
+
+    override suspend fun loadCalcState(recipeId: String): SavedCalcState? =
+        withContext(ioDispatcher) {
+            val entity = calcStateDao.get(recipeId) ?: return@withContext null
+            val prices = runCatching {
+                json.decodeFromString(ListSerializer(Long.serializer()), entity.pricesJson)
+            }.getOrDefault(emptyList())
+            SavedCalcState(
+                prices = prices,
+                portions = entity.portions,
+                marginMode = runCatching {
+                    HppMarginMode.valueOf(entity.marginMode)
+                }.getOrDefault(HppMarginMode.PERCENT),
+                marginValue = entity.marginValue
+            )
+        }
+
+    override suspend fun saveCalcState(recipeId: String, state: SavedCalcState) =
+        withContext(ioDispatcher) {
+            calcStateDao.upsert(
+                CalcStateEntity(
+                    recipeId = recipeId,
+                    pricesJson = json.encodeToString(
+                        ListSerializer(Long.serializer()),
+                        state.prices
+                    ),
+                    portions = state.portions,
+                    marginMode = state.marginMode.name,
+                    marginValue = state.marginValue
+                )
+            )
+        }
 
     private fun parsePost(rawJson: String): PostDto? = runCatching {
         json.decodeFromString(PostDto.serializer(), rawJson)

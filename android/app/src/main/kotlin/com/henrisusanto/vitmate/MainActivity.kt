@@ -34,6 +34,7 @@ import androidx.navigation.compose.rememberNavController
 import com.henrisusanto.vitmate.data.sync.SyncOutcome
 import com.henrisusanto.vitmate.ui.navigation.Screen
 import com.henrisusanto.vitmate.ui.screens.DetailScreen
+import com.henrisusanto.vitmate.ui.screens.DetailViewModel
 import com.henrisusanto.vitmate.ui.screens.FavoritesScreen
 import com.henrisusanto.vitmate.ui.screens.FavoritesViewModel
 import com.henrisusanto.vitmate.ui.screens.HomeScreen
@@ -186,9 +187,16 @@ fun MainNavigationApp(container: AppContainer) {
                 SettingsScreen()
             }
             composable(Screen.Detail.route) { backStackEntry ->
-                val recipeId = backStackEntry.arguments?.getString("recipeId") ?: ""
+                val recipeId = backStackEntry.arguments?.getString("recipeId").orEmpty()
+                val detailViewModel: DetailViewModel = viewModel(key = recipeId) {
+                    DetailViewModel(
+                        recipeId = recipeId,
+                        repository = container.recipeRepository,
+                        analytics = container.analytics
+                    )
+                }
                 DetailScreen(
-                    recipeId = recipeId,
+                    viewModel = detailViewModel,
                     onNavigateBack = {
                         navController.popBackStack()
                     }

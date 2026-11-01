@@ -13,3 +13,9 @@ fun formatRupiah(amount: Int): String = formatRupiah(amount.toLong())
 
 fun formatRupiah(amount: Long): String =
     "Rp " + NumberFormat.getIntegerInstance(indonesiaLocale).format(amount)
+
+/** Pembulatan mengikuti web (`Math.round`) agar tampilan identik. */
+fun formatRupiah(amount: Double): String {
+    if (!amount.isFinite()) return formatRupiah(0L)
+    return formatRupiah(Math.round(amount))
+}

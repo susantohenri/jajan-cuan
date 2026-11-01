@@ -38,7 +38,32 @@
     <string name="detail_share_text_format">%1$s\n%2$s\nDapatkan Jajan Cuan: https://jajan-cuan.web.app/</string>
     <string name="button_try_again">Coba Lagi</string>
     <string name="button_save">Simpan</string>
-    <string name="button_timer_free">Nyalakan Timer</string>
+    <string name="detail_back_content_desc">Kembali</string>
+    <string name="detail_share_content_desc">Bagikan resep</string>
+    <string name="detail_share_chooser">Bagikan resep</string>
+    <string name="detail_section_analysis">Analisis Bisnis</string>
+    <string name="detail_market_demand">Potensi Pasar &amp; Permintaan</string>
+    <string name="detail_ease_of_making">Kemudahan Pembuatan</string>
+    <string name="detail_ingredient_availability">Ketersediaan Bahan</string>
+    <string name="detail_section_ingredients">Komposisi</string>
+    <string name="detail_section_steps">Cara Memasak</string>
+    <string name="detail_section_promo">Konten Promosi</string>
+    <string name="detail_promo_unavailable">Konten promosi untuk resep ini belum tersedia.</string>
+    <string name="detail_title">Detail Resep</string>
+    <string name="detail_label_capital">Estimasi Modal</string>
+    <string name="detail_not_found_title">Resep tidak ditemukan</string>
+    <string name="detail_not_found_msg">Resep ini mungkin sudah tidak tersedia.</string>
+    <string name="detail_timer_button_format">Nyalakan Timer (%s)</string>
+    <string name="detail_duration_hours_minutes">%1$d jam %2$d menit</string>
+    <string name="detail_duration_minutes">%d menit</string>
+    <string name="detail_duration_seconds">%d detik</string>
+    <string name="detail_calc_hint">Sesuaikan harga bahan di pasarmu, lalu lihat HPP dan harga jual secara langsung.</string>
+    <string name="detail_calc_ingredient_price">Harga bahan</string>
+    <string name="detail_calc_portions">Porsi</string>
+    <string name="detail_calc_margin_percent">Margin (%)</string>
+    <string name="detail_calc_margin_nominal">Laba per Porsi (Rp)</string>
+    <string name="detail_calc_saved">Perhitungan disimpan</string>
+    <string name="detail_calc_save_failed">Gagal menyimpan perhitungan. Coba lagi.</string>
 
     <!-- Kalkulator HPP -->
     <string name="hpp_calculator">Kalkulator HPP</string>
