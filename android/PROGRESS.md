@@ -10,7 +10,7 @@
 - [x] S6 Home, Pencarian, Favorit
 - [x] S7 Detail & Kalkulator
 - [x] S8 Timer
-- [ ] S9 Rewarded & Promo
+- [x] S9 Rewarded & Promo
 - [ ] S10 Settings & Aset
 - [ ] S11 QA & hardening
 
@@ -74,6 +74,14 @@
 - S8 countdown: sisa waktu dihitung dari `endAtEpochMillis` absolut dengan pembulatan ke atas (`TimerCountdown`), bukan hitung mundur lokal; daftar timer aktif menampilkan semua resep dan bisa dibatalkan satu per satu. Ticker 1 detik hanya berjalan selama ada timer aktif.
 - S8 startup: baris `active_timers` yang sudah lewat dibersihkan saat container dibuat. Alarm tidak dijadwalkan ulang setelah reboot perangkat (sesuai AGENTS §6, diterima).
 - S8 test: 124 unit test total (21 baru: 4 TimerCountdown, 6 TimerRepository, 4 AlarmTimerScheduler Robolectric, 3 TimerNotifier Robolectric, 3 DetailViewModel timer, 1 rollback repository). Lint 0 error, 108 warning.
+- S9 aturan buka: `UnlockRepository` membaca `unlocks` + `SessionUnlocks` + flag Remote Config. Fitur dianggap terbuka bila `isAdsEnabled == false` ATAU `rewardedEnabled == false` ATAU ada baris permanen ATAU ada unlock sesi. Flag dibaca dari StateFlow, jadi perubahan RC langsung berlaku tanpa menulis baris apa pun. Hanya CALCULATOR dan PROMO yang pernah masuk gate.
+- S9 sesi iklan bersama: satu `RewardedAdSession` (dibungkus `RewardedController`) dipakai kedua gate pada satu Detail, sehingga hanya satu iklan dimuat pada satu waktu. `FeatureGateCoordinator` menggabungkan flow unlock + state iklan + fitur yang tersedia; preload hanya setelah detail diketahui dan masih ada fitur terkunci, lalu preload lagi saat iklan kembali `Idle` bila masih ada fitur terkunci.
+- S9 status gate: `PREPARING` ("Menyiapkan iklan…", nonaktif + indikator), `READY` ("Tonton iklan untuk membuka {fitur}", aktif), `OPEN` (konten tampil). Klik hanya membuka dialog konfirmasi saat `READY`; Batal tidak menampilkan iklan. Baris `unlocks` ditulis HANYA di callback reward untuk fitur yang tertunda, lalu dicatat `rewarded_unlock` dengan `via_fallback=false`.
+- S9 fallback: timeout atau gagal setelah retry dengan `rewardedFallbackUnlockOnFailure=true` membuka SEMUA fitur yang masih terkunci pada resep itu hanya di `SessionUnlocks`, mencatat satu `rewarded_unlock` per fitur dengan `via_fallback=true`, dan menampilkan Snackbar "Iklan belum tersedia, fitur dibuka sementara untuk sesi ini". Bila flag false, gate tetap `PREPARING`/terkunci sampai Detail dibuka ulang. Unlock sesi hilang saat proses app dimatikan.
+- S9 ketersediaan promo: gate PROMO hanya dibuat bila `promo_images` yang sudah di-resolve tidak kosong; bila kosong seluruh bagian Konten Promosi (termasuk gate) tidak dirender sehingga tidak ada gate kosong. Ke-209 resep di `data/seed-posts.json` saat ini memiliki `promo_images` kosong, jadi bagian promo belum terlihat dengan data sekarang.
+- S9 unduh/share: unduh memakai MediaStore ke `Pictures/JajanCuan` pada API 29+ tanpa izin; API 26–28 meminta `WRITE_EXTERNAL_STORAGE` saat runtime dan menulis ke folder Pictures publik. Share mengunduh ke `cacheDir/promo` lalu memakai FileProvider yang sudah ada (`com.henrisusanto.vitmate.fileprovider`). `promo_download` dicatat hanya setelah simpan berhasil dan `promo_share` hanya setelah URI share siap; offline menampilkan pesan jelas tanpa mencatat event.
+- S9 UI promo: grid 2 kolom, viewer modal dengan tombol sebelumnya/berikutnya (melingkar), serta tombol Unduh dan Share. Saat offline grid diganti pesan "Konten promosi membutuhkan internet". Slot placeholder promo dari S7 sudah diganti implementasi penuh ini.
+- S9 test: 149 unit test total (25 baru: 7 UnlockRepository, 11 FeatureGateCoordinator, 7 DetailViewModel). `assembleDebug` hijau; `lintDebug` 0 error, 100 warning.
 
 ---
 
@@ -105,3 +113,9 @@
 - S8 Dua timer: nyalakan dua timer dari langkah berbeda -> keduanya tampil di bagian "Timer Aktif" dengan countdown masing-masing; batalkan salah satu -> hanya timer itu yang hilang dan alarmnya tidak berbunyi.
 - S8 Ketepatan alarm (Android 12+): karena izin exact alarm dilarang, `setAlarmClock()` tidak tersedia dan timer memakai alarm inexact (`setAndAllowWhileIdle`), jadi notifikasi bisa muncul beberapa detik/menit setelah countdown mencapai nol. Di Android 11 ke bawah alarm clock tetap tepat waktu.
 - S8 Exact alarm: cek `adb shell dumpsys package com.henrisusanto.vitmate | findstr EXACT_ALARM` -> tidak ada `SCHEDULE_EXACT_ALARM`/`USE_EXACT_ALARM`.
+- S9 Permanen per fitur: dengan iklan aktif, buka resep yang kalkulatornya terkunci -> tonton iklan sampai selesai -> kalkulator terbuka; Konten Promosi (bila resep punya foto promo) tetap terkunci dan butuh iklan sendiri. Kembali ke Home lalu buka resep yang sama dan restart app -> kalkulator tetap terbuka, tidak ada permintaan iklan lagi. Buka resep lain -> kalkulator tetap terkunci.
+- S9 Fallback: blokir jaringan atau pakai kondisi no-fill, tunggu melewati `rewardedReadyTimeoutSec` (default 8 detik) -> semua fitur yang masih terkunci pada resep itu terbuka sementara dengan Snackbar "Iklan belum tersedia, fitur dibuka sementara untuk sesi ini"; DebugView mencatat `rewarded_unlock` dengan `via_fallback=true`; tutup paksa dan buka lagi app -> fitur terkunci kembali. Pastikan tidak ada baris baru di tabel `unlocks` untuk fallback.
+- S9 Flag iklan: set `isAdsEnabled=false` atau `rewardedEnabled=false` di Remote Config -> kalkulator dan promo langsung terbuka tanpa iklan dan tanpa menulis `unlocks` saat app dibuka ulang.
+- S9 Promo: karena 209 resep seed saat ini `promo_images` kosong, bagian promo tidak tampil. Untuk menguji, pakai data resep dengan `promo_images` terisi -> grid 2 kolom, viewer dengan panah sebelumnya/berikutnya, Unduh menyimpan ke `Pictures/JajanCuan` (cek aplikasi Galeri), Share membuka chooser berisi foto. Aktifkan mode pesawat -> grid diganti pesan "Konten promosi membutuhkan internet" dan unduh/share menampilkan pesan yang sama.
+- S9 Izin unduh API 26–28: tekan Unduh pertama kali -> dialog izin penyimpanan; tolak -> Snackbar izin diperlukan; izinkan -> foto tersimpan di folder Pictures/JajanCuan. Di API 29+ tidak boleh ada dialog izin.
+- S9 Dialog gate: saat status "Menyiapkan iklan…" tombol tidak bisa ditekan; setelah siap, tap membuka dialog Batal/Tonton; Batal tidak memutar iklan dan status tetap siap.

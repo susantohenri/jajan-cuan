@@ -230,7 +230,14 @@ fun MainNavigationApp(
                         recipeId = recipeId,
                         repository = container.recipeRepository,
                         timers = container.timerRepository,
-                        analytics = container.analytics
+                        analytics = container.analytics,
+                        unlocks = container.unlockRepository,
+                        rewardedSession = container.adManager.createRewardedController(),
+                        promoActions = container.promoActions,
+                        imageUrlResolver = container.imageUrlResolver,
+                        fallbackUnlockEnabled = {
+                            container.adManager.rewardedFallbackUnlockOnFailure()
+                        }
                     )
                 }
                 DetailScreen(

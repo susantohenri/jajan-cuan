@@ -126,6 +126,15 @@
     <string name="button_unduh">Unduh</string>
     <string name="button_share">Share</string>
     <string name="promo_no_internet">Konten promosi membutuhkan internet</string>
+    <string name="promo_image_content_desc">Foto promosi %d</string>
+    <string name="promo_viewer_close">Tutup</string>
+    <string name="promo_viewer_previous">Foto sebelumnya</string>
+    <string name="promo_viewer_next">Foto berikutnya</string>
+    <string name="promo_download_success">Foto promosi disimpan ke Galeri</string>
+    <string name="promo_download_failed">Gagal mengunduh foto promosi. Coba lagi.</string>
+    <string name="promo_permission_denied">Izin penyimpanan diperlukan untuk mengunduh foto promosi.</string>
+    <string name="promo_share_failed">Gagal membagikan foto promosi. Coba lagi.</string>
+    <string name="promo_share_chooser">Bagikan foto promosi</string>
 
     <!-- Errors -->
     <string name="error_network">Tidak dapat terhubung ke internet. Menggunakan cache lokal.</string>

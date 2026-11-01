@@ -1,8 +1,13 @@
 package com.henrisusanto.vitmate.ui.screens
 
+import android.app.Activity
+import android.net.Uri
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.henrisusanto.vitmate.ads.RewardedAdSession
 import com.henrisusanto.vitmate.analytics.AnalyticsLogger
+import com.henrisusanto.vitmate.data.image.ImageUrlResolver
+import com.henrisusanto.vitmate.data.model.UnlockFeature
 import com.henrisusanto.vitmate.data.repository.ActiveTimer
 import com.henrisusanto.vitmate.data.repository.CookingTimers
 import com.henrisusanto.vitmate.data.repository.DetailCatalog
@@ -10,10 +15,16 @@ import com.henrisusanto.vitmate.data.repository.DetailResult
 import com.henrisusanto.vitmate.data.repository.FavoriteToggleResult
 import com.henrisusanto.vitmate.data.repository.RecipeDetailData
 import com.henrisusanto.vitmate.data.repository.SavedCalcState
+import com.henrisusanto.vitmate.data.repository.UnlockCatalog
 import com.henrisusanto.vitmate.domain.CookingDurationParser
 import com.henrisusanto.vitmate.domain.HppCalculator
 import com.henrisusanto.vitmate.domain.HppMarginMode
 import com.henrisusanto.vitmate.domain.HppResult
+import com.henrisusanto.vitmate.promo.PromoActions
+import com.henrisusanto.vitmate.promo.PromoDownloadResult
+import com.henrisusanto.vitmate.promo.PromoShareResult
+import com.henrisusanto.vitmate.ui.gate.FeatureGateCoordinator
+import com.henrisusanto.vitmate.ui.gate.FeatureGateUiState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -57,7 +68,10 @@ data class DetailUiState(
     val hpp: HppResult = HppCalculator.calculate(emptyList(), 1),
     val isFavorite: Boolean = false,
     val isSaving: Boolean = false,
-    val activeTimers: List<ActiveTimer> = emptyList()
+    val activeTimers: List<ActiveTimer> = emptyList(),
+    val promoImages: List<String> = emptyList(),
+    val calculatorGate: FeatureGateUiState = FeatureGateUiState(),
+    val promoGate: FeatureGateUiState = FeatureGateUiState()
 )
 
 sealed interface DetailUiEvent {
@@ -67,6 +81,13 @@ sealed interface DetailUiEvent {
     data object CalculationSaved : DetailUiEvent
     data object SaveFailed : DetailUiEvent
     data object TimerFailed : DetailUiEvent
+    data object RewardedFallback : DetailUiEvent
+    data object PromoDownloaded : DetailUiEvent
+    data object PromoDownloadFailed : DetailUiEvent
+    data object PromoPermissionDenied : DetailUiEvent
+    data object PromoNoInternet : DetailUiEvent
+    data object PromoShareFailed : DetailUiEvent
+    data class PromoShareReady(val uri: Uri, val mimeType: String) : DetailUiEvent
     data class Error(val message: String) : DetailUiEvent
 }
 
@@ -78,7 +99,12 @@ class DetailViewModel(
     private val recipeId: String,
     private val repository: DetailCatalog,
     private val timers: CookingTimers,
-    private val analytics: AnalyticsLogger
+    private val analytics: AnalyticsLogger,
+    private val unlocks: UnlockCatalog,
+    private val rewardedSession: RewardedAdSession,
+    private val promoActions: PromoActions,
+    private val imageUrlResolver: ImageUrlResolver,
+    private val fallbackUnlockEnabled: () -> Boolean
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(DetailUiState())
@@ -87,10 +113,31 @@ class DetailViewModel(
     private val _events = MutableSharedFlow<DetailUiEvent>(extraBufferCapacity = 8)
     val events: Flow<DetailUiEvent> = _events.asSharedFlow()
 
+    private val gateCoordinator = FeatureGateCoordinator(
+        recipeId = recipeId,
+        unlocks = unlocks,
+        adSession = rewardedSession,
+        analytics = analytics,
+        fallbackEnabled = fallbackUnlockEnabled,
+        scope = viewModelScope,
+        onFallback = { _events.tryEmit(DetailUiEvent.RewardedFallback) }
+    )
+
     /** calculate_hpp dicatat sekali per sesi edit, bukan per ketukan. */
     private var hppLogged = false
 
     init {
+        viewModelScope.launch {
+            gateCoordinator.states.collect { gates ->
+                _state.update { current ->
+                    current.copy(
+                        calculatorGate = gates[UnlockFeature.CALCULATOR]
+                            ?: FeatureGateUiState(),
+                        promoGate = gates[UnlockFeature.PROMO] ?: FeatureGateUiState()
+                    )
+                }
+            }
+        }
         viewModelScope.launch {
             repository.observeIsFavorite(recipeId).collect { isFavorite ->
                 _state.update { it.copy(isFavorite = isFavorite) }
@@ -142,6 +189,14 @@ class DetailViewModel(
         val marginValue = saved?.marginValue
             ?.takeIf { it.isFinite() }
             ?: HppCalculator.DEFAULT_MARGIN_PERCENT
+        val promoImages = imageUrlResolver.resolvePromoImages(post.promoImages)
+
+        gateCoordinator.updateAvailableFeatures(
+            buildSet {
+                add(UnlockFeature.CALCULATOR)
+                if (promoImages.isNotEmpty()) add(UnlockFeature.PROMO)
+            }
+        )
 
         val base = DetailUiState(
             isLoading = false,
@@ -168,7 +223,10 @@ class DetailViewModel(
             marginMode = marginMode,
             marginText = formatMargin(marginValue),
             isFavorite = _state.value.isFavorite,
-            activeTimers = _state.value.activeTimers
+            activeTimers = _state.value.activeTimers,
+            promoImages = promoImages,
+            calculatorGate = _state.value.calculatorGate,
+            promoGate = _state.value.promoGate
         )
         _state.value = base.recalculated()
     }
@@ -224,6 +282,63 @@ class DetailViewModel(
     fun onShareOpened() {
         analytics.shareRecipe(recipeId)
     }
+
+    fun onGateClick(feature: UnlockFeature) {
+        gateCoordinator.onGateClick(feature)
+    }
+
+    fun onGateDialogDismiss() {
+        gateCoordinator.dismissDialog()
+    }
+
+    fun onGateDialogConfirm(activity: Activity) {
+        gateCoordinator.confirmDialog(activity)
+    }
+
+    fun onPromoDownload(index: Int) {
+        val url = _state.value.promoImages.getOrNull(index) ?: return
+        viewModelScope.launch {
+            when (promoActions.download(url, promoBaseName(index))) {
+                PromoDownloadResult.Success -> {
+                    analytics.promoDownload(recipeId)
+                    _events.emit(DetailUiEvent.PromoDownloaded)
+                }
+                PromoDownloadResult.PermissionDenied ->
+                    _events.emit(DetailUiEvent.PromoPermissionDenied)
+                PromoDownloadResult.NoInternet ->
+                    _events.emit(DetailUiEvent.PromoNoInternet)
+                PromoDownloadResult.Failed ->
+                    _events.emit(DetailUiEvent.PromoDownloadFailed)
+            }
+        }
+    }
+
+    fun onPromoShare(index: Int) {
+        val url = _state.value.promoImages.getOrNull(index) ?: return
+        viewModelScope.launch {
+            when (val result = promoActions.prepareShare(url, promoBaseName(index))) {
+                is PromoShareResult.Ready -> {
+                    analytics.promoShare(recipeId)
+                    _events.emit(
+                        DetailUiEvent.PromoShareReady(result.uri, result.mimeType)
+                    )
+                }
+                PromoShareResult.NoInternet ->
+                    _events.emit(DetailUiEvent.PromoNoInternet)
+                PromoShareResult.Failed ->
+                    _events.emit(DetailUiEvent.PromoShareFailed)
+            }
+        }
+    }
+
+    override fun onCleared() {
+        gateCoordinator.destroy()
+        rewardedSession.destroy()
+        super.onCleared()
+    }
+
+    private fun promoBaseName(index: Int): String =
+        "jajan-cuan-${recipeId.replace(NON_FILE_NAME_CHAR, "_")}-${index + 1}"
 
     fun onSaveCalculation() {
         val current = _state.value
@@ -330,5 +445,6 @@ class DetailViewModel(
         private const val MAX_PORTION_DIGITS = 6
         private const val MAX_MARGIN_DIGITS = 8
         private const val MIN_TIMER_SECONDS = 1L
+        private val NON_FILE_NAME_CHAR = Regex("[^A-Za-z0-9_-]")
     }
 }

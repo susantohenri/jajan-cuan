@@ -67,12 +67,13 @@ class RewardedController(
     dispatcher: CoroutineDispatcher = Dispatchers.Main.immediate,
     private val clock: () -> Long = System::currentTimeMillis,
     private val retryDelaysMillis: List<Long> = DEFAULT_RETRY_DELAYS_MILLIS
-) {
+) : RewardedAdSession {
     private val scope = CoroutineScope(SupervisorJob() + dispatcher)
 
     private val _state = MutableStateFlow<RewardedAdState>(RewardedAdState.Idle)
-    val state: StateFlow<RewardedAdState> = _state.asStateFlow()
+    override val state: StateFlow<RewardedAdState> = _state.asStateFlow()
 
+    private var rewardListener: (RewardItem) -> Unit = onUserEarnedReward
     private var loadedAd: RewardedAdHandle? = null
     private var loadedAdUnitId: String = ""
     private var timeoutJob: Job? = null
@@ -82,7 +83,11 @@ class RewardedController(
     private var destroyed = false
     private var loadInFlight = false
 
-    fun preload() {
+    override fun setRewardListener(listener: (RewardItem) -> Unit) {
+        rewardListener = listener
+    }
+
+    override fun preload() {
         if (destroyed || !enabled() || loadInFlight) return
         when (_state.value) {
             is RewardedAdState.Loading, is RewardedAdState.Ready -> return
@@ -93,7 +98,7 @@ class RewardedController(
         }
     }
 
-    fun show(activity: Activity) {
+    override fun show(activity: Activity) {
         if (destroyed) return
         val ad = loadedAd ?: return
         if (_state.value !is RewardedAdState.Ready) return
@@ -108,7 +113,7 @@ class RewardedController(
                 override fun onUserEarnedReward(rewardItem: RewardItem) {
                     if (destroyed || rewardDelivered) return
                     rewardDelivered = true
-                    onUserEarnedReward(rewardItem)
+                    rewardListener(rewardItem)
                 }
 
                 override fun onPaid(valueMicros: Long, currencyCode: String?, adSource: String?) {
@@ -148,7 +153,7 @@ class RewardedController(
         )
     }
 
-    fun reset() {
+    override fun reset() {
         timeoutJob?.cancel()
         retryJob?.cancel()
         retryCount = 0
@@ -157,7 +162,7 @@ class RewardedController(
         _state.value = RewardedAdState.Idle
     }
 
-    fun destroy() {
+    override fun destroy() {
         destroyed = true
         timeoutJob?.cancel()
         retryJob?.cancel()

@@ -12,10 +12,14 @@ import com.henrisusanto.vitmate.data.image.OkHttpImageDownloader
 import com.henrisusanto.vitmate.data.local.JajanCuanDatabase
 import com.henrisusanto.vitmate.data.remote.OkHttpRecipeRemoteDataSource
 import com.henrisusanto.vitmate.data.repository.RecipeRepository
+import com.henrisusanto.vitmate.data.repository.SessionUnlocks
 import com.henrisusanto.vitmate.data.repository.TimerRepository
+import com.henrisusanto.vitmate.data.repository.UnlockRepository
 import com.henrisusanto.vitmate.data.sync.SharedPreferencesSyncStateStore
 import com.henrisusanto.vitmate.data.sync.SyncManager
 import com.henrisusanto.vitmate.data.sync.SyncOutcome
+import com.henrisusanto.vitmate.promo.AndroidPromoActions
+import com.henrisusanto.vitmate.promo.PromoActions
 import com.henrisusanto.vitmate.timer.AlarmTimerScheduler
 import com.henrisusanto.vitmate.timer.TimerNotifier
 import kotlinx.coroutines.CoroutineScope
@@ -64,9 +68,19 @@ class AppContainer(context: Context) {
 
     private val database = JajanCuanDatabase.getInstance(appContext)
 
+    val sessionUnlocks = SessionUnlocks()
+
+    val unlockRepository = UnlockRepository(
+        dao = database.unlockDao(),
+        sessionUnlocks = sessionUnlocks,
+        config = remoteConfigManager.values
+    )
+
+    val promoActions: PromoActions = AndroidPromoActions(appContext, httpClient)
+
     private val recipeRemoteDataSource = OkHttpRecipeRemoteDataSource(client = httpClient)
 
-    private val imageUrlResolver = ImageUrlResolver()
+    val imageUrlResolver = ImageUrlResolver()
 
     val recipeRepository = RecipeRepository(
         database = database,

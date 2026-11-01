@@ -3,4 +3,5 @@
     <external-path name="external_files" path="." />
     <files-path name="covers" path="." />
     <files-path name="thumbs" path="." />
+    <cache-path name="promo" path="promo/" />
 </paths>

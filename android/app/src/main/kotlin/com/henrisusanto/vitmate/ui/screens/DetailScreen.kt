@@ -1,9 +1,13 @@
 package com.henrisusanto.vitmate.ui.screens
 
 import android.Manifest
+import android.content.ClipData
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -57,19 +61,22 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import com.henrisusanto.vitmate.R
+import com.henrisusanto.vitmate.data.model.UnlockFeature
 import com.henrisusanto.vitmate.domain.HppMarginMode
 import com.henrisusanto.vitmate.timer.TimerPermissionPrompt
 import com.henrisusanto.vitmate.ui.components.ActiveTimersSection
 import com.henrisusanto.vitmate.ui.components.BusinessAnalysisSection
 import com.henrisusanto.vitmate.ui.components.CookingStepsSection
 import com.henrisusanto.vitmate.ui.components.ErrorState
+import com.henrisusanto.vitmate.ui.components.FeatureGate
 import com.henrisusanto.vitmate.ui.components.HppCalculatorSection
 import com.henrisusanto.vitmate.ui.components.IngredientsSection
-import com.henrisusanto.vitmate.ui.components.SectionTitle
+import com.henrisusanto.vitmate.ui.components.PromoSection
 import com.henrisusanto.vitmate.ui.components.TimerDialog
 import com.henrisusanto.vitmate.ui.components.TimerDraft
 import com.henrisusanto.vitmate.ui.components.imageModel
 import com.henrisusanto.vitmate.ui.util.categoryEmoji
+import com.henrisusanto.vitmate.ui.util.findActivity
 import com.henrisusanto.vitmate.ui.util.formatRupiah
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -116,6 +123,38 @@ fun DetailScreen(
         if (draft != null) startTimer(draft)
     }
 
+    var pendingPromoDownload by remember { mutableStateOf<Int?>(null) }
+    val promoPermissionDeniedMessage = stringResource(R.string.promo_permission_denied)
+    val storagePermissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        val index = pendingPromoDownload
+        pendingPromoDownload = null
+        if (granted && index != null) {
+            viewModel.onPromoDownload(index)
+        } else if (!granted) {
+            scope.launch {
+                snackbarHostState.showSnackbar(promoPermissionDeniedMessage)
+            }
+        }
+    }
+
+    fun downloadPromo(index: Int) {
+        val needsLegacyPermission = Build.VERSION.SDK_INT < Build.VERSION_CODES.Q &&
+            ContextCompat.checkSelfPermission(
+                context,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            ) != PackageManager.PERMISSION_GRANTED
+        if (needsLegacyPermission) {
+            pendingPromoDownload = index
+            storagePermissionLauncher.launch(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+        } else {
+            viewModel.onPromoDownload(index)
+        }
+    }
+
+    val activity = context.findActivity()
+
     var nowMillis by remember { mutableLongStateOf(System.currentTimeMillis()) }
     LaunchedEffect(state.activeTimers.isNotEmpty()) {
         if (state.activeTimers.isEmpty()) return@LaunchedEffect
@@ -158,6 +197,42 @@ fun DetailScreen(
                     context.getString(R.string.detail_calc_save_failed)
                 )
                 DetailUiEvent.TimerFailed -> snackbarHostState.showSnackbar(timerFailedMessage)
+                DetailUiEvent.RewardedFallback -> snackbarHostState.showSnackbar(
+                    context.getString(R.string.rewarded_fallback_msg)
+                )
+                DetailUiEvent.PromoDownloaded -> snackbarHostState.showSnackbar(
+                    context.getString(R.string.promo_download_success)
+                )
+                DetailUiEvent.PromoDownloadFailed -> snackbarHostState.showSnackbar(
+                    context.getString(R.string.promo_download_failed)
+                )
+                DetailUiEvent.PromoPermissionDenied -> snackbarHostState.showSnackbar(
+                    promoPermissionDeniedMessage
+                )
+                DetailUiEvent.PromoNoInternet -> snackbarHostState.showSnackbar(
+                    context.getString(R.string.promo_no_internet)
+                )
+                DetailUiEvent.PromoShareFailed -> snackbarHostState.showSnackbar(
+                    context.getString(R.string.promo_share_failed)
+                )
+                is DetailUiEvent.PromoShareReady -> {
+                    val sendIntent = Intent(Intent.ACTION_SEND).apply {
+                        type = event.mimeType
+                        putExtra(Intent.EXTRA_STREAM, event.uri)
+                        clipData = ClipData.newUri(
+                            context.contentResolver,
+                            "promo",
+                            event.uri
+                        )
+                        addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    }
+                    context.startActivity(
+                        Intent.createChooser(
+                            sendIntent,
+                            context.getString(R.string.promo_share_chooser)
+                        ).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                    )
+                }
                 is DetailUiEvent.Error -> snackbarHostState.showSnackbar(event.message)
             }
         }
@@ -259,6 +334,13 @@ fun DetailScreen(
                         onSaveCalculation = viewModel::onSaveCalculation,
                         onTimerClick = { timerStep = it },
                         onCancelTimer = viewModel::onCancelTimer,
+                        onGateClick = viewModel::onGateClick,
+                        onGateDialogDismiss = viewModel::onGateDialogDismiss,
+                        onGateDialogConfirm = {
+                            activity?.let(viewModel::onGateDialogConfirm)
+                        },
+                        onPromoDownload = { downloadPromo(it) },
+                        onPromoShare = viewModel::onPromoShare,
                         modifier = Modifier
                             .fillMaxSize()
                             .widthIn(max = TABLET_CONTENT_MAX_WIDTH_DP.dp)
@@ -298,6 +380,11 @@ private fun DetailContent(
     onSaveCalculation: () -> Unit,
     onTimerClick: (CookingStepUi) -> Unit,
     onCancelTimer: (String) -> Unit,
+    onGateClick: (UnlockFeature) -> Unit,
+    onGateDialogDismiss: () -> Unit,
+    onGateDialogConfirm: () -> Unit,
+    onPromoDownload: (Int) -> Unit,
+    onPromoShare: (Int) -> Unit,
     modifier: Modifier = Modifier
 ) {
     LazyColumn(
@@ -338,28 +425,42 @@ private fun DetailContent(
             )
         }
         item(key = "calculator") {
-            HppCalculatorSection(
-                state = state,
-                onPriceChange = onPriceChange,
-                onPortionsChange = onPortionsChange,
-                onMarginModeChange = onMarginModeChange,
-                onMarginChange = onMarginChange,
-                onSave = onSaveCalculation,
+            FeatureGate(
+                featureLabel = stringResource(R.string.hpp_calculator),
+                state = state.calculatorGate,
+                onUnlockClick = { onGateClick(UnlockFeature.CALCULATOR) },
+                onDialogDismiss = onGateDialogDismiss,
+                onDialogConfirm = onGateDialogConfirm,
                 modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
-            )
-        }
-        item(key = "promo") {
-            // Slot Konten Promosi; isi dan penguncian Rewarded dikerjakan pada S9.
-            Column(
-                modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp),
-                verticalArrangement = Arrangement.spacedBy(8.dp)
             ) {
-                SectionTitle(stringResource(R.string.detail_section_promo))
-                Text(
-                    text = stringResource(R.string.detail_promo_unavailable),
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                HppCalculatorSection(
+                    state = state,
+                    onPriceChange = onPriceChange,
+                    onPortionsChange = onPortionsChange,
+                    onMarginModeChange = onMarginModeChange,
+                    onMarginChange = onMarginChange,
+                    onSave = onSaveCalculation,
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
                 )
+            }
+        }
+        if (state.promoImages.isNotEmpty()) {
+            item(key = "promo") {
+                FeatureGate(
+                    featureLabel = stringResource(R.string.promo_section_title),
+                    state = state.promoGate,
+                    onUnlockClick = { onGateClick(UnlockFeature.PROMO) },
+                    onDialogDismiss = onGateDialogDismiss,
+                    onDialogConfirm = onGateDialogConfirm,
+                    modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+                ) {
+                    PromoSection(
+                        images = state.promoImages,
+                        onDownload = onPromoDownload,
+                        onShare = onPromoShare,
+                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 12.dp)
+                    )
+                }
             }
         }
     }

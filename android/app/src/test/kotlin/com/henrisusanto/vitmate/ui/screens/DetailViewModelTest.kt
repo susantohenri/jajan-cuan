@@ -1,15 +1,27 @@
 package com.henrisusanto.vitmate.ui.screens
 
+import android.app.Application
+import android.net.Uri
+import com.henrisusanto.vitmate.ads.RewardedAdState
 import com.henrisusanto.vitmate.analytics.AnalyticsLogger
+import com.henrisusanto.vitmate.data.image.ImageUrlResolver
+import com.henrisusanto.vitmate.data.model.UnlockFeature
 import com.henrisusanto.vitmate.data.repository.DetailResult
 import com.henrisusanto.vitmate.data.repository.DetailSource
 import com.henrisusanto.vitmate.data.repository.FavoriteToggleResult
+import com.henrisusanto.vitmate.data.repository.RecipeDetailData
 import com.henrisusanto.vitmate.data.repository.SavedCalcState
 import com.henrisusanto.vitmate.domain.HppMarginMode
+import com.henrisusanto.vitmate.promo.PromoDownloadResult
+import com.henrisusanto.vitmate.promo.PromoShareResult
 import com.henrisusanto.vitmate.testutil.RecordingAnalyticsSink
 import com.henrisusanto.vitmate.testutil.RecordingCrashlyticsSink
+import com.henrisusanto.vitmate.ui.gate.FeatureGateStatus
 import com.henrisusanto.vitmate.ui.testutil.FakeCookingTimers
 import com.henrisusanto.vitmate.ui.testutil.FakeDetailCatalog
+import com.henrisusanto.vitmate.ui.testutil.FakePromoActions
+import com.henrisusanto.vitmate.ui.testutil.FakeRewardedAdSession
+import com.henrisusanto.vitmate.ui.testutil.FakeUnlockCatalog
 import com.henrisusanto.vitmate.ui.testutil.MainDispatcherRule
 import com.henrisusanto.vitmate.ui.testutil.goldenDetail
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -24,8 +36,13 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
 @OptIn(ExperimentalCoroutinesApi::class)
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk = [34], application = Application::class)
 class DetailViewModelTest {
 
     @get:Rule
@@ -35,6 +52,9 @@ class DetailViewModelTest {
     private lateinit var catalog: FakeDetailCatalog
     private lateinit var timers: FakeCookingTimers
     private lateinit var analytics: AnalyticsLogger
+    private lateinit var unlocks: FakeUnlockCatalog
+    private lateinit var rewardedSession: FakeRewardedAdSession
+    private lateinit var promoActions: FakePromoActions
     private val collectedEvents = mutableListOf<DetailUiEvent>()
 
     @Before
@@ -48,6 +68,9 @@ class DetailViewModelTest {
             installTimeMillis = 0L,
             nowMillis = { 1L }
         )
+        unlocks = FakeUnlockCatalog()
+        rewardedSession = FakeRewardedAdSession()
+        promoActions = FakePromoActions()
     }
 
     @Test
@@ -267,12 +290,143 @@ class DetailViewModelTest {
         eventsJob.cancel()
     }
 
+    @Test
+    fun `resep tanpa foto promo menyembunyikan konten promosi`() = runTest {
+        catalog.detailResult = DetailResult.Success(goldenDetail())
+
+        val viewModel = createViewModel()
+
+        assertTrue(viewModel.state.value.promoImages.isEmpty())
+        // Hanya kalkulator yang terkunci, jadi sesi rewarded tetap dipreload.
+        assertEquals(1, rewardedSession.preloadCalls)
+    }
+
+    @Test
+    fun `foto promo memakai origin hosting dan gate siap setelah iklan siap`() = runTest {
+        catalog.detailResult = DetailResult.Success(promoDetail())
+
+        val viewModel = createViewModel()
+
+        assertEquals(
+            listOf(
+                "https://jajan-cuan.web.app/img/promo/1.jpg",
+                "https://jajan-cuan.web.app/img/promo/2.jpg"
+            ),
+            viewModel.state.value.promoImages
+        )
+        assertEquals(
+            FeatureGateStatus.PREPARING,
+            viewModel.state.value.calculatorGate.status
+        )
+        assertEquals(FeatureGateStatus.PREPARING, viewModel.state.value.promoGate.status)
+
+        rewardedSession.setState(RewardedAdState.Ready)
+        advanceUntilIdle()
+
+        assertEquals(FeatureGateStatus.READY, viewModel.state.value.calculatorGate.status)
+        assertEquals(FeatureGateStatus.READY, viewModel.state.value.promoGate.status)
+    }
+
+    @Test
+    fun `fitur yang sudah terbuka tidak memicu preload iklan`() = runTest {
+        unlocks.unlocked.value = setOf(UnlockFeature.CALCULATOR)
+        catalog.detailResult = DetailResult.Success(goldenDetail())
+
+        val viewModel = createViewModel()
+
+        assertEquals(FeatureGateStatus.OPEN, viewModel.state.value.calculatorGate.status)
+        assertEquals(0, rewardedSession.preloadCalls)
+    }
+
+    @Test
+    fun `unduh promo sukses mencatat event dan memberi konfirmasi`() = runTest {
+        catalog.detailResult = DetailResult.Success(promoDetail())
+        promoActions.downloadResult = PromoDownloadResult.Success
+
+        val viewModel = createViewModel()
+        val eventsJob = collectEvents(viewModel)
+
+        viewModel.onPromoDownload(0)
+        advanceUntilIdle()
+
+        val (url, baseName) = promoActions.downloadCalls.single()
+        assertEquals("https://jajan-cuan.web.app/img/promo/1.jpg", url)
+        assertTrue(baseName.startsWith("jajan-cuan-mini-spaghetti-ekonomis"))
+        assertTrue(collectedEvents.contains(DetailUiEvent.PromoDownloaded))
+        assertEquals(1, countEvent("promo_download"))
+        eventsJob.cancel()
+    }
+
+    @Test
+    fun `unduh promo tanpa internet tidak mencatat event`() = runTest {
+        catalog.detailResult = DetailResult.Success(promoDetail())
+        promoActions.downloadResult = PromoDownloadResult.NoInternet
+
+        val viewModel = createViewModel()
+        val eventsJob = collectEvents(viewModel)
+
+        viewModel.onPromoDownload(1)
+        advanceUntilIdle()
+
+        assertTrue(collectedEvents.contains(DetailUiEvent.PromoNoInternet))
+        assertEquals(0, countEvent("promo_download"))
+        eventsJob.cancel()
+    }
+
+    @Test
+    fun `share promo sukses mengirim uri dan mencatat event`() = runTest {
+        catalog.detailResult = DetailResult.Success(promoDetail())
+        val uri = Uri.parse("content://com.henrisusanto.vitmate.fileprovider/promo/foto.jpg")
+        promoActions.shareResult = PromoShareResult.Ready(uri, "image/jpeg")
+
+        val viewModel = createViewModel()
+        val eventsJob = collectEvents(viewModel)
+
+        viewModel.onPromoShare(0)
+        advanceUntilIdle()
+
+        val event = collectedEvents.filterIsInstance<DetailUiEvent.PromoShareReady>().single()
+        assertEquals(uri, event.uri)
+        assertEquals("image/jpeg", event.mimeType)
+        assertEquals(1, countEvent("promo_share"))
+        eventsJob.cancel()
+    }
+
+    @Test
+    fun `share promo gagal memberi pesan kegagalan`() = runTest {
+        catalog.detailResult = DetailResult.Success(promoDetail())
+        promoActions.shareResult = PromoShareResult.Failed
+
+        val viewModel = createViewModel()
+        val eventsJob = collectEvents(viewModel)
+
+        viewModel.onPromoShare(0)
+        advanceUntilIdle()
+
+        assertTrue(collectedEvents.contains(DetailUiEvent.PromoShareFailed))
+        assertEquals(0, countEvent("promo_share"))
+        eventsJob.cancel()
+    }
+
+    private fun promoDetail(): RecipeDetailData = goldenDetail().let { detail ->
+        detail.copy(
+            post = detail.post.copy(
+                promoImages = listOf("img/promo/1.jpg", "img/promo/2.jpg")
+            )
+        )
+    }
+
     private fun TestScope.createViewModel(): DetailViewModel {
         val viewModel = DetailViewModel(
             recipeId = "mini-spaghetti-ekonomis-untuk-jualan-2ribuan",
             repository = catalog,
             timers = timers,
-            analytics = analytics
+            analytics = analytics,
+            unlocks = unlocks,
+            rewardedSession = rewardedSession,
+            promoActions = promoActions,
+            imageUrlResolver = ImageUrlResolver(),
+            fallbackUnlockEnabled = { true }
         )
         advanceUntilIdle()
         return viewModel
