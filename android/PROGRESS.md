@@ -12,7 +12,7 @@
 - [x] S8 Timer
 - [x] S9 Rewarded & Promo
 - [x] S10 Settings & Aset
-- [ ] S11 QA & hardening
+- [x] S11 QA & hardening
 
 ---
 
@@ -88,6 +88,12 @@
 - S10 UI: Settings memakai Scaffold + kolom scrollable dengan lebar maksimal 840dp seperti Home/Favorit, tiga opsi radio tema, versi dari `BuildConfig.VERSION_NAME`, dan baris privasi. Semua teks UI baru memakai string resources.
 - S10 aset: adaptive icon vektor baru (foreground cone + tiga jajanan + koin cuan, background gradien hangat, monochrome untuk themed icon) menggantikan ikon sementara, tanpa PNG per density. Splash memakai foreground baru dan label launcher tetap "Jajan Cuan". Aset toko dirender dari `assets/src/*.svg` dengan sharp: `icon-512.png` 512×512 RGBA (alpha 100% opak) dan `feature-graphic-1024x500.png` 1024×500 RGB tanpa alpha. Teks feature graphic sudah dikonversi ke path memakai Baloo 2 (SIL OFL); tidak ada font/gambar/merek pihak lain yang disertakan.
 - S10 test: 154 unit test total (5 baru: 2 ThemePreferences untuk persistensi DataStore, 3 SettingsViewModel untuk visibilitas tombol privasi dan event tema). `assembleDebug` hijau; `lintDebug` 0 error / 90 warning (turun dari 100).
+- S11 Coil: audit §6 menemukan satu gap nyata — belum ada `ImageLoader` kustom, sehingga disk cache memakai ukuran default Coil (bukan 100 MB). `JajanCuanApplication` sekarang mengimplementasikan `coil.ImageLoaderFactory` dengan `DiskCache` di `cacheDir/image_cache` dan `maxSizeBytes = 100 * 1024 * 1024`. Tidak ada perubahan dependensi.
+- S11 keep rules: aturan `-keep` yang luas untuk kotlinx.serialization, Room, Firebase, AdMob, dan UMP sengaja dipertahankan (bukan dipersempit) karena tidak ada device/emulator untuk membuktikan refleksi runtime build release. Verifikasi memakai `mapping.txt`: serializer `PostDto`/`SearchIndexEntryDto`/`MetaDto`, `JajanCuanDatabase_Impl`, `FirebaseAnalytics`/`RemoteConfig`/`Crashlytics`, `MobileAds`, dan `coil.ImageLoader` semuanya masih ada (tidak di-obfuscate/hilang).
+- S11 verifikasi penuh: `.\gradlew.bat clean testDebugUnitTest lintDebug assembleDebug assembleRelease` -> `BUILD SUCCESSFUL in 8m 31s` (111 task, 108 executed). 154 unit test (22 suite) lulus tanpa failure/error/skipped; `lintDebug` 0 error / 82 warning; `app-debug.apk` 17.326.444 byte (16,52 MiB); `app-release-unsigned.apk` 4.502.232 byte (4,29 MiB); `mapping.txt` 63.254.512 byte.
+- S11 audit manifest release (merged): INTERNET, ACCESS_NETWORK_STATE, POST_NOTIFICATIONS, WRITE_EXTERNAL_STORAGE (maxSdk 28), ditambah SDK AD_ID, ACCESS_ADSERVICES_AD_ID/ATTRIBUTION/TOPICS, WAKE_LOCK, BIND_GET_INSTALL_REFERRER_SERVICE, FOREGROUND_SERVICE, dan DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION. Tidak ada `SCHEDULE_EXACT_ALARM`/`USE_EXACT_ALARM`; `allowBackup=false`; build release tidak `debuggable`.
+- S11 audit repo: hanya test ad unit ID `ca-app-pub-3940256099942544/...` dan App ID sampel; tidak ada ad unit produksi, keystore, `local.properties`, atau `google-services.json` yang ter-track. API key Firebase web di `web/js/firebase-init.js`/`scripts/seed-database.html` adalah kunci klien publik yang memang dipakai di browser. Tidak ada panggilan `/posts.json` penuh, tidak ada dependensi `firebase-database`, tidak ada TODO/FIXME/stub (hanya parameter Compose `placeholder`), dan tidak ada versi alpha/beta/rc.
+- S11 risiko: (1) `SyncManager` menyimpan `lastMetaCheckAt` sebelum fetch `/search-index`, jadi kegagalan fetch index menekan retry non-forced sampai `metaCheckIntervalHours`; (2) tidak ada device/emulator sehingga build release belum diuji crash R8 secara runtime; (3) Remote Config produksi masih `isAdsEnabled=false` dan seluruh 209 resep seed memiliki `promo_images` kosong, sehingga iklan/gate/promo belum terbukti di produksi; APK release juga masih unsigned. Detail uji manual ada di `android/RELEASE_CHECKLIST.md`.
 
 ---
 
@@ -130,3 +136,4 @@
 - S10 Versi: baris Versi menampilkan `1.0.0` dari BuildConfig.
 - S10 Privasi: tombol Kebijakan Privasi membuka browser ke `https://susantohenri.github.io/privacy-policy`. "Pengaturan Privasi Iklan" hanya terlihat saat UMP menyatakan REQUIRED (uji dengan `umpDebugEea=true`, hapus data app, lalu buka lagi); tap membuka formulir opsi privasi UMP.
 - S10 Ikon: launcher memakai ikon baru (cone + jajanan + koin) dengan label "Jajan Cuan"; di Android 13+ themed icon memakai varian monochrome; splash menampilkan ikon baru; tidak ada PNG per density di folder `res/mipmap-*`.
+- S11: seluruh uji manual rilis (favorit offline + foto, empty state, UMP, rewarded permanen setelah restart, fallback sesi, notifikasi timer, tema, banner tidak menutupi bottom nav, perubahan `/meta`, kalkulator vs web) ada di `android/RELEASE_CHECKLIST.md`. Bagian "Butuh tindakan manual" (ad unit/App ID produksi, keystore/AAB, Play Console, Privacy Policy, AdMob-Firebase, PRD, kuota Hosting, aset) juga di sana.
