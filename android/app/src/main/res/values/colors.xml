@@ -8,4 +8,11 @@
     <color name="brand_on_surface">#1A1A1A</color>
     <color name="brand_error">#D32F2F</color>
     <color name="brand_success">#388E3C</color>
+
+    <!-- Native ad (gaya kartu Material 3) -->
+    <color name="native_ad_card_background">#FFFFFBF0</color>
+    <color name="native_ad_card_stroke">#33FF6B35</color>
+    <color name="native_ad_badge_background">#FFFFE0D2</color>
+    <color name="native_ad_badge_text">#FF7E2A00</color>
+    <color name="native_ad_secondary_text">#FF6B6560</color>
 </resources>

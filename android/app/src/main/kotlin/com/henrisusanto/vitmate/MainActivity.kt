@@ -18,11 +18,13 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -42,6 +44,9 @@ data class BottomNavItem(
 )
 
 class MainActivity : ComponentActivity() {
+    private val container: AppContainer
+        get() = (application as JajanCuanApplication).container
+
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         enableEdgeToEdge()
@@ -53,15 +58,20 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainNavigationApp()
+                    MainNavigationApp(container)
                 }
             }
+        }
+
+        // UMP dulu; MobileAds baru diinisialisasi setelah canRequestAds() true.
+        container.consentManager.gatherConsent(this) {
+            container.adsInitializer.initializeIfAllowed()
         }
     }
 }
 
 @Composable
-fun MainNavigationApp() {
+fun MainNavigationApp(container: AppContainer) {
     val navController = rememberNavController()
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentRoute = navBackStackEntry?.destination?.route
@@ -74,6 +84,19 @@ fun MainNavigationApp() {
 
     // Bottom bar is hidden on Detail screen
     val shouldShowBottomBar = bottomNavItems.any { it.route == currentRoute }
+
+    DisposableEffect(navController) {
+        val listener = NavController.OnDestinationChangedListener { _, destination, _ ->
+            val route = destination.route
+            if (route != null) {
+                val screen = route.substringBefore("/")
+                container.analytics.screenView(screen)
+                container.adManager.setCurrentScreen(screen)
+            }
+        }
+        navController.addOnDestinationChangedListener(listener)
+        onDispose { navController.removeOnDestinationChangedListener(listener) }
+    }
 
     Scaffold(
         bottomBar = {
