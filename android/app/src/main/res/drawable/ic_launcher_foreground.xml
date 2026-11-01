@@ -4,7 +4,48 @@
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
+    <!-- Tiga jajanan bulat di atas kertas cone. -->
     <path
-        android:fillColor="#FFFFFF"
-        android:pathData="M34,44 C34,38.48 38.48,34 44,34 L64,34 C69.52,34 74,38.48 74,44 L74,64 C74,69.52 69.52,74 64,74 L44,74 C38.48,74 34,69.52 34,64 Z"/>
+        android:fillColor="#FFC107"
+        android:pathData="M36,42a9,9 0 1,0 18,0a9,9 0 1,0 -18,0" />
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M54,42a9,9 0 1,0 18,0a9,9 0 1,0 -18,0" />
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M45,32a9,9 0 1,0 18,0a9,9 0 1,0 -18,0" />
+
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M39,38a3,3 0 1,0 6,0a3,3 0 1,0 -6,0" />
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M57,38a3,3 0 1,0 6,0a3,3 0 1,0 -6,0" />
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M48,28a3,3 0 1,0 6,0a3,3 0 1,0 -6,0" />
+
+    <!-- Kertas pembungkus (cone). -->
+    <path
+        android:fillColor="#FFF3E0"
+        android:pathData="M35,50C35,47.8 36.8,46 39,46L69,46C71.2,46 73,47.8 73,50L57,83C56.3,84.4 54.7,84.4 54,83Z" />
+    <path
+        android:fillColor="#FFE0B2"
+        android:pathData="M43,53L65,53L55.7,78Z" />
+
+    <!-- Koin cuan. -->
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M66,66a9,9 0 1,0 18,0a9,9 0 1,0 -18,0" />
+    <path
+        android:fillColor="#FFB300"
+        android:pathData="M69,66a6,6 0 1,0 12,0a6,6 0 1,0 -12,0" />
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M75,61.5L76.2,64.2L79,64.6L77,66.7L77.5,69.5L75,68.1L72.5,69.5L73,66.7L71,64.6L73.8,64.2Z" />
+
+    <!-- Kilau. -->
+    <path
+        android:fillColor="#FFF8E1"
+        android:pathData="M32,24L33.8,29.2L39,31L33.8,32.8L32,38L30.2,32.8L25,31L30.2,29.2Z" />
 </vector>

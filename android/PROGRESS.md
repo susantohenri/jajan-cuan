@@ -11,7 +11,7 @@
 - [x] S7 Detail & Kalkulator
 - [x] S8 Timer
 - [x] S9 Rewarded & Promo
-- [ ] S10 Settings & Aset
+- [x] S10 Settings & Aset
 - [ ] S11 QA & hardening
 
 ---
@@ -82,6 +82,12 @@
 - S9 unduh/share: unduh memakai MediaStore ke `Pictures/JajanCuan` pada API 29+ tanpa izin; API 26–28 meminta `WRITE_EXTERNAL_STORAGE` saat runtime dan menulis ke folder Pictures publik. Share mengunduh ke `cacheDir/promo` lalu memakai FileProvider yang sudah ada (`com.henrisusanto.vitmate.fileprovider`). `promo_download` dicatat hanya setelah simpan berhasil dan `promo_share` hanya setelah URI share siap; offline menampilkan pesan jelas tanpa mencatat event.
 - S9 UI promo: grid 2 kolom, viewer modal dengan tombol sebelumnya/berikutnya (melingkar), serta tombol Unduh dan Share. Saat offline grid diganti pesan "Konten promosi membutuhkan internet". Slot placeholder promo dari S7 sudah diganti implementasi penuh ini.
 - S9 test: 149 unit test total (25 baru: 7 UnlockRepository, 11 FeatureGateCoordinator, 7 DetailViewModel). `assembleDebug` hijau; `lintDebug` 0 error, 100 warning.
+- S10 tema: `ThemeMode` (SYSTEM/LIGHT/DARK) disimpan di Preferences DataStore `settings` dengan key `theme_mode`. `ThemePreferences` menjadi satu-satunya akses; nilai default SYSTEM bila DataStore kosong atau gagal dibaca (IOException). `MainActivity` mengoleksi flow tersebut dan meneruskan `darkTheme` ke `JajanCuanTheme`, sehingga perubahan tema langsung terlihat tanpa restart; ikon status/navigation bar ikut disesuaikan lewat `WindowCompat`.
+- S10 analytics: `AppContainer` mengoleksi tema tersimpan saat start untuk mengisi user property `theme_mode` + Crashlytics. `SettingsViewModel.onThemeSelected` hanya menulis DataStore dan mencatat `change_theme` bila nilainya berbeda dari yang tersimpan, jadi memilih opsi yang sama tidak menghasilkan event ganda.
+- S10 privasi: baris "Pengaturan Privasi Iklan" memakai `ConsentManager.privacyOptionsRequired` (StateFlow UMP) dan hanya dirender saat bernilai true (status REQUIRED). Tap memanggil `showPrivacyOptionsForm`; error form ditampilkan lewat Snackbar. Kebijakan Privasi membuka `https://susantohenri.github.io/privacy-policy` lewat `ACTION_VIEW`.
+- S10 UI: Settings memakai Scaffold + kolom scrollable dengan lebar maksimal 840dp seperti Home/Favorit, tiga opsi radio tema, versi dari `BuildConfig.VERSION_NAME`, dan baris privasi. Semua teks UI baru memakai string resources.
+- S10 aset: adaptive icon vektor baru (foreground cone + tiga jajanan + koin cuan, background gradien hangat, monochrome untuk themed icon) menggantikan ikon sementara, tanpa PNG per density. Splash memakai foreground baru dan label launcher tetap "Jajan Cuan". Aset toko dirender dari `assets/src/*.svg` dengan sharp: `icon-512.png` 512×512 RGBA (alpha 100% opak) dan `feature-graphic-1024x500.png` 1024×500 RGB tanpa alpha. Teks feature graphic sudah dikonversi ke path memakai Baloo 2 (SIL OFL); tidak ada font/gambar/merek pihak lain yang disertakan.
+- S10 test: 154 unit test total (5 baru: 2 ThemePreferences untuk persistensi DataStore, 3 SettingsViewModel untuk visibilitas tombol privasi dan event tema). `assembleDebug` hijau; `lintDebug` 0 error / 90 warning (turun dari 100).
 
 ---
 
@@ -119,3 +125,8 @@
 - S9 Promo: karena 209 resep seed saat ini `promo_images` kosong, bagian promo tidak tampil. Untuk menguji, pakai data resep dengan `promo_images` terisi -> grid 2 kolom, viewer dengan panah sebelumnya/berikutnya, Unduh menyimpan ke `Pictures/JajanCuan` (cek aplikasi Galeri), Share membuka chooser berisi foto. Aktifkan mode pesawat -> grid diganti pesan "Konten promosi membutuhkan internet" dan unduh/share menampilkan pesan yang sama.
 - S9 Izin unduh API 26–28: tekan Unduh pertama kali -> dialog izin penyimpanan; tolak -> Snackbar izin diperlukan; izinkan -> foto tersimpan di folder Pictures/JajanCuan. Di API 29+ tidak boleh ada dialog izin.
 - S9 Dialog gate: saat status "Menyiapkan iklan…" tombol tidak bisa ditekan; setelah siap, tap membuka dialog Batal/Tonton; Batal tidak memutar iklan dan status tetap siap.
+- S10 Tema seketika: buka Pengaturan lalu pilih Terang/Gelap -> warna seluruh layar berubah saat itu juga tanpa restart; pilih Ikuti Sistem -> tampilan mengikuti tema sistem; tutup paksa lalu buka lagi -> pilihan terakhir tetap terpakai.
+- S10 Analytics: di DebugView, memilih tema baru memunculkan `change_theme` dengan `theme_mode` dan user property `theme_mode`; memilih opsi yang sudah aktif tidak menambah event.
+- S10 Versi: baris Versi menampilkan `1.0.0` dari BuildConfig.
+- S10 Privasi: tombol Kebijakan Privasi membuka browser ke `https://susantohenri.github.io/privacy-policy`. "Pengaturan Privasi Iklan" hanya terlihat saat UMP menyatakan REQUIRED (uji dengan `umpDebugEea=true`, hapus data app, lalu buka lagi); tap membuka formulir opsi privasi UMP.
+- S10 Ikon: launcher memakai ikon baru (cone + jajanan + koin) dengan label "Jajan Cuan"; di Android 13+ themed icon memakai varian monochrome; splash menampilkan ikon baru; tidak ada PNG per density di folder `res/mipmap-*`.

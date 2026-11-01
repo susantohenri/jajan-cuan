@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
@@ -26,6 +27,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
@@ -35,6 +37,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import com.henrisusanto.vitmate.data.sync.SyncOutcome
+import com.henrisusanto.vitmate.settings.ThemeMode
 import com.henrisusanto.vitmate.timer.TimerIntents
 import com.henrisusanto.vitmate.ui.navigation.Screen
 import com.henrisusanto.vitmate.ui.screens.DetailScreen
@@ -44,6 +47,7 @@ import com.henrisusanto.vitmate.ui.screens.FavoritesViewModel
 import com.henrisusanto.vitmate.ui.screens.HomeScreen
 import com.henrisusanto.vitmate.ui.screens.HomeViewModel
 import com.henrisusanto.vitmate.ui.screens.SettingsScreen
+import com.henrisusanto.vitmate.ui.screens.SettingsViewModel
 import com.henrisusanto.vitmate.ui.theme.JajanCuanTheme
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -69,7 +73,22 @@ class MainActivity : ComponentActivity() {
         pendingRecipeId.value = TimerIntents.recipeIdFrom(intent)
 
         setContent {
-            JajanCuanTheme {
+            val themeMode by container.themePreferences.themeMode
+                .collectAsStateWithLifecycle(initialValue = ThemeMode.SYSTEM)
+            val darkTheme = when (themeMode) {
+                ThemeMode.SYSTEM -> isSystemInDarkTheme()
+                ThemeMode.LIGHT -> false
+                ThemeMode.DARK -> true
+            }
+
+            LaunchedEffect(darkTheme) {
+                WindowCompat.getInsetsController(window, window.decorView).apply {
+                    isAppearanceLightStatusBars = !darkTheme
+                    isAppearanceLightNavigationBars = !darkTheme
+                }
+            }
+
+            JajanCuanTheme(darkTheme = darkTheme) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -221,7 +240,18 @@ fun MainNavigationApp(
                 )
             }
             composable(Screen.Settings.route) {
-                SettingsScreen()
+                val settingsViewModel: SettingsViewModel = viewModel {
+                    SettingsViewModel(
+                        themePreferences = container.themePreferences,
+                        analytics = container.analytics,
+                        privacyOptionsRequired = container.consentManager.privacyOptionsRequired,
+                        versionName = BuildConfig.VERSION_NAME
+                    )
+                }
+                SettingsScreen(
+                    viewModel = settingsViewModel,
+                    consentManager = container.consentManager
+                )
             }
             composable(Screen.Detail.route) { backStackEntry ->
                 val recipeId = backStackEntry.arguments?.getString("recipeId").orEmpty()

@@ -93,6 +93,9 @@
     <string name="settings_version">Versi</string>
     <string name="settings_privacy_policy">Kebijakan Privasi</string>
     <string name="settings_ads_privacy">Pengaturan Privasi Iklan</string>
+    <string name="settings_open">Buka</string>
+    <string name="settings_privacy_policy_error">Tidak dapat membuka browser. Coba lagi.</string>
+    <string name="settings_ads_privacy_error">Tidak dapat membuka pengaturan privasi iklan. Coba lagi.</string>
 
     <!-- Timer -->
     <string name="timer_channel_name">Timer Memasak</string>

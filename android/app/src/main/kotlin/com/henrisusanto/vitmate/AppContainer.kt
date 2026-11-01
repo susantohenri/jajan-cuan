@@ -20,6 +20,7 @@ import com.henrisusanto.vitmate.data.sync.SyncManager
 import com.henrisusanto.vitmate.data.sync.SyncOutcome
 import com.henrisusanto.vitmate.promo.AndroidPromoActions
 import com.henrisusanto.vitmate.promo.PromoActions
+import com.henrisusanto.vitmate.settings.ThemePreferences
 import com.henrisusanto.vitmate.timer.AlarmTimerScheduler
 import com.henrisusanto.vitmate.timer.TimerNotifier
 import kotlinx.coroutines.CoroutineScope
@@ -37,6 +38,8 @@ class AppContainer(context: Context) {
     private val httpClient = OkHttpRecipeRemoteDataSource.defaultClient()
 
     val analytics: AnalyticsLogger = AnalyticsLogger.getInstance(appContext)
+
+    val themePreferences = ThemePreferences.from(appContext)
 
     val remoteConfigManager = RemoteConfigManager(isDebugBuild = BuildConfig.DEBUG)
 
@@ -110,6 +113,12 @@ class AppContainer(context: Context) {
         applicationScope.launch { timerRepository.pruneExpired() }
 
         remoteConfigManager.start()
+
+        applicationScope.launch {
+            themePreferences.themeMode.collect { mode ->
+                analytics.setThemeMode(mode.analyticsValue)
+            }
+        }
 
         applicationScope.launch {
             remoteConfigManager.values.collect { values ->

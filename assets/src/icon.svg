@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFC107"/>
+      <stop offset="0.55" stop-color="#FF8A00"/>
+      <stop offset="1" stop-color="#F4511E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.28" cy="0.18" r="0.8">
+      <stop offset="0" stop-color="#FFE082" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FF8A00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <rect width="512" height="512" fill="url(#glow)"/>
+  <circle cx="440" cy="452" r="160" fill="#E65100" opacity="0.16"/>
+  <circle cx="72" cy="52" r="132" fill="#FFE082" opacity="0.14"/>
+  <g transform="translate(256 256) scale(6.15) translate(-54 -54)">
+    <path fill="#FFC107" d="M36,42a9,9 0 1,0 18,0a9,9 0 1,0 -18,0"/>
+    <path fill="#FFC107" d="M54,42a9,9 0 1,0 18,0a9,9 0 1,0 -18,0"/>
+    <path fill="#FFC107" d="M45,32a9,9 0 1,0 18,0a9,9 0 1,0 -18,0"/>
+    <path fill="#FFF8E1" d="M39,38a3,3 0 1,0 6,0a3,3 0 1,0 -6,0"/>
+    <path fill="#FFF8E1" d="M57,38a3,3 0 1,0 6,0a3,3 0 1,0 -6,0"/>
+    <path fill="#FFF8E1" d="M48,28a3,3 0 1,0 6,0a3,3 0 1,0 -6,0"/>
+    <path fill="#FFF3E0" d="M35,50C35,47.8 36.8,46 39,46L69,46C71.2,46 73,47.8 73,50L57,83C56.3,84.4 54.7,84.4 54,83Z"/>
+    <path fill="#FFE0B2" d="M43,53L65,53L55.7,78Z"/>
+    <path fill="#FFD54F" d="M66,66a9,9 0 1,0 18,0a9,9 0 1,0 -18,0"/>
+    <path fill="#FFB300" d="M69,66a6,6 0 1,0 12,0a6,6 0 1,0 -12,0"/>
+    <path fill="#FFF8E1" d="M75,61.5L76.2,64.2L79,64.6L77,66.7L77.5,69.5L75,68.1L72.5,69.5L73,66.7L71,64.6L73.8,64.2Z"/>
+    <path fill="#FFF8E1" d="M32,24L33.8,29.2L39,31L33.8,32.8L32,38L30.2,32.8L25,31L30.2,29.2Z"/>
+  </g>
+</svg>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Siluet untuk themed icon: satu warna, sistem yang memberi tint. -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M36,42a9,9 0 1,0 18,0a9,9 0 1,0 -18,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,42a9,9 0 1,0 18,0a9,9 0 1,0 -18,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M45,32a9,9 0 1,0 18,0a9,9 0 1,0 -18,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M35,50C35,47.8 36.8,46 39,46L69,46C71.2,46 73,47.8 73,50L57,83C56.3,84.4 54.7,84.4 54,83Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M66,66a9,9 0 1,0 18,0a9,9 0 1,0 -18,0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,24L33.8,29.2L39,31L33.8,32.8L32,38L30.2,32.8L25,31L30.2,29.2Z" />
+</vector>
