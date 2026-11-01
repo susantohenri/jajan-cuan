@@ -58,6 +58,22 @@ interface RecipeIndexDao {
     @Query("SELECT DISTINCT category FROM recipe_index ORDER BY category ASC")
     fun observeCategories(): Flow<List<String>>
 
+    @Query(
+        """
+        SELECT COUNT(*) FROM recipe_index
+        WHERE (:category IS NULL OR category = :category)
+          AND (
+            :escapedQuery = ''
+            OR title LIKE '%' || :escapedQuery || '%' ESCAPE '\\'
+            OR ingredientsText LIKE '%' || :escapedQuery || '%' ESCAPE '\\'
+            OR tagsText LIKE '%' || :escapedQuery || '%' ESCAPE '\\'
+            OR category LIKE '%' || :escapedQuery || '%' ESCAPE '\\'
+          )
+        """
+    )
+    suspend fun countFiltered(category: String?, escapedQuery: String): Int
+
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(recipes: List<RecipeIndexEntity>)
 
