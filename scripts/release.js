@@ -36,25 +36,30 @@ if (!fs.existsSync(draftsPath)) {
 }
 
 const drafts = JSON.parse(fs.readFileSync(draftsPath, 'utf8'));
-const finalPosts = {};
 
-let activeCount = 0;
-for (const [slug, recipe] of Object.entries(drafts)) {
-  if (recipe.published !== false) {
-    // Pastikan foto cover terisi dengan foto polesan jika approved, atau foto asli
-    const coverPhoto = (recipe.media?.status === 'approved' && recipe.media?.ai_polished_photo)
-      ? recipe.media.ai_polished_photo
-      : (recipe.media?.source_photo || recipe.og_image || '');
+// Bangun finalPosts dari draft: isi cover, set last_updated. Disediakan sebagai
+// fungsi agar bisa dipanggil terpisah (mis. sinkron seed-database.html saja).
+function buildFinalPosts(draftsIn) {
+  const finalPosts = {};
+  for (const [slug, recipe] of Object.entries(draftsIn)) {
+    if (recipe.published !== false) {
+      // Pastikan foto cover terisi dengan foto polesan jika approved, atau foto asli
+      const coverPhoto = (recipe.media?.status === 'approved' && recipe.media?.ai_polished_photo)
+        ? recipe.media.ai_polished_photo
+        : (recipe.media?.source_photo || recipe.og_image || '');
 
-    finalPosts[slug] = {
-      ...recipe,
-      og_image: coverPhoto,
-      last_updated: new Date().toISOString()
-    };
-    activeCount++;
+      finalPosts[slug] = {
+        ...recipe,
+        og_image: coverPhoto,
+        last_updated: new Date().toISOString()
+      };
+    }
   }
+  return finalPosts;
 }
 
+const finalPosts = buildFinalPosts(drafts);
+const activeCount = Object.keys(finalPosts).length;
 console.log(`📦 [1/N] Menyiapkan ${activeCount} resep terkurasi...`);
 
 // --- Fungsi bantu URL gambar -----------------------------------------------
@@ -265,19 +270,71 @@ function rtdbPut(node, data) {
 }
 
 // --- Update seed-database.html --------------------------------------------
-function updateSeedHtml(finalPosts, searchIndex, meta) {
+// Ganti/buat blok `const <NAME> = { ... };` dengan brace-counting (robust
+// terhadap indentasi), bukan regex yang sensitif whitespace.
+function findAssignmentSpan(html, assignment) {
+  const startToken = `const ${assignment} = {`;
+  const startIdx = html.indexOf(startToken);
+  if (startIdx === -1) return null;
+  const braceStart = html.indexOf('{', startIdx);
+  let depth = 0, inStr = null;
+  for (let i = braceStart; i < html.length; i++) {
+    const c = html[i];
+    if (inStr) {
+      if (c === '\\') { i++; continue; }
+      if (c === inStr) inStr = null;
+      continue;
+    }
+    if (c === '"' || c === "'" || c === '`') { inStr = c; continue; }
+    if (c === '{') depth++;
+    else if (c === '}') { depth--; if (depth === 0) { return { start: startIdx, endAfterSemi: null, closeIdx: i }; } }
+  }
+  return null;
+}
+
+function skipWs(html, i) {
+  while (i < html.length && /\s/.test(html[i])) i++;
+  return i;
+}
+
+function replaceAssignment(html, assignment, valueStr) {
+  const span = findAssignmentSpan(html, assignment);
+  if (!span) return { html, changed: false };
+  let j = skipWs(html, span.closeIdx + 1);
+  if (html[j] !== ';') return { html, changed: false };
+  const before = html.slice(0, span.start);
+  const after = html.slice(j + 1);
+  return { html: before + valueStr + ';' + after, changed: true };
+}
+
+function insertAfterAssignment(html, assignment, valueStr) {
+  const span = findAssignmentSpan(html, assignment);
+  if (!span) return { html, created: false };
+  let j = skipWs(html, span.closeIdx + 1);
+  if (html[j] !== ';') return { html, created: false };
+  const insertIdx = j + 1;
+  const lineIndent = html.slice(html.lastIndexOf('\n', span.start) + 1, span.start);
+  const before = html.slice(0, insertIdx);
+  const after = html.slice(insertIdx);
+  return { html: before + '\n\n' + lineIndent + valueStr + ';' + after, created: true };
+}
+
+function updateSeedHtml(finalPostsArg, searchIndex, meta) {
   const seederHtmlPath = path.join(__dirname, 'seed-database.html');
   if (!fs.existsSync(seederHtmlPath)) return;
   let html = fs.readFileSync(seederHtmlPath, 'utf8');
 
-  const payloadRegex = /const SEED_PAYLOAD = \{[\s\S]*?\n    \};/;
-  html = html.replace(payloadRegex, `const SEED_PAYLOAD = ${JSON.stringify(finalPosts, null, 2)};`);
+  html = replaceAssignment(html, 'SEED_PAYLOAD', `const SEED_PAYLOAD = ${JSON.stringify(finalPostsArg, null, 2)}`).html;
 
-  const indexRegex = /const SEED_SEARCH_INDEX = \{[\s\S]*?\n    \};/;
-  html = html.replace(indexRegex, `const SEED_SEARCH_INDEX = ${JSON.stringify(searchIndex, null, 2)};`);
+  const indexStr = `const SEED_SEARCH_INDEX = ${JSON.stringify(searchIndex, null, 2)}`;
+  html = html.includes('const SEED_SEARCH_INDEX = {')
+    ? replaceAssignment(html, 'SEED_SEARCH_INDEX', indexStr).html
+    : insertAfterAssignment(html, 'SEED_PAYLOAD', indexStr).html;
 
-  const metaRegex = /const SEED_META = \{[\s\S]*?\};/;
-  html = html.replace(metaRegex, `const SEED_META = ${JSON.stringify(meta, null, 2)};`);
+  const metaStr = `const SEED_META = ${JSON.stringify(meta, null, 2)}`;
+  html = html.includes('const SEED_META = {')
+    ? replaceAssignment(html, 'SEED_META', metaStr).html
+    : insertAfterAssignment(html, 'SEED_SEARCH_INDEX', metaStr).html;
 
   fs.writeFileSync(seederHtmlPath, html, 'utf8');
 }
@@ -409,8 +466,18 @@ async function runRelease(dryRun) {
   console.log(`====================================================\n`);
 }
 
-const DRY_RUN = process.argv.includes('--dry-run');
-runRelease(DRY_RUN).catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+if (require.main === module) {
+  const DRY_RUN = process.argv.includes('--dry-run');
+  runRelease(DRY_RUN).catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  buildFinalPosts,
+  buildSearchIndex,
+  buildMeta,
+  updateSeedHtml,
+  resolveCover
+};
