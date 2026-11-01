@@ -14,6 +14,7 @@ import com.henrisusanto.vitmate.data.remote.OkHttpRecipeRemoteDataSource
 import com.henrisusanto.vitmate.data.repository.RecipeRepository
 import com.henrisusanto.vitmate.data.sync.SharedPreferencesSyncStateStore
 import com.henrisusanto.vitmate.data.sync.SyncManager
+import com.henrisusanto.vitmate.data.sync.SyncOutcome
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -100,4 +101,11 @@ class AppContainer(context: Context) {
             syncManager.sync(force = force)
         }
     }
+
+    /**
+     * Versi suspend untuk pull-to-refresh: UI menunggu sampai sync selesai
+     * agar indikator refresh berhenti tepat waktu.
+     */
+    suspend fun syncNow(force: Boolean = false): SyncOutcome =
+        syncManager.sync(force = force)
 }

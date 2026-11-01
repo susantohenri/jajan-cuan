@@ -1,9 +1,7 @@
 package com.henrisusanto.vitmate.data.repository
 
 import com.henrisusanto.vitmate.data.local.RecipeIndexEntity
-import com.henrisusanto.vitmate.data.local.RecipeSummary
 import com.henrisusanto.vitmate.data.model.UnlockFeature
-import com.henrisusanto.vitmate.data.remote.FavoriteToggleResult
 import kotlinx.coroutines.flow.Flow
 
 /**

@@ -1,3 +1,34 @@
+package com.henrisusanto.vitmate.data.repository
+
+import com.henrisusanto.vitmate.data.image.ImageDownloader
+import com.henrisusanto.vitmate.data.image.ImageUrlResolver
+import com.henrisusanto.vitmate.data.local.FavoriteEntity
+import com.henrisusanto.vitmate.data.local.JajanCuanDatabase
+import com.henrisusanto.vitmate.data.local.RecipeDetailEntity
+import com.henrisusanto.vitmate.data.local.RecipeIndexEntity
+import com.henrisusanto.vitmate.data.local.escapeLikePattern
+import com.henrisusanto.vitmate.data.remote.RecipeRemoteDataSource
+import com.henrisusanto.vitmate.data.remote.RemoteResult
+import com.henrisusanto.vitmate.data.remote.dto.PostDto
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
+import kotlinx.coroutines.withContext
+import kotlinx.serialization.json.Json
+import java.io.File
+import java.util.Locale
+
+/**
+ * Repository baca/tulis untuk katalog, detail, dan favorit.
+ *
+ * Detail selalu memakai urutan: snapshot favorit -> cache detail -> jaringan.
+ * Favorit adalah snapshot mandiri, bukan relasi ke recipe_index.
+ */
 class RecipeRepository(
     private val database: JajanCuanDatabase,
     private val remote: RecipeRemoteDataSource,
@@ -13,75 +44,64 @@ class RecipeRepository(
     private val favoriteDao = database.favoriteDao()
     private val toggleMutex = Mutex()
 
-    override
-    fun observeRecipes(
+    override fun observeRecipes(
         category: String?,
         query: String,
         limit: Int,
-        sessionSeed: Long? = null
+        sessionSeed: Long?
     ): Flow<List<RecipeSummary>> {
         val normalizedCategory = category?.takeIf { it.isNotBlank() }
         val escapedQuery = escapeLikePattern(query.trim())
-        val query = if (sessionSeed == null) {
+        val safeLimit = limit.coerceAtLeast(1)
+        val rows = if (sessionSeed == null) {
             indexDao.observeList(
                 category = normalizedCategory,
                 escapedQuery = escapedQuery,
-                limit = limit.coerceAtLeast(1)
+                limit = safeLimit
             )
         } else {
             indexDao.observeListShuffled(
                 category = normalizedCategory,
                 escapedQuery = escapedQuery,
-                limit = limit.coerceAtLeast(1),
+                limit = safeLimit,
                 sessionSeed = sessionSeed
             )
         }
-        return combine(
-            query,
-            favoriteDao.observeIds()
-        ) { rows, favoriteIds ->
+        return combine(rows, favoriteDao.observeIds()) { recipes, favoriteIds ->
             val favorites = favoriteIds.toHashSet()
-            rows.map { row -> row.toSummary(isFavorite = row.id in favorites) }
+            recipes.map { row -> row.toSummary(isFavorite = row.id in favorites) }
         }
     }
 
-    override
-    fun observeCategories(): Flow<List<String>> = indexDao.observeCategories()
+    override fun observeCategories(): Flow<List<String>> = indexDao.observeCategories()
 
-    override
-    fun observeFavoriteRecipes(query: String = ""): Flow<List<RecipeSummary>> =
+    override fun observeFavoriteRecipes(query: String): Flow<List<RecipeSummary>> =
         favoriteDao.observeFiltered(escapeLikePattern(query.trim()))
             .map { favorites -> favorites.map { it.toSummary() } }
 
-    override
-    fun observeFavoriteCount(): Flow<Int> = favoriteDao.observeCount()
+    override fun observeFavoriteCount(): Flow<Int> = favoriteDao.observeCount()
 
-    override
-    suspend fun countRecipes(category: String?, query: String): Int {
-        val escapedQuery = escapeLikePattern(query.trim())
-        return indexDao.countFiltered(
-            category = category?.takeIf { it.isNotBlank() },
-            escapedQuery = escapedQuery
-        )
-    }
+    override fun observeIsFavorite(recipeId: String): Flow<Boolean> =
+        favoriteDao.observeIsFavorite(recipeId)
 
-    override
-    fun observeIsFavorite(recipeId: String): Flow<Boolean> = favoriteDao.observeIsFavorite(recipeId)
-
-    override
     suspend fun isFavorite(recipeId: String): Boolean = favoriteDao.isFavorite(recipeId)
+
+    override suspend fun countRecipes(category: String?, query: String): Int =
+        indexDao.countFiltered(
+            category = category?.takeIf { it.isNotBlank() },
+            escapedQuery = escapeLikePattern(query.trim())
+        )
 
     suspend fun getDetail(recipeId: String): DetailResult = withContext(ioDispatcher) {
         loadDetail(recipeId)
     }
 
     /**
- * Menambah favorit dengan snapshot lengkap, atau menghapusnya bila sudah
- * ada. Bila detail belum ada di cache dan jaringan gagal, hasilnya
- * [FavoriteToggleResult.NeedsInternet].
- */
-    override
-    suspend fun toggleFavorite(recipeId: String): FavoriteToggleResult =
+     * Menambah favorit dengan snapshot lengkap, atau menghapusnya bila sudah
+     * ada. Bila detail belum ada di cache dan jaringan gagal, hasilnya
+     * [FavoriteToggleResult.NeedsInternet].
+     */
+    override suspend fun toggleFavorite(recipeId: String): FavoriteToggleResult =
         withContext(ioDispatcher) {
             toggleMutex.withLock {
                 try {
@@ -161,6 +181,62 @@ class RecipeRepository(
                 }
             }
         }
+
+    /**
+     * Dipanggil SyncManager setelah index diganti. Bila server mengembalikan
+     * null/404 atau jaringan gagal, snapshot lama dipertahankan.
+     */
+    suspend fun refreshFavoriteFromNetwork(recipeId: String) = withContext(ioDispatcher) {
+        val favorite = favoriteDao.get(recipeId) ?: return@withContext
+        val result = remote.fetchPost(recipeId)
+        val payload = (result as? RemoteResult.Success)?.value ?: return@withContext
+        val post = payload.dto
+        val index = indexDao.get(recipeId)
+
+        val coverUrl = imageUrlResolver.resolveCover(index?.cover)
+            ?: imageUrlResolver.coverFor(post)
+        val thumbUrl = imageUrlResolver.resolveThumb(index?.thumb, coverUrl)
+
+        var coverLocalPath = favorite.coverLocalPath
+        var thumbLocalPath = favorite.thumbLocalPath
+        if (coverUrl != null) {
+            val directory = favoriteDirectory(recipeId)
+            val coverFile = File(directory, COVER_FILE_NAME)
+            if (imageDownloader.download(coverUrl, coverFile)) {
+                coverLocalPath = coverFile.absolutePath
+                val thumbFile = File(directory, THUMB_FILE_NAME)
+                thumbLocalPath = if (
+                    thumbUrl != null &&
+                    thumbUrl != coverUrl &&
+                    imageDownloader.download(thumbUrl, thumbFile)
+                ) {
+                    thumbFile.absolutePath
+                } else {
+                    coverLocalPath
+                }
+            }
+        }
+
+        favoriteDao.upsert(
+            favorite.copy(
+                title = post.title.ifBlank { index?.title.orEmpty() },
+                category = post.category.ifBlank { index?.category.orEmpty() },
+                tagsText = post.tags.joinToString(SPACE)
+                    .ifBlank { index?.tagsText.orEmpty() },
+                ingredientsText = post.ingredients
+                    .joinToString(SPACE) { it.name.lowercase(Locale.ROOT) }
+                    .ifBlank { index?.ingredientsText.orEmpty() },
+                estCapital = post.businessAnalysis.estimatedInitialCapital
+                    .takeIf { it > 0 } ?: index?.estCapital ?: favorite.estCapital,
+                portions = post.defaultPortions.takeIf { it > 0 }
+                    ?: index?.portions ?: favorite.portions,
+                thumbLocalPath = thumbLocalPath,
+                coverLocalPath = coverLocalPath,
+                detailJson = payload.rawJson
+            )
+        )
+    }
+
     private suspend fun loadDetail(recipeId: String): DetailResult {
         val favorite = favoriteDao.get(recipeId)
         if (favorite != null) {
@@ -266,6 +342,10 @@ class RecipeRepository(
             isFavorite = true
         )
     }
+
+    private fun String.toTags(): List<String> =
+        split(SPACE).map { it.trim() }.filter { it.isNotEmpty() }
+
     companion object {
         const val DETAIL_CACHE_LIMIT = 30
         private const val COVER_FILE_NAME = "cover"

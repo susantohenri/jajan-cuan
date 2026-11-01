@@ -7,7 +7,7 @@
 - [x] S3 Kerangka proyek Android
 - [x] S4 Instrumentasi (Firebase, RC, UMP, AdManager)
 - [x] S5 Data layer
-- [ ] S6 Home, Pencarian, Favorit
+- [x] S6 Home, Pencarian, Favorit
 - [ ] S7 Detail & Kalkulator
 - [ ] S8 Timer
 - [ ] S9 Rewarded & Promo
@@ -49,6 +49,15 @@
 - S5 favorit: snapshot mandiri di tabel `favorites`; file disimpan di `filesDir/covers/{id}/cover` dan `/thumb`. Jika thumbnail gagal diunduh, cover dipakai sebagai thumbnail. Hapus favorit menghapus baris + direktori. Refresh favorit saat versi index berubah mempertahankan snapshot lama bila server 404/null atau jaringan gagal.
 - S5 urutan list: `orderIdx` menyimpan urutan dasar deterministik dari index (diurutkan per id saat sync); pengacakan sesi Home tetap menjadi tugas S6. Query LIKE memakai escape `\`, `%`, dan `_` yang diuji.
 - S5 verifikasi: 70 unit test total (52 test baru S5) hijau; assembleDebug hijau; lint 0 error. Di perangkat SM-A045F, setelah app dibuka database Room berisi 209 baris `recipe_index` dengan field kartu benar, tanpa FATAL EXCEPTION.
+- S6 pengacakan: `observeListShuffled` mengurutkan `(((orderIdx * :sessionSeed) % 1000003) + 1000003) % 1000003` di SQL, sehingga `LIMIT` tetap dipakai dan urutan stabil per seed (paginasi tidak menduplikasi/lompat). Seed hanya dikirim saat kata kunci kosong; saat mencari, urutan `orderIdx` dipakai agar hasil konsisten.
+- S6 seed: dibuat baru saat ViewModel dibuat (cold start) dan saat pull-to-refresh; refresh yang gagal tetap memakai seed baru tetapi daftar diambil dari cache Room.
+- S6 `RecipeRepository` kini mengimplementasikan `RecipeCatalog` (seed, count, observeFavoriteCount). Interface ini menjaga ViewModel tidak bergantung langsung pada Room. Implementasi dipulihkan dari salinan tracked `android/android/...` yang identik.
+- S6 Home memuat halaman pertama lebih dulu; bila cache kosong ia memanggil sync sekali dan menampilkan error + "Coba Lagi" hanya jika sync gagal. Sync foreground tetap ditangani `ProcessLifecycleOwner` dari S5.
+- S6 banner: slot sticky hanya mereservasi tinggi 56dp ketika `initialized && isAdsEnabled && bannerEnabled`; sebelum consent/flag mati slot tidak mengambil ruang (tidak ada area kosong).
+- S6 Favorit sengaja tanpa pull-to-refresh karena sumbernya snapshot lokal; pencarian lokal tetap debounce 300ms + `distinctUntilChanged`. Empty state pencarian memakai komponen yang sama dengan Home, tanpa chip saran (tidak relevan untuk snapshot favorit).
+- S6 log: `recipe_search` sekali per term final (setelah debounce), `view_favorites_tab` sekali per ViewModel Favorit dibuat, `change_category` setiap chip dipilih (null = "Semua"), `view_recipe` saat kartu dibuka.
+- S6 test: 78 unit test total, semuanya hijau (5 HomeViewModel + 3 FavoritesViewModel baru). Test debounce memajukan waktu tanpa `advanceUntilIdle` di antara ketikan agar emisi antara benar-benar dibatalkan.
+- S6 catatan lingkungan: `gradlew.bat` di repo ini selalu keluar dengan kode 1 walau build sukses (label `:fail` berada setelah `endlocal`, sehingga eksekusi jatuh ke `exit /b 1`). Verifikasi dinilai dari baris `BUILD SUCCESSFUL`; file wrapper ini tidak diubah karena di luar lingkup S6.
 
 ---
 
@@ -61,3 +70,9 @@
 - S5 (sudah diverifikasi di SM-A045F): buka app pertama kali -> tabel `recipe_index` berisi 209 resep. Bisa diulang dengan menghapus data app lalu membuka app lagi.
 - S5 (setelah S6): pull-to-refresh harus memanggil `syncManager.sync(force=true)` dan tetap mempertahankan favorit/unlock; pergantian versi `/meta` baru bisa diuji penuh lewat UI.
 - S5 (opsional): jalankan app dalam mode pesawat setelah index terisi; daftar dari Room harus tetap tampil (UI baru ada di S6).
+- S6 Home: buka app, scroll sampai mendekati item ke-10 -> limit bertambah tanpa kartu duplikat; tarik untuk refresh -> urutan berubah, indikator berhenti setelah sync selesai.
+- S6 Pencarian: ketik "tapioka" -> hasil muncul setelah ±300ms; kosongkan/tutup pencarian -> daftar penuh kembali; cari kata acak -> empty state dengan chip kategori dan "Tampilkan Semua Resep"; cek Analytics DebugView hanya satu `recipe_search` untuk term final.
+- S6 Favorit: tekan hati di Home -> Snackbar + getar + ikon terisi; buka tab Favorit -> jumlah di header bertambah, foto tampil dari file lokal; hapus bookmark -> kartu hilang + Snackbar; kosongkan daftar -> ilustrasi + tombol "Jelajahi Ide Resep" kembali ke Home.
+- S6 Offline: setelah minimal satu favorit tersimpan (foto terbuka), aktifkan mode pesawat lalu buka tab Favorit -> kartu, foto, dan pencarian lokal tetap berfungsi. Tekan hati pada resep yang belum pernah dibuka saat offline -> Snackbar "Perlu internet untuk menyimpan resep ini pertama kali".
+- S6 Tablet & gelap: jalankan di tablet/landscape -> konten maksimal 840dp dan terpusat; ganti tema sistem ke gelap -> semua layar tetap terbaca.
+- S6 Iklan (setelah `isAdsEnabled=true`): native muncul tiap `nativeEveryN` kartu di Home/Favorit, banner tampil di atas bottom nav tanpa menutupi konten.

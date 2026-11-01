@@ -9,16 +9,29 @@
 
     <!-- Home -->
     <string name="home_header_title">Jajan Cuan</string>
+    <string name="home_tagline">Ide jajanan cuan setiap hari</string>
     <string name="home_search_hint">Cari resep jajanan…</string>
     <string name="chip_all">Semua</string>
     <string name="native_ad_label">Iklan</string>
+    <string name="home_modal_format">Modal ±%s</string>
+    <string name="home_portions_format">%d porsi</string>
+    <string name="badge_viral">Viral</string>
+    <string name="search_expand_content_desc">Buka pencarian</string>
+    <string name="search_close_content_desc">Tutup pencarian</string>
+    <string name="search_clear_content_desc">Hapus kata kunci</string>
+    <string name="search_suggestions_label">Coba kategori lain:</string>
+    <string name="favorite_add_content_desc">Simpan ke Favorit</string>
+    <string name="favorite_remove_content_desc">Hapus dari Favorit</string>
 
     <!-- Empty states -->
     <string name="empty_search_title">Resep tidak ditemukan</string>
     <string name="empty_search_msg_format">Resep dengan kata kunci \u201c%s\u201d tidak ditemukan</string>
+    <string name="empty_catalog_title">Belum ada resep</string>
+    <string name="empty_catalog_msg">Katalog resep belum tersedia. Periksa koneksi lalu coba lagi.</string>
     <string name="button_show_all">Tampilkan Semua Resep</string>
     <string name="empty_favorites_title">Belum Ada Resep Favorit</string>
     <string name="empty_favorites_msg">Kamu belum menyimpan resep jajanan favorit. Simpan resep yang kamu suka dengan menekan ikon hati.</string>
+    <string name="empty_favorites_illustration_desc">Ilustrasi hati jajanan favorit</string>
     <string name="button_explore_recipes">Jelajahi Ide Resep</string>
 
     <!-- Detail -->
@@ -40,6 +53,7 @@
 
     <!-- Favorit -->
     <string name="favorites_header">Resep Favorit Saya (%d)</string>
+    <string name="favorites_search_hint">Cari di favorit…</string>
     <string name="snackbar_saved">Resep disimpan ke Favorit</string>
     <string name="snackbar_removed">Resep dihapus dari Favorit</string>
     <string name="snackbar_need_internet">Perlu internet untuk menyimpan resep ini pertama kali</string>

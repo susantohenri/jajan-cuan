@@ -55,6 +55,34 @@ interface RecipeIndexDao {
         limit: Int
     ): Flow<List<RecipeIndexEntity>>
 
+    /**
+     * Urutan yang sama dengan [observeList] tetapi diacak deterministik dari
+     * [sessionSeed]. Pemetaan `(orderIdx * seed) mod prima` memberi permutasi
+     * stabil per seed, sehingga paginasi (LIMIT bertambah) tidak menduplikasi
+     * atau melompati baris selama sesi berlangsung. Seed baru mengganti urutan.
+     */
+    @Query(
+        """
+        SELECT * FROM recipe_index
+        WHERE (:category IS NULL OR category = :category)
+          AND (
+            :escapedQuery = ''
+            OR title LIKE '%' || :escapedQuery || '%' ESCAPE '\'
+            OR ingredientsText LIKE '%' || :escapedQuery || '%' ESCAPE '\'
+            OR tagsText LIKE '%' || :escapedQuery || '%' ESCAPE '\'
+            OR category LIKE '%' || :escapedQuery || '%' ESCAPE '\'
+          )
+        ORDER BY (((orderIdx * :sessionSeed) % 1000003) + 1000003) % 1000003 ASC, id ASC
+        LIMIT :limit
+        """
+    )
+    fun observeListShuffled(
+        category: String?,
+        escapedQuery: String,
+        limit: Int,
+        sessionSeed: Long
+    ): Flow<List<RecipeIndexEntity>>
+
     @Query("SELECT DISTINCT category FROM recipe_index ORDER BY category ASC")
     fun observeCategories(): Flow<List<String>>
 
@@ -64,15 +92,14 @@ interface RecipeIndexDao {
         WHERE (:category IS NULL OR category = :category)
           AND (
             :escapedQuery = ''
-            OR title LIKE '%' || :escapedQuery || '%' ESCAPE '\\'
-            OR ingredientsText LIKE '%' || :escapedQuery || '%' ESCAPE '\\'
-            OR tagsText LIKE '%' || :escapedQuery || '%' ESCAPE '\\'
-            OR category LIKE '%' || :escapedQuery || '%' ESCAPE '\\'
+            OR title LIKE '%' || :escapedQuery || '%' ESCAPE '\'
+            OR ingredientsText LIKE '%' || :escapedQuery || '%' ESCAPE '\'
+            OR tagsText LIKE '%' || :escapedQuery || '%' ESCAPE '\'
+            OR category LIKE '%' || :escapedQuery || '%' ESCAPE '\'
           )
         """
     )
     suspend fun countFiltered(category: String?, escapedQuery: String): Int
-
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(recipes: List<RecipeIndexEntity>)
@@ -153,6 +180,9 @@ interface FavoriteDao {
 
     @Query("SELECT COUNT(*) FROM favorites")
     suspend fun count(): Int
+
+    @Query("SELECT COUNT(*) FROM favorites")
+    fun observeCount(): Flow<Int>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsert(favorite: FavoriteEntity)

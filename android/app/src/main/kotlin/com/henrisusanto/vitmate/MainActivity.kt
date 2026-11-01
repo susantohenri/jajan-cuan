@@ -24,16 +24,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import com.henrisusanto.vitmate.data.sync.SyncOutcome
 import com.henrisusanto.vitmate.ui.navigation.Screen
 import com.henrisusanto.vitmate.ui.screens.DetailScreen
 import com.henrisusanto.vitmate.ui.screens.FavoritesScreen
+import com.henrisusanto.vitmate.ui.screens.FavoritesViewModel
 import com.henrisusanto.vitmate.ui.screens.HomeScreen
+import com.henrisusanto.vitmate.ui.screens.HomeViewModel
 import com.henrisusanto.vitmate.ui.screens.SettingsScreen
 import com.henrisusanto.vitmate.ui.theme.JajanCuanTheme
 
@@ -136,14 +140,47 @@ fun MainNavigationApp(container: AppContainer) {
             modifier = Modifier.padding(innerPadding)
         ) {
             composable(Screen.Home.route) {
+                val homeViewModel: HomeViewModel = viewModel {
+                    HomeViewModel(
+                        repository = container.recipeRepository,
+                        analytics = container.analytics,
+                        pageSize = container.remoteConfigManager.values.value.pageSize,
+                        refresh = { force ->
+                            container.syncNow(force = force) !is SyncOutcome.Failed
+                        }
+                    )
+                }
                 HomeScreen(
+                    viewModel = homeViewModel,
+                    adManager = container.adManager,
                     onNavigateToDetail = { recipeId ->
                         navController.navigate(Screen.Detail.createRoute(recipeId))
                     }
                 )
             }
             composable(Screen.Favorites.route) {
-                FavoritesScreen()
+                val favoritesViewModel: FavoritesViewModel = viewModel {
+                    FavoritesViewModel(
+                        repository = container.recipeRepository,
+                        analytics = container.analytics
+                    )
+                }
+                FavoritesScreen(
+                    viewModel = favoritesViewModel,
+                    adManager = container.adManager,
+                    onNavigateToDetail = { recipeId ->
+                        navController.navigate(Screen.Detail.createRoute(recipeId))
+                    },
+                    onExploreRecipes = {
+                        navController.navigate(Screen.Home.route) {
+                            popUpTo(navController.graph.findStartDestination().id) {
+                                saveState = true
+                            }
+                            launchSingleTop = true
+                            restoreState = true
+                        }
+                    }
+                )
             }
             composable(Screen.Settings.route) {
                 SettingsScreen()

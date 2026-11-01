@@ -268,6 +268,7 @@ class AdManager(
     companion object {
         const val NATIVE_POOL_SIZE = 3
         const val SCREEN_HOME = "home"
+        const val SCREEN_FAVORITES = "favorites"
         private const val TAG = "AdManager"
     }
 }
