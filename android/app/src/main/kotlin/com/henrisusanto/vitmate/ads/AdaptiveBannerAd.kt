@@ -37,8 +37,10 @@ fun AdaptiveBannerAd(
         if (widthDp >= MIN_ADAPTIVE_BANNER_WIDTH_DP) {
             // [F-032] Ganti key(raw widthDp) dengan bucket kasar (16dp) agar
             // tidak me-recreate AdView saat insets bergeser 1dp.
-            // AdSize tetap diperbarui di update{} tanpa recreate view.
+            // Catatan: AdView melarang setAdSize dipanggil lebih dari sekali,
+            // sehingga update{} tidak boleh memanggil setAdSize.
             val widthBucket = widthDp / BANNER_BUCKET_SIZE_DP
+            val bucketedWidthDp = widthBucket * BANNER_BUCKET_SIZE_DP
             key(widthBucket) {
                 AndroidView(
                     modifier = Modifier.fillMaxWidth(),
@@ -47,20 +49,11 @@ fun AdaptiveBannerAd(
                             setAdSize(
                                 AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
                                     context,
-                                    widthDp
+                                    bucketedWidthDp
                                 )
                             )
                             adManager.loadBanner(this, screen)
                         }
-                    },
-                    update = { adView ->
-                        // Perbarui AdSize saat lebar berubah, tanpa recreate view.
-                        adView.setAdSize(
-                            AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(
-                                adView.context,
-                                widthDp
-                            )
-                        )
                     },
                     onRelease = { adView ->
                         adView.destroy()
