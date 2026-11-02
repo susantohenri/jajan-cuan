@@ -2,7 +2,6 @@ package com.henrisusanto.vitmate.ui.screens
 
 import android.app.Application
 import android.net.Uri
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.SavedStateHandle
 import com.henrisusanto.vitmate.ads.RewardedAdState
 import com.henrisusanto.vitmate.analytics.AnalyticsLogger

@@ -26,5 +26,5 @@ class AdUnitProvider(
     fun rewarded(): String = resolve(isDebugBuild, valuesProvider().rewardedAdUnitId, AdUnitIds.TEST_REWARDED)
 
     private fun resolve(isDebug: Boolean, remoteValue: String, testValue: String): String =
-        if (isDebug) testValue else remoteValue.ifBlank { testValue }
+        if (isDebug) testValue else remoteValue.trim()
 }

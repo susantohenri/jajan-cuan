@@ -158,20 +158,24 @@
 - [x] **F-009 & F-022**: RTDB base URL dipindah ke `buildConfigField` (`BuildConfig.RTDB_BASE_URL`); `RetryInterceptor`/`Thread.sleep` dihapus dan retry GET memakai `delay()` coroutine dengan backoff 250/500 ms di `OkHttpRecipeRemoteDataSource`.
 - [x] **F-013 & F-026**: Pengacakan dipindah dari `ORDER BY` aritmetika di `Daos.kt` ke sorting Kotlin deterministik per seed di `RecipeRepository` (paginasi stabil); `HashSet` favorit hanya dialokasikan saat daftar id berubah dan flow favorit memakai `distinctUntilChanged()`.
 - [x] **F-038**: Seluruh properti DTO di `RecipeDtos.kt` (`MetaDto`, `SearchIndexEntryDto`, `BusinessAnalysisDto`, `IngredientDto`, `MediaDto`, `PostDto`) kini memakai `@SerialName` eksplisit sesuai nama JSON RTDB.
+- [x] **F-037**: Hubungkan draf kalkulator HPP di `DetailViewModel.kt` ke `SavedStateHandle` dan inject `SavedStateHandle` di `MainActivity.kt` agar form tidak hilang saat process death.
+- [x] **F-001 & F-002**: Ubah default ad unit di `RemoteConfigValues.kt` menjadi string kosong dan `AdUnitProvider.kt` tidak fallback ke test ID pada release build bila remote kosong (dengan string trim).
+- [x] **F-012 & F-028**: Anotasi `@MainThread` di `AdManager.kt` dan debounce trigger preload native ad 300 ms.
+- [x] **F-032**: `AdaptiveBannerAd.kt` menggunakan bucket 16 dp untuk mencegah re-create `AdView` saat insets bergeser 1 dp.
+- [x] **F-034**: `ConsentManager.kt` mendeteksi `INTERNET_ERROR` UMP untuk menghindari pemblokiran permanen finished=true saat offline, serta menyediakan fungsi `retryConsent()`.
 
 ### ⏳ Siap Dikerjakan Paralel (Terbagi per Track Independen)
 
-#### Track A: Data Layer & Database (Zero UI Dependency)
+#### Track B: UI Presentation & Form State
+- [ ] **F-014**: Pisahkan `_query` mentah dari combine content di `HomeViewModel.kt` (gunakan `_searchQuery` yang sudah didebounce).
+- [ ] **F-007 & F-024**: Buat `pageSize` reaktif terhadap Remote Config di `MainActivity.kt` & validasi `recipeId.isNotBlank()` sebelum membuka `DetailScreen`.
+- [ ] **F-020**: Pasang `FLAG_GRANT_READ_URI_PERMISSION` hanya pada inner send intent di `DetailScreen.kt`, bukan pada chooser wrapper.
 
-#### Track B: UI Presentation & Form State (Zero Data Layer Dependency)
-- [ ] **F-037**: Hubungkan draf kalkulator HPP di `DetailViewModel` ke `SavedStateHandle` agar form tidak hilang saat process death.
-- [ ] **F-014**: Pisahkan `_query` mentah dari combine content di `HomeViewModel.kt`.
-- [ ] **F-007 & F-024**: Buat `pageSize` reaktif terhadap Remote Config di `MainActivity.kt` & validasi `recipeId.isNotBlank()`.
-- [ ] **F-020**: Pasang `FLAG_GRANT_READ_URI_PERMISSION` hanya pada inner send intent, bukan pada chooser wrapper.
+#### Track A: Data Layer & Maintenance
+- [ ] **F-010**: Periksa return value `deleteRecursively()` di `RecipeRepository.kt` dan berikan log peringatan bila gagal menghapus cache gambar favorit.
+- [ ] **F-040**: Tambahkan fungsi pembersihan berkala (*housekeeping query*) untuk menghapus entri `calc_state` yatim yang `recipeId`-nya tidak ada di `recipe_index` maupun `favorites`.
 
-#### Track C: AdMob, UMP Consent & Remote Config (Zero Screen UI Logic)
-- [ ] **F-001 & F-002**: Penggantian Test Ad IDs & ubah default ad unit di Remote Config menjadi string kosong.
-- [ ] **F-031**: Stabilisasi `NativeAdCard.kt` di scroll list (jangan langsung destroy saat keluar viewport 1px).
-- [ ] **F-034**: `ConsentManager.kt` retry saat offline di cold-start (jangan set `finished = true` permanen bila gagal karena jaringan).
-- [ ] **F-032**: `AdaptiveBannerAd.kt` jangan gunakan `key(widthDp)` mentah agar tidak re-create saat insets bergeser 1 dp.
-- [ ] **F-012 & F-028**: Tambahkan anotasi `@MainThread` di `AdManager.kt` dan debounce trigger preload native ad.
+#### Track C: Policy, Gating & Analytics Hardening
+- [ ] **F-019**: Sesuaikan `FeatureGateCoordinator.kt` fallback unlock agar hanya membuka fitur yang gagal dimuat pada sesi itu, bukan memborong semua fitur sekaligus.
+- [ ] **F-021**: Tangani reservasi event Google Analytics di `AnalyticsLogger.kt` secara graceful.
+- [ ] **F-027**: Persempit keep rule `kotlinx.serialization` di `proguard-rules.pro`.

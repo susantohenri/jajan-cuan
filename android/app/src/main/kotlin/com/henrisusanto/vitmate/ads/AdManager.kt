@@ -1,9 +1,10 @@
-package com.henrisusanto.vitmate.ads
+﻿package com.henrisusanto.vitmate.ads
 
 import android.content.Context
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
+import androidx.annotation.MainThread
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdLoader
 import com.google.android.gms.ads.AdRequest
@@ -42,6 +43,8 @@ class AdManager(
     private var nativeLoading = 0
     private val _nativePoolSize = MutableStateFlow(0)
     val nativePoolSize: StateFlow<Int> = _nativePoolSize.asStateFlow()
+
+    private var isPreloadScheduled = false
 
     @Volatile
     var currentScreen: String = SCREEN_HOME
@@ -129,6 +132,7 @@ class AdManager(
     // Native
     // ---------------------------------------------------------------------
 
+    @MainThread
     private fun preloadNativeAds() {
         if (!canShowNative()) return
 
@@ -183,34 +187,29 @@ class AdManager(
         }
     }
 
-    /**
-     * Mengambil satu native ad dari pool. Null berarti pool sedang kosong;
-     * pemanggil TIDAK boleh merender slot kosong.
-     */
+    @MainThread
     fun takeNativeAd(): NativeAd? {
         if (!canShowNative()) return null
 
         val ad = nativePool.removeFirstOrNull()
         _nativePoolSize.value = nativePool.size
         if (isAdvertisingActive()) {
-            preloadNativeAds()
+            schedulePreload()
         }
         return ad
     }
 
-    /**
-     * Mengembalikan/menghancurkan native ad yang sudah tidak ditampilkan.
-     * Wajib dipanggil saat item dilepas dari Compose atau ViewModel cleared.
-     */
+    @MainThread
     fun releaseNativeAd(nativeAd: NativeAd) {
         runOnMain {
             nativeAd.destroy()
             if (isAdvertisingActive()) {
-                preloadNativeAds()
+                schedulePreload()
             }
         }
     }
 
+    @MainThread
     fun destroyAllNativeAds() {
         val destroyedCount = nativePool.size
         while (nativePool.isNotEmpty()) {
@@ -220,6 +219,18 @@ class AdManager(
         if (destroyedCount > 0) {
             Log.d(TAG, "Semua native ad di pool dihancurkan ($destroyedCount)")
         }
+    }
+
+    @MainThread
+    private fun schedulePreload() {
+        if (isPreloadScheduled) return
+        isPreloadScheduled = true
+        mainHandler.postDelayed({
+            isPreloadScheduled = false
+            if (isAdvertisingActive()) {
+                runOnMain { preloadNativeAds() }
+            }
+        }, 300L)
     }
 
     // ---------------------------------------------------------------------
@@ -237,8 +248,6 @@ class AdManager(
         screenProvider = { currentScreen },
         onUserEarnedReward = onUserEarnedReward
     )
-
-    // ---------------------------------------------------------------------
 
     private fun logPaid(
         format: AdFormat,

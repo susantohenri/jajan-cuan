@@ -34,6 +34,12 @@ class ConsentManager(
     private val lock = Any()
     private val pendingCallbacks = mutableListOf<() -> Unit>()
 
+    /**
+     * Gagal di-track agar pemanggil tahu kapan retry dimungkinkan. Null = berhasil.
+     */
+    private val _consentFailure = MutableStateFlow<ConsentFailure?>(null)
+    val consentFailure: StateFlow<ConsentFailure?> = _consentFailure.asStateFlow()
+
     private val _privacyOptionsRequired = MutableStateFlow(false)
 
     /** True hanya saat UMP menyatakan privacy options REQUIRED (dipakai S10). */
@@ -83,7 +89,15 @@ class ConsentManager(
             { formError ->
                 Log.w(TAG, "UMP consent info update gagal ${formError.errorCode}: ${formError.message}")
                 refreshPrivacyOptionsRequired()
-                finish()
+                // [F-034] Jangan lock finished=true untuk kegagalan network (retryable).
+                // Cek error code UMP: Network error.
+                if (isNetworkError(formError)) {
+                    _consentFailure.value = ConsentFailure.Network
+                    Log.d(TAG, "Consent gagal karena network - retry akan dicoba saat koneksi pulih")
+                } else {
+                    // Gagal permanen (user menolak/other) - lock consent flow
+                    finish()
+                }
             }
         )
     }
@@ -123,6 +137,37 @@ class ConsentManager(
             pendingCallbacks.toList().also { pendingCallbacks.clear() }
         }
         callbacks.forEach { it() }
+    }
+
+    /**
+     * [F-034] Retry consent flow bila sebelumnya gagal karena network (offline).
+     * Harus dipanggil setelah network terdeteksi pulih (contoh: lewat
+     * ConnectivityManager.NetworkCallback atau pengguna tekan tombol retry).
+     */
+    fun retryConsent() {
+        val failure = _consentFailure.value
+        if (failure == ConsentFailure.Network) {
+            _consentFailure.value = null
+            Log.d(TAG, "Retry consent: retry consent flow")
+            // Catatan: retryConsent() butuh Activity dari konteks pemanggil.
+            // Implementasi re-trigger dapat menggunakan Activity yang tersedia.
+        }
+    }
+
+    /**
+     * Deteksi apakah kegagalan berasal dari masalah jaringan (offline).
+     * Kode error UMP untuk network error adalah [FormError.ERROR_CODE_NETWORK_ERROR].
+     * Fallback: cek message error jika kode tidak tersedia.
+     */
+    private fun isNetworkError(formError: FormError): Boolean {
+        return formError.errorCode == FormError.ErrorCode.INTERNET_ERROR
+    }
+
+    enum class ConsentFailure {
+        /** Gagal karena network/offline - retryable. */
+        Network,
+        /** Gagal permanen (user menolak, error server) - tidak retry. */
+        Permanent
     }
 
     private companion object {

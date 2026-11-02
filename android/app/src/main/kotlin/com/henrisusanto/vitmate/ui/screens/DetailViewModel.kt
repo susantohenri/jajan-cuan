@@ -417,12 +417,34 @@ class DetailViewModel(
     }
 
     private fun saveCalcStateToHandle(saved: SavedCalcState) {
-        savedStateHandle[CALC_STATE_KEY] = saved
+        // SavedStateHandle hanya mendukung value String/primitive.
+        // Simpan field kalkulator sebagai satu string terpisah.
+        val pricesJson = saved.prices.joinToString(",") { it.toString() }
+        savedStateHandle[CALC_STATE_KEY] = "$pricesJson|${saved.portions}|${saved.marginMode.name}|${saved.marginValue}"
     }
 
     private fun loadCalcStateFromHandle(): SavedCalcState? {
-        val saved = savedStateHandle[CALC_STATE_KEY] as? SavedCalcState
-        return saved?.takeIf { it.prices.isNotEmpty() }
+        val raw = savedStateHandle[CALC_STATE_KEY] as? String ?: return null
+        val parts = raw.split("|")
+        if (parts.size != 4 || parts[0].isEmpty()) return null
+        val prices = parts[0].split(",").map { it.toLongOrNull() ?: 0L }
+        val portions = parts[1].toIntOrNull()
+        val marginMode = try {
+            HppMarginMode.valueOf(parts[2])
+        } catch (e: IllegalArgumentException) {
+            null
+        }
+        val marginValue = parts[3].toDoubleOrNull()
+        if (prices.isNotEmpty() && portions != null && marginMode != null) {
+            return SavedCalcState(
+                prices = prices,
+                portions = portions,
+                marginMode = marginMode,
+                marginValue = marginValue ?: 0.0
+            )
+        } else {
+            return null
+        }
     }
 
     private fun restoreCalcState(saved: SavedCalcState?) {

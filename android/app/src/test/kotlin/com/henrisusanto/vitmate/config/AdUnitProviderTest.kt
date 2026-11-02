@@ -30,7 +30,7 @@ class AdUnitProviderTest {
     }
 
     @Test
-    fun `release falls back to test ids when remote values are blank`() {
+    fun `release does not fall back to test ids when remote values are blank`() {
         val provider = AdUnitProvider(isDebugBuild = false) {
             remoteValues.copy(
                 bannerAdUnitId = "",
@@ -39,8 +39,8 @@ class AdUnitProviderTest {
             )
         }
 
-        assertEquals(AdUnitIds.TEST_BANNER, provider.banner())
-        assertEquals(AdUnitIds.TEST_NATIVE, provider.native())
-        assertEquals(AdUnitIds.TEST_REWARDED, provider.rewarded())
+        assertEquals("", provider.banner())
+        assertEquals("", provider.native())
+        assertEquals("", provider.rewarded())
     }
 }

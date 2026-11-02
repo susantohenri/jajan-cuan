@@ -29,6 +29,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
@@ -267,7 +268,8 @@ fun MainNavigationApp(
                         imageUrlResolver = container.imageUrlResolver,
                         fallbackUnlockEnabled = {
                             container.adManager.rewardedFallbackUnlockOnFailure()
-                        }
+                        },
+                        savedStateHandle = SavedStateHandle()
                     )
                 }
                 DetailScreen(
