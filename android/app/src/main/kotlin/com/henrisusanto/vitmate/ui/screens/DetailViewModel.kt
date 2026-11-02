@@ -3,6 +3,7 @@ package com.henrisusanto.vitmate.ui.screens
 import android.app.Activity
 import android.net.Uri
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.henrisusanto.vitmate.ads.RewardedAdSession
 import com.henrisusanto.vitmate.analytics.AnalyticsLogger
@@ -104,7 +105,8 @@ class DetailViewModel(
     private val rewardedSession: RewardedAdSession,
     private val promoActions: PromoActions,
     private val imageUrlResolver: ImageUrlResolver,
-    private val fallbackUnlockEnabled: () -> Boolean
+    private val fallbackUnlockEnabled: () -> Boolean,
+    private val savedStateHandle: SavedStateHandle = SavedStateHandle()
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(DetailUiState())
@@ -173,8 +175,13 @@ class DetailViewModel(
     private suspend fun applyDetail(detail: RecipeDetailData) {
         val post = detail.post
         val saved = repository.loadCalcState(recipeId)
+        // Pake SavedStateHandle saat ViewModel dipulihkan dari process death
+        // (dengan `viewModel(key = recipeId)`), bukan dari Room.
+        val handleSaved = loadCalcStateFromHandle()
+        val savedToUse = handleSaved ?: saved
+
         val ingredients = post.ingredients.mapIndexed { index, ingredient ->
-            val price = saved?.prices?.getOrNull(index)
+            val price = savedToUse?.prices?.getOrNull(index)
                 ?: ingredient.defaultPrice.toLong().coerceAtLeast(0L)
             IngredientInput(
                 name = ingredient.name,
@@ -183,10 +190,10 @@ class DetailViewModel(
                 priceText = price.toString()
             )
         }
-        val portions = saved?.portions?.takeIf { it > 0 }
+        val portions = savedToUse?.portions?.takeIf { it > 0 }
             ?: post.defaultPortions.coerceAtLeast(1)
-        val marginMode = saved?.marginMode ?: HppMarginMode.PERCENT
-        val marginValue = saved?.marginValue
+        val marginMode = savedToUse?.marginMode ?: HppMarginMode.PERCENT
+        val marginValue = savedToUse?.marginValue
             ?.takeIf { it.isFinite() }
             ?: HppCalculator.DEFAULT_MARGIN_PERCENT
         val promoImages = imageUrlResolver.resolvePromoImages(post.promoImages)
@@ -362,6 +369,7 @@ class DetailViewModel(
                 analytics.saveCalculation(recipeId)
                 // Sesi edit berakhir di titik simpan; edit berikutnya dicatat lagi.
                 hppLogged = false
+                saveCalcStateToHandle(saved)
                 _events.emit(DetailUiEvent.CalculationSaved)
             } else {
                 _events.emit(DetailUiEvent.SaveFailed)
@@ -408,6 +416,42 @@ class DetailViewModel(
         analytics.calculateHpp(recipeId)
     }
 
+    private fun saveCalcStateToHandle(saved: SavedCalcState) {
+        savedStateHandle[CALC_STATE_KEY] = saved
+    }
+
+    private fun loadCalcStateFromHandle(): SavedCalcState? {
+        val saved = savedStateHandle[CALC_STATE_KEY] as? SavedCalcState
+        return saved?.takeIf { it.prices.isNotEmpty() }
+    }
+
+    private fun restoreCalcState(saved: SavedCalcState?) {
+        val prices = saved?.prices?.takeIf { it.isNotEmpty() }
+        val portions = saved?.portions
+        val marginMode = saved?.marginMode
+        val marginValue = saved?.marginValue
+        if (prices != null) {
+            val ingredients = _state.value.ingredients.toMutableList()
+            for (i in prices.indices) {
+                if (i in ingredients.indices) {
+                    ingredients[i] = ingredients[i].copy(priceText = prices[i].toString())
+                }
+            }
+            _state.update { current ->
+                val updated = ingredients
+                val newPortions = portions ?: current.portionsText
+                val newMarginMode = marginMode ?: current.marginMode
+                val newMarginText = marginValue?.takeIf { it.isFinite() }?.let { formatMargin(it) } ?: current.marginText
+                current.copy(
+                    ingredients = updated,
+                    portionsText = newPortions.toString(),
+                    marginMode = newMarginMode,
+                    marginText = newMarginText
+                ).recalculated()
+            }
+        }
+    }
+
     private fun DetailUiState.recalculated(): DetailUiState {
         val prices = ingredients.map { it.priceText.toLongOrNull() ?: 0L }
         val portions = portionsText.toIntOrNull()?.coerceAtLeast(1) ?: 1
@@ -440,11 +484,12 @@ class DetailViewModel(
     private fun formatMargin(value: Double): String =
         if (value % 1.0 == 0.0) value.toLong().toString() else value.toString()
 
-    companion object {
+    private companion object {
         private const val MAX_PRICE_DIGITS = 12
         private const val MAX_PORTION_DIGITS = 6
         private const val MAX_MARGIN_DIGITS = 8
         private const val MIN_TIMER_SECONDS = 1L
+        private const val CALC_STATE_KEY = "calc_state"
         private val NON_FILE_NAME_CHAR = Regex("[^A-Za-z0-9_-]")
     }
 }
