@@ -18,6 +18,7 @@
 
 ## Keputusan & asumsi
 - Home Feed Shuffling (Fresh Experience): Resep di Home tab 'Semua' diacak menggunakan session seed yang diperbarui saat cold start aplikasi atau pull-to-refresh. Hal ini memastikan user selalu melihat susunan resep yang segar/baru tiap membuka aplikasi, namun urutan tetap konsisten dan bebas duplikasi selama sesi scrolling berlangsung.
+- F-013 (remediasi): pengacakan tidak lagi memakai `ORDER BY` aritmetika di SQL (yang mematikan index). Query `observeListShuffled` mengambil kandidat terfilter dengan `ORDER BY orderIdx, id` (index `orderIdx` terpakai) TANPA `LIMIT`, lalu repository mengurutkan secara deterministik per seed dan memotong `take(limit)`. Konsekuensi: seluruh baris kandidat terambil ke memori per emisi; dapat diterima karena katalog index lokal berukuran ratusan resep, dan ini satu-satunya cara menjaga paginasi tidak menggeser/menduplikasi item.
 - S1 thumbnail: sumber cover saat ini 100% remote (cpcdn), jadi thumbnail di-unduh via REST (mengikuti redirect). Path `thumb` di index selalu `img/recipes/thumbs/{slug}.webp` (gaya sama dengan `ai_polished_photo`), bernilai null bila unduh/encode gagal.
 - S1 "lewati pembuatan ulang bila sudah ada & lebih baru dari sumbernya": karena sumber remote tanpa mtime lokal yang andal, diimplementasikan sebagai pencocokan konten — state disimpan di `web/img/recipes/thumbs/.gen-state.json` ({url, sha1 sumber}); thumbnail dilewati bila file ada dan URL+hash sumber sama. `--force-thumbs` memaksa rebuild. File `.gen-state.json` di-.gitignore (build artifact).
 - S1 `--dry-run` tidak menulis seed-posts.json/seed-database.html/RTDB/deploy; hanya membangun index/meta (in-memory) + thumbnail lokal. Mode normal mempertahankan perilaku lama (seed-posts + seed-database.html) ditambah push /search_index dan /meta (urutan: posts -> search_index -> meta) lalu deploy hosting.
@@ -151,15 +152,15 @@
 - [x] **F-033**: Override `onCleared()` di `DetailViewModel.kt` untuk memanggil `gateCoordinator.destroy()` dan `rewardedSession.destroy()`.
 - [x] **F-035 & F-036**: Gunakan streaming buffer di `AndroidPromoActions.kt` untuk unduhan promo dan impor `ByteArrayOutputStream`.
 - [x] **F-039**: Tangani `IllegalArgumentException` pada string URL tidak valid di `OkHttpImageDownloader.kt` + unit test `OkHttpImageDownloaderTest`.
+- [x] **F-003**: `saveLastMetaCheckAt` di `SyncManager.kt` hanya ditulis setelah cek meta sukses (up-to-date) atau transaksi index sukses; jalur gagal tidak ter-throttle (commit `2a278ec`).
+- [x] **F-018**: Properti `slug` ditambahkan ke `FavoriteEntity` (Room v2 + migrasi/backfill) dan dipakai `RecipeRepository.toSummary()`, `toggleFavorite`, serta `refreshFavoriteFromNetwork` (commit `cb77d5b`).
+- [x] **F-017 & F-030**: `.fallbackToDestructiveMigration()` dipasang setelah `addMigrations(MIGRATION_1_2)`; schema Room `1.json` dan `2.json` ter-track di `app/schemas/` (commit `ef9d8b7`).
+- [x] **F-009 & F-022**: RTDB base URL dipindah ke `buildConfigField` (`BuildConfig.RTDB_BASE_URL`); `RetryInterceptor`/`Thread.sleep` dihapus dan retry GET memakai `delay()` coroutine dengan backoff 250/500 ms di `OkHttpRecipeRemoteDataSource`.
+- [x] **F-013 & F-026**: Pengacakan dipindah dari `ORDER BY` aritmetika di `Daos.kt` ke sorting Kotlin deterministik per seed di `RecipeRepository` (paginasi stabil); `HashSet` favorit hanya dialokasikan saat daftar id berubah dan flow favorit memakai `distinctUntilChanged()`.
 
 ### ⏳ Siap Dikerjakan Paralel (Terbagi per Track Independen)
 
 #### Track A: Data Layer & Database (Zero UI Dependency)
-- [ ] **F-003**: `SyncManager.kt` timestamp `saveLastMetaCheckAt` dipindah ke setelah transaksi Room sukses.
-- [ ] **F-018**: Tambahkan properti `slug` di `FavoriteEntity` & `RecipeRepository.kt` (jangan mapping slug = id).
-- [ ] **F-017 & F-030**: Tambahkan `.fallbackToDestructiveMigration()` pada Room database v1 & commit schema JSON.
-- [ ] **F-009 & F-022**: Pindahkan RTDB URL ke `BuildConfig` & gunakan delay coroutine pada retry interceptor.
-- [ ] **F-013 & F-026**: Optimasi sorting list resep di Kotlin vs SQL computed math & pasang `distinctUntilChanged` pada flow favorit.
 - [ ] **F-038**: Lengkapi anotasi `@SerialName` pada seluruh properti di `RecipeDtos.kt`.
 
 #### Track B: UI Presentation & Form State (Zero Data Layer Dependency)

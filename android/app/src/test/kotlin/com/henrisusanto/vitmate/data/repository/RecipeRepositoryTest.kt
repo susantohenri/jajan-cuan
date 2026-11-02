@@ -19,6 +19,7 @@ import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull
+import org.junit.Assert.assertNotEquals
 import org.junit.Assert.assertNull
 import org.junit.Assert.assertTrue
 import org.junit.Before
@@ -290,6 +291,55 @@ class RecipeRepositoryTest {
         val after = repository.observeRecipes(null, "", 10).first()
 
         assertFalse(after.single().isFavorite)
+    }
+
+    @Test
+    fun `pengacakan deterministik dan paginasi tidak menggeser urutan`() = runBlocking {
+        insertShuffleCatalog(count = 25)
+        val seed = 7_654_321L
+
+        val firstPage = repository.observeRecipes(null, "", 10, seed).first().map { it.id }
+        val secondPage = repository.observeRecipes(null, "", 20, seed).first().map { it.id }
+        val repeated = repository.observeRecipes(null, "", 10, seed).first().map { it.id }
+
+        assertEquals(10, firstPage.size)
+        assertEquals(20, secondPage.size)
+        assertEquals(firstPage, secondPage.take(10))
+        assertEquals(firstPage, repeated)
+        assertEquals(20, secondPage.distinct().size)
+    }
+
+    @Test
+    fun `seed berbeda menghasilkan urutan berbeda`() = runBlocking {
+        insertShuffleCatalog(count = 25)
+
+        val first = repository.observeRecipes(null, "", 25, 7_654_321L).first().map { it.id }
+        val second = repository.observeRecipes(null, "", 25, 8_123_456L).first().map { it.id }
+
+        assertEquals(25, first.size)
+        assertEquals(25, second.size)
+        assertNotEquals(first, second)
+    }
+
+    private suspend fun insertShuffleCatalog(count: Int) {
+        database.recipeIndexDao().insertAll(
+            (0 until count).map { order ->
+                RecipeIndexEntity(
+                    id = "resep-shuffle-$order",
+                    slug = "resep-shuffle-$order",
+                    title = "Resep Shuffle $order",
+                    category = "kue",
+                    tagsText = "kue",
+                    ingredientsText = "bahan",
+                    cover = "https://img.example.com/$order.jpg",
+                    thumb = "img/recipes/thumbs/$order.webp",
+                    estCapital = 10_000,
+                    portions = 4,
+                    isViral = false,
+                    orderIdx = order
+                )
+            }
+        )
     }
 
     private fun index(id: String, title: String): RecipeIndexEntity {

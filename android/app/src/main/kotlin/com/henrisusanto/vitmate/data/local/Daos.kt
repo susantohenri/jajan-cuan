@@ -56,10 +56,13 @@ interface RecipeIndexDao {
     ): Flow<List<RecipeIndexEntity>>
 
     /**
-     * Urutan yang sama dengan [observeList] tetapi diacak deterministik dari
-     * [sessionSeed]. Pemetaan `(orderIdx * seed) mod prima` memberi permutasi
-     * stabil per seed, sehingga paginasi (LIMIT bertambah) tidak menduplikasi
-     * atau melompati baris selama sesi berlangsung. Seed baru mengganti urutan.
+     * Kandidat untuk urutan acak: sama seperti [observeList] tetapi tanpa
+     * `LIMIT` dan memakai `ORDER BY orderIdx, id` biasa agar index SQLite
+     * tetap terpakai.
+     *
+     * F-013: pengacakan deterministik dilakukan di repository (Kotlin), bukan
+     * lewat ekspresi `ORDER BY` aritmetika yang mematikan index. Pemanggil
+     * memotong hasil setelah diurutkan sehingga paginasi tetap stabil.
      */
     @Query(
         """
@@ -72,15 +75,12 @@ interface RecipeIndexDao {
             OR tagsText LIKE '%' || :escapedQuery || '%' ESCAPE '\'
             OR category LIKE '%' || :escapedQuery || '%' ESCAPE '\'
           )
-        ORDER BY (((orderIdx * :sessionSeed) % 1000003) + 1000003) % 1000003 ASC, id ASC
-        LIMIT :limit
+        ORDER BY orderIdx ASC, id ASC
         """
     )
     fun observeListShuffled(
         category: String?,
-        escapedQuery: String,
-        limit: Int,
-        sessionSeed: Long
+        escapedQuery: String
     ): Flow<List<RecipeIndexEntity>>
 
     @Query("SELECT DISTINCT category FROM recipe_index ORDER BY category ASC")

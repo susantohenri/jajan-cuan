@@ -17,6 +17,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -65,15 +66,20 @@ class RecipeRepository(
                 limit = safeLimit
             )
         } else {
+            // F-013: query hanya memakai index `orderIdx, id`; pengacakan dan
+            // pemotongan limit dikerjakan di Kotlin agar urutan tetap stabil
+            // saat limit bertambah (paginasi).
             indexDao.observeListShuffled(
                 category = normalizedCategory,
-                escapedQuery = escapedQuery,
-                limit = safeLimit,
-                sessionSeed = sessionSeed
-            )
+                escapedQuery = escapedQuery
+            ).map { entries -> entries.shuffledFor(sessionSeed).take(safeLimit) }
         }
-        return combine(rows, favoriteDao.observeIds()) { recipes, favoriteIds ->
-            val favorites = favoriteIds.toHashSet()
+        // F-026: alokasi HashSet hanya saat daftar id favorit berubah, bukan
+        // pada setiap emisi list resep.
+        val favoriteIds: Flow<Set<String>> = favoriteDao.observeIds()
+            .map { ids -> ids.toHashSet() }
+            .distinctUntilChanged()
+        return combine(rows, favoriteIds) { recipes, favorites ->
             recipes.map { row -> row.toSummary(isFavorite = row.id in favorites) }
         }
     }
@@ -83,6 +89,7 @@ class RecipeRepository(
     override fun observeFavoriteRecipes(query: String): Flow<List<RecipeSummary>> =
         favoriteDao.observeFiltered(escapeLikePattern(query.trim()))
             .map { favorites -> favorites.map { it.toSummary() } }
+            .distinctUntilChanged()
 
     override fun observeFavoriteCount(): Flow<Int> = favoriteDao.observeCount()
 
@@ -395,12 +402,31 @@ class RecipeRepository(
     private fun String.toTags(): List<String> =
         split(SPACE).map { it.trim() }.filter { it.isNotEmpty() }
 
+    /**
+     * F-013: permutasi deterministik per [seed] tanpa `ORDER BY` aritmetika di
+     * SQL. Kunci dihitung modulo prima yang sama sehingga hasilnya stabil dan
+     * pemotongan `take(limit)` tetap kompatibel dengan paginasi.
+     */
+    private fun List<RecipeIndexEntity>.shuffledFor(seed: Long): List<RecipeIndexEntity> =
+        sortedWith(
+            compareBy<RecipeIndexEntity>(
+                { shuffleKey(it.orderIdx, seed) },
+                { it.id }
+            )
+        )
+
+    private fun shuffleKey(orderIdx: Int, seed: Long): Long = Math.floorMod(
+        (orderIdx.toLong() % SHUFFLE_PRIME) * (seed % SHUFFLE_PRIME),
+        SHUFFLE_PRIME
+    )
+
     companion object {
         const val DETAIL_CACHE_LIMIT = 30
         private const val COVER_FILE_NAME = "cover"
         private const val THUMB_FILE_NAME = "thumb"
         private const val SPACE = " "
         private const val VIRAL_TAG = "viral"
+        private const val SHUFFLE_PRIME = 1_000_003L
         private val RepositoryJson: Json = Json {
             ignoreUnknownKeys = true
             coerceInputValues = true
