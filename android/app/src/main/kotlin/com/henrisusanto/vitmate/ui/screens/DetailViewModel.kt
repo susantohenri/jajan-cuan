@@ -2,6 +2,7 @@ package com.henrisusanto.vitmate.ui.screens
 
 import android.app.Activity
 import android.net.Uri
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.henrisusanto.vitmate.ads.RewardedAdSession
@@ -91,9 +92,8 @@ sealed interface DetailUiEvent {
     data class Error(val message: String) : DetailUiEvent
 }
 
-/**
- * Detail resep. Sumber data dan foto ditentukan repository (favorit lokal ->
- * cache -> jaringan), jadi layar ini tetap penuh saat offline untuk favorit.
+/** Detail resep. Sumber data dan foto ditentukan repository (favorit lokal -> cache -> jaringan),
+ * jadi layar ini tetap penuh saat offline untuk favorit.
  */
 class DetailViewModel(
     private val recipeId: String,
@@ -113,6 +113,14 @@ class DetailViewModel(
     private val _events = MutableSharedFlow<DetailUiEvent>(extraBufferCapacity = 8)
     val events: Flow<DetailUiEvent> = _events.asSharedFlow()
 
+    /** Draft HPP yang disimpan supaya tidak hilang saat process death. */
+    private val savedStateHandle: SavedStateHandle
+
+    init {
+        savedStateHandle = SavedStateHandle(requireArguments())
+        restoreDraftFromSavedState()
+    }
+
     private val gateCoordinator = FeatureGateCoordinator(
         recipeId = recipeId,
         unlocks = unlocks,
@@ -125,6 +133,38 @@ class DetailViewModel(
 
     /** calculate_hpp dicatat sekali per sesi edit, bukan per ketukan. */
     private var hppLogged = false
+
+    private fun restoreDraftFromSavedState() {
+        // SavedStateHandle mewarisi proses death, bukan memicu ulang keadaan.
+        val draft = savedStateHandle.get<SavedCalcState>(KEY_CALC_DRAFT)
+        if (draft == null) return
+
+        _state.update { current ->
+            current.copy(
+                ingredients = draft.prices.mapIndexed { index, price ->
+                    val ingredient = current.ingredients.getOrNull(index)
+                    ingredient?.copy(priceText = price.toString()) ?: ingredient
+                },
+                portionsText = draft.portions.toString(),
+                marginMode = draft.marginMode,
+                marginText = formatMargin(draft.marginValue)
+            ).recalculated()
+        }
+    }
+
+    private fun saveCurrentDraftToSavedState() {
+        val current = _state.value
+        savedStateHandle[KEY_CALC_DRAFT] = SavedCalcState(
+            prices = current.ingredients.map { it.priceText.toLongOrNull() ?: 0L },
+            portions = current.portionsText.toIntOrNull()?.coerceAtLeast(1) ?: 1,
+            marginMode = current.marginMode,
+            marginValue = current.marginText
+                .replace(',', '.')
+                .toDoubleOrNull()
+                ?.takeIf { it.isFinite() }
+                ?: 0.0
+        )
+    }
 
     init {
         viewModelScope.launch {
@@ -240,24 +280,28 @@ class DetailViewModel(
             current.copy(ingredients = updated).recalculated()
         }
         noteEdited()
+        saveCurrentDraftToSavedState()
     }
 
     fun onPortionsChange(value: String) {
         val sanitized = value.filter(Char::isDigit).take(MAX_PORTION_DIGITS)
         _state.update { it.copy(portionsText = sanitized).recalculated() }
         noteEdited()
+        saveCurrentDraftToSavedState()
     }
 
     fun onMarginChange(value: String) {
         val sanitized = sanitizeDecimal(value)
         _state.update { it.copy(marginText = sanitized).recalculated() }
         noteEdited()
+        saveCurrentDraftToSavedState()
     }
 
     fun onMarginModeChange(mode: HppMarginMode) {
         if (_state.value.marginMode == mode) return
         _state.update { it.copy(marginMode = mode).recalculated() }
         noteEdited()
+        saveCurrentDraftToSavedState()
     }
 
     fun onFavoriteToggle() {
@@ -408,6 +452,17 @@ class DetailViewModel(
         analytics.calculateHpp(recipeId)
     }
 
+    private fun onPriceTextChanged(index: Int, value: String) {
+        val sanitized = value.filter(Char::isDigit).take(MAX_PRICE_DIGITS)
+        _state.update { current ->
+            if (index !in current.ingredients.indices) return@update current
+            val updated = current.ingredients.toMutableList()
+            updated[index] = updated[index].copy(priceText = sanitized)
+            current.copy(ingredients = updated).recalculated()
+        }
+        noteEdited()
+    }
+
     private fun DetailUiState.recalculated(): DetailUiState {
         val prices = ingredients.map { it.priceText.toLongOrNull() ?: 0L }
         val portions = portionsText.toIntOrNull()?.coerceAtLeast(1) ?: 1
@@ -446,5 +501,7 @@ class DetailViewModel(
         private const val MAX_MARGIN_DIGITS = 8
         private const val MIN_TIMER_SECONDS = 1L
         private val NON_FILE_NAME_CHAR = Regex("[^A-Za-z0-9_-]")
+
+        private const val KEY_CALC_DRAFT = "calc_draft"
     }
 }
