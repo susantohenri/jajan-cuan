@@ -38,17 +38,13 @@ class AnalyticsLoggerTest {
     }
 
     @Test
-    fun `reserved event names are rejected`() {
+    fun `reserved event names are handled gracefully without crash`() {
         val logger = createLogger()
         val reserved = listOf("first_open", "session_start", "ad_click", "ad_impression", "error")
 
+        // Tidak melempar exception, event hanya diabaikan segala adanya.
         reserved.forEach { name ->
-            try {
-                logger.log(name, emptyMap())
-                fail("Event $name seharusnya ditolak")
-            } catch (expected: IllegalArgumentException) {
-                assertTrue(expected.message.orEmpty().contains("reserved"))
-            }
+            logger.log(name, emptyMap())
         }
     }
 

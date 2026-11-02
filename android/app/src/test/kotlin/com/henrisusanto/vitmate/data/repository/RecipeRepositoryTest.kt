@@ -374,4 +374,49 @@ class RecipeRepositoryTest {
         coverLocalPath = "/tmp/$id-cover",
         detailJson = detailJson
     )
+
+    @Test
+    fun `hapus favorit mencatat peringatan bila direktori gagal dihapus`() = runBlocking {
+        database.recipeIndexDao().insertAll(listOf(index(churrosId, "Churros Frozen Crispy")))
+        remote.postResults[churrosId] = RemoteResult.Success(Fixtures.post("churros"))
+        repository.toggleFavorite(churrosId)
+
+        // Simulasikan kondisi di mana direktori tidak bisa dihapus (file sedang dikunci OS)
+        val favoriteDir = File(coversDirectory, churrosId)
+        favoriteDir.mkdirs()
+        val lockFile = File(favoriteDir, "lock.tmp")
+        val stream = java.io.FileOutputStream(lockFile)
+        try {
+            val removed = repository.toggleFavorite(churrosId)
+            assertEquals(FavoriteToggleResult.Removed, removed)
+            assertNull(database.favoriteDao().get(churrosId))
+
+            // Direktori seharusnya masih ada karena deleteRecursively() gagal akibat file terkunci
+            assertTrue(favoriteDir.exists())
+        } finally {
+            stream.close()
+            lockFile.delete()
+            favoriteDir.delete()
+        }
+    }
+
+    @Test
+    fun `housekeeping menghapus calc_state yatim`() = runBlocking {
+        database.recipeIndexDao().insertAll(listOf(index(churrosId, "Churros Frozen Crispy")))
+        repository.toggleFavorite(churrosId)
+
+        // Calc state untuk resep yang masih ada (favorit)
+        repository.saveCalcState(churrosId, SavedCalcState(listOf(1000L), 3, HppMarginMode.PERCENT, 100.0))
+
+        // Calc state untuk resep yatim (tidak ada di recipe_index maupun favorites)
+        repository.saveCalcState("resep-yatim-1", SavedCalcState(listOf(2000L), 2, HppMarginMode.PERCENT, 200.0))
+
+        repository.housekeeping()
+
+        // Resep yang masih ada tetap memiliki calc_state
+        assertNotNull(repository.loadCalcState(churrosId))
+
+        // Resep yatim terhapus
+        assertNull(repository.loadCalcState("resep-yatim-1"))
+    }
 }

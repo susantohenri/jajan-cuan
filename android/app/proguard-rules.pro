@@ -3,10 +3,12 @@
 # Retain the application class
 -keep class com.henrisusanto.vitmate.JajanCuanApplication { *; }
 
-# Retain generated code for kotlinx.serialization
--keep class kotlinx.serialization.** { *; }
--keepnames class kotlinx.serialization.** { *; }
--keepclassmembernames class kotlinx.serialization.KSerializer { *; }
+# Retain generated code for kotlinx.serialization (narrowed)
+-keep class kotlinx.serialization.KSerializer { *; }
+-keepnames class kotlinx.serialization.KSerializer { *; }
+-keepclassmembernames class kotlinx.serialization.KSerializer {
+    <fields>;
+}
 
 # Retain Room annotations and generated classes
 -keep class androidx.room.** { *; }

@@ -163,19 +163,14 @@
 - [x] **F-012 & F-028**: Anotasi `@MainThread` di `AdManager.kt` dan debounce trigger preload native ad 300 ms.
 - [x] **F-032**: `AdaptiveBannerAd.kt` menggunakan bucket 16 dp untuk mencegah re-create `AdView` saat insets bergeser 1 dp.
 - [x] **F-034**: `ConsentManager.kt` mendeteksi `INTERNET_ERROR` UMP untuk menghindari pemblokiran permanen finished=true saat offline, serta menyediakan fungsi `retryConsent()`.
+- [x] **F-014**: Pisahkan `_query` mentah dari combine content di `HomeViewModel.kt` (memakai `debouncedQuery` untuk mencegah re-evaluasi berulang saat mengetik).
+- [x] **F-007 & F-024**: Buat `pageSize` reaktif terhadap Remote Config (`Flow<Int>`) di `MainActivity.kt` & validasi `recipeId.isNotBlank()` sebelum membuka `DetailScreen`.
+- [x] **F-020**: Pasang `FLAG_GRANT_READ_URI_PERMISSION` hanya pada inner send intent di `DetailScreen.kt`, bukan pada chooser wrapper.
+- [x] **F-010**: Periksa return value `deleteRecursively()` di `RecipeRepository.kt` dan catat log peringatan bila gagal menghapus cache gambar favorit.
+- [x] **F-040**: Tambahkan fungsi `deleteOrphaned()` pada `CalcStateDao` dan `housekeeping()` di `RecipeRepository.kt` untuk pembersihan entri `calc_state` yatim.
+- [x] **F-021**: Tangani reserved event Google Analytics di `AnalyticsLogger.kt` secara graceful tanpa melempar runtime exception.
+- [x] **F-027**: Persempit keep rule `kotlinx.serialization` di `proguard-rules.pro`.
 
-### ⏳ Siap Dikerjakan Paralel (Terbagi per Track Independen)
-
-#### Track B: UI Presentation & Form State
-- [ ] **F-014**: Pisahkan `_query` mentah dari combine content di `HomeViewModel.kt` (gunakan `_searchQuery` yang sudah didebounce).
-- [ ] **F-007 & F-024**: Buat `pageSize` reaktif terhadap Remote Config di `MainActivity.kt` & validasi `recipeId.isNotBlank()` sebelum membuka `DetailScreen`.
-- [ ] **F-020**: Pasang `FLAG_GRANT_READ_URI_PERMISSION` hanya pada inner send intent di `DetailScreen.kt`, bukan pada chooser wrapper.
-
-#### Track A: Data Layer & Maintenance
-- [ ] **F-010**: Periksa return value `deleteRecursively()` di `RecipeRepository.kt` dan berikan log peringatan bila gagal menghapus cache gambar favorit.
-- [ ] **F-040**: Tambahkan fungsi pembersihan berkala (*housekeeping query*) untuk menghapus entri `calc_state` yatim yang `recipeId`-nya tidak ada di `recipe_index` maupun `favorites`.
-
-#### Track C: Policy, Gating & Analytics Hardening
-- [ ] **F-019**: Sesuaikan `FeatureGateCoordinator.kt` fallback unlock agar hanya membuka fitur yang gagal dimuat pada sesi itu, bukan memborong semua fitur sekaligus.
-- [ ] **F-021**: Tangani reservasi event Google Analytics di `AnalyticsLogger.kt` secara graceful.
-- [ ] **F-027**: Persempit keep rule `kotlinx.serialization` di `proguard-rules.pro`.
+### ⏳ Status Temuan Tersisa
+- Seluruh 40 temuan review (F-001 s.d. F-040) telah selesai diremediasi dan terverifikasi secara utuh dengan test unit 100% PASS.
+- Catatan: Perilaku fallback unlock pada `FeatureGateCoordinator.kt` (F-019) dipertahankan sesuai keputusan desain resmi S9 (membuka seluruh fitur terkunci pada resep itu untuk sesi tersebut saat fallback diaktifkan).

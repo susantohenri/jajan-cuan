@@ -231,7 +231,7 @@ fun DetailScreen(
                         Intent.createChooser(
                             sendIntent,
                             context.getString(R.string.promo_share_chooser)
-                        ).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                        )
                     )
                 }
                 is DetailUiEvent.Error -> snackbarHostState.showSnackbar(event.message)

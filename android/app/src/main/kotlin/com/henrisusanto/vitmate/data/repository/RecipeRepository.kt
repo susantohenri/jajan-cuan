@@ -11,6 +11,7 @@ import com.henrisusanto.vitmate.data.local.escapeLikePattern
 import com.henrisusanto.vitmate.data.remote.RecipeRemoteDataSource
 import com.henrisusanto.vitmate.data.remote.RemoteResult
 import com.henrisusanto.vitmate.data.remote.dto.PostDto
+import android.util.Log
 import com.henrisusanto.vitmate.domain.HppMarginMode
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineDispatcher
@@ -44,6 +45,7 @@ class RecipeRepository(
     private val clock: () -> Long = System::currentTimeMillis,
     private val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : RecipeCatalog, DetailCatalog {
+    private val TAG = "RecipeRepository"
     private val indexDao = database.recipeIndexDao()
     private val detailDao = database.recipeDetailDao()
     private val favoriteDao = database.favoriteDao()
@@ -349,12 +351,30 @@ class RecipeRepository(
             )
         }
 
+
+    /**
+     * Housekeeping: hapus entri [calc_state] yatim (recipeId tidak ada di
+     * [recipe_index] maupun [favorites]). Dipanggil sesekali, misalnya dari
+     * SyncManager sesudah index/baru disync.
+     */
+    suspend fun housekeeping() = withContext(ioDispatcher) {
+        calcStateDao.deleteOrphaned()
+    }
+
     private fun parsePost(rawJson: String): PostDto? = runCatching {
         json.decodeFromString(PostDto.serializer(), rawJson)
     }.getOrNull()
 
     private suspend fun deleteFavoriteFiles(recipeId: String) {
-        favoriteDirectory(recipeId).deleteRecursively()
+        val directory = favoriteDirectory(recipeId)
+        val deleted = directory.deleteRecursively()
+        if (!deleted) {
+            Log.w(
+                TAG,
+                "Gagal menghapus cache gambar yatim resep $recipeId (direktori: $directory); file thumbnail/cover mungkin masih ada",
+                Exception("deleteRecursively() returned false")
+            )
+        }
     }
 
     private fun favoriteDirectory(recipeId: String): File =

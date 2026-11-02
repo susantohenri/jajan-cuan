@@ -233,6 +233,19 @@ interface CalcStateDao {
 
     @Query("DELETE FROM calc_state WHERE recipeId = :recipeId")
     suspend fun delete(recipeId: String)
+
+    /**
+     * Housekeeping: hapus entri [calc_state] yang [recipeId]-nya tidak lagi
+     * ada di [recipe_index] maupun [favorites]. Penggunaan biasa adalah
+     * pembersihan berkala (mis. saat sync) untuk mencegah kebocoran memori
+     * storage dari data kalkulator lama.
+     */
+    @Query(
+        "DELETE FROM calc_state " +
+        "WHERE recipeId NOT IN (SELECT id FROM recipe_index) " +
+        "  AND recipeId NOT IN (SELECT id FROM favorites)"
+    )
+    suspend fun deleteOrphaned()
 }
 
 @Dao

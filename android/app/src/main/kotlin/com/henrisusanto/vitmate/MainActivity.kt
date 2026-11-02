@@ -31,6 +31,7 @@ import androidx.core.view.WindowCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import kotlinx.coroutines.flow.map
 import androidx.navigation.NavController
 import androidx.navigation.NavGraph.Companion.findStartDestination
 import androidx.navigation.compose.NavHost
@@ -132,10 +133,12 @@ fun MainNavigationApp(
 
     LaunchedEffect(recipeIdToOpen) {
         val recipeId = recipeIdToOpen ?: return@LaunchedEffect
-        navController.navigate(Screen.Detail.createRoute(recipeId)) {
-            launchSingleTop = true
+        if (recipeId.isNotBlank()) {
+            navController.navigate(Screen.Detail.createRoute(recipeId)) {
+                launchSingleTop = true
+            }
+            onPendingRecipeConsumed()
         }
-        onPendingRecipeConsumed()
     }
 
     val bottomNavItems = listOf(
@@ -202,7 +205,7 @@ fun MainNavigationApp(
                     HomeViewModel(
                         repository = container.recipeRepository,
                         analytics = container.analytics,
-                        pageSize = container.remoteConfigManager.values.value.pageSize,
+                        pageSize = container.remoteConfigManager.values.map { it.pageSize },
                         refresh = { force ->
                             container.syncNow(force = force) !is SyncOutcome.Failed
                         }
@@ -212,7 +215,9 @@ fun MainNavigationApp(
                     viewModel = homeViewModel,
                     adManager = container.adManager,
                     onNavigateToDetail = { recipeId ->
-                        navController.navigate(Screen.Detail.createRoute(recipeId))
+                        if (recipeId.isNotBlank()) {
+                            navController.navigate(Screen.Detail.createRoute(recipeId))
+                        }
                     }
                 )
             }
@@ -227,7 +232,9 @@ fun MainNavigationApp(
                     viewModel = favoritesViewModel,
                     adManager = container.adManager,
                     onNavigateToDetail = { recipeId ->
-                        navController.navigate(Screen.Detail.createRoute(recipeId))
+                        if (recipeId.isNotBlank()) {
+                            navController.navigate(Screen.Detail.createRoute(recipeId))
+                        }
                     },
                     onExploreRecipes = {
                         navController.navigate(Screen.Home.route) {

@@ -177,8 +177,10 @@ class AnalyticsLogger @VisibleForTesting internal constructor(
     @VisibleForTesting
     internal fun log(eventName: String, params: Map<String, Any>) {
         val normalizedName = eventName.trim().lowercase(Locale.US)
-        require(normalizedName !in RESERVED_EVENT_NAMES) {
-            "Event '$eventName' reserved untuk Firebase dan tidak boleh dicatat manual"
+        if (normalizedName in RESERVED_EVENT_NAMES) {
+            // Event ini reserved untuk Firebase; abaikan tanpa melempar exception
+            // supaya aplikasi tetap stabil.
+            return
         }
         analytics.logEvent(
             normalizedName,

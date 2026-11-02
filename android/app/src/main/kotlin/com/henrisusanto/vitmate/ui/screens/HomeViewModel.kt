@@ -18,6 +18,7 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.emptyFlow
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
@@ -51,18 +52,18 @@ data class HomeUiState(
 class HomeViewModel(
     private val repository: RecipeCatalog,
     private val analytics: AnalyticsLogger,
-    pageSize: Int = DEFAULT_PAGE_SIZE,
+    private val pageSize: Flow<Int> = emptyFlow(),
     private val refresh: suspend (force: Boolean) -> Boolean = { true },
     private val sessionSeedFactory: () -> Long = {
         System.currentTimeMillis() xor Random.nextLong()
     }
 ) : ViewModel() {
 
-    private val effectivePageSize = pageSize.coerceAtLeast(1)
+    private val _effectivePageSize = MutableStateFlow(DEFAULT_PAGE_SIZE)
 
     private val _query = MutableStateFlow("")
     private val _selectedCategory = MutableStateFlow<String?>(null)
-    private val _limit = MutableStateFlow(effectivePageSize)
+    private val _limit = MutableStateFlow(_effectivePageSize.value)
     private val _sessionSeed = MutableStateFlow(sessionSeedFactory())
     private val _totalMatched = MutableStateFlow(0)
     private val _isRefreshing = MutableStateFlow(false)
@@ -102,7 +103,7 @@ class HomeViewModel(
     private val content = combine(
         recipesFlow,
         categoriesFlow,
-        _query,
+        debouncedQuery,
         _selectedCategory
     ) { recipes, categories, query, category ->
         Content(
@@ -137,11 +138,20 @@ class HomeViewModel(
     )
 
     init {
+        // pageSize dari Remote Config dapat berubah; terapkan ulang tanpa
+        // menggeser daftar agar scroll tidak lompat.
+        viewModelScope.launch {
+            pageSize.collect { size ->
+                _effectivePageSize.value = size.coerceAtLeast(1)
+                _limit.value = _effectivePageSize.value
+            }
+        }
+
         // Limit kembali ke halaman pertama dan jumlah hasil dihitung ulang
         // setiap kategori/kata kunci final berubah.
         viewModelScope.launch {
             filter.collectLatest { current ->
-                _limit.value = effectivePageSize
+                _limit.value = _effectivePageSize.value
                 _totalMatched.value = repository.countRecipes(
                     category = current.category,
                     query = current.query
@@ -207,7 +217,7 @@ class HomeViewModel(
 
     fun onLoadMore() {
         if (_isRefreshing.value || !state.value.hasMore) return
-        _limit.update { current -> current + effectivePageSize }
+        _limit.update { current -> current + _effectivePageSize.value }
     }
 
     fun onRecipeOpened(recipeId: String) {

@@ -7,6 +7,7 @@ import com.henrisusanto.vitmate.ui.testutil.FakeRecipeCatalog
 import com.henrisusanto.vitmate.ui.testutil.MainDispatcherRule
 import com.henrisusanto.vitmate.ui.testutil.sampleRecipes
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.TestScope
 import kotlinx.coroutines.test.advanceTimeBy
@@ -43,7 +44,7 @@ class HomeViewModelTest {
                 installTimeMillis = 0L,
                 nowMillis = { 1L }
             ),
-            pageSize = 10,
+            pageSize = MutableStateFlow(10),
             refresh = { true },
             sessionSeedFactory = { nextSeed }
         )
