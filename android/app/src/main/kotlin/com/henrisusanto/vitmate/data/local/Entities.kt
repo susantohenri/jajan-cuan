@@ -1,5 +1,6 @@
 package com.henrisusanto.vitmate.data.local
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
@@ -37,6 +38,7 @@ data class RecipeDetailEntity(
 )
 data class FavoriteEntity(
     @PrimaryKey val id: String,
+    @ColumnInfo(defaultValue = "''") val slug: String = "",
     val favoritedAt: Long,
     val title: String,
     val category: String,

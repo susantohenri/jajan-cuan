@@ -1,0 +1,381 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "35bcec84d3febd7f2c80323a22e49ea3",
+    "entities": [
+      {
+        "tableName": "recipe_index",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `slug` TEXT NOT NULL, `title` TEXT NOT NULL, `category` TEXT NOT NULL, `tagsText` TEXT NOT NULL, `ingredientsText` TEXT NOT NULL, `cover` TEXT NOT NULL, `thumb` TEXT, `estCapital` INTEGER NOT NULL, `portions` INTEGER NOT NULL, `isViral` INTEGER NOT NULL, `orderIdx` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "slug",
+            "columnName": "slug",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tagsText",
+            "columnName": "tagsText",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ingredientsText",
+            "columnName": "ingredientsText",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cover",
+            "columnName": "cover",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "thumb",
+            "columnName": "thumb",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "estCapital",
+            "columnName": "estCapital",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "portions",
+            "columnName": "portions",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isViral",
+            "columnName": "isViral",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "orderIdx",
+            "columnName": "orderIdx",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_recipe_index_category",
+            "unique": false,
+            "columnNames": [
+              "category"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recipe_index_category` ON `${TABLE_NAME}` (`category`)"
+          },
+          {
+            "name": "index_recipe_index_orderIdx",
+            "unique": false,
+            "columnNames": [
+              "orderIdx"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_recipe_index_orderIdx` ON `${TABLE_NAME}` (`orderIdx`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "recipe_detail",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `json` TEXT NOT NULL, `fetchedAt` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "json",
+            "columnName": "json",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fetchedAt",
+            "columnName": "fetchedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "favorites",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `slug` TEXT NOT NULL DEFAULT '', `favoritedAt` INTEGER NOT NULL, `title` TEXT NOT NULL, `category` TEXT NOT NULL, `tagsText` TEXT NOT NULL, `ingredientsText` TEXT NOT NULL, `estCapital` INTEGER NOT NULL, `portions` INTEGER NOT NULL, `thumbLocalPath` TEXT, `coverLocalPath` TEXT NOT NULL, `detailJson` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "slug",
+            "columnName": "slug",
+            "affinity": "TEXT",
+            "notNull": true,
+            "defaultValue": "''"
+          },
+          {
+            "fieldPath": "favoritedAt",
+            "columnName": "favoritedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "category",
+            "columnName": "category",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "tagsText",
+            "columnName": "tagsText",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ingredientsText",
+            "columnName": "ingredientsText",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estCapital",
+            "columnName": "estCapital",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "portions",
+            "columnName": "portions",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "thumbLocalPath",
+            "columnName": "thumbLocalPath",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coverLocalPath",
+            "columnName": "coverLocalPath",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "detailJson",
+            "columnName": "detailJson",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_favorites_favoritedAt",
+            "unique": false,
+            "columnNames": [
+              "favoritedAt"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_favorites_favoritedAt` ON `${TABLE_NAME}` (`favoritedAt`)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "unlocks",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recipeId` TEXT NOT NULL, `feature` TEXT NOT NULL, `unlockedAt` INTEGER NOT NULL, PRIMARY KEY(`recipeId`, `feature`))",
+        "fields": [
+          {
+            "fieldPath": "recipeId",
+            "columnName": "recipeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "feature",
+            "columnName": "feature",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "unlockedAt",
+            "columnName": "unlockedAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "recipeId",
+            "feature"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "calc_state",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`recipeId` TEXT NOT NULL, `pricesJson` TEXT NOT NULL, `portions` INTEGER NOT NULL, `marginMode` TEXT NOT NULL, `marginValue` REAL NOT NULL, PRIMARY KEY(`recipeId`))",
+        "fields": [
+          {
+            "fieldPath": "recipeId",
+            "columnName": "recipeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "pricesJson",
+            "columnName": "pricesJson",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "portions",
+            "columnName": "portions",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marginMode",
+            "columnName": "marginMode",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marginValue",
+            "columnName": "marginValue",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "recipeId"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "active_timers",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `recipeId` TEXT NOT NULL, `recipeTitle` TEXT NOT NULL, `label` TEXT NOT NULL, `endAtEpochMillis` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `notificationId` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recipeId",
+            "columnName": "recipeId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recipeTitle",
+            "columnName": "recipeTitle",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "label",
+            "columnName": "label",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "endAtEpochMillis",
+            "columnName": "endAtEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "createdAt",
+            "columnName": "createdAt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notificationId",
+            "columnName": "notificationId",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '35bcec84d3febd7f2c80323a22e49ea3')"
+    ]
+  }
+}

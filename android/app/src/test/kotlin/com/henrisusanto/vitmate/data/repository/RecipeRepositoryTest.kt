@@ -183,6 +183,7 @@ class RecipeRepositoryTest {
 
         assertEquals(FavoriteToggleResult.Added, added)
         val favorite = checkNotNull(database.favoriteDao().get(churrosId))
+        assertEquals("1065-churros-frozen-ide-jualan", favorite.slug)
         assertEquals("Churros Frozen Crispy", favorite.title)
         assertEquals("kue modal-kecil viral", favorite.tagsText)
         assertEquals(27_500, favorite.estCapital)
@@ -252,6 +253,7 @@ class RecipeRepositoryTest {
         repository.refreshFavoriteFromNetwork(churrosId)
 
         val favorite = checkNotNull(database.favoriteDao().get(churrosId))
+        assertEquals("271-es-bongko-khas-pontianak-bisa-untuk-takjil-ide-jualan", favorite.slug)
         assertEquals("Es Bongko Khas Pontianak", favorite.title)
         assertEquals(Fixtures.postJson("es_bongko"), favorite.detailJson)
         assertEquals(41_500, favorite.estCapital)
@@ -270,6 +272,7 @@ class RecipeRepositoryTest {
 
         assertEquals(1, favorites.size)
         assertEquals("Churros Frozen Crispy", favorites.first().title)
+        assertEquals("1065-churros-frozen-ide-jualan", favorites.first().slug)
         assertTrue(favorites.first().isFavorite)
         assertEquals(DetailSource.FAVORITE, (detail as DetailResult.Success).detail.source)
         assertEquals(1, remote.postCalls)
@@ -309,6 +312,7 @@ class RecipeRepositoryTest {
 
     private fun favorite(id: String, detailJson: String) = FavoriteEntity(
         id = id,
+        slug = id,
         favoritedAt = 1L,
         title = "Churros Frozen Crispy",
         category = "kue",

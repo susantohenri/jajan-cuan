@@ -159,6 +159,8 @@ class RecipeRepository(
                     favoriteDao.upsert(
                         FavoriteEntity(
                             id = recipeId,
+                            slug = post.slug.ifBlank { index?.slug.orEmpty() }
+                                .ifBlank { recipeId },
                             favoritedAt = clock(),
                             title = post.title.ifBlank { index?.title.orEmpty() },
                             category = post.category.ifBlank { index?.category.orEmpty() },
@@ -224,6 +226,8 @@ class RecipeRepository(
 
         favoriteDao.upsert(
             favorite.copy(
+                slug = post.slug.ifBlank { index?.slug.orEmpty() }
+                    .ifBlank { favorite.slug },
                 title = post.title.ifBlank { index?.title.orEmpty() },
                 category = post.category.ifBlank { index?.category.orEmpty() },
                 tagsText = post.tags.joinToString(SPACE)
@@ -374,7 +378,7 @@ class RecipeRepository(
         val tags = tagsText.toTags()
         return RecipeSummary(
             id = id,
-            slug = id,
+            slug = slug.ifBlank { id },
             title = title,
             category = category,
             tags = tags,

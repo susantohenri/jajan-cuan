@@ -6,6 +6,8 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverter
 import androidx.room.TypeConverters
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.henrisusanto.vitmate.data.model.UnlockFeature
 
 class Converters {
@@ -25,7 +27,7 @@ class Converters {
         CalcStateEntity::class,
         ActiveTimerEntity::class
     ],
-    version = 1,
+    version = 2,
     exportSchema = true
 )
 @TypeConverters(Converters::class)
@@ -40,6 +42,30 @@ abstract class JajanCuanDatabase : RoomDatabase() {
     companion object {
         private const val DATABASE_NAME = "jajan_cuan.db"
 
+        /**
+         * F-018: `favorites` menyimpan `slug` sendiri agar kartu favorit tidak
+         * lagi memakai `id` sebagai slug. Baris lama diisi dari `recipe_index`
+         * bila masih tersedia; bila tidak, string kosong dan repository
+         * memakai `id` sebagai fallback.
+         */
+        private val MIGRATION_1_2 = object : Migration(1, 2) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    "ALTER TABLE favorites ADD COLUMN slug TEXT NOT NULL DEFAULT ''"
+                )
+                db.execSQL(
+                    """
+                    UPDATE favorites
+                    SET slug = COALESCE(
+                        (SELECT slug FROM recipe_index WHERE recipe_index.id = favorites.id),
+                        ''
+                    )
+                    WHERE slug = ''
+                    """.trimIndent()
+                )
+            }
+        }
+
         @Volatile
         private var instance: JajanCuanDatabase? = null
 
@@ -49,7 +75,10 @@ abstract class JajanCuanDatabase : RoomDatabase() {
                     context.applicationContext,
                     JajanCuanDatabase::class.java,
                     DATABASE_NAME
-                ).build().also { instance = it }
+                )
+                    .addMigrations(MIGRATION_1_2)
+                    .build()
+                    .also { instance = it }
             }
     }
 }
