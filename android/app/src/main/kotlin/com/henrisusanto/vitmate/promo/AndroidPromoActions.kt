@@ -7,6 +7,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Environment
 import android.provider.MediaStore
+import android.util.Base64
 import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import kotlinx.coroutines.CoroutineDispatcher
@@ -15,6 +16,8 @@ import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.File
+import java.io.InputStream
+import java.io.OutputStream
 
 /**
  * Unduh foto promo ke Galeri lewat MediaStore (tanpa izin di API 29+) dan
@@ -72,7 +75,7 @@ class AndroidPromoActions(
         directory.listFiles()?.forEach { it.delete() }
 
         val file = File(directory, fileName)
-        val written = runCatching { file.writeBytes(bytes) }.isSuccess
+        val written = runCatching { file.outputStream().use { it.write(bytes) } }.isSuccess
         if (!written) return@withContext PromoShareResult.Failed
 
         runCatching {
@@ -89,7 +92,15 @@ class AndroidPromoActions(
         val request = Request.Builder().url(url).build()
         client.newCall(request).execute().use { response ->
             if (!response.isSuccessful) return@use null
-            response.body?.bytes()
+            val output = ByteArrayOutputStream()
+            response.body?.byteStream()?.use { input: InputStream ->
+                val buffer = ByteArray(8 * 1024)
+                var bytesRead: Int
+                while (input.read(buffer).also { bytesRead = it } != -1) {
+                    output.write(buffer, 0, bytesRead)
+                }
+            }
+            output.toByteArray()
         }
     }.getOrNull()
 
@@ -172,7 +183,11 @@ class AndroidPromoActions(
         withTimestamp: Boolean
     ): String {
         val extension = imageExtension(imageUrl)
-        val stamp = if (withTimestamp) "-${clock()}" else ""
+        val seed = Base64.encodeToString(
+            imageUrl.toByteArray(Charsets.UTF_8),
+            Base64.NO_WRAP
+        ).takeLast(8)
+        val stamp = if (withTimestamp) "-${clock()}" else "-$seed"
         return "$baseFileName$stamp.$extension"
     }
 
