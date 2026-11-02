@@ -157,11 +157,11 @@
 - [x] **F-017 & F-030**: `.fallbackToDestructiveMigration()` dipasang setelah `addMigrations(MIGRATION_1_2)`; schema Room `1.json` dan `2.json` ter-track di `app/schemas/` (commit `ef9d8b7`).
 - [x] **F-009 & F-022**: RTDB base URL dipindah ke `buildConfigField` (`BuildConfig.RTDB_BASE_URL`); `RetryInterceptor`/`Thread.sleep` dihapus dan retry GET memakai `delay()` coroutine dengan backoff 250/500 ms di `OkHttpRecipeRemoteDataSource`.
 - [x] **F-013 & F-026**: Pengacakan dipindah dari `ORDER BY` aritmetika di `Daos.kt` ke sorting Kotlin deterministik per seed di `RecipeRepository` (paginasi stabil); `HashSet` favorit hanya dialokasikan saat daftar id berubah dan flow favorit memakai `distinctUntilChanged()`.
+- [x] **F-038**: Seluruh properti DTO di `RecipeDtos.kt` (`MetaDto`, `SearchIndexEntryDto`, `BusinessAnalysisDto`, `IngredientDto`, `MediaDto`, `PostDto`) kini memakai `@SerialName` eksplisit sesuai nama JSON RTDB.
 
 ### ⏳ Siap Dikerjakan Paralel (Terbagi per Track Independen)
 
 #### Track A: Data Layer & Database (Zero UI Dependency)
-- [ ] **F-038**: Lengkapi anotasi `@SerialName` pada seluruh properti di `RecipeDtos.kt`.
 
 #### Track B: UI Presentation & Form State (Zero Data Layer Dependency)
 - [ ] **F-037**: Hubungkan draf kalkulator HPP di `DetailViewModel` ke `SavedStateHandle` agar form tidak hilang saat process death.
