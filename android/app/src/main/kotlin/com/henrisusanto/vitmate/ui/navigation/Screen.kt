@@ -5,6 +5,6 @@ sealed class Screen(val route: String) {
     data object Favorites : Screen("favorites")
     data object Settings : Screen("settings")
     data object Detail : Screen("detail/{recipeId}") {
-        fun createRoute(recipeId: String) = "detail/$recipeId"
+        fun createRoute(recipeId: String) = "detail/${Uri.encode(recipeId)}"
     }
 }
