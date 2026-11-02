@@ -77,6 +77,10 @@ abstract class JajanCuanDatabase : RoomDatabase() {
                     DATABASE_NAME
                 )
                     .addMigrations(MIGRATION_1_2)
+                    // Rilis tanpa migrasi eksplisit tidak boleh crash di perangkat
+                    // pengguna; fallback ini hanya terpakai bila tidak ada jalur
+                    // migrasi yang cocok (mis. database korup / versi lebih baru).
+                    .fallbackToDestructiveMigration()
                     .build()
                     .also { instance = it }
             }
