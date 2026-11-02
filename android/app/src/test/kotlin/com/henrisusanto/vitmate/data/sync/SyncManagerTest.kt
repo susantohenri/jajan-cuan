@@ -148,7 +148,12 @@ class SyncManagerTest {
         assertTrue(result is SyncOutcome.Failed)
         assertEquals(1, database.recipeIndexDao().count())
         assertEquals("versi-lama", stateStore.version)
-        assertEquals(now, stateStore.lastCheckAt)
+        // Timestamp tidak boleh disimpan sebelum index berhasil diterapkan.
+        assertEquals(0L, stateStore.lastCheckAt)
+
+        // Sync berikutnya tidak boleh ter-throttle dan harus mencoba lagi.
+        manager.sync(force = false)
+        assertEquals(2, remote.metaCalls)
     }
 
     @Test

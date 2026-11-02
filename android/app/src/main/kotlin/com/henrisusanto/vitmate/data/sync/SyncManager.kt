@@ -63,9 +63,9 @@ class SyncManager(
                 return@withLock SyncOutcome.Failed("Meta tidak memiliki versi.")
             }
 
-            stateStore.saveLastMetaCheckAt(now)
             val currentVersion = stateStore.metaVersion()
             if (currentVersion == meta.version && indexDao.count() > 0) {
+                stateStore.saveLastMetaCheckAt(now)
                 return@withLock SyncOutcome.UpToDate
             }
 
@@ -109,6 +109,9 @@ class SyncManager(
                 detailDao.clear()
             }
             stateStore.saveMetaVersion(meta.version)
+            // Timestamp baru dicatat setelah index benar-benar tersimpan, agar
+            // kegagalan unduh/simpan tidak membuat sync berikutnya ter-throttle.
+            stateStore.saveLastMetaCheckAt(now)
 
             favoriteDao.getIds().forEach { recipeId ->
                 try {
