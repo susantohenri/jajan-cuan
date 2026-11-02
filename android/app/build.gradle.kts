@@ -40,6 +40,12 @@ android {
             "UMP_TEST_DEVICE_HASHED_ID",
             "\"${localProperties.getProperty("umpTestDeviceHashedId", "").trim()}\""
         )
+        // F-009: alamat RTDB tidak lagi hardcoded di kode Kotlin.
+        buildConfigField(
+            "String",
+            "RTDB_BASE_URL",
+            "\"https://jajan-cuan-default-rtdb.asia-southeast1.firebasedatabase.app/\""
+        )
     }
 
     buildTypes {
@@ -93,6 +99,7 @@ dependencies {
     implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.process)
+    implementation(libs.androidx.lifecycle.viewmodel.savedstate)
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.datastore.preferences)

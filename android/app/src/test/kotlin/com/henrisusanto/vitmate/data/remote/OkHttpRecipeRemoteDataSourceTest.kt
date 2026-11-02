@@ -26,7 +26,8 @@ class OkHttpRecipeRemoteDataSourceTest {
         server.start()
         source = OkHttpRecipeRemoteDataSource(
             baseUrl = server.url("/").toString(),
-            client = clientWithRetry()
+            client = OkHttpClient(),
+            retryDelayMillis = {}
         )
     }
 
@@ -112,9 +113,9 @@ class OkHttpRecipeRemoteDataSourceTest {
     fun `gagal jaringan menghasilkan Failure NETWORK`() = runBlocking {
         val noRetrySource = OkHttpRecipeRemoteDataSource(
             baseUrl = server.url("/").toString(),
-            client = OkHttpClient.Builder()
-                .addInterceptor(RetryInterceptor(maxRetries = 0, sleep = {}))
-                .build()
+            client = OkHttpClient(),
+            maxRetries = 0,
+            retryDelayMillis = {}
         )
         server.enqueue(
             MockResponse().setSocketPolicy(SocketPolicy.DISCONNECT_AT_START)
@@ -158,7 +159,33 @@ class OkHttpRecipeRemoteDataSourceTest {
         assertEquals(FailureKind.PARSE, (result as RemoteResult.Failure).kind)
     }
 
-    private fun clientWithRetry(): OkHttpClient = OkHttpClient.Builder()
-        .addInterceptor(RetryInterceptor(maxRetries = 2, sleep = {}))
-        .build()
+    @Test
+    fun `4xx tidak diulang`() = runBlocking {
+        server.enqueue(MockResponse().setResponseCode(403))
+
+        val result = source.fetchMeta()
+
+        assertTrue(result is RemoteResult.Failure)
+        assertEquals(FailureKind.HTTP, (result as RemoteResult.Failure).kind)
+        assertEquals(1, server.requestCount)
+    }
+
+    @Test
+    fun `backoff retry memakai delay coroutine 250ms lalu 500ms`() = runBlocking {
+        val delays = mutableListOf<Long>()
+        val retrySource = OkHttpRecipeRemoteDataSource(
+            baseUrl = server.url("/").toString(),
+            client = OkHttpClient(),
+            retryDelayMillis = { delays += it }
+        )
+        server.enqueue(MockResponse().setResponseCode(500))
+        server.enqueue(MockResponse().setResponseCode(500))
+        server.enqueue(MockResponse().setBody(Fixtures.metaJson()))
+
+        val result = retrySource.fetchMeta()
+
+        assertTrue(result is RemoteResult.Success)
+        assertEquals(listOf(250L, 500L), delays)
+        assertEquals(3, server.requestCount)
+    }
 }
