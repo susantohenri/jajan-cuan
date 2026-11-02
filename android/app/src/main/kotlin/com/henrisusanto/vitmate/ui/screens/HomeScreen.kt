@@ -372,8 +372,8 @@ private fun RecipeList(
                 )
             }
             if (index >= recipes.lastIndex - LOAD_MORE_THRESHOLD && hasMore) {
-                LaunchedEffect(recipes.size) {
-                    onLoadMore()
+                LaunchedEffect(recipes) {
+                    if (it.size >= recipes.size) onLoadMore()
                 }
             }
         }
