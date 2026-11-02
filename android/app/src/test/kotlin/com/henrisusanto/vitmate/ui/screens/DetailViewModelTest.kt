@@ -2,6 +2,8 @@ package com.henrisusanto.vitmate.ui.screens
 
 import android.app.Application
 import android.net.Uri
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.lifecycle.SavedStateHandle
 import com.henrisusanto.vitmate.ads.RewardedAdState
 import com.henrisusanto.vitmate.analytics.AnalyticsLogger
 import com.henrisusanto.vitmate.data.image.ImageUrlResolver
@@ -55,6 +57,7 @@ class DetailViewModelTest {
     private lateinit var unlocks: FakeUnlockCatalog
     private lateinit var rewardedSession: FakeRewardedAdSession
     private lateinit var promoActions: FakePromoActions
+    private lateinit var savedStateHandle: SavedStateHandle
     private val collectedEvents = mutableListOf<DetailUiEvent>()
 
     @Before
@@ -71,6 +74,7 @@ class DetailViewModelTest {
         unlocks = FakeUnlockCatalog()
         rewardedSession = FakeRewardedAdSession()
         promoActions = FakePromoActions()
+        savedStateHandle = SavedStateHandle()
     }
 
     @Test
@@ -194,6 +198,33 @@ class DetailViewModelTest {
         val second = createViewModel()
         val state = second.state.value
 
+        assertEquals("5000", state.ingredients.first().priceText)
+        assertEquals("10", state.portionsText)
+        assertEquals(HppMarginMode.NOMINAL, state.marginMode)
+        assertEquals("1000", state.marginText)
+        assertEquals(35_000.0, state.hpp.totalModal, DELTA)
+        assertEquals(3_500.0, state.hpp.hppPerPortion, DELTA)
+        assertEquals(4_500.0, state.hpp.sellingPrice, DELTA)
+        assertEquals(10_000.0, state.hpp.totalProfit, DELTA)
+    }
+
+    @Test
+    fun `SavedStateHandle memulihkan state kalkulator setelah process death`() = runTest {
+        catalog.detailResult = DetailResult.Success(goldenDetail())
+
+        val first = createViewModel()
+        first.onPriceChange(0, "5000")
+        first.onPortionsChange("10")
+        first.onMarginModeChange(HppMarginMode.NOMINAL)
+        first.onMarginChange("1000")
+        first.onSaveCalculation()
+        advanceUntilIdle()
+
+        // Simulasi process death: SavedStateHandle dipertahankan, Room databasenya
+        // di-reset (savedStateHandle masih punya data).
+        val restored = createViewModel()
+
+        val state = restored.state.value
         assertEquals("5000", state.ingredients.first().priceText)
         assertEquals("10", state.portionsText)
         assertEquals(HppMarginMode.NOMINAL, state.marginMode)
@@ -426,7 +457,8 @@ class DetailViewModelTest {
             rewardedSession = rewardedSession,
             promoActions = promoActions,
             imageUrlResolver = ImageUrlResolver(),
-            fallbackUnlockEnabled = { true }
+            fallbackUnlockEnabled = { true },
+            savedStateHandle = savedStateHandle
         )
         advanceUntilIdle()
         return viewModel
