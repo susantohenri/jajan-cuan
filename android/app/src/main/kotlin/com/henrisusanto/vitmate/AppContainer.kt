@@ -23,6 +23,7 @@ import com.henrisusanto.vitmate.promo.PromoActions
 import com.henrisusanto.vitmate.settings.ThemePreferences
 import com.henrisusanto.vitmate.timer.AlarmTimerScheduler
 import com.henrisusanto.vitmate.timer.TimerNotifier
+import com.henrisusanto.vitmate.timer.TimerPreferences
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
@@ -95,9 +96,12 @@ class AppContainer(context: Context) {
 
     val timerNotifier = TimerNotifier(appContext)
 
+    val timerPreferences = TimerPreferences.from(appContext)
+
     val timerRepository = TimerRepository(
         dao = database.activeTimerDao(),
-        scheduler = AlarmTimerScheduler(appContext)
+        scheduler = AlarmTimerScheduler(appContext),
+        notificationCounter = timerPreferences
     )
 
     val syncManager = SyncManager(

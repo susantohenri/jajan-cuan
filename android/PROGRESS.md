@@ -137,3 +137,40 @@
 - S10 Privasi: tombol Kebijakan Privasi membuka browser ke `https://susantohenri.github.io/privacy-policy`. "Pengaturan Privasi Iklan" hanya terlihat saat UMP menyatakan REQUIRED (uji dengan `umpDebugEea=true`, hapus data app, lalu buka lagi); tap membuka formulir opsi privasi UMP.
 - S10 Ikon: launcher memakai ikon baru (cone + jajanan + koin) dengan label "Jajan Cuan"; di Android 13+ themed icon memakai varian monochrome; splash menampilkan ikon baru; tidak ada PNG per density di folder `res/mipmap-*`.
 - S11: seluruh uji manual rilis (favorit offline + foto, empty state, UMP, rewarded permanen setelah restart, fallback sesi, notifikasi timer, tema, banner tidak menutupi bottom nav, perubahan `/meta`, kalkulator vs web) ada di `android/RELEASE_CHECKLIST.md`. Bagian "Butuh tindakan manual" (ad unit/App ID produksi, keystore/AAB, Play Console, Privacy Policy, AdMob-Firebase, PRD, kuota Hosting, aset) juga di sana.
+
+---
+
+## Remediasi Code Review (Pasca-S11)
+
+### ✅ Selesai Diperbaiki & Terverifikasi (Unit Tests 100% Pass)
+- [x] **F-004**: Pindahkan `LaunchedEffect` load-more di `HomeScreen.kt` ke luar `itemsIndexed` via `derivedStateOf`.
+- [x] **F-005**: Batasi waktu async receiver di `TimerReceiver.kt` dengan `withTimeoutOrNull(8_000L)` dan konstanta di companion object.
+- [x] **F-006**: Counter notifikasi timer monotonic via `TimerPreferences.kt` & interface `NotificationCounter` di DataStore.
+- [x] **F-008 & F-015**: Perbaiki countdown key dengan daftar ID timer dan berikan pesan ramah jika activity null di `DetailScreen.kt`.
+- [x] **F-025**: URL encoding pada pembuatan rute navigasi `Screen.Detail.createRoute(recipeId)`.
+- [x] **F-033**: Override `onCleared()` di `DetailViewModel.kt` untuk memanggil `gateCoordinator.destroy()` dan `rewardedSession.destroy()`.
+- [x] **F-035 & F-036**: Gunakan streaming buffer di `AndroidPromoActions.kt` untuk unduhan promo dan impor `ByteArrayOutputStream`.
+- [x] **F-039**: Tangani `IllegalArgumentException` pada string URL tidak valid di `OkHttpImageDownloader.kt` + unit test `OkHttpImageDownloaderTest`.
+
+### ⏳ Siap Dikerjakan Paralel (Terbagi per Track Independen)
+
+#### Track A: Data Layer & Database (Zero UI Dependency)
+- [ ] **F-003**: `SyncManager.kt` timestamp `saveLastMetaCheckAt` dipindah ke setelah transaksi Room sukses.
+- [ ] **F-018**: Tambahkan properti `slug` di `FavoriteEntity` & `RecipeRepository.kt` (jangan mapping slug = id).
+- [ ] **F-017 & F-030**: Tambahkan `.fallbackToDestructiveMigration()` pada Room database v1 & commit schema JSON.
+- [ ] **F-009 & F-022**: Pindahkan RTDB URL ke `BuildConfig` & gunakan delay coroutine pada retry interceptor.
+- [ ] **F-013 & F-026**: Optimasi sorting list resep di Kotlin vs SQL computed math & pasang `distinctUntilChanged` pada flow favorit.
+- [ ] **F-038**: Lengkapi anotasi `@SerialName` pada seluruh properti di `RecipeDtos.kt`.
+
+#### Track B: UI Presentation & Form State (Zero Data Layer Dependency)
+- [ ] **F-037**: Hubungkan draf kalkulator HPP di `DetailViewModel` ke `SavedStateHandle` agar form tidak hilang saat process death.
+- [ ] **F-014**: Pisahkan `_query` mentah dari combine content di `HomeViewModel.kt`.
+- [ ] **F-007 & F-024**: Buat `pageSize` reaktif terhadap Remote Config di `MainActivity.kt` & validasi `recipeId.isNotBlank()`.
+- [ ] **F-020**: Pasang `FLAG_GRANT_READ_URI_PERMISSION` hanya pada inner send intent, bukan pada chooser wrapper.
+
+#### Track C: AdMob, UMP Consent & Remote Config (Zero Screen UI Logic)
+- [ ] **F-001 & F-002**: Penggantian Test Ad IDs & ubah default ad unit di Remote Config menjadi string kosong.
+- [ ] **F-031**: Stabilisasi `NativeAdCard.kt` di scroll list (jangan langsung destroy saat keluar viewport 1px).
+- [ ] **F-034**: `ConsentManager.kt` retry saat offline di cold-start (jangan set `finished = true` permanen bila gagal karena jaringan).
+- [ ] **F-032**: `AdaptiveBannerAd.kt` jangan gunakan `key(widthDp)` mentah agar tidak re-create saat insets bergeser 1 dp.
+- [ ] **F-012 & F-028**: Tambahkan anotasi `@MainThread` di `AdManager.kt` dan debounce trigger preload native ad.

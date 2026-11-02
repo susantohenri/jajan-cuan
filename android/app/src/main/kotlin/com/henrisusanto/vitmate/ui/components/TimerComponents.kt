@@ -49,11 +49,11 @@ fun TimerDialog(
     onDismiss: () -> Unit,
     onConfirm: (TimerDraft) -> Unit
 ) {
-    var label by remember(key = initialLabel) { mutableStateOf(initialLabel) }
-    var minutesText by remember(key = initialDurationSeconds) {
+    var label by remember(initialLabel) { mutableStateOf(initialLabel) }
+    var minutesText by remember(initialDurationSeconds) {
         mutableStateOf((initialDurationSeconds / 60).toString())
     }
-    var secondsText by remember(key = initialDurationSeconds) {
+    var secondsText by remember(initialDurationSeconds) {
         mutableStateOf((initialDurationSeconds % 60).toString())
     }
 

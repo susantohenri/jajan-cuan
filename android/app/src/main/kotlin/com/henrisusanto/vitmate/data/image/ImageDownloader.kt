@@ -3,6 +3,7 @@ package com.henrisusanto.vitmate.data.image
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import okhttp3.HttpUrl.Companion.toHttpUrlOrNull
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import java.io.File
@@ -29,7 +30,10 @@ class OkHttpImageDownloader(
 
             var temporaryFile: File? = null
             try {
-                val request = Request.Builder().url(url).get().build()
+                // F-039: string URL cacat tidak boleh melempar IllegalArgumentException
+                // ke pemanggil; anggap saja unduhan gagal.
+                val httpUrl = url.toHttpUrlOrNull() ?: return@withContext false
+                val request = Request.Builder().url(httpUrl).get().build()
                 client.newCall(request).execute().use { response ->
                     if (!response.isSuccessful) return@withContext false
                     val body = response.body ?: return@withContext false
@@ -52,6 +56,9 @@ class OkHttpImageDownloader(
                     true
                 }
             } catch (exception: IOException) {
+                false
+            } catch (exception: IllegalArgumentException) {
+                // Jaring pengaman bila OkHttp melempar untuk URL yang lolos parse.
                 false
             } finally {
                 temporaryFile?.delete()

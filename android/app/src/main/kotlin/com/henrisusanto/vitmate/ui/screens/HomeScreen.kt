@@ -15,6 +15,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.itemsIndexed
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
@@ -37,6 +38,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -339,7 +341,23 @@ private fun RecipeList(
     onLoadMore: () -> Unit
 ) {
     val nativeEveryN = adManager.nativeEveryN()
+    val listState = rememberLazyListState()
+
+    val shouldLoadMore by remember(recipes.size, hasMore) {
+        derivedStateOf {
+            val lastVisibleIndex = listState.layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: 0
+            hasMore && lastVisibleIndex >= recipes.lastIndex - LOAD_MORE_THRESHOLD
+        }
+    }
+
+    LaunchedEffect(shouldLoadMore) {
+        if (shouldLoadMore) {
+            onLoadMore()
+        }
+    }
+
     LazyColumn(
+        state = listState,
         modifier = Modifier.fillMaxSize(),
         contentPadding = PaddingValues(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
@@ -370,11 +388,6 @@ private fun RecipeList(
                     adManager = adManager,
                     modifier = Modifier.padding(top = 12.dp)
                 )
-            }
-            if (index >= recipes.lastIndex - LOAD_MORE_THRESHOLD && hasMore) {
-                LaunchedEffect(recipes) {
-                    if (it.size >= recipes.size) onLoadMore()
-                }
             }
         }
     }

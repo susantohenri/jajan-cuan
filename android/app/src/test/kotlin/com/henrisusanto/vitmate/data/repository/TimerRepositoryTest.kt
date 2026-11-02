@@ -2,6 +2,7 @@ package com.henrisusanto.vitmate.data.repository
 
 import com.henrisusanto.vitmate.data.local.ActiveTimerDao
 import com.henrisusanto.vitmate.data.local.ActiveTimerEntity
+import com.henrisusanto.vitmate.timer.NotificationCounter
 import com.henrisusanto.vitmate.timer.TimerScheduler
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -21,10 +22,12 @@ class TimerRepositoryTest {
     private val dao = FakeActiveTimerDao()
     private val scheduler = RecordingTimerScheduler()
     private val ids = ArrayDeque(listOf("timer-a", "timer-b", "timer-c"))
+    private val preferences = FakeTimerPreferences()
 
     private fun repository(nowMillis: Long = 1_000L) = TimerRepository(
         dao = dao,
         scheduler = scheduler,
+        notificationCounter = preferences,
         clock = { nowMillis },
         idFactory = { ids.removeFirst() }
     )
@@ -121,6 +124,7 @@ class TimerRepositoryTest {
         TimerRepository(
             dao = dao,
             scheduler = scheduler,
+            notificationCounter = preferences,
             clock = { started.endAtEpochMillis },
             idFactory = { "timer-z" }
         ).pruneExpired()
@@ -153,6 +157,15 @@ class TimerRepositoryTest {
 
         override suspend fun deleteExpired(nowMillis: Long) {
             rows.update { timers -> timers.filter { it.endAtEpochMillis > nowMillis } }
+        }
+    }
+
+    private class FakeTimerPreferences : NotificationCounter {
+        private var counter = 0
+
+        override suspend fun nextNotificationId(): Int {
+            counter++
+            return counter
         }
     }
 

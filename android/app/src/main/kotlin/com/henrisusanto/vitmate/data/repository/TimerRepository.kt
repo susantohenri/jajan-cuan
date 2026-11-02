@@ -2,6 +2,7 @@ package com.henrisusanto.vitmate.data.repository
 
 import com.henrisusanto.vitmate.data.local.ActiveTimerDao
 import com.henrisusanto.vitmate.data.local.ActiveTimerEntity
+import com.henrisusanto.vitmate.timer.NotificationCounter
 import com.henrisusanto.vitmate.timer.TimerScheduler
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -43,6 +44,7 @@ interface CookingTimers {
 class TimerRepository(
     private val dao: ActiveTimerDao,
     private val scheduler: TimerScheduler,
+    private val notificationCounter: NotificationCounter,
     private val clock: () -> Long = System::currentTimeMillis,
     private val idFactory: () -> String = { UUID.randomUUID().toString() }
 ) : CookingTimers {
@@ -118,10 +120,7 @@ class TimerRepository(
         notificationId = notificationId
     )
 
-    private suspend fun nextNotificationId(): Int {
-        val next = (dao.maxNotificationId() ?: 0) + 1
-        return if (next > 0) next else 1
-    }
+    private suspend fun nextNotificationId(): Int = notificationCounter.nextNotificationId()
 
     private companion object {
         const val MIN_DURATION_SECONDS = 1L

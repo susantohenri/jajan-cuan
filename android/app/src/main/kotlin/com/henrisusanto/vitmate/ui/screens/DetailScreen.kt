@@ -7,7 +7,6 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -102,17 +101,13 @@ fun DetailScreen(
     val haptics = LocalHapticFeedback.current
     val scope = rememberCoroutineScope()
 
-    var timerStep by remember(key = Unit) { mutableStateOf<CookingStepUi?>(null) }
-    var pendingTimer by remember(key = Unit) { mutableStateOf<TimerDraft?>(null) }
+    var timerStep by remember { mutableStateOf<CookingStepUi?>(null) }
+    var pendingTimer by remember { mutableStateOf<TimerDraft?>(null) }
     val permissionPrompt = remember(context) { TimerPermissionPrompt(context) }
     val permissionDeniedMessage = stringResource(R.string.timer_permission_denied)
     val timerFailedMessage = stringResource(R.string.timer_failed)
 
     fun startTimer(draft: TimerDraft) {
-        if (activity == null) {
-            scope.launch { snackbarHostState.showSnackbar(stringResource(R.string.timer_failed)) }
-            return
-        }
         viewModel.startTimer(draft.label, draft.durationSeconds)
         if (!permissionPrompt.isGranted()) {
             scope.launch { snackbarHostState.showSnackbar(permissionDeniedMessage) }
@@ -128,16 +123,7 @@ fun DetailScreen(
         if (draft != null) startTimer(draft)
     }
 
-    val planner = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) {
-        if (activity == null) {
-            scope.launch { snackbarHostState.showSnackbar(stringResource(R.string.timer_failed)) }
-        }
-    }
-
-    var pendingPromoDownload by remember(key = Unit) { mutableStateOf<Int?>(null) }
-    val snackbarHost = remember { SnackbarHostState() }
+    var pendingPromoDownload by remember { mutableStateOf<Int?>(null) }
     val promoPermissionDeniedMessage = stringResource(R.string.promo_permission_denied)
     val storagePermissionLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -154,7 +140,6 @@ fun DetailScreen(
     }
 
     fun downloadPromo(index: Int) {
-        if (activity == null) return
         val needsLegacyPermission = Build.VERSION.SDK_INT < Build.VERSION_CODES.Q &&
             ContextCompat.checkSelfPermission(
                 context,
@@ -170,30 +155,9 @@ fun DetailScreen(
 
     val activity = context.findActivity()
 
-    val planner = rememberLauncherForActivityResult(
-        ActivityResultContracts.RequestPermission()
-    ) {
-        if (activity == null) {
-            scope.launch { snackbarHostState.showSnackbar(stringResource(R.string.timer_failed)) }
-        }
-    }
-
-    var nowMillis by remember(key = Unit) { mutableLongStateOf(System.currentTimeMillis()) }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    val snackbarHost = remember { SnackbarHostState() }
-    LaunchedEffect(state.activeTimers.isNotEmpty(), nowMillis) {
+    var nowMillis by remember { mutableLongStateOf(System.currentTimeMillis()) }
+    val activeTimerIds = remember(state.activeTimers) { state.activeTimers.map { it.id } }
+    LaunchedEffect(activeTimerIds) {
         if (state.activeTimers.isEmpty()) return@LaunchedEffect
         nowMillis = System.currentTimeMillis()
         while (true) {
@@ -208,10 +172,6 @@ fun DetailScreen(
         state.excerpt
     )
     val shareChooserTitle = stringResource(R.string.detail_share_chooser)
-
-    val shareLauncher = rememberLauncherForActivityResult(
-        ActivityResultContracts.StartActivityForResult()
-    ) { _ -> }
 
     LaunchedEffect(viewModel) {
         viewModel.events.collect { event ->
@@ -257,7 +217,6 @@ fun DetailScreen(
                     context.getString(R.string.promo_share_failed)
                 )
                 is DetailUiEvent.PromoShareReady -> {
-                    if (activity == null) return@collect
                     val sendIntent = Intent(Intent.ACTION_SEND).apply {
                         type = event.mimeType
                         putExtra(Intent.EXTRA_STREAM, event.uri)
@@ -268,7 +227,7 @@ fun DetailScreen(
                         )
                         addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                     }
-                    shareLauncher.launch(
+                    context.startActivity(
                         Intent.createChooser(
                             sendIntent,
                             context.getString(R.string.promo_share_chooser)
@@ -338,7 +297,7 @@ fun DetailScreen(
                 windowInsets = WindowInsets(0, 0, 0, 0)
             )
         },
-        snackbarHost = { SnackbarHost(snackbarHost) },
+        snackbarHost = { SnackbarHost(snackbarHostState) },
         contentWindowInsets = WindowInsets(0, 0, 0, 0)
     ) { innerPadding ->
         Box(
@@ -379,7 +338,13 @@ fun DetailScreen(
                         onGateClick = viewModel::onGateClick,
                         onGateDialogDismiss = viewModel::onGateDialogDismiss,
                         onGateDialogConfirm = {
-                            activity?.let(viewModel::onGateDialogConfirm)
+                            if (activity != null) {
+                                viewModel.onGateDialogConfirm(activity)
+                            } else {
+                                scope.launch {
+                                    snackbarHostState.showSnackbar("Gagal memuat iklan: aktivitas tidak ditemukan")
+                                }
+                            }
                         },
                         onPromoDownload = { downloadPromo(it) },
                         onPromoShare = viewModel::onPromoShare,
@@ -405,32 +370,6 @@ fun DetailScreen(
                     notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
                 } else {
                     startTimer(draft)
-                }
-            }
-        )
-    }
-
-    val openTimerDialog = { draft: TimerDraft ->
-        if (activity == null) {
-            scope.launch { snackbarHostState.showSnackbar(stringResource(R.string.timer_failed)) }
-            return@let
-        }
-        startTimer(draft)
-    }
-
-    timerStep?.let { step ->
-        TimerDialog(
-            initialLabel = step.text,
-            initialDurationSeconds = step.durationSeconds ?: DEFAULT_TIMER_SECONDS,
-            onDismiss = { timerStep = null },
-            onConfirm = { draft ->
-                timerStep = null
-                if (permissionPrompt.shouldRequest()) {
-                    pendingTimer = draft
-                    permissionPrompt.markRequested()
-                    planner.launch(Manifest.permission.POST_NOTIFICATIONS)
-                } else {
-                    openTimerDialog(draft)
                 }
             }
         )

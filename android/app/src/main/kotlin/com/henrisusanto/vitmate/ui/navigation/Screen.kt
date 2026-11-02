@@ -1,5 +1,7 @@
 package com.henrisusanto.vitmate.ui.navigation
 
+import android.net.Uri
+
 sealed class Screen(val route: String) {
     data object Home : Screen("home")
     data object Favorites : Screen("favorites")
