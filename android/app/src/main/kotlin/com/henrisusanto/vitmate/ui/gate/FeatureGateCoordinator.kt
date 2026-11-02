@@ -133,9 +133,10 @@ class FeatureGateCoordinator(
             is RewardedAdState.TimedOut, is RewardedAdState.Failed -> {
                 if (!fallbackHandled) {
                     fallbackHandled = true
+                    val fallbackFeature = pendingFeature
                     pendingFeature = null
-                    if (fallbackEnabled() && locked.isNotEmpty()) {
-                        fallbackUnlock(locked)
+                    if (fallbackEnabled() && fallbackFeature != null && fallbackFeature in locked) {
+                        fallbackUnlock(fallbackFeature)
                     }
                 }
             }
@@ -143,11 +144,9 @@ class FeatureGateCoordinator(
         }
     }
 
-    private fun fallbackUnlock(locked: Set<UnlockFeature>) {
-        locked.forEach { feature ->
-            unlocks.unlockForSession(recipeId, feature)
-            analytics.rewardedUnlock(feature.name, recipeId, viaFallback = true)
-        }
+    private fun fallbackUnlock(feature: UnlockFeature) {
+        unlocks.unlockForSession(recipeId, feature)
+        analytics.rewardedUnlock(feature.name, recipeId, viaFallback = true)
         onFallback()
     }
 
