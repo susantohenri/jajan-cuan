@@ -1,0 +1,155 @@
+Cluster: Ide Jualan Makanan Kekinian dan Modal Kecil
+Primary Keyword:
+
+ide jualan makanan kekinian
+Search Intent:
+
+Informational — mencari inspirasi produk dan ide jualan.
+Commercial Investigation — sebagian pencari mungkin sedang mempertimbangkan produk untuk mulai dijual.
+Priority Score:
+
+5/5
+Secondary Keywords:
+
+ide jualan makanan
+ide jualan makanan modal kecil
+ide jualan makanan kekinian modal kecil untung besar
+ide jualan makanan simple
+kreatif ide jualan makanan
+ide jual makanan
+ide jualan kekinian [agak umum]
+jualan makanan [terlalu umum]
+Alasan Prioritas:
+
+Paling dekat dengan katalog resep dan fokus bisnis jajanan Jajan Cuan.
+Bisa mengarahkan pembaca dari ide produk ke resep, kalkulasi HPP, dan penentuan harga jual.
+Keyword bertema “modal kecil” cocok untuk audiens yang sedang mencari usaha yang realistis dimulai.
+Cluster: Jajanan 1000-an dan Jualan di Sekolahan
+Primary Keyword:
+
+jajanan 1000an laris manis untuk dijual
+Search Intent:
+
+Informational — mencari pilihan jajanan murah untuk dijual.
+Commercial Investigation — mencari ide produk dengan harga jual tertentu yang berpotensi laku.
+Priority Score:
+
+5/5
+Secondary Keywords:
+
+ide jualan makanan 1000an
+ide jual makanan 1000an
+jajan 1000an [agak umum]
+ide jualan makanan di sekolahan
+ide jualan di sekolahan [ambigu; diasumsikan terkait jualan makanan]
+Alasan Prioritas:
+
+Sangat sesuai dengan resep jajanan ekonomis yang terdapat di katalog repo.
+Topik harga 1000-an dapat dibahas bersama porsi, biaya bahan, HPP, dan harga jual.
+Konteks sekolah memperjelas target pasar dan kebutuhan produk.
+Cluster: Resep Es Lumut
+Primary Keyword:
+
+es lumut coklat
+Search Intent:
+
+Informational — mencari resep atau cara membuat varian es lumut.
+Priority Score:
+
+4/5
+Secondary Keywords:
+
+es lumut nutrijel
+Alasan Prioritas:
+
+Keyword resep spesifik dan berkaitan dengan tema minuman jajanan.
+Repo memuat resep es lumut cokelat; keyword Nutrijel dapat menjadi variasi konten jika resepnya memang sesuai.
+Konten bisa dilengkapi informasi HPP dan harga jual untuk memperkuat kaitannya dengan bisnis jajanan.
+Cluster: Jualan Makanan yang Laku dan Menguntungkan
+Primary Keyword:
+
+jualan makanan yang laku setiap hari
+Search Intent:
+
+Informational — mencari ide produk yang berpotensi laku.
+Commercial Investigation — menilai peluang dan potensi jualan.
+Priority Score:
+
+4/5
+Secondary Keywords:
+
+jualan apa yang laku setiap hari
+jualan apa yang laku [terlalu umum]
+jualan apa yang laris [terlalu umum]
+jualan yg laris [variasi penulisan; agak umum]
+jualan yang menguntungkan [terlalu umum]
+usaha apa yg cocok untuk pemula [terlalu umum]
+Alasan Prioritas:
+
+Relevan untuk calon penjual yang ingin memilih produk makanan sebelum memulai usaha.
+Dapat diarahkan ke contoh resep, pertimbangan HPP, dan cara menentukan harga jual.
+Beberapa keyword terlalu luas, sehingga konten sebaiknya tetap berfokus pada makanan atau jajanan.
+Cluster: Usaha Rumahan dan Usaha Modal Kecil
+Primary Keyword:
+
+ide usaha rumahan [agak umum]
+Search Intent:
+
+Informational — mencari inspirasi usaha rumahan dan usaha bermodal kecil.
+Commercial Investigation — mempertimbangkan jenis usaha yang layak dimulai.
+Priority Score:
+
+3/5
+Secondary Keywords:
+
+ide jualan di rumah
+ide jualan modal kecil
+usaha rumahan modal kecil
+usaha rumahan yang menjanjikan
+ide bisnis rumahan
+ide bisnis modal kecil [terlalu umum]
+ide usaha modal kecil
+bisnis modal kecil [terlalu umum]
+usaha sampingan [terlalu umum]
+ide bisnis [terlalu umum]
+ide usaha [terlalu umum]
+Alasan Prioritas:
+
+Berpotensi menjangkau pengguna yang bisa menjadi calon audiens bisnis jajanan rumahan.
+Relevansinya lebih rendah daripada keyword yang menyebut makanan atau jajanan secara langsung.
+Sebaiknya digunakan untuk konten yang secara eksplisit membahas usaha makanan rumahan.
+Cluster: Ide Jualan dan Usaha di Kampung
+Primary Keyword:
+
+ide usaha di kampung
+Search Intent:
+
+Informational — mencari peluang usaha sesuai lingkungan atau lokasi.
+Commercial Investigation — membandingkan jenis usaha yang mungkin cocok untuk pasar setempat.
+Priority Score:
+
+2/5
+Secondary Keywords:
+
+jualan apa yang laku di kampung [ambigu; tidak menyebut jenis produk]
+Alasan Prioritas:
+
+Dapat dikaitkan dengan jajanan yang terjangkau atau sesuai kebutuhan pasar lokal.
+Keyword tidak secara spesifik menyebut makanan, sehingga kecocokannya dengan Jajan Cuan lebih terbatas.
+Cluster: Jualan Online
+Primary Keyword:
+
+ide jual online [ambigu; produk yang dijual tidak disebutkan]
+Search Intent:
+
+Informational — mencari inspirasi untuk berjualan secara online.
+Priority Score:
+
+2/5
+Secondary Keywords:
+
+Tidak ada keyword pendukung lain dalam daftar.
+Alasan Prioritas:
+
+Bisa relevan jika diarahkan ke penjualan makanan atau jajanan secara online.
+Keyword terlalu luas untuk langsung menunjukkan minat terhadap resep atau toolkit bisnis jajanan.
