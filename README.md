@@ -178,6 +178,8 @@ Aplikasi memanfaatkan infrastruktur cloud Firebase untuk kemudahan operasional d
 
 ## 7\. Ekosistem Pemasaran & Listing Google Play Store
 
+> **Aplikasi sudah rilis.** Link listing Google Play Store: <https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate>
+
 ### A. Saluran YouTube
 
   * **Peran:** Wadah hosting video tutorial resmi mengenai cara penggunaan aplikasi (panduan fitur kalkulator HPP, timer masak, dan navigasi resep).

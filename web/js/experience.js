@@ -134,6 +134,7 @@ const ADMIN_STORAGE_KEY = 'jajan_cuan_curated_drafts';
 
 // --- DB-LEVEL PAGINATION CONFIG FOR END-USERS (5 items per page) ---
 const PAGE_SIZE = 5;
+const MAX_WEB_RECIPES = 20;
 let currentPage = 1;
 const initialUrlFilter = (urlParams.get('filter') || 'all').replace(/[^\w-]/g, '');
 let currentFilter = initialUrlFilter;
@@ -331,8 +332,8 @@ async function loadAdminPosts() {
   }
 }
 
-// 2. Data Fetching Pengunjung Biasa — ON-DEMAND DB PAGINATION (5 ITEM PER REQUEST)
-// PENTING: Dilarang fetch all lalu slice di JS. Query RTDB dibatasi limitToFirst(PAGE_SIZE + 1).
+// 2. Data Fetching Pengunjung Biasa — KATALOG WEB DIBATASI 20 RESEP PILIHAN
+// Resep lengkap 200+ dan fitur eksklusif lainnya dialihkan ke aplikasi Android
 async function loadUserPage(page = 1, filter = currentFilter) {
   if (isFetchingPage) return;
   isFetchingPage = true;
@@ -345,156 +346,56 @@ async function loadUserPage(page = 1, filter = currentFilter) {
   const nextBtn = document.getElementById('nextPageBtn');
   const pageNumEl = document.getElementById('currentPageNum');
 
-  if (pageNumEl) pageNumEl.textContent = currentPage;
-  if (prevBtn) prevBtn.disabled = (currentPage === 1);
-  if (nextBtn) nextBtn.disabled = true;
-
   if (container) {
     container.innerHTML = `
       <div class="loading-state">
         <div class="spinner"></div>
-        <p>Memuat resep halaman ${currentPage} dari database...</p>
+        <p>Memuat resep pilihan web...</p>
       </div>
     `;
   }
 
   try {
-    let pagedRecipes = [];
-    let hasMore = false;
+    // Ambil maksimal 20 resep pilihan untuk web
+    const catalogSource = getAllCatalogRecipes().slice(0, MAX_WEB_RECIPES);
 
-    if (typeof db !== 'undefined' && db) {
-      let query;
-      const cursor = pageCursors[page - 1]; // Cursor key untuk halaman ini
-
-      if (filter === 'all') {
-        query = db.ref('posts').orderByKey();
-        if (cursor) {
-          query = query.startAt(cursor);
-        }
-        query = query.limitToFirst(PAGE_SIZE + 1);
-
-        const snapshot = await fetchWithTimeout(query.once('value'), 4000);
-        const items = [];
-        snapshot.forEach((child) => {
-          const val = child.val();
-          if (val && val.published !== false) {
-            items.push({
-              id: child.key,
-              slug: val.slug || child.key,
-              emoji: val.emoji || getEmojiForCategory(val.category),
-              ...val
-            });
-          }
-        });
-
-        if (items.length > PAGE_SIZE) {
-          hasMore = true;
-          pagedRecipes = items.slice(0, PAGE_SIZE);
-          pageCursors[page] = items[PAGE_SIZE].id;
-        } else {
-          hasMore = false;
-          pagedRecipes = items;
-          pageCursors[page] = null;
-        }
-
-      } else if (filter === 'kue' || filter === 'gorengan' || filter === 'minuman') {
-        // Query RTDB terindeks pada field category
-        query = db.ref('posts').orderByChild('category').equalTo(filter);
-        const snapshot = await fetchWithTimeout(query.once('value'), 4000);
-        const items = [];
-        snapshot.forEach((child) => {
-          const val = child.val();
-          if (val && val.published !== false) {
-            items.push({
-              id: child.key,
-              slug: val.slug || child.key,
-              emoji: val.emoji || getEmojiForCategory(val.category),
-              ...val
-            });
-          }
-        });
-
-        const startIdx = (page - 1) * PAGE_SIZE;
-        pagedRecipes = items.slice(startIdx, startIdx + PAGE_SIZE);
-        hasMore = items.length > startIdx + PAGE_SIZE;
-
-      } else {
-        // Filter Tag (modal-kecil, viral)
-        let sourceList = [];
-        if (typeof window.SCRAPED_DRAFTS !== 'undefined' && window.SCRAPED_DRAFTS) {
-          sourceList = Object.values(window.SCRAPED_DRAFTS);
-        } else {
-          const snap = await fetchWithTimeout(db.ref('posts').once('value'), 4000);
-          snap.forEach(c => {
-            const val = c.val();
-            if (val && val.published !== false) sourceList.push({ id: c.key, ...val });
-          });
-        }
-
-        sourceList = sourceList.filter(r => {
-          const tags = r.tags || [];
-          if (filter === 'modal-kecil') {
-            return tags.includes('modal-kecil') || (r.business_analysis?.estimated_initial_capital <= 40000);
-          }
-          if (filter === 'viral') {
-            return tags.includes('viral');
-          }
-          return tags.includes(filter);
-        });
-
-        const startIdx = (page - 1) * PAGE_SIZE;
-        pagedRecipes = sourceList.slice(startIdx, startIdx + PAGE_SIZE);
-        hasMore = sourceList.length > startIdx + PAGE_SIZE;
-      }
-    } else {
-      throw new Error('Database offline / not initialized');
-    }
-
-    hasNextPage = hasMore;
-    allRecipes = pagedRecipes;
-    renderRecipes(allRecipes);
-
-    if (paginationControls) {
-      paginationControls.style.display = 'flex';
-    }
-    if (prevBtn) prevBtn.disabled = (currentPage === 1);
-    if (nextBtn) nextBtn.disabled = !hasNextPage;
-
-  } catch (err) {
-    console.warn('DB Pagination fallback (Offline/Localhost):', err);
-    // Fallback Offline/Localhost: Potong 5 item sesuai permintaan halaman
-    let sourceList = [];
-    if (typeof window.SCRAPED_DRAFTS !== 'undefined' && window.SCRAPED_DRAFTS) {
-      sourceList = Object.values(window.SCRAPED_DRAFTS);
-    } else {
-      sourceList = SEED_DATA;
-    }
-
+    let filtered = catalogSource;
     if (filter !== 'all') {
-      sourceList = sourceList.filter(r => {
+      filtered = catalogSource.filter(r => {
         const tags = r.tags || [];
-        const category = r.category || '';
+        const cat = r.category || '';
         if (filter === 'modal-kecil') {
           return tags.includes('modal-kecil') || (r.business_analysis?.estimated_initial_capital <= 50000);
         }
         if (filter === 'viral') {
           return tags.includes('viral');
         }
-        return category === filter || tags.includes(filter);
+        return (cat === filter) || tags.includes(filter);
       });
     }
 
-    const startIdx = (page - 1) * PAGE_SIZE;
-    allRecipes = sourceList.slice(startIdx, startIdx + PAGE_SIZE);
-    hasNextPage = sourceList.length > startIdx + PAGE_SIZE;
+    const totalFiltered = filtered.length;
+    const totalPages = Math.ceil(totalFiltered / PAGE_SIZE) || 1;
+    currentPage = Math.max(1, Math.min(page, totalPages));
 
+    const startIdx = (currentPage - 1) * PAGE_SIZE;
+    const pagedRecipes = filtered.slice(startIdx, startIdx + PAGE_SIZE);
+    hasNextPage = (startIdx + PAGE_SIZE) < totalFiltered;
+
+    allRecipes = pagedRecipes;
     renderRecipes(allRecipes);
 
     if (paginationControls) {
-      paginationControls.style.display = 'flex';
+      paginationControls.style.display = totalFiltered > PAGE_SIZE ? 'flex' : 'none';
     }
+    if (pageNumEl) pageNumEl.textContent = `${currentPage} dari ${totalPages}`;
     if (prevBtn) prevBtn.disabled = (currentPage === 1);
     if (nextBtn) nextBtn.disabled = !hasNextPage;
+
+  } catch (err) {
+    console.warn('Error loading web curated recipes:', err);
+    allRecipes = SEED_DATA.slice(0, MAX_WEB_RECIPES);
+    renderRecipes(allRecipes);
   } finally {
     isFetchingPage = false;
   }
@@ -543,28 +444,32 @@ function renderRecipes(recipes) {
       container.innerHTML = `
         <div class="empty-search-card">
           <div style="font-size: 3rem; margin-bottom: 0.5rem;">🔍</div>
-          <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--ink);">Resep Tidak Ditemukan</h3>
-          <p class="text-secondary" style="max-width: 480px; margin: 0 auto 1.25rem;">
-            Tidak ada jajanan dengan kata kunci "<strong>${escapeHtml(currentSearchQuery)}</strong>"${currentFilter !== 'all' ? ` di kategori <strong>${escapeHtml(currentFilter)}</strong>` : ''}.
+          <h3 style="font-size: 1.35rem; margin-bottom: 0.5rem; color: var(--ink);">Tidak Ditemukan di 20 Menu Web</h3>
+          <p class="text-secondary" style="max-width: 520px; margin: 0 auto 1.25rem;">
+            Tidak ada jajanan dengan kata kunci "<strong>${escapeHtml(currentSearchQuery)}</strong>"${currentFilter !== 'all' ? ` di kategori <strong>${escapeHtml(currentFilter)}</strong>` : ''} dalam 20 resep pilihan web.<br>
+            Cari di antara <strong>200+ resep lengkap</strong> di aplikasi Android Jajan Cuan!
           </p>
-          <div style="display: flex; justify-content: center; gap: 0.5rem; flex-wrap: wrap;">
-            <button class="btn btn-primary btn-sm btn-reset-search">
-              🔄 Tampilkan Semua Resep
+          <div style="display: flex; justify-content: center; gap: 0.6rem; flex-wrap: wrap;">
+            <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+              📲 Cari di 200+ Resep di Google Play
+            </a>
+            <button class="btn btn-outline btn-sm btn-reset-search">
+              🔄 Tampilkan 20 Resep Web
             </button>
             ${currentFilter !== 'all' ? `
               <button class="btn btn-outline btn-sm btn-clear-filter-search">
-                🌐 Cari di Semua Kategori
+                🌐 Cari di Semua Kategori Web
               </button>
             ` : ''}
           </div>
           <div style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--mut);">
-            <span>Saran kata kunci populer:</span><br>
-            <button class="search-suggestion-chip" data-keyword="tapioka">tapioka</button>
-            <button class="search-suggestion-chip" data-keyword="kulit lumpia">kulit lumpia</button>
-            <button class="search-suggestion-chip" data-keyword="keju">keju</button>
-            <button class="search-suggestion-chip" data-keyword="cireng">cireng</button>
-            <button class="search-suggestion-chip" data-keyword="sosis">sosis</button>
+            <span>Saran kata kunci populer di web:</span><br>
+            <button class="search-suggestion-chip" data-keyword="pangsit">pangsit</button>
+            <button class="search-suggestion-chip" data-keyword="risol">risol</button>
             <button class="search-suggestion-chip" data-keyword="bolu">bolu</button>
+            <button class="search-suggestion-chip" data-keyword="spaghetti">spaghetti</button>
+            <button class="search-suggestion-chip" data-keyword="sosis">sosis</button>
+            <button class="search-suggestion-chip" data-keyword="cokelat">cokelat</button>
           </div>
         </div>
       `;
@@ -581,7 +486,7 @@ function renderRecipes(recipes) {
     return;
   }
 
-  container.innerHTML = recipes.map((recipe) => {
+  const cardsHtml = recipes.map((recipe) => {
     const slug = recipe.slug || recipe.id;
     const initialCapital = recipe.business_analysis?.estimated_initial_capital || 35000;
     const portions = recipe.default_portions || 20;
@@ -870,16 +775,16 @@ function renderRecipes(recipes) {
                 <span style="font-size: 3rem;">📸</span>
                 <span>Poster Promo WhatsApp</span>
                 <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
-                  <button class="btn btn-sm btn-cta" onclick="alert('Fitur download HD tersedia di aplikasi Jajan Cuan!')">📥 Download Foto</button>
-                  <button class="btn btn-sm btn-outline" style="color: #fff; border-color: #fff;" onclick="alert('Fitur share langsung WhatsApp tersedia di aplikasi Jajan Cuan!')">📤 Share WA</button>
+                  <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn btn-sm btn-cta">📥 Download HD di App</a>
+                  <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="color: #fff; border-color: #fff;">📤 Share WA di App</a>
                 </div>
               </div>
               <div class="promo-placeholder" style="background: linear-gradient(135deg, #2EC4B6 0%, #1A1A2E 100%);">
                 <span style="font-size: 3rem;">📱</span>
                 <span>Story IG & Reels Banner</span>
                 <div style="display: flex; gap: 0.5rem; margin-top: 0.5rem;">
-                  <button class="btn btn-sm btn-cta" onclick="alert('Fitur download HD tersedia di aplikasi Jajan Cuan!')">📥 Download Foto</button>
-                  <button class="btn btn-sm btn-outline" style="color: #fff; border-color: #fff;" onclick="alert('Fitur share langsung Instagram tersedia di aplikasi Jajan Cuan!')">📤 Share IG</button>
+                  <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn btn-sm btn-cta">📥 Download HD di App</a>
+                  <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn btn-sm btn-outline" style="color: #fff; border-color: #fff;">📤 Share IG di App</a>
                 </div>
               </div>
             </div>
@@ -888,6 +793,42 @@ function renderRecipes(recipes) {
       </article>
     `;
   }).join('');
+
+  const appBannerHtml = !isSearching ? `
+    <div class="app-download-banner-card">
+      <span class="app-download-badge">📲 Aplikasi Jajan Cuan Resmi di Google Play</span>
+      <h3>Mau Buka 200+ Resep Jajanan Viral Lainnya?</h3>
+      <p>
+        Katalog web dibatasi 20 resep pilihan terbaik. Unduh aplikasi resmi Jajan Cuan di Google Play Store sekarang untuk membuka akses penuh ke 200+ resep viral, kalkulator otomatis, timer masak anti-gosong, simpan resep favorit tanpa batas, dan unduh foto promosi HD tanpa watermark!
+      </p>
+      <ul class="app-download-features">
+        <li>🔥 <strong>200+ Resep Jajanan Viral:</strong> Lengkap estimasi modal &amp; HPP</li>
+        <li>⏱️ <strong>Timer Masak Otomatis:</strong> Pengingat alarm notifikasi otomatis</li>
+        <li>📸 <strong>Foto Promosi HD Siap Share:</strong> Unduh poster jualan ke galeri HP</li>
+        <li>🤍 <strong>Simpan Resep Favorit:</strong> Akses cepat kapan saja secara offline</li>
+      </ul>
+      <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+        <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn btn-playstore">
+          <span class="btn-playstore-icon">📲</span>
+          <div class="btn-playstore-text">
+            <small>DOWNLOAD GRATIS DI</small>
+            <strong>Google Play</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  ` : `
+    <div style="background: #FFFBEB; border: 1.5px dashed #F59E0B; border-radius: 12px; padding: 1.25rem; text-align: center; margin-top: 1.5rem;">
+      <p style="margin: 0 0 0.75rem 0; font-size: 0.95rem; color: #92400E; font-weight: 600;">
+        Menampilkan hasil dari 20 resep pilihan web. Mau cari lebih lengkap di antara <strong>200+ resep jajanan viral</strong>?
+      </p>
+      <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+        📲 Cari di 200+ Resep Aplikasi Play Store →
+      </a>
+    </div>
+  `;
+
+  container.innerHTML = cardsHtml + appBannerHtml;
 
   // Attach dynamic event listeners after rendering
   setupAccordionListeners();
@@ -1166,13 +1107,13 @@ function initWaitlistModal() {
 
       // Kustomisasi pesan jika dipicu oleh tombol bookmark di kartu resep (App-Install Hook)
       const modalExpTitle = document.getElementById('modalExpTitle');
-      const modalSubtitle = modal.querySelector('.modal-subtitle');
+      const modalSubtitle = modal.querySelector('.text-secondary');
       if (source === 'card_bookmark_hook') {
         if (modalExpTitle) modalExpTitle.textContent = 'Simpan Resep ke Favorit 🤍';
-        if (modalSubtitle) modalSubtitle.textContent = 'Mau simpan resep favorit tanpa batas & buka offline di pasar? Dapatkan akses prioritas aplikasi Android Jajan Cuan di Google Play!';
+        if (modalSubtitle) modalSubtitle.textContent = 'Fitur simpan resep favorit tanpa batas & akses offline tersedia di aplikasi Android Jajan Cuan. Unduh sekarang gratis di Google Play!';
       } else {
-        if (modalExpTitle) modalExpTitle.textContent = 'Jadilah yang Pertama Tahu Saat Rilis!';
-        if (modalSubtitle) modalSubtitle.textContent = 'Dapatkan akses prioritas ke 100+ resep jajanan viral, kalkulator HPP otomatis, dan bahan promosi siap pakai langsung di HP kamu.';
+        if (modalExpTitle) modalExpTitle.textContent = 'Aplikasi Jajan Cuan Resmi Hadir di Google Play! 🚀';
+        if (modalSubtitle) modalSubtitle.textContent = 'Download sekarang gratis untuk menemukan 200+ resep jajanan viral, timer masak otomatis, dan materi promosi siap pakai.';
       }
 
       if (formContainer && successContainer) {
@@ -1292,15 +1233,15 @@ function initWaitlistModal() {
 // --- SEARCH ENGINE IMPLEMENTATION ---
 function getAllCatalogRecipes() {
   if (isAdmin && typeof adminDrafts !== 'undefined' && Object.keys(adminDrafts).length > 0) {
-    return Object.values(adminDrafts).filter(r => r && r.published !== false);
+    return Object.values(adminDrafts).filter(r => r && r.published !== false).slice(0, MAX_WEB_RECIPES);
   }
   if (typeof window.SCRAPED_DRAFTS !== 'undefined' && window.SCRAPED_DRAFTS) {
-    return Object.values(window.SCRAPED_DRAFTS).filter(r => r && r.published !== false);
+    return Object.values(window.SCRAPED_DRAFTS).filter(r => r && r.published !== false).slice(0, MAX_WEB_RECIPES);
   }
   if (typeof SEED_DATA !== 'undefined' && Array.isArray(SEED_DATA)) {
-    return SEED_DATA.filter(r => r && r.published !== false);
+    return SEED_DATA.filter(r => r && r.published !== false).slice(0, MAX_WEB_RECIPES);
   }
-  return allRecipes;
+  return allRecipes.slice(0, MAX_WEB_RECIPES);
 }
 
 function initSearch() {

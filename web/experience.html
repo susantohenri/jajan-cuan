@@ -40,9 +40,14 @@
       <a href="index.html" class="brand-logo">
         🍳 Jajan<span>Cuan</span>
       </a>
-      <a href="index.html" class="btn btn-outline btn-sm">
-        ← Beranda
-      </a>
+      <div style="display: flex; gap: 0.5rem; align-items: center;">
+        <a href="index.html" class="btn btn-outline btn-sm">
+          ← Beranda
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          📲 Download App
+        </a>
+      </div>
     </div>
   </header>
 
@@ -75,14 +80,33 @@
 
     <!-- Header & Interactive Step Flow -->
     <div class="experience-header" style="border: none; padding-bottom: 0.5rem;">
-      <span class="section-tag">Katalog Interaktif</span>
+      <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: #FEF3C7; color: #92400E; padding: 0.35rem 0.85rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.75rem;">
+        <span>🎉</span> Aplikasi Resmi Rilis di Google Play!
+      </div>
       <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">Katalog Ide Jajanan Siap Jual</h1>
-      <p>Tap kartu resep untuk lihat analisis untung, cara masak, dan kalkulator HPP otomatis.</p>
+      <p style="max-width: 650px; margin: 0 auto 0.75rem;">
+        Menampilkan <strong>20 resep pilihan terpopuler</strong> di web. Mau akses <strong>200+ resep lengkap</strong>, <strong>timer masak anti-gagal</strong>, dan <strong>foto promosi gratis</strong>?
+      </p>
+      <div style="margin-bottom: 1.25rem;">
+        <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700;">
+          <span>📲</span> Download Aplikasi Jajan Cuan di Google Play →
+        </a>
+      </div>
       <ol class="jc-flow">
-        <li>1 Pilih resep</li>
-        <li>2 Cek analisis &amp; cara masak</li>
-        <li>3 Hitung modal &amp; untung</li>
+        <li>1 Coba 20 resep web</li>
+        <li>2 Cek analisis &amp; HPP</li>
+        <li>3 Buka 200+ resep di aplikasi</li>
       </ol>
+    </div>
+
+    <!-- Catalog 20 Recipe Notice Banner -->
+    <div class="catalog-limit-notice">
+      <div>
+        <span>📖</span> <strong>Preview 20 Resep Pilihan Web.</strong> Mau buka 200+ resep lengkap, timer masak, dan foto promosi?
+      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener">
+        📲 Buka di Google Play
+      </a>
     </div>
 
     <!-- Search Bar Interaktif (Pencarian Judul, Bahan, & Tag) -->
@@ -140,64 +164,49 @@
   <div class="sticky-bar" id="expStickyBar">
     <div class="container">
       <div class="sticky-bar-text">
-        Mau semua resep &amp; kalkulator langsung di HP?
+        Mau buka 200+ resep jajanan viral &amp; fitur lengkap?
       </div>
       <div class="sticky-bar-actions">
-        <button class="btn btn-primary btn-sm trigger-waitlist" data-source="experience_sticky">
-          🔔 Ingatkan Saya Saat Rilis
-        </button>
+        <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
+          📲 Download di Google Play
+        </a>
         <button class="jc-x" id="closeStickyBtn" aria-label="Tutup bar pemberitahuan">&times;</button>
       </div>
     </div>
   </div>
 
-  <!-- Modal Waitlist Component -->
+  <!-- Modal App Download Component -->
   <div class="modal-overlay" id="waitlistModal" aria-hidden="true" role="dialog" aria-labelledby="modalExpTitle">
     <div class="modal-card">
       <button class="modal-close" id="closeModalBtn" aria-label="Tutup modal">&times;</button>
       
-      <!-- Form Content -->
+      <!-- App Download Content -->
       <div id="modalFormContainer">
         <div class="modal-header">
-          <div class="modal-icon">🚀</div>
-          <h3 id="modalExpTitle">Jajan Cuan Segera Hadir di Google Play!</h3>
-          <p class="text-secondary">Jadilah yang pertama mencoba. Kami kabari kamu saat rilis.</p>
+          <div class="modal-icon">📲</div>
+          <h3 id="modalExpTitle">Aplikasi Jajan Cuan Resmi Hadir di Google Play!</h3>
+          <p class="text-secondary">Download sekarang untuk akses 200+ resep jajanan viral, timer masak otomatis, dan materi promosi siap pakai.</p>
         </div>
 
-        <form id="waitlistForm">
-          <div class="modal-radio-group">
-            <label class="modal-radio-label">
-              <input type="radio" name="contactType" value="whatsapp" checked>
-              <span>WhatsApp</span>
-            </label>
-            <label class="modal-radio-label">
-              <input type="radio" name="contactType" value="email">
-              <span>Email</span>
-            </label>
-          </div>
+        <div style="text-align: center; margin: 1.5rem 0;">
+          <a href="https://play.google.com/store/apps/details?id=com.henrisusanto.vitmate" target="_blank" rel="noopener" class="btn-playstore" style="padding: 0.85rem 1.75rem; font-size: 1.05rem;">
+            <span class="btn-playstore-icon">📲</span>
+            <div class="btn-playstore-text">
+              <small>DOWNLOAD GRATIS DI</small>
+              <strong>Google Play</strong>
+            </div>
+          </a>
+        </div>
 
-          <div class="modal-form-group">
-            <input 
-              type="text" 
-              id="contactInput" 
-              class="modal-input" 
-              placeholder="Nomor WhatsApp (contoh: 0812xxxx)" 
-              required
-              autocomplete="off"
-            >
-          </div>
-
-          <button type="submit" class="btn btn-primary btn-block" id="submitWaitlistBtn">
-            Kabari Saya Saat Rilis →
-          </button>
-        </form>
-      </div>
-
-      <!-- Success State -->
-      <div class="modal-success" id="modalSuccessContainer">
-        <div class="modal-success-icon">✅</div>
-        <h4>Terima kasih!</h4>
-        <p class="text-secondary">Kontak kamu sudah tersimpan. Kami akan hubungi kamu segera setelah aplikasi siap diunduh.</p>
+        <div style="background: #F9FAFB; border-radius: 12px; padding: 1rem; border: 1px solid #E5E7EB; text-align: left;">
+          <h4 style="font-size: 0.88rem; margin-bottom: 0.5rem; color: #1F2937;">Fitur Unggulan di Aplikasi:</h4>
+          <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: #4B5563; line-height: 1.7;">
+            <li>🔥 <strong>200+ Resep Jajanan Siap Jual:</strong> Lengkap dengan estimasi modal &amp; HPP</li>
+            <li>⏱️ <strong>Timer Masak Otomatis:</strong> Notifikasi alarm anti-gosong &amp; anti-gagal</li>
+            <li>📸 <strong>Foto Promosi HD Siap Share:</strong> Simpan ke galeri tanpa watermark</li>
+            <li>🤍 <strong>Simpan Resep Favorit:</strong> Akses cepat kapan saja secara offline</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -209,7 +218,7 @@
 
   <!-- App Scripts -->
   <script src="js/firebase-init.js"></script>
-  <script src="js/scraped-drafts.js?v=209"></script>
+  <script src="js/scraped-drafts.js?v=20"></script>
   <script src="js/experience.js"></script>
 
   <!-- Non-intrusive Sticky Bar Behavior -->

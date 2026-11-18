@@ -774,6 +774,126 @@ body.jc-exp {
   position: relative;
 }
 
+/* ==========================================================================
+   Google Play App Release Conversion Elements
+   ========================================================================== */
+
+.app-download-banner-card {
+  background: linear-gradient(135deg, #FFF7ED 0%, #FEF3C7 100%);
+  border: 1.5px solid #FDBA74;
+  border-radius: 16px;
+  padding: 2rem 1.75rem;
+  margin: 2rem 0 1.5rem 0;
+  box-shadow: 0 4px 16px rgba(234, 88, 12, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-download-banner-card::before {
+  content: '📲';
+  position: absolute;
+  right: -10px;
+  bottom: -15px;
+  font-size: 7rem;
+  opacity: 0.12;
+  pointer-events: none;
+}
+
+.app-download-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: #FFEDD5;
+  color: #C2410C;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+  border: 1px solid #FDBA74;
+}
+
+.app-download-banner-card h3 {
+  font-size: 1.5rem;
+  color: #1F2937;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+.app-download-banner-card p {
+  color: #4B5563;
+  font-size: 0.95rem;
+  max-width: 620px;
+  margin-bottom: 1.25rem;
+  line-height: 1.5;
+}
+
+.app-download-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.6rem 1rem;
+}
+
+.app-download-features li {
+  font-size: 0.88rem;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.catalog-limit-notice {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.88rem;
+  color: #92400E;
+}
+
+.catalog-limit-notice strong {
+  color: #78350F;
+}
+
+.catalog-limit-notice a {
+  background: #F59E0B;
+  color: #FFFFFF;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.catalog-limit-notice a:hover {
+  background: #D97706;
+}
+
+@media (max-width: 640px) {
+  .app-download-banner-card {
+    padding: 1.5rem 1.25rem;
+  }
+  .app-download-banner-card h3 {
+    font-size: 1.25rem;
+  }
+  .catalog-limit-notice {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
